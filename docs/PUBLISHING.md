@@ -1,5 +1,12 @@
 # Publish the repository and demo
 
+## Published project
+
+- Public repository: https://github.com/gytung/ProseLedger
+- Recorded evaluation: https://gytung.github.io/ProseLedger/
+
+The evaluation link serves the six saved cases. New model generation runs through the local application, not GitHub Pages.
+
 ## Repository
 
 1. Extract the source archive locally.

@@ -4,6 +4,8 @@
 
 **DSS5105 Capstone · Group 18 · National University of Singapore**
 
+[Recorded evaluation](https://gytung.github.io/ProseLedger/) · [Architecture](docs/ARCHITECTURE.md) · [Evaluation notes](docs/EVALUATION.md)
+
 ProseLedger turns a research topic and supplied source notes into a six-section proposal, then compares three revision routes. It separates expression quality from content-preservation checks and records both retained and rejected candidates.
 
 | Route | Revision policy |
@@ -16,7 +18,7 @@ Planner-only and Memory both use their own prior-round feedback. All routes shar
 
 ## Explore the recorded evaluation
 
-Open **[docs/index.html](docs/index.html)** in a browser, or publish the `docs` directory with GitHub Pages. It contains all six recorded cases, their initial and retained texts, and the decision traces. No installation, credentials or model calls are required for this viewer.
+Open the **[recorded evaluation](https://gytung.github.io/ProseLedger/)**, or download and open `docs/index.html` locally. It contains all six recorded cases, their initial and retained texts, and the decision traces. No installation, credentials or model calls are required for this viewer.
 
 The viewer inspects saved results. It does not rerun the algorithm or generate new text. The same six-case data power the project presentation.
 
