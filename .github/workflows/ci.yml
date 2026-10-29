@@ -21,4 +21,5 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m proseledger verify
       - run: python -m pytest -q
+      - run: python scripts/export_round_scores.py --check
       - run: python scripts/check_publication.py

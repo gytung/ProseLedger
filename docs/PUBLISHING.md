@@ -3,9 +3,9 @@
 ## Published project
 
 - Public repository: https://github.com/gytung/ProseLedger
-- Recorded evaluation: https://gytung.github.io/ProseLedger/
+- Interactive round scores: https://gytung.github.io/ProseLedger/#rounds
 
-The evaluation link serves the six saved cases. New model generation runs through the local application, not GitHub Pages.
+The link opens the full round-score dashboard: round 0 plus rounds 1–3, batch means, all six case curves, and candidate-versus-retained decisions. All saved results load together. New model generation runs through the local application, not GitHub Pages.
 
 ## Repository
 
