@@ -11,7 +11,7 @@ const asset = name => new URL(`../docs/assets/${name}`, import.meta.url);
 const importAsset = async name => import(`data:text/javascript;base64,${Buffer.from(await readFile(asset(name), 'utf8')).toString('base64')}`);
 const api = await importAsset('api-client.js');
 const engine = await importAsset('browser-engine.js');
-const app = (await readFile(asset('create-app.js'), 'utf8')).replace(/^import .*;\n/gm, '');
+const app = (await readFile(asset('create-app.js'), 'utf8')).replace(/^import .*;\r?\n/gm, '');
 
 const sources = [
   {id:'S1', title:'Evidence and editing', authors:['Example Author'], license:'CC BY 4.0', license_url:'https://creativecommons.org/licenses/by/4.0/', excerpt:'This supplied source discusses how language models may revise supported passages while retaining their original attribution. Its findings do not validate a new proposal.'},
