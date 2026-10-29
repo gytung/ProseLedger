@@ -1,0 +1,554 @@
+{
+  "schema": "proseledger-browser-inputs-1",
+  "topic": "Evidence-preserving revision of research proposals",
+  "source_catalog_sha256": "f7ccc8a2a84b1b29b3fd601420b65b46cea5819430abf7502323014d78c90880",
+  "catalog": {
+    "schema_version": "v10-semantic-history-binding-2",
+    "bank_id": "proseledger-nine-dev-edit-plans-v6",
+    "bank_sha256": "91531b38a33592e974196c558b04b37a87b6ff30ac762eb5f004e7a438c942ec",
+    "cards": [
+      {
+        "id": "caveat_consolidation",
+        "dimensions": [
+          "repetitive_structure",
+          "redundant_hedging_promotion"
+        ],
+        "operation": "Consolidate an equivalent repeated caveat while retaining its scope and a clear surviving statement.",
+        "steps": [
+          "Find two caveats about the same subject and evidential boundary.",
+          "Keep the full caveat in the section where its scope is clearest.",
+          "Shorten only the redundant occurrence and retain its attribution."
+        ],
+        "preserve": [
+          "Every distinct claim and qualification",
+          "Source attribution and citation identifiers",
+          "Numbers, study status, and uncertainty",
+          "At least one explicit statement of each distinct evidential boundary"
+        ],
+        "counterexamples": [
+          "Combining limitations of different methods merely because both say untested",
+          "Removing all reminders that the study has not been conducted"
+        ],
+        "review_notes": "A scope-equivalent caveat survived in another section; literal keyword overlap alone is insufficient.",
+        "conditions": [
+          {
+            "id": "R1",
+            "kind": "required",
+            "text": "Find two caveats about the same subject and evidential boundary."
+          },
+          {
+            "id": "A1",
+            "kind": "avoid",
+            "text": "Caveats concern different claims or sources"
+          },
+          {
+            "id": "A2",
+            "kind": "avoid",
+            "text": "Only one statement preserves the uncertainty or untested status"
+          },
+          {
+            "id": "A3",
+            "kind": "avoid",
+            "text": "Removing the caveat would make its local claim unconditional"
+          }
+        ],
+        "examples": [
+          {
+            "episode_id": "episode-e28e0a9a8906c4cae8f8",
+            "payload": {
+              "label": "associated_success",
+              "section": "Methodology",
+              "before": "Selecting evidence before rewriting adapts the attribution-first approach, while fine-grained checking draws on reference-based claim verification. Neither source establishes preservation during proposal revision [S2][S5].",
+              "after": "Evidence selection before rewriting adapts the attribution-first approach, and fine-grained checking draws on reference-based claim verification [S2][S5].",
+              "retained_elsewhere": "although neither study establishes that claim locks preserve research proposal content.",
+              "retained_section": "Related Work"
+            },
+            "provenance": {
+              "trace": "benchmarks/runs/09_seen_followup_controlled/cases/historical5/repeat_001/targeted_results.json",
+              "trace_sha256": "74b49d41c41d84f867c4c5ce3aa68b1659071ebbc83f5857baa3fd2b56ba691c",
+              "initial_path": "benchmarks/runs/09_seen_followup_controlled/cases/historical5/repeat_001/initial.json",
+              "initial_sha256": "77b0c50e6083644910d1e4aee42bcb516c02d63da9fe469c45ee32ec62762c67",
+              "round": 1,
+              "original_utf8_sha256": "459db28581e9144a21a81e73fd54444b804f610645a33d1a472cc42f45034293",
+              "candidate_utf8_sha256": "3e23a59cb44b4904036640e645c51025ad3e3063a7162d02e4a1e66fb2d831db"
+            },
+            "historical_outcome": {
+              "score_before": 15.2,
+              "score_after": 9.8,
+              "accepted": true,
+              "guard_passed": true
+            },
+            "verification": {
+              "trace_and_initial_sha_verified": true,
+              "exact_quotes_verified": true,
+              "semantic_truth_proven": false,
+              "causal_effect_established": false,
+              "revalidated_by_current_guard": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "comparison_relation",
+        "dimensions": [
+          "argument_specificity",
+          "vague_claims"
+        ],
+        "operation": "Make an already-stated assessment object and criterion relation explicit.",
+        "steps": [
+          "Identify the object and criterion already present in the current target.",
+          "Express their existing comparison directly; do not invent how reviewers decide or add new criteria."
+        ],
+        "preserve": [
+          "The original assessment object and criteria",
+          "All uncertainty, citations and numbers"
+        ],
+        "counterexamples": [
+          "Adding a scoring rubric or annotation procedure not in the draft",
+          "Mistaking a language model tool for the comparison standard"
+        ],
+        "review_notes": "Source edit made the workflow-steps/task-requirements relation explicit without adding a new protocol. Vague-claim use is a reviewed engineering generalization.",
+        "conditions": [
+          {
+            "id": "R1",
+            "kind": "required",
+            "text": "Identify the object and criterion already present in the current target."
+          },
+          {
+            "id": "A1",
+            "kind": "avoid",
+            "text": "Using names a tool rather than a criterion"
+          },
+          {
+            "id": "A2",
+            "kind": "avoid",
+            "text": "The intended comparison is ambiguous or already explicit"
+          }
+        ],
+        "examples": [
+          {
+            "episode_id": "episode-06b14366c26e9a8f96da",
+            "payload": {
+              "label": "associated_success",
+              "section": "Experiments",
+              "before": "Human reviewers will assess applicability using workflow steps and task requirements.",
+              "after": "Human reviewers will assess applicability by examining workflow steps against task requirements."
+            },
+            "provenance": {
+              "trace": "benchmarks/runs/10_v5_frozen_holdout/cases/h06_workflow_expiry/repeat_001/targeted_results.json",
+              "trace_sha256": "5b88bcbca25804f7887545c54081419b2d6da6aa596984437d9cca3e73a5ec72",
+              "initial_path": "benchmarks/runs/10_v5_frozen_holdout/cases/h06_workflow_expiry/repeat_001/initial.json",
+              "initial_sha256": "fc6a45c2350e418c55f034bb8d3cb60880fcf39e2125d980a6cae1fc7a9a8cd8",
+              "round": 1,
+              "original_utf8_sha256": "b93d9ccc01f3cde1c2c0d7a8747e0eed754360e2868990c1e8b33ad68220d9e2",
+              "candidate_utf8_sha256": "8fad0286eda0915814ccc70ad35b02d7801804ae26c616faab115b7280d2c10b"
+            },
+            "historical_outcome": {
+              "score_before": 8.4,
+              "score_after": 7.0,
+              "accepted": true,
+              "guard_passed": true
+            },
+            "verification": {
+              "trace_and_initial_sha_verified": true,
+              "exact_quotes_verified": true,
+              "semantic_truth_proven": false,
+              "causal_effect_established": false,
+              "revalidated_by_current_guard": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "concrete_lead",
+        "dimensions": [
+          "empty_framing"
+        ],
+        "operation": "Lead with already-present concrete substance rather than broad framing.",
+        "steps": [
+          "Locate a concrete neighboring statement in the same paragraph.",
+          "Move that existing substance ahead of broad framing without changing its qualifiers.",
+          "Retain the objective and all substantive constraints."
+        ],
+        "preserve": [
+          "Every distinct claim and qualification",
+          "Source attribution and citation identifiers",
+          "Numbers, study status, and uncertainty"
+        ],
+        "counterexamples": [
+          "Inventing a failure mode to make the opening vivid",
+          "Presenting a hypothetical risk as an observed result"
+        ],
+        "review_notes": "The observed source edit led with an existing risk. Applying the same role allocation to other concrete substance is an engineering generalization, not separately observed causal evidence. Its factual content must never transfer.",
+        "conditions": [
+          {
+            "id": "R1",
+            "kind": "required",
+            "text": "Locate a concrete neighboring statement in the same paragraph."
+          },
+          {
+            "id": "A1",
+            "kind": "avoid",
+            "text": "No concrete substance already exists in the same paragraph"
+          },
+          {
+            "id": "A2",
+            "kind": "avoid",
+            "text": "The paragraph already leads with that substance"
+          }
+        ],
+        "examples": [
+          {
+            "episode_id": "episode-9f97f098ec2242099b34",
+            "payload": {
+              "label": "associated_success",
+              "section": "Introduction",
+              "before": "Academic revision requires clearer expression without changes to supported claims, qualifiers, or citation relationships. Fluency alone does not meet this requirement: a rewrite can strengthen a tentative conclusion or disconnect a statement from its evidence.",
+              "after": "A fluent rewrite can strengthen a tentative conclusion or disconnect a statement from its evidence. Academic revision therefore requires attention to supported claims, qualifiers, and citation relationships as well as expression."
+            },
+            "provenance": {
+              "trace": "benchmarks/runs/04_development_final/cases/old10_development/repeat_001/targeted_results.json",
+              "trace_sha256": "406277985bfc65b813e3fbea25fb18d023bb7431e7780fd9736390b246f863e2",
+              "initial_path": "benchmarks/runs/04_development_final/cases/old10_development/repeat_001/initial.json",
+              "initial_sha256": "2d034a226e6932520712a800acd4ae04f5938fa0fe4bc09b2cd209d39b51a5d8",
+              "round": 2,
+              "original_utf8_sha256": "0a2930a9e3555519eb7770323492aacadbba702c7a9c80c30e7f9c173e8e4a78",
+              "candidate_utf8_sha256": "420e59b80866873424157b3d54453e37229bf0a529dfee25db4abc59ee844609"
+            },
+            "historical_outcome": {
+              "score_before": 11.9,
+              "score_after": 9.8,
+              "accepted": true,
+              "guard_passed": true
+            },
+            "verification": {
+              "trace_and_initial_sha_verified": true,
+              "exact_quotes_verified": true,
+              "semantic_truth_proven": false,
+              "causal_effect_established": false,
+              "revalidated_by_current_guard": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "existing_comparison",
+        "dimensions": [
+          "empty_framing"
+        ],
+        "operation": "Replace a broad payoff statement with the concrete comparison already described in this draft.",
+        "steps": [
+          "Use the supporting current passage to state what is being compared or inspected and what question that addresses.",
+          "Keep the statement prospective and retain its scope; merge rather than append another promise."
+        ],
+        "preserve": [
+          "Existing question, comparison and qualifications",
+          "Citations and planned-study status"
+        ],
+        "counterexamples": [
+          "Inventing an experimental protocol to make a conclusion specific",
+          "Calling an expected benefit a finding"
+        ],
+        "review_notes": "Both observed edits replace a general evaluation promise with a question linked to existing evaluation actions. Raw source content must not transfer.",
+        "conditions": [
+          {
+            "id": "R1",
+            "kind": "required",
+            "text": "Use the supporting current passage to state what is being compared or inspected and what question that addresses."
+          },
+          {
+            "id": "A1",
+            "kind": "avoid",
+            "text": "No related comparison is already present"
+          },
+          {
+            "id": "A2",
+            "kind": "avoid",
+            "text": "The change requires a new procedure, threshold or result"
+          }
+        ],
+        "examples": [
+          {
+            "episode_id": "episode-9608d2ee9c9dfc443b8b",
+            "payload": {
+              "label": "associated_success",
+              "section": "Conclusion",
+              "before": "The proposed study will evaluate editing order as a constrained decision problem.",
+              "after": "By matching resources, assessing quality dimensions separately, and inspecting revision histories, the proposed study aims to identify when global revision should precede local editing and when another schedule may be preferable."
+            },
+            "provenance": {
+              "trace": "benchmarks/runs/10_v5_frozen_holdout/cases/h02_revision_priority/repeat_001/memory_results.json",
+              "trace_sha256": "a3bdc0d64fafb579468c3d1ca0b8f60d96f3f7f6555d8a18a2505ad1b0505d7f",
+              "initial_path": "benchmarks/runs/10_v5_frozen_holdout/cases/h02_revision_priority/repeat_001/initial.json",
+              "initial_sha256": "81ede34c6cf1df5ad802781f040b3c8bd82ea37c241bf3c0a0a3c83afa7aaa9f",
+              "round": 1,
+              "original_utf8_sha256": "0a2c951f70f8c5fc8eeedacd65edf56d7437c61d18a9c665dcc2eb5dc4c25377",
+              "candidate_utf8_sha256": "804684393c2e19ad145c98edcf57c378f3007024372888c0603967429dca4752"
+            },
+            "historical_outcome": {
+              "score_before": 10.4,
+              "score_after": 9.0,
+              "accepted": true,
+              "guard_passed": true
+            },
+            "verification": {
+              "trace_and_initial_sha_verified": true,
+              "exact_quotes_verified": true,
+              "semantic_truth_proven": false,
+              "causal_effect_established": false,
+              "revalidated_by_current_guard": false
+            }
+          },
+          {
+            "episode_id": "episode-626d490c8f4de2c418bb",
+            "payload": {
+              "label": "associated_success",
+              "section": "Conclusion",
+              "before": "The study can identify tradeoffs between harmful reuse, excessive abstention, and revision quality.",
+              "after": "By examining the revisions that follow reuse and abstention, the planned study will assess whether avoiding harmful reuse comes at the cost of withholding useful guidance or reducing revision quality."
+            },
+            "provenance": {
+              "trace": "benchmarks/runs/10_v5_frozen_holdout/cases/h06_workflow_expiry/repeat_001/targeted_results.json",
+              "trace_sha256": "5b88bcbca25804f7887545c54081419b2d6da6aa596984437d9cca3e73a5ec72",
+              "initial_path": "benchmarks/runs/10_v5_frozen_holdout/cases/h06_workflow_expiry/repeat_001/initial.json",
+              "initial_sha256": "fc6a45c2350e418c55f034bb8d3cb60880fcf39e2125d980a6cae1fc7a9a8cd8",
+              "round": 2,
+              "original_utf8_sha256": "8fad0286eda0915814ccc70ad35b02d7801804ae26c616faab115b7280d2c10b",
+              "candidate_utf8_sha256": "87ffdb0f8f2684624dec2f28616d4a95d13ca27c39da950c214baa710264c5d0"
+            },
+            "historical_outcome": {
+              "score_before": 7.0,
+              "score_after": 6.3,
+              "accepted": true,
+              "guard_passed": true
+            },
+            "verification": {
+              "trace_and_initial_sha_verified": true,
+              "exact_quotes_verified": true,
+              "semantic_truth_proven": false,
+              "causal_effect_established": false,
+              "revalidated_by_current_guard": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "schema_role_allocation",
+        "dimensions": [
+          "repetitive_structure"
+        ],
+        "operation": "Give repeated material distinct section roles instead of repeating the same operational statement.",
+        "steps": [
+          "Compare only the shared proposition in the two current passages.",
+          "Keep the operational detail in Methodology or Experiments; let the overview state its already-supported purpose.",
+          "Retain every unique control, component, qualification and citation; skip ambiguous equivalence."
+        ],
+        "preserve": [
+          "Unique details and conditions in both passages",
+          "Citations, numbers and prospective status"
+        ],
+        "counterexamples": [
+          "Deleting a unique method component",
+          "Inventing new component interactions to replace an inventory"
+        ],
+        "style_countercondition": "Do not replace repeated controls with synonyms or a longer explanation of the same controls. Change only the shared rhetorical role; retain every distinct condition.",
+        "review_notes": "The accepted source condensed a repeated inventory. Extending its section-role operation to other supported repeated propositions is an explicitly reviewed engineering generalization. The negative example is style-only association, not causation.",
+        "conditions": [
+          {
+            "id": "R1",
+            "kind": "required",
+            "text": "Compare only the shared proposition in the two current passages."
+          },
+          {
+            "id": "A1",
+            "kind": "avoid",
+            "text": "The target supplies a unique detail that cannot be retained"
+          },
+          {
+            "id": "A2",
+            "kind": "avoid",
+            "text": "The passages concern different sources or claims"
+          }
+        ],
+        "examples": [
+          {
+            "episode_id": "episode-36d7578f4b7fd6634d9f",
+            "payload": {
+              "label": "associated_success",
+              "section": "Introduction",
+              "before": "We propose a memory schema recording detected style issues, editing procedures, applicability conditions, source identifiers, protected claims, and verification outcomes. Records would transfer procedures rather than factual assertions.",
+              "after": "The proposed memory would transfer editing procedures rather than factual assertions. Each procedure would remain tied to the context and verification judgments associated with its use, allowing later revisions to be assessed against their own evidence.",
+              "retained_elsewhere": "Each memory record would contain the detected issue, editing procedure, applicability conditions, source identifiers, protected claims, and verification outcomes.",
+              "retained_section": "Methodology"
+            },
+            "provenance": {
+              "trace": "benchmarks/runs/04_development_final/cases/old10_development/repeat_001/targeted_results.json",
+              "trace_sha256": "406277985bfc65b813e3fbea25fb18d023bb7431e7780fd9736390b246f863e2",
+              "initial_path": "benchmarks/runs/04_development_final/cases/old10_development/repeat_001/initial.json",
+              "initial_sha256": "2d034a226e6932520712a800acd4ae04f5938fa0fe4bc09b2cd209d39b51a5d8",
+              "round": 1,
+              "original_utf8_sha256": "92d0abad5ec300d8d82afba289c149373d0b6e439e03510b1de83b2829e2d08c",
+              "candidate_utf8_sha256": "0a2930a9e3555519eb7770323492aacadbba702c7a9c80c30e7f9c173e8e4a78"
+            },
+            "historical_outcome": {
+              "score_before": 15.8,
+              "score_after": 11.9,
+              "accepted": true,
+              "guard_passed": true
+            },
+            "verification": {
+              "trace_and_initial_sha_verified": true,
+              "exact_quotes_verified": true,
+              "semantic_truth_proven": false,
+              "causal_effect_established": false,
+              "revalidated_by_current_guard": false
+            }
+          },
+          {
+            "episode_id": "episode-4ba947ee81180863a144",
+            "payload": {
+              "label": "style_only_counterexample",
+              "section": "Methodology",
+              "before": "Answers, source pools, and candidate passages will remain fixed across conditions.",
+              "after": "Answers, source pools, and candidate passages will remain fixed across conditions so that differences in citation presentation can be assessed without attributing answer-content differences to selection policies."
+            },
+            "provenance": {
+              "trace": "benchmarks/runs/10_v5_frozen_holdout/cases/h01_citation_budget/repeat_001/targeted_results.json",
+              "trace_sha256": "aa6958c0f4503cd87a07aaffd2a2c01ba3f2b50788beb7005a5b7a78a548242e",
+              "initial_path": "benchmarks/runs/10_v5_frozen_holdout/cases/h01_citation_budget/repeat_001/initial.json",
+              "initial_sha256": "3fd8fbcf1ecba03594de9d65a1114271f7912cee7620da13bcc764acbd7f0986",
+              "round": 2,
+              "original_utf8_sha256": "d5ea3d24a5dc94d84208c5fd6776391af6f4b097ff0e7c0013a0872cbe42bf1c",
+              "candidate_utf8_sha256": "af3755f03aaa9a8f6389a52eadfc2bd794ee08fd0a018cbb29c5306c85a93d31"
+            },
+            "historical_outcome": {
+              "score_before": 7.0,
+              "score_after": 7.7,
+              "accepted": false,
+              "guard_passed": true
+            },
+            "verification": {
+              "trace_and_initial_sha_verified": true,
+              "exact_quotes_verified": true,
+              "semantic_truth_proven": false,
+              "causal_effect_established": false,
+              "revalidated_by_current_guard": false
+            }
+          }
+        ]
+      }
+    ],
+    "skipped": [
+      {
+        "card_id": "heading_announcement",
+        "reason": "Historical card is inactive."
+      }
+    ],
+    "budget": {
+      "max_chars": 20000,
+      "max_example_chars": 3200,
+      "used_chars": 9588
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Enabling Large Language Models to Generate Text with Citations",
+      "authors": [
+        "Tianyu Gao",
+        "Howard Yen",
+        "Jiatong Yu",
+        "Danqi Chen"
+      ],
+      "year": 2023,
+      "venue": "EMNLP 2023",
+      "url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "content_kind": "original_abstract_and_excerpt",
+      "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+      "excerpt": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nLarge language models (LLMs) have emerged as a widely-used tool for information seeking, but their generated outputs are prone to hallucination. In this work, our aim is to allow LLMs to generate text with citations, improving their factual correctness and verifiability. Existing work mainly relies on commercial search engines and human evaluation, making it challenging to reproduce and compare different modeling approaches. We propose ALCE, the first benchmark for Automatic LLMs’ Citation Evaluation. ALCE collects a diverse set of questions and retrieval corpora and requires building end-to-end systems to retrieve supporting evidence and generate answers with citations. We develop automatic metrics along three dimensions—fluency, correctness, and citation quality—and demonstrate their strong correlation with human judgements. Our experiments with state-of-the-art LLMs and novel prompting strategies show that current systems have considerable room for improvement—For example, on the ELI5 dataset, even the best models lack complete citation support 50% of the time. Our analyses further highlight promising future directions, including developing better retrievers, advancing long-context LLMs, and improving the ability to synthesize information from multiple sources.\n\nORIGINAL EXCERPT (PDF page 1; Section 1 Introduction, opening paragraph):\nLarge language models (LLMs; Brown et al., 2020; OpenAI, 2023) have gained increasing popularity as a tool for information seeking. While they generate engaging and coherent responses, their outputs are prone to hallucination and often contain factually incorrect information (Ji et al., 2023). This makes it harder for users to trust and verify LLM-generated outputs without any supporting evidence."
+    },
+    {
+      "id": "S2",
+      "title": "Attribute First, then Generate: Locally-attributable Grounded Text Generation",
+      "authors": [
+        "Aviv Slobodkin",
+        "Eran Hirsch",
+        "Arie Cattan",
+        "Tal Schuster",
+        "Ido Dagan"
+      ],
+      "year": 2024,
+      "venue": "ACL 2024 (Long Papers)",
+      "url": "https://aclanthology.org/2024.acl-long.182/",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "content_kind": "original_abstract_and_excerpt",
+      "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+      "excerpt": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nRecent efforts to address hallucinations in Large Language Models (LLMs) have focused on attributed text generation, which supplements generated texts with citations of supporting sources for post-generation fact-checking and corrections. Yet, these citations often point to entire documents or paragraphs, burdening users with extensive verification work. In this paper, we introduce a locally-attributable text generation approach, prioritizing concise attributions. Our method, named “Attribute First, then Generate“, breaks down the conventional end-to-end generation process into three intuitive steps: content selection, sentence planning, and sequential sentence generation. By initially identifying relevant source segments (“select first“) and then conditioning the generation process on them (“then generate“), we ensure these segments also act as the output’s fine-grained attributions (“select“ becomes “attribute“). Tested on Multi-document Summarization and Long-form Question-answering, our method not only yields more concise citations than the baselines but also maintains - and in some cases enhances - both generation quality and attribution accuracy. Furthermore, it significantly reduces the time required for fact verification by human assessors.\n\nORIGINAL EXCERPT (PDF page 3; Section 3.1 Attribute First, then Generate, opening paragraph):\nTo reliably achieve the desirable fine-grained attribution, we introduce the Attribute First, then Generate paradigm, outlined in Fig. 2. This method is structured around three key steps, mirroring the inherent decision-making processes involved in text generation: content selection, sentence-planning, and sentence-by-sentence generation. Though applicable to any grounded text generation task, we specifically test its application in Multi-document Summarization (MDS) and Long-form Question-answering (LFQA), adapting only the content selection step to each task’s unique requirements."
+    },
+    {
+      "id": "S3",
+      "title": "Towards Automated Document Revision: Grammatical Error Correction, Fluency Edits, and Beyond",
+      "authors": [
+        "Masato Mita",
+        "Keisuke Sakaguchi",
+        "Masato Hagiwara",
+        "Tomoya Mizumoto",
+        "Jun Suzuki",
+        "Kentaro Inui"
+      ],
+      "year": 2024,
+      "venue": "BEA 2024",
+      "url": "https://aclanthology.org/2024.bea-1.21/",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "content_kind": "original_abstract_and_excerpt",
+      "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+      "excerpt": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nNatural language processing (NLP) technology has rapidly improved automated grammatical error correction (GEC) tasks, and the GEC community has begun to explore document-level revision. However, there are two major obstacles to going beyond automated sentence-level GEC to NLP-based document-level revision support: (1) there are few public corpora with document-level revisions annotated by professional editors, and (2) it is infeasible to obtain all possible references and evaluate revision quality using such references because there are infinite revision possibilities. To address these challenges, this paper proposes a new document revision corpus, Text Revision of ACL papers (TETRA), in which multiple professional editors have revised academic papers sampled from the ACL anthology. This corpus enables us to focus on document-level and paragraph-level edits, such as edits related to coherence and consistency. Additionally, as a case study using the TETRA corpus, we investigate reference-less and interpretable methods for meta-evaluation to detect quality improvements according to document revisions. We show the uniqueness of TETRA compared with existing document revision corpora and demonstrate that a fine-tuned pre-trained language model can discriminate the quality of documents after revision even when the difference is subtle.\n\nORIGINAL EXCERPT (PDF page 1; Section 1 Introduction, opening paragraph):\nDocument revision is a crucial step in the process of writing essays and argumentative texts. The writing process consists of two major parts: content organization and selection planning (henceforth, planning part) and realization of text improvement (henceforth, realization part), which are hierarchical and recursive. In addition, according to previous studies on argumentative writing (Flower and Hayes, 1981; Beason, 1993; Buchman et al., 2000; Seow, 2002; Allal et al., 2004), realization part in writing process typically comprises three main stages: Revising, Editing, and Proofreading. Revising is the initial editing step used to plan and structure the overall document at a high level, Editing focuses on making sentence-level or phrase-level expressions, and Proofreading is used to identify and correct errors such as spelling and grammar errors (see Figure 1, left). While the order of these steps is not set in stone, the writing process typically starts with a broad, high-level perspective, and gradually narrows down the scope of edits."
+    },
+    {
+      "id": "S4",
+      "title": "Identifying Reliable Evaluation Metrics for Scientific Text Revision",
+      "authors": [
+        "Léane Jourdan",
+        "Florian Boudin",
+        "Nicolas Hernandez",
+        "Richard Dufour"
+      ],
+      "year": 2025,
+      "venue": "ACL 2025 (Long Papers)",
+      "url": "https://aclanthology.org/2025.acl-long.335/",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "content_kind": "original_abstract_and_excerpt",
+      "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+      "excerpt": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nEvaluating text revision in scientific writing remains a challenge, as traditional metrics such as ROUGE and BERTScore primarily focus on similarity rather than capturing meaningful improvements. In this work, we analyse and identify the limitations of these metrics and explore alternative evaluation methods that better align with human judgments. We first conduct a manual annotation study to assess the quality of different revisions. Then, we investigate reference-free evaluation metrics from related NLP domains. Additionally, we examine LLM-as-a-judge approaches, analysing their ability to assess revisions with and without a gold reference. Our results show that LLMs effectively assess instruction-following but struggle with correctness, while domain-specific metrics provide complementary insights. We find that a hybrid approach combining LLM-as-a-judge evaluation and task-specific metrics offers the most reliable assessment of revision.\n\nORIGINAL EXCERPT (PDF page 1; Section 1 Introduction, opening paragraph):\nEffective revision is a critical step in scientific writing, ensuring clarity, coherence, and adherence to academic standards. The writing process typically consists of four stages: 1) Prewriting, 2) Drafting, 3) Revising, and 4) Editing (Jourdan et al., 2023). The revision stage involves substantial modifications to improve readability, style, and formality (Du et al., 2022; Li et al., 2022). This step is particularly critical, as poor writing quality can obscure research findings and often contributes to paper rejection (Amano et al., 2023). As illustrated in Figure 1, the revision task takes an original paragraph and an instruction specifying the required modification as input. The expected output is a revised paragraph that aligns with the given instruction."
+    },
+    {
+      "id": "S5",
+      "title": "Knowledge-Centric Hallucination Detection",
+      "authors": [
+        "Xiangkun Hu",
+        "Dongyu Ru",
+        "Lin Qiu",
+        "Qipeng Guo",
+        "Tianhang Zhang",
+        "Yang Xu",
+        "Yun Luo",
+        "Pengfei Liu",
+        "Yue Zhang",
+        "Zheng Zhang"
+      ],
+      "year": 2024,
+      "venue": "EMNLP 2024",
+      "url": "https://aclanthology.org/2024.emnlp-main.395/",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "content_kind": "original_abstract_and_excerpt",
+      "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+      "excerpt": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nLarge Language Models (LLMs) have shown impressive capabilities but also a concerning tendency to hallucinate. This paper presents RefChecker, a framework that introduces claim-triplets to represent claims in LLM responses, aiming to detect fine-grained hallucinations. In RefChecker, an extractor generates claim-triplets from a response, which are then evaluated by a checker against a reference. We delineate three task settings: Zero, Noisy and Accurate Context, to reflect various real-world use cases. We curated a benchmark spanning various NLP tasks and annotated 11k claim-triplets from 2.1k responses by seven LLMs. RefChecker supports both proprietary and open-source models as the extractor and checker. Experiments demonstrate that claim-triplets enable superior hallucination detection, compared to other granularities such as response, sentence and sub-sentence level claims. RefChecker outperforms prior methods by 18.2 to 27.2 points on our benchmark and the checking results of RefChecker are strongly aligned with human judgments.\n\nORIGINAL EXCERPT (PDF page 2; Figure 2 caption (framework description)):\nThe REFCHECKER framework comprises two main components: an extractor denoted as E and a checker denoted as C. Given a text to be checked, typically a response generated by an LLM, the extractor takes it as input and generates a set of knowledge triplets, referred to as claim-triplets. Subsequently, the checker assesses each claim-triplet by comparing it against a reference, assigning a hallucination label based on the evaluation."
+    }
+  ]
+}

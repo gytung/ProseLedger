@@ -4,7 +4,7 @@
 
 **DSS5105 Capstone · Group 18 · National University of Singapore**
 
-[Interactive round scores](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md) · [Evaluation notes](docs/EVALUATION.md)
+[Generate in your browser](https://gytung.github.io/ProseLedger/create.html) · [Recorded round scores](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md)
 
 ProseLedger turns a research topic and supplied source notes into a six-section proposal, then compares three revision routes. It separates expression quality from content-preservation checks and records both retained and rejected candidates.
 
@@ -17,6 +17,10 @@ ProseLedger turns a research topic and supplied source notes into a six-section 
 Planner-only and Memory both use their own prior-round feedback. All routes share the initial draft and the first Targeted revision. Later planning decisions choose a local edit, an ordinary targeted rewrite, or a stop. Additional planning calls mean that equal revision opportunities are not equal token budgets.
 
 ## Explore the recorded evaluation
+
+To create new writing without installing anything, open the **[browser generation demo](https://gytung.github.io/ProseLedger/create.html)**. Select a provider, enter your own model API key, and supply a topic with source excerpts. Draft mode makes three model calls; full comparison adds three revision rounds across Targeted, Planner-only and Memory, with up to 21 calls in total. Download the manuscripts, all round scores and the decision record. The browser sends requests directly to the selected provider; no project server receives or stores the key. See the [browser guide](docs/BROWSER_DEMO.md) for privacy and endpoint requirements.
+
+The browser implementation is a bounded JavaScript adaptation. Its five-dimension problem score ranges from 0 to 20 and is **not interchangeable with the frozen Python evaluation's composite score**. The original Python workflow below remains available for that protocol. Model inference takes place at the visitor's API provider, not on their computer's GPU.
 
 Open the **[round-by-round dashboard](https://gytung.github.io/ProseLedger/#rounds)**, or download and open `docs/index.html` locally. It contains all six recorded cases, their initial and retained texts, and the decision traces. No installation, credentials or model calls are required for this viewer.
 
@@ -120,6 +124,7 @@ See [architecture](docs/ARCHITECTURE.md), [reproducibility](docs/REPRODUCIBILITY
 ```bash
 python -m pip install -r requirements-dev.txt
 python -m pytest -q
+node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs
 python scripts/check_publication.py
 ```
 

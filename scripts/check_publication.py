@@ -20,7 +20,7 @@ SKIP = {
     "runs",
     "uploads",
 }
-TEXT_TYPES = {".py", ".md", ".json", ".html", ".csv", ".txt", ".toml", ".yml", ".yaml"}
+TEXT_TYPES = {".py", ".md", ".json", ".html", ".csv", ".txt", ".toml", ".yml", ".yaml", ".js", ".mjs", ".css"}
 
 
 def digest(text: str) -> str:
