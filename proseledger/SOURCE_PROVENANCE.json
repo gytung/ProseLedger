@@ -1,0 +1,109 @@
+{
+  "derivation": "Extraction and native path/I/O refactor. Existing protocol markers remain only to validate archived model cache. No historical runtime module is imported.",
+  "files": {
+    "pipeline.py": {
+      "source": "project3/pipeline.py",
+      "sha256": "cfddd20de8bc3b37d0dfd8e4cb5c236f5e3ecd17a1bc494d419aad6cf54dd3ef"
+    },
+    "quality.py": {
+      "source": "project3/quality.py",
+      "sha256": "b75cca8c7f3714f62720325c8784a5efd4ea5947d27bb7dca3f208e720b0041f"
+    },
+    "preservation.py": {
+      "source": "project3/revision_verifier.py",
+      "sha256": "12b29418c07636d203c290aba39f86a6faf2a841943d9031581159961d68a58d"
+    },
+    "memory_planning.py": {
+      "source": "project3/semantic_memory.py",
+      "sha256": "9ed59baab0ae9e85b97842cb72b3ac6db801319b246357f666968431ff6a0000"
+    },
+    "local_executor.py": {
+      "source": "development/v11_local_candidate/executor.py",
+      "sha256": "911a34ec5c9ca2b62e52f4f0090aeebc24513b6e06dfd217a59f9768eccbcb5b"
+    },
+    "revision_prompts.py": {
+      "source": "project3/semantic_rewrite.py",
+      "sha256": "311edc8ee7c2dcc3e873e4dd601682e6049d11e7dfd0f1be7b9e3963378b908d"
+    },
+    "checkpoints.py": {
+      "source": "development/v11_local_candidate/runtime_candidate.py",
+      "sha256": "c645f4fed4d89ca72949d7c9d309fba5c9b424a36114033f7cc2ce8305457909"
+    },
+    "revision_controller.py": {
+      "source": "development/v12_routed_candidate/runtime_candidate.py",
+      "sha256": "7e84ab751696fb01f7568542eeeae688285248c3ce2a9930c3310412c753137a"
+    },
+    "drafting/base_agent.py": {
+      "source": "src/base_agent.py",
+      "sha256": "76181c5f06a40c146cc08846d8171efd29e03285355f7f12b62f1747ecd79edf"
+    },
+    "drafting/builder.py": {
+      "source": "src/builder.py",
+      "sha256": "a55deb1f0bfd67ded49e53214b24b0f924c9fcaee950405d542c38377e1b6814"
+    },
+    "drafting/editor.py": {
+      "source": "src/editor.py",
+      "sha256": "5f651f0b160b5170dd099efcb4d2aa52bda3726f66212bb3d3a79717de7669df"
+    },
+    "drafting/reviewer.py": {
+      "source": "src/reviewer.py",
+      "sha256": "bb5531108ffd3094c77438bbfd0ce232aaeae9b73ed87c53d87f159fa87ae0d8"
+    },
+    "drafting/researchers.py": {
+      "source": "src/researchers.py",
+      "sha256": "c5a622ca00b66d018d30dcdb098aadaaf50e267285cbdb5d6df4cd7013f9145c"
+    },
+    "drafting/writers.py": {
+      "source": "src/writers.py",
+      "sha256": "ef7ff612e40081ad0387ffedb3f0fc78602b780f5a9c8b7edb3f5c2a099acc97"
+    },
+    "drafting/utils/constants.py": {
+      "source": "src/utils/constants.py",
+      "sha256": "64baea7372a59909d1caf199174bdcf01e2cb24930c74181254269f23cfe5462"
+    },
+    "drafting/utils/file_utils.py": {
+      "source": "src/utils/file_utils.py",
+      "sha256": "675617f7978f16f461dc8e628deafe1f33cfc034d29af344fe975cc3e6623066"
+    },
+    "drafting/utils/communication.py": {
+      "source": "src/utils/communication.py",
+      "sha256": "8a5761aaf333e4d622247aba1abef8252f5d243e6127ce801777f4aea6fefdf6"
+    },
+    "drafting/utils/pbar_utils.py": {
+      "source": "src/utils/pbar_utils.py",
+      "sha256": "0320666f3c41e59f523e17ba6ce144b543529f967a265006f10c2596f4d0e7de"
+    },
+    "drafting/prompts/proposal.py": {
+      "source": "src/prompts/proposal.py",
+      "sha256": "546fa70226ce98493463bf0d03b8bb4164b656ad9095c3ba0d6540f994572380"
+    },
+    "drafting/prompts/research.py": {
+      "source": "src/prompts/research.py",
+      "sha256": "19adcd24d1a6cc5493dbec44bc5787d88562afec85498d455ff271829b057020"
+    },
+    "drafting/prompts/write.py": {
+      "source": "src/prompts/write.py",
+      "sha256": "662110012de629ebbcd1250a38fae1aa290848c5ea51e8bc783cdfdbded1e0dd"
+    },
+    "drafting/prompts/edit.py": {
+      "source": "src/prompts/edit.py",
+      "sha256": "1976c3e22b7ea5343e46e7d1eb68d03bbbaab728d8fd991236ea8c0744ada796"
+    },
+    "drafting/prompts/review.py": {
+      "source": "src/prompts/review.py",
+      "sha256": "b30e0095f3ae739ef949c11544c7dffb5206fec3dc658ec7e24a9f340a7b271e"
+    },
+    "drafting/utils/misc.py": {
+      "source": "utils/misc.py",
+      "sha256": "33969bbc60d486ec8426ac6a4b8cd967217c898759606482e4d260c7957c5327"
+    },
+    "drafting/LICENSE": {
+      "source": "LICENSE",
+      "sha256": "d2b329a0489309c744fa9eb5b8d48631cc2c55a6f6852c67bef0fc1fb8647fdc"
+    },
+    "codex_client.py": {
+      "source": "codex_model.py",
+      "sha256": "e8fbdad103f751e2a16974e5fe4b2b4520e085c65132a277755d9200f3af8672"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+# Local environments and build products
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.DS_Store
+Thumbs.db
+
+# Credentials and local application configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+auth.json
+credentials.json
+*.pem
+*.key
+
+# Generated manuscripts, source uploads and raw model request/response traces
+runs/
+uploads/
+temp/
+call_cache/
+*.log
+*.jsonl
+*.lock
+
+# Personal editor settings
+.idea/
+.vscode/

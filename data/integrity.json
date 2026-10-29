@@ -1,0 +1,8 @@
+{
+  "schema": "proseledger-resources-1",
+  "files": {
+    "sources.json": "d37a0592353b0225ab08bb61cd85eb62dda62a5d3da8006a3500597b66428960",
+    "topic.txt": "e7efa074a59992f66102b39ab634a9f5d8b7d800eab10dfcf2738026429e3544",
+    "catalogs.json": "f7ccc8a2a84b1b29b3fd601420b65b46cea5819430abf7502323014d78c90880"
+  }
+}

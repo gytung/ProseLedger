@@ -1,0 +1,13 @@
+# Direct dependencies pinned to the recorded Python 3.12 application environment.
+langchain==0.3.23
+langchain-core==0.3.86
+langgraph==0.2.62
+streamlit==1.64.0
+pandas==3.0.6
+numpy==1.26.4
+pydantic==2.14.1
+tiktoken==0.7.0
+joblib==1.4.2
+tqdm==4.67.1
+pypdf==5.9.0
+reportlab==4.4.3

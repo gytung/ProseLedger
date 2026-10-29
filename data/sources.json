@@ -1,0 +1,182 @@
+[
+  {
+    "id": "S1",
+    "title": "Enabling Large Language Models to Generate Text with Citations",
+    "authors": [
+      "Tianyu Gao",
+      "Howard Yen",
+      "Jiatong Yu",
+      "Danqi Chen"
+    ],
+    "url": "https://aclanthology.org/2023.emnlp-main.398/",
+    "year": 2023,
+    "venue": "EMNLP 2023",
+    "content_kind": "original_abstract_and_excerpt",
+    "content": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nLarge language models (LLMs) have emerged as a widely-used tool for information seeking, but their generated outputs are prone to hallucination. In this work, our aim is to allow LLMs to generate text with citations, improving their factual correctness and verifiability. Existing work mainly relies on commercial search engines and human evaluation, making it challenging to reproduce and compare different modeling approaches. We propose ALCE, the first benchmark for Automatic LLMs’ Citation Evaluation. ALCE collects a diverse set of questions and retrieval corpora and requires building end-to-end systems to retrieve supporting evidence and generate answers with citations. We develop automatic metrics along three dimensions—fluency, correctness, and citation quality—and demonstrate their strong correlation with human judgements. Our experiments with state-of-the-art LLMs and novel prompting strategies show that current systems have considerable room for improvement—For example, on the ELI5 dataset, even the best models lack complete citation support 50% of the time. Our analyses further highlight promising future directions, including developing better retrievers, advancing long-context LLMs, and improving the ability to synthesize information from multiple sources.\n\nORIGINAL EXCERPT (PDF page 1; Section 1 Introduction, opening paragraph):\nLarge language models (LLMs; Brown et al., 2020; OpenAI, 2023) have gained increasing popularity as a tool for information seeking. While they generate engaging and coherent responses, their outputs are prone to hallucination and often contain factually incorrect information (Ji et al., 2023). This makes it harder for users to trust and verify LLM-generated outputs without any supporting evidence.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+    "anthology_id": "2023.emnlp-main.398",
+    "pdf_url": "https://aclanthology.org/2023.emnlp-main.398.pdf",
+    "local_pdf": "data/papers/2023.emnlp-main.398.pdf",
+    "pdf_sha256": "ae9868f07f0f7ffaae5346778f79b7827d9ec6b13b1e6aae4dff6b2ffc37a2e1",
+    "retrieved_on": "2026-10-04",
+    "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+    "excerpts": [
+      {
+        "text": "Large language models (LLMs; Brown et al., 2020; OpenAI, 2023) have gained increasing popularity as a tool for information seeking. While they generate engaging and coherent responses, their outputs are prone to hallucination and often contain factually incorrect information (Ji et al., 2023). This makes it harder for users to trust and verify LLM-generated outputs without any supporting evidence.",
+        "pdf_page": 1,
+        "printed_page": 6465,
+        "section": "Section 1 Introduction, opening paragraph"
+      }
+    ],
+    "citation_key": "S1",
+    "num": 1
+  },
+  {
+    "id": "S2",
+    "title": "Attribute First, then Generate: Locally-attributable Grounded Text Generation",
+    "authors": [
+      "Aviv Slobodkin",
+      "Eran Hirsch",
+      "Arie Cattan",
+      "Tal Schuster",
+      "Ido Dagan"
+    ],
+    "url": "https://aclanthology.org/2024.acl-long.182/",
+    "year": 2024,
+    "venue": "ACL 2024 (Long Papers)",
+    "content_kind": "original_abstract_and_excerpt",
+    "content": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nRecent efforts to address hallucinations in Large Language Models (LLMs) have focused on attributed text generation, which supplements generated texts with citations of supporting sources for post-generation fact-checking and corrections. Yet, these citations often point to entire documents or paragraphs, burdening users with extensive verification work. In this paper, we introduce a locally-attributable text generation approach, prioritizing concise attributions. Our method, named “Attribute First, then Generate“, breaks down the conventional end-to-end generation process into three intuitive steps: content selection, sentence planning, and sequential sentence generation. By initially identifying relevant source segments (“select first“) and then conditioning the generation process on them (“then generate“), we ensure these segments also act as the output’s fine-grained attributions (“select“ becomes “attribute“). Tested on Multi-document Summarization and Long-form Question-answering, our method not only yields more concise citations than the baselines but also maintains - and in some cases enhances - both generation quality and attribution accuracy. Furthermore, it significantly reduces the time required for fact verification by human assessors.\n\nORIGINAL EXCERPT (PDF page 3; Section 3.1 Attribute First, then Generate, opening paragraph):\nTo reliably achieve the desirable fine-grained attribution, we introduce the Attribute First, then Generate paradigm, outlined in Fig. 2. This method is structured around three key steps, mirroring the inherent decision-making processes involved in text generation: content selection, sentence-planning, and sentence-by-sentence generation. Though applicable to any grounded text generation task, we specifically test its application in Multi-document Summarization (MDS) and Long-form Question-answering (LFQA), adapting only the content selection step to each task’s unique requirements.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+    "anthology_id": "2024.acl-long.182",
+    "pdf_url": "https://aclanthology.org/2024.acl-long.182.pdf",
+    "local_pdf": "data/papers/2024.acl-long.182.pdf",
+    "pdf_sha256": "002048ec1e28b95a183d6f5d6aee0427cc05721e588cce5a12b14e380ea8085b",
+    "retrieved_on": "2026-10-04",
+    "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+    "excerpts": [
+      {
+        "text": "To reliably achieve the desirable fine-grained attribution, we introduce the Attribute First, then Generate paradigm, outlined in Fig. 2. This method is structured around three key steps, mirroring the inherent decision-making processes involved in text generation: content selection, sentence-planning, and sentence-by-sentence generation. Though applicable to any grounded text generation task, we specifically test its application in Multi-document Summarization (MDS) and Long-form Question-answering (LFQA), adapting only the content selection step to each task’s unique requirements.",
+        "pdf_page": 3,
+        "printed_page": 3311,
+        "section": "Section 3.1 Attribute First, then Generate, opening paragraph"
+      }
+    ],
+    "citation_key": "S2",
+    "num": 2
+  },
+  {
+    "id": "S3",
+    "title": "Towards Automated Document Revision: Grammatical Error Correction, Fluency Edits, and Beyond",
+    "authors": [
+      "Masato Mita",
+      "Keisuke Sakaguchi",
+      "Masato Hagiwara",
+      "Tomoya Mizumoto",
+      "Jun Suzuki",
+      "Kentaro Inui"
+    ],
+    "url": "https://aclanthology.org/2024.bea-1.21/",
+    "year": 2024,
+    "venue": "BEA 2024",
+    "content_kind": "original_abstract_and_excerpt",
+    "content": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nNatural language processing (NLP) technology has rapidly improved automated grammatical error correction (GEC) tasks, and the GEC community has begun to explore document-level revision. However, there are two major obstacles to going beyond automated sentence-level GEC to NLP-based document-level revision support: (1) there are few public corpora with document-level revisions annotated by professional editors, and (2) it is infeasible to obtain all possible references and evaluate revision quality using such references because there are infinite revision possibilities. To address these challenges, this paper proposes a new document revision corpus, Text Revision of ACL papers (TETRA), in which multiple professional editors have revised academic papers sampled from the ACL anthology. This corpus enables us to focus on document-level and paragraph-level edits, such as edits related to coherence and consistency. Additionally, as a case study using the TETRA corpus, we investigate reference-less and interpretable methods for meta-evaluation to detect quality improvements according to document revisions. We show the uniqueness of TETRA compared with existing document revision corpora and demonstrate that a fine-tuned pre-trained language model can discriminate the quality of documents after revision even when the difference is subtle.\n\nORIGINAL EXCERPT (PDF page 1; Section 1 Introduction, opening paragraph):\nDocument revision is a crucial step in the process of writing essays and argumentative texts. The writing process consists of two major parts: content organization and selection planning (henceforth, planning part) and realization of text improvement (henceforth, realization part), which are hierarchical and recursive. In addition, according to previous studies on argumentative writing (Flower and Hayes, 1981; Beason, 1993; Buchman et al., 2000; Seow, 2002; Allal et al., 2004), realization part in writing process typically comprises three main stages: Revising, Editing, and Proofreading. Revising is the initial editing step used to plan and structure the overall document at a high level, Editing focuses on making sentence-level or phrase-level expressions, and Proofreading is used to identify and correct errors such as spelling and grammar errors (see Figure 1, left). While the order of these steps is not set in stone, the writing process typically starts with a broad, high-level perspective, and gradually narrows down the scope of edits.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+    "anthology_id": "2024.bea-1.21",
+    "pdf_url": "https://aclanthology.org/2024.bea-1.21.pdf",
+    "local_pdf": "data/papers/2024.bea-1.21.pdf",
+    "pdf_sha256": "cc17f528b3c540b8ace901ef22069238b32882e3464ed088d7b2dfdb13093518",
+    "retrieved_on": "2026-10-04",
+    "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+    "excerpts": [
+      {
+        "text": "Document revision is a crucial step in the process of writing essays and argumentative texts. The writing process consists of two major parts: content organization and selection planning (henceforth, planning part) and realization of text improvement (henceforth, realization part), which are hierarchical and recursive. In addition, according to previous studies on argumentative writing (Flower and Hayes, 1981; Beason, 1993; Buchman et al., 2000; Seow, 2002; Allal et al., 2004), realization part in writing process typically comprises three main stages: Revising, Editing, and Proofreading. Revising is the initial editing step used to plan and structure the overall document at a high level, Editing focuses on making sentence-level or phrase-level expressions, and Proofreading is used to identify and correct errors such as spelling and grammar errors (see Figure 1, left). While the order of these steps is not set in stone, the writing process typically starts with a broad, high-level perspective, and gradually narrows down the scope of edits.",
+        "pdf_page": 1,
+        "printed_page": 251,
+        "section": "Section 1 Introduction, opening paragraph"
+      }
+    ],
+    "citation_key": "S3",
+    "num": 3
+  },
+  {
+    "id": "S4",
+    "title": "Identifying Reliable Evaluation Metrics for Scientific Text Revision",
+    "authors": [
+      "Léane Jourdan",
+      "Florian Boudin",
+      "Nicolas Hernandez",
+      "Richard Dufour"
+    ],
+    "url": "https://aclanthology.org/2025.acl-long.335/",
+    "year": 2025,
+    "venue": "ACL 2025 (Long Papers)",
+    "content_kind": "original_abstract_and_excerpt",
+    "content": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nEvaluating text revision in scientific writing remains a challenge, as traditional metrics such as ROUGE and BERTScore primarily focus on similarity rather than capturing meaningful improvements. In this work, we analyse and identify the limitations of these metrics and explore alternative evaluation methods that better align with human judgments. We first conduct a manual annotation study to assess the quality of different revisions. Then, we investigate reference-free evaluation metrics from related NLP domains. Additionally, we examine LLM-as-a-judge approaches, analysing their ability to assess revisions with and without a gold reference. Our results show that LLMs effectively assess instruction-following but struggle with correctness, while domain-specific metrics provide complementary insights. We find that a hybrid approach combining LLM-as-a-judge evaluation and task-specific metrics offers the most reliable assessment of revision.\n\nORIGINAL EXCERPT (PDF page 1; Section 1 Introduction, opening paragraph):\nEffective revision is a critical step in scientific writing, ensuring clarity, coherence, and adherence to academic standards. The writing process typically consists of four stages: 1) Prewriting, 2) Drafting, 3) Revising, and 4) Editing (Jourdan et al., 2023). The revision stage involves substantial modifications to improve readability, style, and formality (Du et al., 2022; Li et al., 2022). This step is particularly critical, as poor writing quality can obscure research findings and often contributes to paper rejection (Amano et al., 2023). As illustrated in Figure 1, the revision task takes an original paragraph and an instruction specifying the required modification as input. The expected output is a revised paragraph that aligns with the given instruction.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+    "anthology_id": "2025.acl-long.335",
+    "pdf_url": "https://aclanthology.org/2025.acl-long.335.pdf",
+    "local_pdf": "data/papers/2025.acl-long.335.pdf",
+    "pdf_sha256": "115bd2574ce743e4beb8511d15ae55051a4aa11df282edf51d2980e442660fe7",
+    "retrieved_on": "2026-10-04",
+    "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+    "excerpts": [
+      {
+        "text": "Effective revision is a critical step in scientific writing, ensuring clarity, coherence, and adherence to academic standards. The writing process typically consists of four stages: 1) Prewriting, 2) Drafting, 3) Revising, and 4) Editing (Jourdan et al., 2023). The revision stage involves substantial modifications to improve readability, style, and formality (Du et al., 2022; Li et al., 2022). This step is particularly critical, as poor writing quality can obscure research findings and often contributes to paper rejection (Amano et al., 2023). As illustrated in Figure 1, the revision task takes an original paragraph and an instruction specifying the required modification as input. The expected output is a revised paragraph that aligns with the given instruction.",
+        "pdf_page": 1,
+        "printed_page": 6731,
+        "section": "Section 1 Introduction, opening paragraph"
+      }
+    ],
+    "metadata_note": "PDF fetched from the current official URL (v2 listed by Anthology) orders authors as Léane Jourdan, Florian Boudin, Nicolas Hernandez, Richard Dufour; Anthology metadata lists Leane Jourdan, Nicolas Hernandez, Florian Boudin, Richard Dufour. The authors field here follows the PDF title page. The official metadata abstract ends in “revision”; the PDF ends in “revision quality”. Content retains the official metadata abstract verbatim.",
+    "citation_key": "S4",
+    "num": 4
+  },
+  {
+    "id": "S5",
+    "title": "Knowledge-Centric Hallucination Detection",
+    "authors": [
+      "Xiangkun Hu",
+      "Dongyu Ru",
+      "Lin Qiu",
+      "Qipeng Guo",
+      "Tianhang Zhang",
+      "Yang Xu",
+      "Yun Luo",
+      "Pengfei Liu",
+      "Yue Zhang",
+      "Zheng Zhang"
+    ],
+    "url": "https://aclanthology.org/2024.emnlp-main.395/",
+    "year": 2024,
+    "venue": "EMNLP 2024",
+    "content_kind": "original_abstract_and_excerpt",
+    "content": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nLarge Language Models (LLMs) have shown impressive capabilities but also a concerning tendency to hallucinate. This paper presents RefChecker, a framework that introduces claim-triplets to represent claims in LLM responses, aiming to detect fine-grained hallucinations. In RefChecker, an extractor generates claim-triplets from a response, which are then evaluated by a checker against a reference. We delineate three task settings: Zero, Noisy and Accurate Context, to reflect various real-world use cases. We curated a benchmark spanning various NLP tasks and annotated 11k claim-triplets from 2.1k responses by seven LLMs. RefChecker supports both proprietary and open-source models as the extractor and checker. Experiments demonstrate that claim-triplets enable superior hallucination detection, compared to other granularities such as response, sentence and sub-sentence level claims. RefChecker outperforms prior methods by 18.2 to 27.2 points on our benchmark and the checking results of RefChecker are strongly aligned with human judgments.\n\nORIGINAL EXCERPT (PDF page 2; Figure 2 caption (framework description)):\nThe REFCHECKER framework comprises two main components: an extractor denoted as E and a checker denoted as C. Given a text to be checked, typically a response generated by an LLM, the extractor takes it as input and generates a set of knowledge triplets, referred to as claim-triplets. Subsequently, the checker assesses each claim-triplet by comparing it against a reference, assigning a hallucination label based on the evaluation.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://aclanthology.org/faq/copyright/",
+    "anthology_id": "2024.emnlp-main.395",
+    "pdf_url": "https://aclanthology.org/2024.emnlp-main.395.pdf",
+    "local_pdf": "data/papers/2024.emnlp-main.395.pdf",
+    "pdf_sha256": "0aa0637a8a1aabbeaf2bf8172285cd0854661fdebcf6135bfc6271d75a59651b",
+    "retrieved_on": "2026-10-04",
+    "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+    "excerpts": [
+      {
+        "text": "The REFCHECKER framework comprises two main components: an extractor denoted as E and a checker denoted as C. Given a text to be checked, typically a response generated by an LLM, the extractor takes it as input and generates a set of knowledge triplets, referred to as claim-triplets. Subsequently, the checker assesses each claim-triplet by comparing it against a reference, assigning a hallucination label based on the evaluation.",
+        "pdf_page": 2,
+        "printed_page": 6954,
+        "section": "Figure 2 caption (framework description)"
+      }
+    ],
+    "citation_key": "S5",
+    "num": 5
+  }
+]

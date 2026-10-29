@@ -1,0 +1,8 @@
+﻿Case,Theme,Initial,Targeted,Planner-only,Memory,Memory vs Targeted
+01,Research handoffs,10.5,9.1,9.1,9.1,Tie
+02,Citation renumbering,9.1,6.3,6.3,7.0,Loss
+03,Ablation rationales,8.4,5.6,6.3,6.3,Loss
+04,Resource comparisons,7.0,7.0,7.0,7.0,Tie
+05,Negative evidence,7.0,7.0,7.0,7.0,Tie
+06,Terminology alignment,8.4,6.3,6.3,6.3,Tie
+Mean,,8.4000,6.8833,7.0000,7.1167,0 wins / 4 ties / 2 losses
