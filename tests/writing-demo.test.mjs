@@ -54,8 +54,8 @@ from pathlib import Path
 spec=importlib.util.spec_from_file_location('builder','scripts/build_writing_demo.py')
 builder=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(builder)
-data=json.loads(Path('docs/natural-writing-evidence.json').read_text())
-report=json.loads(Path('docs/validation/gptzero-observations.json').read_text())
+data=json.loads(Path('docs/natural-writing-evidence.json').read_text(encoding='utf-8'))
+report=json.loads(Path('docs/validation/gptzero-observations.json').read_text(encoding='utf-8'))
 assert builder.bind_external_validation(data,report)['runs']==data['runs']
 assert 'externalValidation' not in data
 for bad in ('hash','run','duplicate'):

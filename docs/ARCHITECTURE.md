@@ -16,7 +16,7 @@ ProseLedger contains a current browser writing application and a preserved Pytho
 
 ## Current browser application
 
-[Open the live editor](https://gytung.github.io/ProseLedger/create.html?v=20261030e) or the [saved language-edit walkthrough](https://gytung.github.io/ProseLedger/writing-demo.html?v=20261030e). The latter makes no model calls.
+[Open the live editor](https://gytung.github.io/ProseLedger/create.html?v=20261030f) or the [saved language-edit walkthrough](https://gytung.github.io/ProseLedger/writing-demo.html?v=20261030f). The latter makes no model calls.
 
 ### Control flow
 
@@ -72,7 +72,7 @@ GitHub Pages serves static code and public inputs; it does not relay model calls
 
 The GPTZero connector sends a selected manuscript directly to the fixed official endpoint only after the visitor supplies a separate GPTZero API key and consents. It records human/mixed/AI class probabilities, available confidence information, a timestamp, and the exact text's SHA-256 fingerprint. These estimates are not naturalness scores or percentages of AI-written sentences.
 
-Detector observations never enter the writer, score, paired review, retention decision or memory admission. The connector has contract tests with simulated responses, and a public browser-access preflight has been checked. An authenticated scan is still pending; neither mock tests nor preflight establish end-to-end account access. Blinded human assessment remains a separate evaluation rather than a feature this connector replaces.
+Detector observations never enter the writer, score, paired review, retention decision or memory admission. Four authenticated browser scans completed for the main recorded run: the initial draft and all three retained outputs were classified as AI with probability 1.0 and high confidence. The detector did not distinguish the four texts. The recorded viewer validates manuscript hashes before attaching these observations. The live panel refreshes after generation or imports and labels observations from previous runs or earlier text versions; it never transfers an old observation to a new manuscript. Blinded human assessment remains a separate evaluation rather than a feature this connector replaces.
 
 ## Archived Python application and six-case protocol
 
