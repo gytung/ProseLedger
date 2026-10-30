@@ -1,15 +1,15 @@
-import { PRESETS, providerEndpoint, createModelClient } from './api-client.js?v=20261030e';
-import { runProposal } from './browser-engine.js?v=20261030e';
-import { createCheckpoint, restoreCheckpoint, CHECKPOINT_MAX_BYTES } from './run-checkpoint.js?v=20261030e';
+import { PRESETS, providerEndpoint, createModelClient } from './api-client.js?v=20261030f';
+import { runProposal } from './browser-engine.js?v=20261030f';
+import { createCheckpoint, restoreCheckpoint, CHECKPOINT_MAX_BYTES } from './run-checkpoint.js?v=20261030f';
 
-import { NATURALNESS_RULES } from './naturalness-rules.js?v=20261030e';
-import { mountExternalValidation } from './external-validation.js?v=20261030e';
+import { NATURALNESS_RULES } from './naturalness-rules.js?v=20261030f';
+import { mountExternalValidation } from './external-validation.js?v=20261030f';
 
 const $ = id => document.getElementById(id);
 const names = {initial:'Initial draft',targeted:'Targeted',planner:'Planner-only',memory:'Memory'};
 const methods = ['targeted','planner','memory'];
 const colors = {targeted:'#6c98af',planner:'#7e9874',memory:'#9b76ba'};
-let defaults,result,client,controller,ticker,started,session;
+let defaults,result,client,controller,ticker,started,session,externalValidation;
 let selected='initial', selectedRound='final', running=false, generating=false;
 let importedRun=false,pendingComparison=false;
 let usage=[],events=[],statuses=new Map(),logicalDone=new Set(),cacheHits=0,attempts=0;
@@ -90,7 +90,7 @@ function busy(value) {
   for(const id of ['provider-preset','api-base','api-model','api-key','topic','input-mode','supplied-draft','source-notes','source-upload','reset-inputs','generation-mode','consent','generate','test-connection','restore-run'])$(id).disabled=value;
   $('cancel').disabled=!value;$('resume').disabled=value;$('resume').hidden=!canResume();
   $('resume-hint').textContent=canResume()?'Unfinished run saved in this tab. Re-enter the original provider/model key and resume, or save a checkpoint before closing. Starting a new run replaces this workspace.':'Nothing is submitted until you start or test. Save a checkpoint before closing to keep the complete record.';
-  updateReadiness();
+  updateReadiness();externalValidation?.refresh();
 }
 function metrics() {
   $('call-count').textContent=String(usage.length);$('attempt-count').textContent=String(attempts);
@@ -252,6 +252,7 @@ function drawChart(branches) {
   Object.entries(branches).forEach(([method,branch],i)=>{const rows=branch.rounds.filter(r=>Number.isFinite(r.retainedScore));add('path',{d:rows.map((r,k)=>`${k?'L':'M'}${x(r.round)},${y(r.retainedScore)}`).join(' '),fill:'none',stroke:colors[method],'stroke-width':2.5,'stroke-dasharray':i===1?'7 4':i===2?'2 4':'none'});for(const r of rows){const circle=add('circle',{cx:x(r.round),cy:y(r.retainedScore),r:5-i,fill:'white',stroke:colors[method],'stroke-width':2});const title=document.createElementNS(ns,'title');title.textContent=`${names[method]} R${r.round}: ${score(r.retainedScore)}`;circle.append(title);}add('text',{x:45+i*180,y:20,class:`legend-${method}`,'font-weight':'bold'},names[method]);});return svg;
 }
 function displayResults() {
+  externalValidation?.refresh();
   if(!result)return;const branches=result.branches||{},failures=failedCount();$('results-panel').hidden=false;
   const draftOnly=session?.snapshot.mode==='draft',done=result.status==='completed';
   $('result-origin').textContent=importedRun?'Imported run record':'Your fresh result';
@@ -377,5 +378,5 @@ $('copy-manuscript').addEventListener('click',async()=>{if(!result?.initialText)
 $('download-json').addEventListener('click',()=>{if(result&&session)download('proseledger_run.json',JSON.stringify({result,metadata:{...session.snapshot,sources:undefined,sourceCatalogSHA256:session.snapshot.sourceCatalogSHA256,startedAt:session.createdAt,protocol:result.schema},inputProvenance:session.snapshot.sources,usage:session.usage,events:generating?[...session.events,...events]:session.events,attempts:session.attempts,rawModelResponses:session.responses},null,2),'application/json');});
 $('download-csv').addEventListener('click',()=>{if(!result)return;const rows=[['Branch','Round','Candidate score','Retained score','Accepted','Pairwise verdict','Route','Outcome','Card IDs','Exact text changed']];for(const[name,b]of Object.entries(result.branches||{}))for(const r of b.rounds)rows.push([names[name],r.round,r.candidateScore??'',r.retainedScore,r.accepted??'',r.pairwise??'',r.route??'initial',r.outcome??'',(r.cardIds||[]).join('; '),r.changed??false]);if(rows.length===1)rows.push(['Initial',0,result.initialScore??'',result.initialScore??'','','','initial','initial','',false]);download('proseledger_round_scores.csv',rows.map(row=>row.map(x=>`"${String(x).replaceAll('"','""')}"`).join(',')).join('\r\n'),'text/csv');});
 window.addEventListener('pagehide',()=>{controller?.abort();clearSecret();});window.addEventListener('beforeunload',e=>{if(running){e.preventDefault();e.returnValue='';}});
-async function initialize() { $('generate').disabled=true;$('test-connection').disabled=true;$('restore-run').disabled=true;try{const response=await fetch('./live-inputs.json',{credentials:'omit',cache:'no-store'});if(!response.ok)throw new Error();defaults=await response.json();$('provider-preset').value='openai';$('api-base').value=PRESETS.openai.base;$('api-model').value=PRESETS.openai.model;changeConnection();loadExample();renderRuleLibrary();mountExternalValidation($('external-validation-panel'),{getDocuments:()=>result?.initialText?[{id:'initial',label:'Initial draft',text:result.initialText},...Object.entries(result.branches||{}).map(([id,b])=>({id,label:names[id],text:b.text}))]:[],isBusy:()=>running});$('generate').disabled=false;$('test-connection').disabled=false;$('restore-run').disabled=false;$('resume').hidden=true;updateReadiness();}catch{showError('The source bundle did not load. Reload this HTTPS page before starting.');}}
+async function initialize() { $('generate').disabled=true;$('test-connection').disabled=true;$('restore-run').disabled=true;try{const response=await fetch('./live-inputs.json',{credentials:'omit',cache:'no-store'});if(!response.ok)throw new Error();defaults=await response.json();$('provider-preset').value='openai';$('api-base').value=PRESETS.openai.base;$('api-model').value=PRESETS.openai.model;changeConnection();loadExample();renderRuleLibrary();externalValidation=mountExternalValidation($('external-validation-panel'),{getDocuments:()=>result?.initialText?[{id:'initial',label:'Initial draft',text:result.initialText},...Object.entries(result.branches||{}).map(([id,b])=>({id,label:names[id],text:b.text}))]:[],getRunId:()=>session?.createdAt||result?.startedAt||'',isBusy:()=>running});$('generate').disabled=false;$('test-connection').disabled=false;$('restore-run').disabled=false;$('resume').hidden=true;updateReadiness();}catch{showError('The source bundle did not load. Reload this HTTPS page before starting.');}}
 initialize();

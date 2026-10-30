@@ -22,7 +22,7 @@ class NodeDouble {
 }
 async function waitFor(fn,label){for(let i=0;i<400;i++){if(fn())return;await new Promise(r=>setTimeout(r,2));}throw new Error('UI did not settle: '+label);}
 async function harness({invalidAuditOnce=false,identical=false,failedMemory=false,tiedMemory=false,uncardedThenRejected=false,scoreValue=1}={}) {
- const nodes=new Map(),downloads=[],requests=[],blobs=new Map(),clipboard=[];let invalid=invalidAuditOnce;
+ const nodes=new Map(),downloads=[],requests=[],blobs=new Map(),clipboard=[],detectorRefreshes=[];let invalid=invalidAuditOnce;
  const get=id=>{if(!nodes.has(id))nodes.set(id,new NodeDouble());return nodes.get(id);};
  const document={getElementById:get,createElement:tag=>new NodeDouble(tag),createElementNS:(_ns,tag)=>new NodeDouble(tag),body:new NodeDouble('body')};
  const create=document.createElement;document.createElement=tag=>{const n=create(tag);if(tag==='a')n.click=()=>downloads.push({name:n.download,blob:blobs.get(n.href)});return n;};
@@ -51,7 +51,7 @@ async function harness({invalidAuditOnce=false,identical=false,failedMemory=fals
      }
    }return out;
  };
- const context=vm.createContext({document,window:{addEventListener(){},confirm:()=>true},navigator:{clipboard:{writeText:async value=>{clipboard.push(value);}}},Map,TextEncoder,URL:URLDouble,Blob,AbortController,DOMException,structuredClone,performance,Date,console,fetch:fetchMock,NATURALNESS_RULES:naturalness.NATURALNESS_RULES,mountExternalValidation(){},createCheckpoint:checkpoint.createCheckpoint,restoreCheckpoint:checkpoint.restoreCheckpoint,CHECKPOINT_MAX_BYTES:checkpoint.CHECKPOINT_MAX_BYTES,PRESETS:api.PRESETS,providerEndpoint:api.providerEndpoint,createModelClient:(config,options)=>api.createModelClient(config,{...options,fetchImpl:fetchMock}),runProposal:fixtureEngine,setInterval:()=>0,clearInterval(){},setTimeout:()=>0});
+ const context=vm.createContext({document,window:{addEventListener(){},confirm:()=>true},navigator:{clipboard:{writeText:async value=>{clipboard.push(value);}}},Map,TextEncoder,URL:URLDouble,Blob,AbortController,DOMException,structuredClone,performance,Date,console,fetch:fetchMock,NATURALNESS_RULES:naturalness.NATURALNESS_RULES,mountExternalValidation(_panel,options){const refresh=()=>detectorRefreshes.push({busy:options.isBusy(),runId:options.getRunId(),documents:structuredClone(options.getDocuments())});refresh();return {refresh};},createCheckpoint:checkpoint.createCheckpoint,restoreCheckpoint:checkpoint.restoreCheckpoint,CHECKPOINT_MAX_BYTES:checkpoint.CHECKPOINT_MAX_BYTES,PRESETS:api.PRESETS,providerEndpoint:api.providerEndpoint,createModelClient:(config,options)=>api.createModelClient(config,{...options,fetchImpl:fetchMock}),runProposal:fixtureEngine,setInterval:()=>0,clearInterval(){},setTimeout:()=>0});
  vm.runInContext(app,context,{filename:'create-app.js'});await waitFor(()=>!get('generate').disabled,'defaults');
  const credentials=(mode='compare')=>{get('api-key').value='visitor-key-for-tests';get('consent').checked=true;get('generation-mode').value=mode;};
  const generate=async()=>{get('generation-form').dispatch('submit');await waitFor(()=>!get('generate').disabled,'completion');};
@@ -59,7 +59,7 @@ async function harness({invalidAuditOnce=false,identical=false,failedMemory=fals
  const jsonExport=async()=>{get('download-json').click();return JSON.parse(await downloads.at(-1).blob.text());};
  const checkpointExport=async()=>{get('download-checkpoint').click();assert.equal(downloads.at(-1)?.name,'proseledger_checkpoint.json',get('error-message').textContent);return JSON.parse(await downloads.at(-1).blob.text());};
  const importCheckpoint=async value=>{const data=JSON.stringify(value);get('restore-run').files=[{name:'saved.json',size:Buffer.byteLength(data),text:async()=>data}];get('restore-run').value='saved.json';get('restore-run').dispatch('change');await waitFor(()=>get('restore-run').value==='','checkpoint import');};
- return{get,downloads,requests,clipboard,credentials,generate,resume,jsonExport,checkpointExport,importCheckpoint};
+ return{get,downloads,requests,clipboard,detectorRefreshes,credentials,generate,resume,jsonExport,checkpointExport,importCheckpoint};
 }
 test('full comparison shows actual edits even when every score is tied',async()=>{
  const h=await harness();h.credentials();await h.generate();assert.equal(h.requests.length,14);assert.equal(h.get('status-title').textContent,'Generation completed');assert.equal(h.get('api-key').value,'');assert.equal(h.get('call-count').textContent,'14');assert.equal(h.get('attempt-count').textContent,'14');assert.equal(h.get('token-count').textContent,'140');assert.equal(h.get('branch-summary').children.length,3);assert.match(h.get('comparison-summary').textContent,/three retained texts are different/);assert.match(h.get('manuscript').textContent,/Experience applies only/);assert.match(h.get('candidate-state').textContent,/paragraph\(s\) changed/);assert.match(h.get('memory-log').textContent,/conditional_edit/);
@@ -164,4 +164,13 @@ test('invalid supplied drafts are rejected before a paid call',async()=>{
 test('legacy checkpoints remain viewable without a key but cannot resume under the new rules',async()=>{
  const h=await harness();h.credentials('draft');await h.generate();const saved=await h.checkpointExport();saved.engineContract='proseledger-browser-2-20261030d';saved.result.schema='proseledger-browser-2';saved.result.status='incomplete';
  const next=await harness();await next.importCheckpoint(saved);assert.equal(next.requests.length,0);assert.match(next.get('run-result-summary').textContent,/legacy record: view-only/);assert.match(next.get('run-result-summary').textContent,/Start a new run/);assert.match(next.get('run-result-summary').textContent,/record is incomplete/);assert.equal(/Re-enter your key|Resume after|Compare three routes/.test(next.get('run-result-summary').textContent),false);assert.equal(next.get('results-heading').textContent,'Inspect this saved record.');assert.equal(next.get('resume').hidden,true);assert.equal(next.get('compare-draft').hidden,true);assert.equal(next.get('api-key').value,'');assert.match(next.get('manuscript').textContent,/Conditional Revision/);
+});
+
+
+test('external validation receives fresh document and busy state after generation and checkpoint import',async()=>{
+ const h=await harness();assert.equal(h.detectorRefreshes.at(-1).documents.length,0);h.credentials();await h.generate();
+ const latest=h.detectorRefreshes.at(-1);assert.equal(latest.busy,false);assert.equal(latest.documents.length,4);assert.equal(latest.documents.find(doc=>doc.id==='memory').text,revised.memory);assert.ok(latest.runId);
+ assert.ok(h.detectorRefreshes.some(item=>item.busy===true));
+ const saved=await h.checkpointExport(),next=await harness();await next.importCheckpoint(saved);
+ const restored=next.detectorRefreshes.at(-1);assert.equal(restored.busy,false);assert.equal(restored.runId,latest.runId);assert.equal(restored.documents.length,4);assert.equal(restored.documents.find(doc=>doc.id==='memory').text,revised.memory);assert.equal(next.requests.length,0);
 });

@@ -1,6 +1,6 @@
 # Natural-writing workflow: execution checks and limits
 
-Release: `20261030e`; browser protocol: `proseledger-browser-3`.
+Release: `20261030f`; browser protocol: `proseledger-browser-3`.
 
 The change makes editorial decisions explicit and inspectable. It does **not** establish that explicit rules or Memory improve writing quality on average. Every completed comparison is reported below, including the standard-instruction control.
 
@@ -50,16 +50,29 @@ A preceding development run, `natural-fresh`, generated the shared initial draft
 
 The optional connector sends only the selected manuscript, after explicit consent, directly to GPTZero using the visitor's separate GPTZero API key. It records the returned classification, confidence, timestamp and a hash of the scanned text. It neither changes scores nor controls generation, retention or memory admission. A lower detector score is not evidence of better prose.
 
-The connector passed mocked success/error/cancellation tests. The unauthenticated browser preflight to the official endpoint returned HTTP 204 with the required origin and headers allowed. **No authenticated GPTZero scan was run; no detector results are claimed.** Its API key and billing are separate from the generation provider. See [official API reference](https://docs.gptzero.me/api-reference/) and [quickstart](https://docs.gptzero.me/quickstart/).
+Four authenticated requests completed directly from the public browser application to the official GPTZero endpoint on 30 October 2026. The exact Markdown texts, including headings and citation markers, were submitted without detector-driven edits. All four returned detector version `2026-10-07-base`:
+
+| Main walkthrough text | Writing problem severity (0–20, lower is better) | Predicted class | AI class probability | Confidence |
+| --- | ---: | --- | ---: | --- |
+| Initial draft | 1.5 | AI | 100% | High |
+| Targeted retained output | 0 | AI | 100% | High |
+| Planner-only retained output | 1 | AI | 100% | High |
+| Memory retained output | 0 | AI | 100% | High |
+
+The API returned exactly 1.0 for the AI class probability, not a rounded approximation. These are four versions of one proposal, not four independent test topics. **No change was observed in the detector classification or probabilities.** This is not a human naturalness rating, the fraction of AI-written words, or a detector-accuracy study. The other recorded comparisons were not scanned and are explicitly marked untested in the walkthrough.
+
+[Raw observations](validation/gptzero-observations.json) preserve timestamps and SHA-256 hashes. The walkthrough builder verifies all four hashes against the recorded initial and retained manuscripts and fails on mismatches. The generation protocol, scores and acceptance decisions are unchanged. Live observations now retain run/text attribution through imports and edits; obsolete observations are labelled rather than reassigned to a new manuscript.
+
+Connector tests also cover success/error/cancellation, result refresh, consent reset and observation attribution. Its API key and billing are separate from the generation provider. See [official API reference](https://docs.gptzero.me/api-reference/) and [quickstart](https://docs.gptzero.me/quickstart/).
 
 The next quality study should randomize text order and hide branch labels. Readers should separately rate clarity, natural flow, appropriate academic tone and meaning preservation, then state a pairwise preference. Preserve ties and all outcomes. Compare explicit versus standard instructions on the same initial drafts, and Memory versus Planner-only to isolate historical examples. Detector observations should be reported separately. Earlier informal interviews do not count as this new controlled human evaluation.
 
 ## Inspect and reproduce
 
-- [Recorded walkthrough](writing-demo.html?v=20261030e): the same records used by the presentation.
+- [Recorded walkthrough](writing-demo.html?v=20261030f): the same records used by the presentation.
 - [Evidence JSON](natural-writing-evidence.json): full decisions, manuscripts, six rules, run metadata and source hashes.
 - [Raw execution archive](validation/natural-writing-checks.zip): all four inputs/results, model messages and responses, including reused-stage labels. Adapter usage includes runtime overhead and is not a browser API billing estimate.
-- [Live generator](create.html?v=20261030e): enter an API key and a model available to that API account. A ChatGPT subscription alone is not a browser API credential.
+- [Live generator](create.html?v=20261030f): enter an API key and a model available to that API account. A ChatGPT subscription alone is not a browser API credential.
 
 To isolate revision behavior, choose the existing-proposal mode and paste the exact initial text. Retain the same sources, model and settings. Live generations can differ even with identical inputs; use saved records for exact numerical inspection. Imported legacy protocol-2 runs are read-only and cannot resume under protocol 3.
 
@@ -72,4 +85,4 @@ python scripts/check_publication.py
 
 No model call or secret is required to inspect the recorded walkthrough or run the offline checks.
 
-Release checks: 118 JavaScript tests passed, covering transport, engine behavior, rule anchors, checkpoints, live UI, the optional detector connector and the timed walkthrough. The existing 84 Python tests passed. The publication audit confirmed that the complete older six-case batch and its 54 decisions remain unchanged. Browser inspection covered actual retained/rejected edits and a 390-pixel viewport.
+Release checks: 126 JavaScript tests passed, covering transport, engine behavior, rule anchors, checkpoints, live UI, the optional detector connector and the timed walkthrough. The existing 84 Python tests passed. The publication audit confirmed that the complete older six-case batch and its 54 decisions remain unchanged. Browser inspection covered actual retained/rejected edits and a 390-pixel viewport.

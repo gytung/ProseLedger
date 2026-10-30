@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {readFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
 const read=p=>readFile(new URL('../'+p,import.meta.url),'utf8');
 const html=await read('docs/writing-demo.html');
 const embedded=html.match(/<script id="evidence" type="application\/json">([\s\S]*?)<\/script>/)[1];
@@ -17,7 +18,7 @@ function mount(){const nodes=new Map([...html.matchAll(/id="([^"]+)"/g)].map(m=>
  vm.runInContext(app,context);return {get,network:()=>network,advance:s=>{now+=s*1000;[...timers.values()].forEach(fn=>fn());}};
 }
 test('walkthrough embeds the full evidence unchanged and has no model or external runtime call',async()=>{
- assert.deepEqual(data,JSON.parse(await read('docs/natural-writing-evidence.json')));assert.equal(html,(await read('scripts/writing-demo.template.html')).replace('__EVIDENCE__',embedded));
+ const {externalValidation,...generationEvidence}=data;assert.deepEqual(generationEvidence,JSON.parse(await read('docs/natural-writing-evidence.json')));assert.deepEqual(externalValidation['natural-release-explicit'],JSON.parse(await read('docs/validation/gptzero-observations.json')));assert.equal(html,(await read('scripts/writing-demo.template.html')).replace('__EVIDENCE__',embedded));
  assert.match(html,/Recorded real-model run/);const ui=mount();assert.equal(ui.network(),0);
 });
 test('displayed round scores and actual edits come from the selected record',()=>{
@@ -29,4 +30,42 @@ test('the 120-second tour reaches all five chapters and can restart without alte
 });
 test('all recorded accepted edits have actual changes and their rule quotes match exact text',()=>{
  for(const run of data.runs)for(const branch of Object.values(run.result.branches))for(const row of branch.rounds){if(row.accepted&&row.round>0){assert.equal(row.changed,true);assert.equal(row.guard.passed,true);assert.equal(row.audit.preservation.passed,true);assert.equal(row.pairwise,'better');}for(const edit of row.edits)for(const rule of edit.rules||[]){assert.ok(edit.before.includes(rule.beforeQuote));assert.ok(edit.after.includes(rule.afterQuote));assert.notEqual(rule.beforeQuote,rule.afterQuote);}}
+});
+
+test('detector observations are separate and bound only to their verified run',()=>{
+ const ui=mount(),original=ui.get('score-table').textContent;
+ assert.match(ui.get('detector-status').textContent,/4 authenticated API scans/);
+ const rows=ui.get('detector-table').children[0].children.slice(1);
+ assert.deepEqual(rows.map(row=>row.children.map(cell=>cell.textContent)),[
+  ['Initial draft','AI','100%','high'],['Targeted','AI','100%','high'],['Planner-only','AI','100%','high'],['Memory','AI','100%','high']]);
+ assert.match(ui.get('detector-conclusion').textContent,/No change/);
+ assert.match(ui.get('detector-conclusion').textContent,/not a naturalness/);
+ assert.match(ui.get('detector-metadata').textContent,/2026-10-07-base/);
+ for(const run of data.runs.filter(run=>run.id!=='natural-release-explicit')){
+  ui.get('run-select').value=run.id;ui.get('run-select').onchange();
+  assert.match(ui.get('detector-status').textContent,/Not tested/);assert.equal(ui.get('detector-table').children.length,0);assert.equal(ui.get('detector-details').hidden,true);
+ }
+ ui.get('run-select').value='natural-release-explicit';ui.get('run-select').onchange();
+ assert.equal(ui.get('score-table').textContent,original);assert.equal(ui.network(),0);
+});
+test('builder refuses detector evidence for altered manuscripts or wrong run',()=>{
+ const code=`import importlib.util,json,copy
+from pathlib import Path
+spec=importlib.util.spec_from_file_location('builder','scripts/build_writing_demo.py')
+builder=importlib.util.module_from_spec(spec)
+spec.loader.exec_module(builder)
+data=json.loads(Path('docs/natural-writing-evidence.json').read_text())
+report=json.loads(Path('docs/validation/gptzero-observations.json').read_text())
+assert builder.bind_external_validation(data,report)['runs']==data['runs']
+assert 'externalValidation' not in data
+for bad in ('hash','run','duplicate'):
+ altered=copy.deepcopy(report)
+ if bad=='hash': altered['observations'][0]['textSHA256']='0'*64
+ if bad=='run': altered['runId']='nonexistent-run'
+ if bad=='duplicate': altered['observations'][1]=copy.deepcopy(altered['observations'][0])
+ try: builder.bind_external_validation(data,altered)
+ except ValueError: pass
+ else: raise AssertionError('Invalid detector evidence was accepted: '+bad)
+print('verified')`;
+ assert.match(execFileSync('python3',['-c',code],{cwd:new URL('..',import.meta.url),encoding:'utf8'}),/verified/);
 });

@@ -4,13 +4,13 @@
 
 **DSS5105 Capstone · Group 18 · National University of Singapore**
 
-[Generate or revise in your browser](https://gytung.github.io/ProseLedger/create.html?v=20261030e) · [Language-edit walkthrough](https://gytung.github.io/ProseLedger/writing-demo.html?v=20261030e) · [Archived six-case scores](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md)
+[Generate or revise in your browser](https://gytung.github.io/ProseLedger/create.html?v=20261030f) · [Language-edit walkthrough](https://gytung.github.io/ProseLedger/writing-demo.html?v=20261030f) · [Archived six-case scores](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md)
 
 ProseLedger makes the editing operation visible: **identify a passage-level problem, apply a suitable rule, inspect the exact change, then check whether the candidate preserves meaning and improves expression**. The revision loop controls when to continue. The rules explain what the editor should change. Conditional memory provides historical examples only when their reuse conditions match the current passage.
 
 ## Current browser workflow
 
-Open the [browser application](https://gytung.github.io/ProseLedger/create.html?v=20261030e) with your own model API key. Generate a six-section research proposal from a topic and attributed source notes, or supply an existing proposal and revise that exact initial text. No local installation or GPU is needed; inference runs at the selected API provider.
+Open the [browser application](https://gytung.github.io/ProseLedger/create.html?v=20261030f) with your own model API key. Generate a six-section research proposal from a topic and attributed source notes, or supply an existing proposal and revise that exact initial text. No local installation or GPU is needed; inference runs at the selected API provider.
 
 The current browser protocol is **`proseledger-browser-3`**. It uses six shared editorial rules:
 
@@ -37,9 +37,9 @@ The browser uses five expression dimensions totaling **0–20 problem severity**
 
 Draft-only generation uses two model stages; reviewing a supplied draft uses one. Three-round comparison adds at most twelve stages. Transport retries can add HTTP attempts, and context lengths differ across routes. See the [browser guide](docs/BROWSER_DEMO.md) for keys, checkpoints, limitations, and recording instructions.
 
-The [language-edit walkthrough](https://gytung.github.io/ProseLedger/writing-demo.html?v=20261030e) presents a saved run and its actual before/after evidence without making model calls. Live generation remains available in the separate application. A saved walkthrough is not a new generation or a guarantee that another run will reproduce its numbers.
+The [language-edit walkthrough](https://gytung.github.io/ProseLedger/writing-demo.html?v=20261030f) presents a saved run and its actual before/after evidence without making model calls. Live generation remains available in the separate application. A saved walkthrough is not a new generation or a guarantee that another run will reproduce its numbers.
 
-An optional **GPTZero** panel records an external observation for selected text, with a separate GPTZero key and explicit consent. It does not feed the writer, decide retention, or admit memory. Connector tests and a public browser-access preflight are available; an authenticated detector scan is still pending. Human naturalness judgments remain separate from detector authorship estimates.
+An optional **GPTZero** panel records an external observation for selected text, with a separate GPTZero key and explicit consent. It does not feed the writer, decide retention, or admit memory. Four authenticated browser scans are recorded for the main walkthrough: the initial draft and all three retained outputs were classified as AI with probability 1.0 and high confidence. The detector did not distinguish these four texts. Each observation is bound to its exact manuscript hash; older observations are labelled when the run or text changes. Human naturalness judgments remain separate from detector authorship estimates.
 
 ## Archived Python evaluation
 
