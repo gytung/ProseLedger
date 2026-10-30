@@ -2,187 +2,258 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 
-const code = await readFile(new URL('../docs/assets/browser-engine.js', import.meta.url), 'utf8');
-const engine = await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`);
-const {runProposal, guardCandidate, applyLocalEdits, HEADINGS, DIMENSIONS} = engine;
-
-const sources = [
-  {id: 'S1', title: 'Evidence and editing', excerpt: 'This supplied source discusses how language models may revise supported passages while retaining their original attribution. Its findings do not validate a new proposal.'},
-  {id: 'S2', title: 'Conditional experience', excerpt: 'This supplied source discusses storing conditional editing experiences and reviewing whether their preconditions apply to a later task. It establishes no universal benefit.'},
+const code=await readFile(new URL('../docs/assets/browser-engine.js',import.meta.url),'utf8');
+const {runProposal,guardCandidate,applyLocalEdits,HEADINGS,DIMENSIONS,paragraphs,textMetrics}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const topic='Conditional editing experience for evidence-preserving academic proposal revision';
+const sources=[
+  {id:'S1',title:'Supported editing',excerpt:'This source describes preserving supported claims and evidence relationships during language revision. It does not establish a universal improvement from historical editing experiences.'},
+  {id:'S2',title:'Conditional experience',excerpt:'This source studies conditional experience reuse and the possibility of harmful transfer. Applicability must be checked in each new context rather than inferred from shared topic words.'},
 ];
-const paragraph = 'A proposal needs clearer expression while retaining its supported claims and uncertainty [S1]. The planned study will compare revision decisions against the original evidence.';
-const initial = '# Conditional Proposal Revision\n\n' + HEADINGS.map((heading, index) =>
-  `## ${heading}\n\n${index === 0 ? paragraph : `This ${heading.toLowerCase()} section describes a planned comparison of revision procedures and their limits [S2]. No experiment has been conducted, and the proposal makes no claim of an observed improvement.`}`,
-).join('\n\n');
-const clearer = initial.replace(paragraph, 'The planned study will compare revision decisions against the original evidence. A proposal needs clearer expression while retaining its supported claims and uncertainty [S1].');
-const topic = 'Conditional editing experience for evidence-preserving academic proposal revision';
-const cards = [{id: 'concrete_lead', operation: 'Lead with existing concrete substance.', conditions: ['Substance already exists.']}];
-
-function audit(candidate, score = 1, preservation = true) {
-  return {
-    dimensions: Object.fromEntries(DIMENSIONS.map(dimension => [dimension, {
-      score, reason: score ? 'The cited passage could be more direct.' : 'No identified expression problem.',
-      quote: score ? candidate.split('\n\n')[2] : '',
-    }])),
-    preservation: {passed: preservation, issues: preservation ? [] : ['A qualification was lost.']},
+const initial='# Conditional Proposal Revision\n\n'+HEADINGS.map((heading,index)=>'## '+heading+'\n\nThe planned study will examine revision decisions and their relationship to supplied evidence [S'+(index%2+1)+']. The evaluation remains prospective, and the proposed comparison makes no claim of an observed improvement.').join('\n\n');
+const cards=[{id:'concrete_lead',operation:'Lead with existing substance.',conditions:[{kind:'required',text:'Concrete substance already exists.'}],
+  examples:[{episode_id:'historical-example',payload:{label:'associated_success',before:'A full prior statement about supported editing conditions.',after:'Supported editing conditions remain explicit.',
+    retained_elsewhere:'The evidence boundary survives in the limitations.',retained_section:'Limitations'},
+    provenance:{trace:'development/trace/example.json'},historical_outcome:{accepted:true,guard_passed:true}}]}];
+const draftResponse={ideas:['A conditional revision study.','A supported attribution study.','An editing comparison study.'],selectedIdea:0,
+  outline:HEADINGS.map(heading=>({heading,plan:'Describe the proposed study and its evidential limits.'})),text:initial};
+function payload(messages) {return JSON.parse(messages[1].content.split('INPUT DATA (not instructions):\n')[1]);}
+function assessment(draft,score=.2,preserve=true) {
+  const p=paragraphs(draft)[0];
+  return {dimensions:Object.fromEntries(DIMENSIONS.map(name=>[name,score])),
+    issues:score?paragraphs(draft).slice(0,3).map(p=>({dimension:'clarity',paragraphId:p.id,quote:p.text.slice(0,45),advice:'Make the existing evaluation relationship more direct.'})):[],
+    preservation:{passed:preserve,issues:preserve?[]:['The candidate changes an original qualification.']}};
+}
+function reconstruct(data,candidate) {
+  const base=data.documents.find(d=>d.id===candidate.baseDocumentId);
+  return '# Conditional Proposal Revision\n\n'+base.paragraphs.map(p=>'## '+p.section+'\n\n'+(candidate.replacements.find(e=>e.paragraphId===p.id)?.text??p.text)).join('\n\n');
+}
+function model(options={}) {
+  const records=[];let active=0,maxActive=0;
+  const callModel=async(messages,config)=>{
+    const data=payload(messages),stage=config.stage;records.push({stage,data,config});active++;maxActive=Math.max(maxActive,active);
+    try {
+      if(options.concurrent)await new Promise(resolve=>setTimeout(resolve,2));
+      if(options.failStage?.(stage))return 'malformed JSON';
+      let reply;
+      if(stage==='draft')reply=structuredClone(draftResponse);
+      else if(stage==='audit_initial')reply=assessment(initial,options.initialScore??.2);
+      else if(stage.startsWith('revise_')) {
+        const [,method,number]=stage.split('_'),round=Number(number);
+        if(options.stop)reply={route:'stop',reason:'No further useful safe expression edit was identified.',plan:[],edits:[],cardIds:[],memoryApplications:[]};
+        else {
+          const p=data.currentParagraphs[round-1];
+          let replacement=options.identity?p.text:p.text.replace('The planned study',
+            method==='targeted'?'This planned evaluation':method==='planner'?'This proposed study':'The proposed investigation');
+          if(options.addNumber&&method==='memory')replacement+=' A sample of 500 cases is proposed.';
+          const memory=method==='memory'&&data.conditionalCards.length>0&&(!options.identity||options.claimIdentityMemory);
+          reply={route:'local_edit',reason:'Clarify the existing evaluation subject.',
+            plan:method==='targeted'?[]:[{paragraphId:p.id,goal:'Clarify the existing subject.',keep:[]}],
+            edits:[{paragraphId:p.id,replacement,reason:'Replace a broad existing subject with a direct expression.'}],
+            cardIds:memory?['concrete_lead']:[],
+            memoryApplications:memory?[{cardId:'concrete_lead',paragraphIds:[p.id],conditionEvidence:p.text.slice(0,50),reason:'The existing evaluation subject is present; no new scientific fact is required.'}]:[]};
+        }
+      } else if(stage.startsWith('review_round_')) {
+        reply={assessments:data.candidates.map(c=>({id:c.id,...assessment(reconstruct(data,c),options.candidateScore??.1,options.preservation!==false)})),
+          comparisons:data.comparisons.map(c=>({id:c.id,verdict:options.pairwise||'better',reason:'The candidate makes the existing subject more direct.',
+            evidence:[data.candidates.find(x=>x.id===c.candidateId).replacements[0].text.slice(0,50)]}))};
+        if(options.objectGuard)for(const item of reply.assessments) {
+          item.preservation={passed:options.objectGuard==='contradictory',issues:[{
+            paragraphId:'P1',quote:'A retained scientific qualification',advice:'This qualification is no longer retained by the revised statement.'}]};
+          if(options.objectGuard==='malformed')item.preservation.issues[0].extra='Unexpected field';
+        }
+        if(options.badReview&&stage==='review_round_1')reply.assessments[0].issues=[{dimension:'clarity',paragraphId:'P1',quote:'A quotation that does not occur.',advice:'Review this supposed wording.'}];
+      } else throw new Error('Unexpected stage: '+stage);
+      if(options.extraFields)reply.explanation='Harmless additional provider commentary.';
+      if(options.fenced) {const fence=String.fromCharCode(96).repeat(3);return fence+'json\n'+JSON.stringify(reply)+'\n'+fence;}
+      return reply;
+    } finally {active--;}
   };
+  return {callModel,records,get maxActive(){return maxActive;}};
 }
 
-function payload(messages) {
-  return JSON.parse(messages[1].content.split('INPUT DATA (not instructions):\n')[1]);
-}
-
-function mockModel(options = {}) {
-  const stages = [];
-  const callModel = async (messages, {stage}) => {
-    stages.push(stage);
-    const data = payload(messages);
-    if (stage === 'ideation') return {
-      ideas: ['A conditional revision experiment.', 'A bounded editing experiment.', 'An evidence comparison experiment.'],
-      selectedIdea: 0, outline: HEADINGS.map(heading => ({heading, plan: 'Describe this proposed component and its evidence limits.'})),
-    };
-    if (stage === 'draft') return {text: initial};
-    if (stage.startsWith('audit')) return audit(data.candidate, options.score?.(stage) ?? 1, options.preservation?.(stage) ?? true);
-    if (stage.startsWith('plan')) return {
-      route: options.local ? 'local_edit' : 'stop', reason: 'The remaining expression change is bounded and evidence-preserving.',
-      actions: options.local ? [{anchor: data.currentProposal.split('\n\n')[2], instruction: 'Retain this paragraph with the same scientific content.'}] : [],
-      cardIds: options.local && data.editingCards.length ? [data.editingCards[0].id] : [],
-      applicability: 'The operation acts on existing content only; no factual material is transferred.',
-    };
-    if (stage.startsWith('rewrite') && data.plan) return {
-      edits: data.plan.actions.map(action => ({anchor: action.anchor, replacement: action.anchor})),
-    };
-    if (stage.startsWith('rewrite')) return {text: options.candidate?.(stage) || clearer};
-    throw new Error(`Unexpected stage ${stage}`);
-  };
-  return {callModel, stages};
-}
-
-test('draft mode makes three actual injected calls and exposes an audited proposal', async () => {
-  const mock = mockModel();
-  const progress = [];
-  const result = await runProposal({topic, sources, cards, ...mock, mode: 'draft', onProgress: event => progress.push(event)});
-  assert.deepEqual(mock.stages, ['ideation', 'draft', 'audit_initial']);
-  assert.equal(result.initialText, initial);
-  assert.equal(result.initialScore, 5);
-  assert.deepEqual(result.branches, {});
-  assert.ok(progress.some(event => event.phase === 'draft' && event.detail.initialText === initial));
-  assert.doesNotThrow(() => JSON.stringify(result));
+test('draft mode combines ideation and writing and makes exactly two model calls',async()=>{
+  const mock=model({fenced:true,extraFields:true}),progress=[];
+  const result=await runProposal({topic,sources,cards,mode:'draft',callModel:mock.callModel,onProgress:e=>progress.push(e)});
+  assert.deepEqual(mock.records.map(x=>x.stage),['draft','audit_initial']);
+  assert.equal(result.initialText,initial);assert.equal(result.initialScore,1);
+  assert.equal(result.schema,'proseledger-browser-2');
+  assert.ok(progress.findIndex(x=>x.phase==='drafted')<progress.findIndex(x=>x.stage==='audit_initial'));
+  assert.equal(result.outline.ideas.length,3);assert.doesNotThrow(()=>JSON.stringify(result));
 });
 
-test('three routes share first revision; explicit stops preserve all R0–R3 records', async () => {
-  const mock = mockModel();
-  const result = await runProposal({topic, sources, cards, ...mock});
-  assert.equal(mock.stages.length, 13);
-  assert.equal(mock.stages.filter(stage => stage === 'rewrite_shared_1').length, 1);
-  for (const branch of Object.values(result.branches)) {
-    assert.deepEqual(branch.rounds.map(row => row.round), [0, 1, 2, 3]);
-    assert.equal(branch.rounds[1].shared, true);
+test('three independent routes run concurrently, retain R0–R3, and use at most 14 logical calls',async()=>{
+  const mock=model({concurrent:true});
+  const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  assert.equal(mock.records.length,14);assert.equal(mock.maxActive,3);
+  for(const method of ['targeted','planner','memory']) {
+    const first=mock.records.find(x=>x.stage==='revise_'+method+'_1');
+    assert.equal(first.data.currentParagraphs[0].text,paragraphs(initial)[0].text);
+    assert.deepEqual(result.branches[method].rounds.map(x=>x.round),[0,1,2,3]);
+    assert.equal(result.branches[method].rounds[1].shared,undefined);
+    assert.ok(result.branches[method].rounds[1].edits.length>0);
   }
-  assert.equal(result.branches.memory.rounds[2].candidateScore, null);
-  assert.equal(result.branches.memory.rounds[2].route, 'stop');
-  assert.equal(result.comparison.memoryMinusTargeted, 0);
-  assert.equal(result.branches.memory.rounds[2].accepted, false);
-  assert.doesNotThrow(() => JSON.stringify(result));
+  assert.equal(result.status,'completed');assert.equal(result.comparison.valid,true);
+  assert.ok(mock.records.every(x=>Number.isInteger(x.config.maxTokens)));
+  assert.doesNotThrow(()=>JSON.stringify(result));
 });
 
-test('local-route comparison stays within 21 calls and exposes real card attribution', async () => {
-  const mock = mockModel({local: true});
-  const result = await runProposal({topic, sources, cards, ...mock});
-  assert.equal(mock.stages.length, 21);
-  assert.deepEqual(result.branches.memory.rounds[2].cardIds, ['concrete_lead']);
-  assert.deepEqual(result.branches.planner.rounds[2].cardIds, []);
-  assert.equal(result.branches.memory.rounds[2].outcome, 'no_gain');
-  assert.equal(result.branches.memory.rounds[2].changed, false);
+test('a better pairwise judgment can retain real edits despite absolute-score jitter',async()=>{
+  const mock=model({initialScore:.2,candidateScore:.4,pairwise:'better'});
+  const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  const row=result.branches.memory.rounds[1];
+  assert.equal(row.accepted,true);assert.equal(row.candidateScore,2);assert.equal(row.retainedScore,2);
+  assert.equal(row.scoreChange,1);assert.equal(row.pairwise,'better');assert.equal(row.outcome,'success');
+  assert.notEqual(row.beforeText,row.text);
 });
 
-test('Memory is not privileged: worse candidates lose to an improving Targeted route', async () => {
-  const mock = mockModel({local: true, score: stage => {
-    if (stage === 'audit_targeted_2' || stage === 'audit_targeted_3') return 0;
-    if (stage.startsWith('audit_memory_')) return 2;
-    return 1;
-  }});
-  const result = await runProposal({topic, sources, cards, ...mock});
-  assert.equal(result.branches.targeted.finalScore, 0);
-  assert.equal(result.branches.memory.finalScore, 5);
-  assert.equal(result.branches.memory.rounds[2].candidateScore, 10);
-  assert.equal(result.branches.memory.rounds[2].accepted, false);
-  assert.equal(result.comparison.memoryMinusTargeted, 5);
+test('a lower absolute score cannot override a worse pairwise judgment',async()=>{
+  const mock=model({candidateScore:0,pairwise:'worse'});
+  const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  const row=result.branches.targeted.rounds[1];
+  assert.equal(row.candidateScore,0);assert.equal(row.retainedScore,1);assert.equal(row.accepted,false);
 });
 
-test('a lower score cannot override a deterministic content failure', async () => {
-  const changedNumber = clearer.replace('planned study', 'planned study involving 500 participants');
-  const mock = mockModel({
-    candidate: stage => stage === 'rewrite_shared_1' ? changedNumber : initial,
-    score: stage => stage === 'audit_shared_1' ? 0 : 1,
-  });
-  const result = await runProposal({topic, sources, cards, ...mock});
-  const row = result.branches.memory.rounds[1];
-  assert.equal(row.candidateScore, 0);
-  assert.equal(row.retainedScore, 5);
-  assert.equal(row.accepted, false);
-  assert.equal(row.outcome, 'failure_guard');
-  assert.equal(row.text, initial);
-  assert.ok(row.guard.findings.some(finding => finding.includes('Numeric tokens added')));
+test('numeric drift or a content-preservation failure cannot win through pairwise preference',async()=>{
+  const mock=model({addNumber:true,candidateScore:0});
+  const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  assert.equal(result.branches.memory.rounds[1].accepted,false);
+  assert.equal(result.branches.memory.rounds[1].outcome,'failure_guard');
+  assert.ok(result.branches.memory.rounds[1].guard.findings.some(x=>x.includes('Numeric tokens')));
+  const failed=model({preservation:false,candidateScore:0});
+  const other=await runProposal({topic,sources,callModel:failed.callModel});
+  assert.equal(other.branches.targeted.rounds[1].accepted,false);
+  assert.equal(other.branches.targeted.rounds[1].audit.preservation.passed,false);
 });
 
-test('a lower score cannot override model-identified loss of meaning', async () => {
-  const mock = mockModel({
-    score: stage => stage === 'audit_shared_1' ? 0 : 1,
-    preservation: stage => stage !== 'audit_shared_1',
-  });
-  const result = await runProposal({topic, sources, cards, ...mock});
-  assert.equal(result.branches.targeted.rounds[1].accepted, false);
-  assert.equal(result.branches.targeted.rounds[1].retainedScore, 5);
-  assert.equal(result.branches.targeted.rounds[1].audit.preservation.passed, false);
+test('identity candidates never claim success or refresh a retained score',async()=>{
+  const mock=model({identity:true,candidateScore:0,pairwise:'better'});
+  const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  const row=result.branches.memory.rounds[1];
+  assert.equal(row.changed,false);assert.equal(row.outcome,'no_change');assert.equal(row.accepted,false);
+  assert.equal(row.candidateScore,0);assert.equal(row.retainedScore,1);assert.equal(row.pairwiseReview.verdict,'better');
 });
 
-test('local execution changes only authorized paragraph bytes and rejects ambiguous anchors', () => {
-  const replacement = 'The same evidence and caveats remain, with a more direct ordering [S1].';
-  const patched = applyLocalEdits(initial, [{anchor: paragraph, replacement}]);
-  assert.equal(patched, initial.replace(paragraph, replacement));
-  assert.throws(() => applyLocalEdits(initial, [{anchor: paragraph.slice(0, 30), replacement}]), /complete original paragraph/);
-  assert.throws(() => applyLocalEdits(initial, [{anchor: paragraph, replacement: '# New heading'}]), /cannot add/);
-  assert.throws(() => applyLocalEdits(`${initial}\n\n${paragraph}`, [{anchor: paragraph, replacement}]), /one unique/);
+test('one invalid candidate does not block peers and invalidates its resumable raw response',async()=>{
+  const mock=model({failStage:s=>s==='revise_memory_1'}),events=[];
+  const result=await runProposal({topic,sources,cards,callModel:mock.callModel,onProgress:e=>events.push(e)});
+  assert.equal(result.branches.memory.rounds[1].outcome,'generation_failed');
+  assert.equal(result.branches.memory.rounds[1].candidateScore,null);
+  assert.equal(result.branches.targeted.rounds[1].accepted,true);
+  assert.equal(result.status,'completed_with_errors');assert.equal(result.comparison.valid,false);
+  assert.ok(events.some(e=>e.stage==='revise_memory_1'&&e.phase==='invalidated'));
 });
 
-test('citation integrity and future-study status are shared checks', () => {
-  assert.equal(guardCandidate(initial, clearer, sources).passed, true);
-  assert.equal(guardCandidate(initial, clearer.replaceAll('[S1]', '[S99]'), sources).passed, false);
-  assert.equal(guardCandidate(initial, clearer.replace('The planned study', 'We found that the study'), sources).passed, false);
-  assert.equal(guardCandidate(initial, clearer.replace('## Methodology', '## Results'), sources).passed, false);
+test('one bad assessment isolates its route without discarding valid peer assessments',async()=>{
+  const mock=model({badReview:true}),events=[];
+  const result=await runProposal({topic,sources,cards,callModel:mock.callModel,onProgress:e=>events.push(e)});
+  // R1 opaque candidate order is Planner, Memory, Targeted.
+  assert.equal(result.branches.planner.rounds[1].outcome,'review_failed');
+  assert.equal(result.branches.targeted.rounds[1].accepted,true);
+  assert.equal(result.branches.memory.rounds[1].accepted,true);
+  assert.equal(result.comparison.valid,false);
+  assert.ok(events.some(e=>e.stage==='review_round_1'&&e.phase==='invalidated'));
 });
 
-test('malformed responses are errors, never fabricated fallbacks', async () => {
-  await assert.rejects(runProposal({topic, sources, callModel: async () => 'not JSON'}), /invalid JSON/);
-  const mock = mockModel();
-  await assert.rejects(runProposal({topic, sources, callModel: async (messages, options) => {
-    const raw = await mock.callModel(messages, options);
-    if (options.stage === 'audit_initial') raw.dimensions.clarity.quote = 'This invented quotation is not in the proposal.';
-    return raw;
-  }}), /quote is not present/);
+test('review payloads carry neutral IDs and patches, not methods, cards, plans, or old scores',async()=>{
+  const mock=model();await runProposal({topic,sources,cards,callModel:mock.callModel});
+  const review=mock.records.find(x=>x.stage==='review_round_1').data;
+  const encoded=JSON.stringify(review);
+  for(const prohibited of ['targeted','planner','memory','concrete_lead','currentDiagnosis','priorDecisions'])assert.equal(encoded.includes(prohibited),false);
+  assert.equal(review.documents.length,1);
+  assert.equal(review.candidates.length,3);
+  assert.equal(review.sources.length,2);
 });
 
-test('unsafe initial drafts are exposed for review but cannot enter comparison', async () => {
-  const mock = mockModel({preservation: stage => stage !== 'audit_initial'});
-  const progress = [];
-  await assert.rejects(runProposal({topic, sources, ...mock, onProgress: event => progress.push(event)}), /Initial proposal needs review/);
-  assert.deepEqual(mock.stages, ['ideation', 'draft', 'audit_initial']);
-  assert.ok(progress.some(event => event.phase === 'draft'));
+test('memory receives complete reusable context; controls do not receive historical cards',async()=>{
+  const mock=model();const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  const memory=mock.records.find(x=>x.stage==='revise_memory_1').data.conditionalCards[0];
+  assert.equal(memory.examples[0].retainedElsewhere,cards[0].examples[0].payload.retained_elsewhere);
+  assert.equal(memory.examples[0].retainedSection,'Limitations');
+  assert.equal(memory.examples[0].trace,'development/trace/example.json');
+  assert.equal(mock.records.find(x=>x.stage==='revise_planner_1').data.conditionalCards.length,0);
+  assert.equal(result.branches.memory.rounds[1].memoryApplications[0].cardId,'concrete_lead');
 });
 
-test('abort signals prevent subsequent provider calls', async () => {
-  const controller = new AbortController();
-  controller.abort();
-  let calls = 0;
-  await assert.rejects(runProposal({topic, sources, signal: controller.signal, callModel: async () => {calls++;}}), {name: 'AbortError'});
-  assert.equal(calls, 0);
-  const mock = mockModel();
-  const second = new AbortController();
-  await assert.rejects(runProposal({topic, sources, signal: second.signal, callModel: async (messages, options) => {
-    const answer = await mock.callModel(messages, options);
-    second.abort();
-    return answer;
-  }}), {name: 'AbortError'});
-  assert.equal(mock.stages.length, 1);
+test('paragraph-ID edits preserve all bytes outside authorized windows and reject invalid targets',()=>{
+  const first=paragraphs(initial)[0],replacement='The same planned comparison preserves evidence relationships [S1].';
+  const result=applyLocalEdits(initial,[{paragraphId:first.id,replacement}]);
+  assert.equal(result,initial.slice(0,first.start)+replacement+initial.slice(first.end));
+  assert.throws(()=>applyLocalEdits(initial,[{paragraphId:'P99',replacement}]),/Unknown paragraph/);
+  assert.throws(()=>applyLocalEdits(initial,[{paragraphId:'P1',replacement:'# New heading'}]),/cannot insert/);
+  assert.throws(()=>applyLocalEdits(initial,[{paragraphId:'P1',replacement},{paragraphId:'P1',replacement}]),/unique/);
+  assert.equal(guardCandidate(initial,initial.replaceAll('[S1]','[S99]'),sources).passed,false);
+  assert.ok(textMetrics(initial).words>0);
+});
+
+test('intentional stops are not model failures and preserve all round records',async()=>{
+  const mock=model({stop:true});const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  assert.equal(mock.records.length,5);
+  assert.equal(result.status,'completed');assert.equal(result.comparison.valid,true);
+  assert.equal(result.branches.memory.rounds[3].route,'stop');
+  assert.equal(result.branches.memory.rounds[3].carriedStop,true);
+  assert.equal(result.branches.memory.rounds[3].candidateScore,null);
+});
+
+test('initial schema errors invalidate cached response and aborted runs send no new calls',async()=>{
+  const events=[];
+  await assert.rejects(runProposal({topic,sources,callModel:async()=>({text:initial}),onProgress:e=>events.push(e)}),/missing required/);
+  assert.ok(events.some(e=>e.stage==='draft'&&e.phase==='invalidated'));
+  const controller=new AbortController();controller.abort();let called=false;
+  await assert.rejects(runProposal({topic,sources,signal:controller.signal,callModel:async()=>{called=true;}}),{name:'AbortError'});
+  assert.equal(called,false);
+});
+
+
+test('an identity replacement cannot claim that a historical editing card was applied',async()=>{
+  const mock=model({identity:true,claimIdentityMemory:true});
+  const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  const row=result.branches.memory.rounds[1];
+  assert.equal(row.outcome,'generation_failed');
+  assert.equal(row.accepted,false);
+  assert.equal(row.candidateScore,null);
+  assert.deepEqual(row.memoryApplications,[]);
+  assert.ok(row.reason.includes('actual text change'));
+  assert.equal(result.branches.targeted.rounds[1].outcome,'no_change');
+  assert.equal(result.comparison.valid,false);
+});
+
+
+test('structured negative content findings stay readable and cannot become accepted candidates',async()=>{
+  const mock=model({objectGuard:'negative',candidateScore:0,pairwise:'better'});
+  const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  const row=result.branches.memory.rounds[1];
+  assert.equal(row.accepted,false);
+  assert.equal(row.outcome,'failure_guard');
+  assert.equal(row.audit.preservation.passed,false);
+  assert.equal(typeof row.audit.preservation.issues[0],'string');
+  assert.ok(row.reason.includes('P1'));
+  assert.ok(row.reason.includes('A retained scientific qualification'));
+  assert.ok(row.reason.includes('no longer retained'));
+  assert.deepEqual(row.audit.preservation.rawIssues[0],{paragraphId:'P1',quote:'A retained scientific qualification',advice:'This qualification is no longer retained by the revised statement.'});
+  assert.equal(result.status,'completed');
+  for(const objectGuard of ['contradictory','malformed']) {
+    const bad=model({objectGuard});
+    const invalid=await runProposal({topic,sources,cards,callModel:bad.callModel});
+    assert.equal(invalid.branches.targeted.rounds[1].outcome,'review_failed');
+    assert.equal(invalid.branches.targeted.rounds[1].accepted,false);
+    assert.equal(invalid.comparison.valid,false);
+  }
+});
+
+
+test('a tied candidate cannot replace the retained draft even with a lower absolute score',async()=>{
+  const mock=model({candidateScore:0,pairwise:'tie'});
+  const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  for(const method of ['targeted','planner','memory']) {
+    const row=result.branches[method].rounds[1];
+    assert.equal(row.changed,true);
+    assert.equal(row.candidateScore,0);
+    assert.equal(row.retainedScore,1);
+    assert.equal(row.pairwise,'tie');
+    assert.equal(row.accepted,false);
+    assert.equal(row.text,initial);
+    assert.notEqual(row.candidateText,initial);
+    assert.equal(row.outcome,'no_gain');
+  }
+  assert.equal(result.comparison.valid,true);
 });

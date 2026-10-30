@@ -1,176 +1,72 @@
-/** DOM-free integration tests for browser application state and downloads.
- * The application, engine and HTTP client execute unchanged; only browser DOM,
- * downloads and network responses are supplied by bounded in-memory doubles.
- */
+/** UI-state integration fixtures. Production UI and HTTP client run unchanged;
+ * a deterministic protocol fixture exercises rendering, cancellation, credential
+ * clearing and response reuse. Engine behavior has its separate test suite. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {readFile} from 'node:fs/promises';
-
-const asset = name => new URL(`../docs/assets/${name}`, import.meta.url);
-const importAsset = async name => import(`data:text/javascript;base64,${Buffer.from(await readFile(asset(name), 'utf8')).toString('base64')}`);
-const api = await importAsset('api-client.js');
-const engine = await importAsset('browser-engine.js');
-const app = (await readFile(asset('create-app.js'), 'utf8')).replace(/^import .*;\r?\n/gm, '');
-
-const sources = [
-  {id:'S1', title:'Evidence and editing', authors:['Example Author'], license:'CC BY 4.0', license_url:'https://creativecommons.org/licenses/by/4.0/', excerpt:'This supplied source discusses how language models may revise supported passages while retaining their original attribution. Its findings do not validate a new proposal.'},
-  {id:'S2', title:'Conditional experience', excerpt:'This supplied source discusses storing conditional editing experiences and reviewing whether their preconditions apply to a later task. It establishes no universal benefit.'},
-];
-const draft = '# Evidence-Preserving Revision\n\n' + engine.HEADINGS.map((heading, index) =>
-  `## ${heading}\n\nThe proposed study will examine whether revision preserves supported claims and uncertainty [S${index % 2 + 1}]. Its evaluation remains planned, and no improvement has been observed in this proposed study.`,
-).join('\n\n');
-const outline = {
-  ideas:['A conditional revision study.', 'A supported claims study.', 'An editing control study.'], selectedIdea:0,
-  outline:engine.HEADINGS.map(heading=>({heading,plan:'Describe the proposed component and its limitations.'})),
-};
-const audit = {
-  dimensions:Object.fromEntries(engine.DIMENSIONS.map(name=>[name,{score:0,reason:'No identified expression issue.',quote:''}])),
-  preservation:{passed:true,issues:[]},
-};
-const defaults = {
-  topic:'Conditional experience for evidence-preserving academic proposal revision',
-  sources, catalog:{cards:[]}, source_catalog_sha256:'public-evidence-catalog-hash',
-};
-
+const asset=name=>new URL(`../docs/assets/${name}`,import.meta.url);
+const api=await import(`data:text/javascript;base64,${Buffer.from(await readFile(asset('api-client.js'),'utf8')).toString('base64')}`);
+const app=(await readFile(asset('create-app.js'),'utf8')).replace(/^import .*;\r?\n/gm,'');
+const sources=[{id:'S1',title:'Evidence and editing',authors:['Example Author'],license:'CC BY 4.0',license_url:'https://creativecommons.org/licenses/by/4.0/',excerpt:'This source concerns preserving scientific content, quotations and planned-study status while editing proposals. It establishes no universal writing advantage.'},{id:'S2',title:'Conditional experience',excerpt:'This source describes storing conditional editing records and checking whether their assumptions apply to later tasks. Examples must not introduce new facts into the current manuscript.'}];
+const initial='# Conditional Revision\n\n## Abstract\n\nThe proposed study will compare evidence-preserving revision decisions [S1]. The evaluation remains planned.\n\n## Introduction\n\nConditional experience may help when the current draft has the same editing problem [S2].';
+const revised={targeted:initial.replace('The proposed study will compare','This proposed study compares'),planner:initial.replace('The evaluation remains planned.','The study has not yet been conducted.'),memory:initial.replace('Conditional experience may help when the current draft has the same editing problem','Experience applies only when its editing conditions match the current draft')};
+const defaults={topic:'Conditional experience for evidence-preserving research proposal revision',sources,catalog:{cards:[{id:'conditional_edit',operation:'Reuse only when conditions hold.',conditions:[{kind:'required',text:'Existing supported content.'}]}]},source_catalog_sha256:'fixture-public-evidence-hash'};
 class NodeDouble {
-  constructor(tag='div') {
-    this.tagName=tag;this.children=[];this.listeners={};this.dataset={};this.attributes={};
-    this.value='';this.checked=false;this.disabled=false;this.hidden=true;this.content='';
-  }
-  set textContent(value) {this.content=String(value);this.children=[];}
-  get textContent() {return this.content+this.children.map(child=>child.textContent).join('');}
-  append(...children) {this.children.push(...children);for(const child of children)child.parent=this;}
-  replaceChildren(...children) {this.children=[];this.content='';this.append(...children);}
-  setAttribute(name,value) {this.attributes[name]=String(value);}
-  addEventListener(name,listener) {(this.listeners[name] ||= []).push(listener);}
-  dispatch(name,event={}) {for(const listener of this.listeners[name]||[])listener({preventDefault(){},target:this,...event});}
-  click() {this.dispatch('click');}
-  remove() {if(this.parent)this.parent.children=this.parent.children.filter(child=>child!==this);}
+ constructor(tag='div'){this.tagName=tag;this.children=[];this.listeners={};this.dataset={};this.attributes={};this.value='';this.checked=false;this.disabled=false;this.hidden=true;this.content='';}
+ set textContent(v){this.content=String(v);this.children=[];}get textContent(){return this.content+this.children.map(c=>c.textContent).join('');}
+ append(...children){this.children.push(...children);for(const c of children)c.parent=this;}replaceChildren(...children){this.children=[];this.content='';this.append(...children);}
+ setAttribute(k,v){this.attributes[k]=String(v);}addEventListener(k,fn){(this.listeners[k]||=[]).push(fn);}dispatch(k,e={}){for(const fn of this.listeners[k]||[])fn({preventDefault(){},target:this,...e});}click(){this.dispatch('click');}focus(){}remove(){if(this.parent)this.parent.children=this.parent.children.filter(c=>c!==this);}
 }
-
-async function waitFor(condition, label) {
-  for(let attempt=0;attempt<300;attempt++) {
-    if(condition())return;
-    await new Promise(resolve=>setTimeout(resolve,2));
-  }
-  throw new Error(`UI did not settle: ${label}`);
+async function waitFor(fn,label){for(let i=0;i<400;i++){if(fn())return;await new Promise(r=>setTimeout(r,2));}throw new Error('UI did not settle: '+label);}
+async function harness({invalidAuditOnce=false,identical=false,failedMemory=false,tiedMemory=false,scoreValue=1}={}) {
+ const nodes=new Map(),downloads=[],requests=[],blobs=new Map();let invalid=invalidAuditOnce;
+ const get=id=>{if(!nodes.has(id))nodes.set(id,new NodeDouble());return nodes.get(id);};
+ const document={getElementById:get,createElement:tag=>new NodeDouble(tag),createElementNS:(_ns,tag)=>new NodeDouble(tag),body:new NodeDouble('body')};
+ const create=document.createElement;document.createElement=tag=>{const n=create(tag);if(tag==='a')n.click=()=>downloads.push({name:n.download,blob:blobs.get(n.href)});return n;};
+ class URLDouble extends URL{static createObjectURL(blob){const id=`blob:fixture-${blobs.size}`;blobs.set(id,blob);return id;}static revokeObjectURL(){}}
+ const fetchMock=async(url,options={})=>{if(url==='./live-inputs.json')return Response.json(structuredClone(defaults));requests.push({url,options});const body=JSON.parse(options.body),stage=body.messages.at(-1).content;let response=JSON.stringify({ok:true});if(stage==='audit_initial'&&invalid){invalid=false;response='invalid';}return Response.json({model:'fixture-model',choices:[{message:{content:response},finish_reason:'stop'}],usage:{prompt_tokens:7,completion_tokens:3,total_tokens:10}});};
+ const fixtureEngine=async({mode,callModel,signal,onProgress})=>{
+   const ask=async stage=>{onProgress({stage,phase:'calling',message:stage});const raw=await callModel([{role:'user',content:stage}],{signal,stage,maxTokens:100});try{return JSON.parse(raw);}catch{onProgress({stage,phase:'invalidated',message:'Invalid response'});throw new Error('Invalid response');}};
+   await ask('draft');onProgress({stage:'draft',phase:'drafted',message:'Draft generated',detail:{initialText:initial}});await ask('audit_initial');onProgress({stage:'draft',phase:'draft',message:'Draft audited',detail:{initialText:initial,initialScore:scoreValue,audit:{dimensions:{},preservation:{passed:true,issues:[]}},guard:{passed:true}}});
+   const out={schema:'proseledger-browser-2',status:'completed',initialText:initial,initialScore:scoreValue,branches:{}};if(mode==='draft')return out;
+   for(const m of Object.keys(revised))out.branches[m]={text:initial,finalScore:scoreValue,rounds:[{round:0,retainedScore:scoreValue,candidateScore:scoreValue,text:initial}]};
+   for(let round=1;round<=3;round++){
+     await Promise.all(Object.keys(revised).map(m=>ask(`revise_${m}_${round}`)));await ask(`review_round_${round}`);
+     for(const m of Object.keys(revised)){
+       const before=out.branches[m].text,after=identical?initial:revised[m],changed=before!==after;
+       const record={round,route:'local_edit',candidateScore:scoreValue,retainedScore:scoreValue,accepted:true,changed,cardIds:m==='memory'?['conditional_edit']:[],outcome:changed?'success':'no_change',reason:changed?'The candidate preserves content and states the condition more directly.':'No new textual change.',guard:{passed:true,findings:[]},audit:{preservation:{passed:true,issues:[]}},text:after,candidateText:after,beforeText:before,edits:changed?[{paragraphId:'P1',before,after,reason:'Make the existing condition explicit.'}]:[],pairwise:changed?'better':'tie',pairwiseReview:{verdict:changed?'better':'tie',reason:'Supported expression retained.',evidence:['The evaluation remains planned.']},memoryApplications:m==='memory'&&changed?[{cardId:'conditional_edit',paragraphIds:['P1'],conditionEvidence:'same editing problem',reason:'The current problem matches the reuse condition.'}]:[]};if(tiedMemory&&m==='memory'){Object.assign(record,{accepted:false,outcome:'no_gain',pairwise:'tie',pairwiseReview:{verdict:'tie',reason:'No strict improvement.',evidence:[]},text:before,reason:'Reviewer found no strict improvement. The previous draft is retained.'});}
+       if(failedMemory&&m==='memory'){Object.assign(record,{outcome:'generation_failed',reason:'Candidate did not validate.',accepted:false,changed:false,candidateText:null,candidateScore:null,text:before,edits:[],memoryApplications:[],cardIds:[]});out.status='completed_with_errors';}
+       out.branches[m].rounds.push(record);out.branches[m].text=record.text;onProgress({stage:m,phase:'round',message:'Reviewed',detail:{branch:m,record}});
+     }
+   }return out;
+ };
+ const context=vm.createContext({document,window:{addEventListener(){}},URL:URLDouble,Blob,AbortController,DOMException,structuredClone,performance,Date,console,fetch:fetchMock,PRESETS:api.PRESETS,providerEndpoint:api.providerEndpoint,createModelClient:(config,options)=>api.createModelClient(config,{...options,fetchImpl:fetchMock}),runProposal:fixtureEngine,setInterval:()=>0,clearInterval(){},setTimeout:()=>0});
+ vm.runInContext(app,context,{filename:'create-app.js'});await waitFor(()=>!get('generate').disabled,'defaults');
+ const credentials=(mode='compare')=>{get('api-key').value='visitor-key-for-tests';get('consent').checked=true;get('generation-mode').value=mode;};
+ const generate=async()=>{get('generation-form').dispatch('submit');await waitFor(()=>!get('generate').disabled&&get('api-key').value==='','completion');};
+ const resume=async()=>{get('resume').click();await waitFor(()=>!get('generate').disabled&&get('api-key').value==='','resume');};
+ const jsonExport=async()=>{get('download-json').click();return JSON.parse(await downloads.at(-1).blob.text());};
+ return{get,downloads,requests,credentials,generate,resume,jsonExport};
 }
-
-async function harness({failDraft=false}={}) {
-  const nodes=new Map(), downloads=[], requests=[], blobs=new Map();
-  const get=id=>{if(!nodes.has(id))nodes.set(id,new NodeDouble());return nodes.get(id);};
-  const document={getElementById:get,createElement:tag=>new NodeDouble(tag),createElementNS:(_ns,tag)=>new NodeDouble(tag),body:new NodeDouble('body')};
-  const create=document.createElement;
-  document.createElement=tag=>{
-    const node=create(tag);
-    if(tag==='a')node.click=()=>downloads.push({name:node.download,blob:blobs.get(node.href)});
-    return node;
-  };
-  class URLDouble extends URL {
-    static createObjectURL(blob) {const id=`blob:test-${blobs.size}`;blobs.set(id,blob);return id;}
-    static revokeObjectURL() {}
-  }
-  const fetchMock=async (url,options={})=>{
-    if(url==='./live-inputs.json')return Response.json(structuredClone(defaults));
-    requests.push({url,options});
-    const body=JSON.parse(options.body);
-    const instruction=body.messages.at(-1).content;
-    if(instruction==='Reply with OK only.')return Response.json({model:'test-model',choices:[{message:{content:'OK'},finish_reason:'stop'}],usage:{prompt_tokens:2,completion_tokens:1,total_tokens:3}});
-    let content;
-    if(instruction.startsWith('Suggest three'))content=outline;
-    else if(instruction.startsWith('Write a self-contained')) {
-      if(failDraft)return new Response('',{status:503});
-      content={text:draft};
-    } else if(instruction.startsWith('Audit the candidate'))content=audit;
-    else throw new Error(`Unexpected model request: ${instruction.slice(0,40)}`);
-    return Response.json({model:'test-model',choices:[{message:{content:JSON.stringify(content)},finish_reason:'stop'}],usage:{prompt_tokens:7,completion_tokens:3,total_tokens:10}});
-  };
-  const context=vm.createContext({
-    document, window:{addEventListener(){}}, URL:URLDouble, Blob, AbortController,
-    structuredClone, performance, Date, console, fetch:fetchMock,
-    PRESETS:api.PRESETS, providerEndpoint:api.providerEndpoint,
-    createModelClient:(config,options)=>api.createModelClient(config,{...options,fetchImpl:fetchMock}),
-    runProposal:engine.runProposal,
-    setInterval:()=>0,clearInterval(){},setTimeout:()=>0,
-  });
-  vm.runInContext(app,context,{filename:'create-app.js'});
-  await waitFor(()=>!get('generate').disabled,'default loading');
-  const credentials=()=>{get('api-key').value='visitor-key-for-tests';get('consent').checked=true;get('generation-mode').value='draft';};
-  const generate=async()=>{
-    get('generation-form').dispatch('submit');
-    await waitFor(()=>!get('generate').disabled && get('api-key').value==='','generation completion');
-  };
-  const jsonExport=async()=>{
-    get('download-json').click();
-    const saved=downloads.at(-1);
-    assert.equal(saved.name,'proseledger_run.json');
-    return JSON.parse(await saved.blob.text());
-  };
-  return {get,downloads,requests,credentials,generate,jsonExport};
-}
-
-test('the browser app loads supplied evidence and produces a downloadable real-engine draft',async()=>{
-  const h=await harness();
-  assert.equal(h.get('topic').value,defaults.topic);
-  assert.ok(h.get('source-notes').value.includes('[S1] Evidence and editing'));
-  assert.equal(h.get('provider-preset').value,'openrouter');
-  h.credentials();await h.generate();
-  assert.equal(h.requests.length,3);
-  assert.equal(h.get('api-key').value,'');
-  assert.equal(h.get('status-title').textContent,'Generation completed');
-  assert.equal(h.get('call-count').textContent,'3');
-  assert.equal(h.get('token-count').textContent,'30');
-  const saved=await h.jsonExport();
-  assert.equal(saved.result.status,'completed');
-  assert.equal(saved.result.initialText,draft);
-  assert.equal(saved.result.initialScore,0);
-  assert.equal(saved.usage.length,3);
-  assert.equal(saved.usage.reduce((sum,row)=>sum+row.totalTokens,0),30);
-  assert.equal(saved.inputProvenance[0].license,'CC BY 4.0');
-  assert.equal(JSON.stringify(saved).includes('visitor-key-for-tests'),false);
-  h.get('download-manuscript').click();
-  assert.equal(h.downloads.at(-1).name,'proseledger_initial.md');
-  assert.ok((await h.downloads.at(-1).blob.text()).includes('Source excerpt license: CC BY 4.0'));
+test('full comparison shows actual edits even when every score is tied',async()=>{
+ const h=await harness();h.credentials();await h.generate();assert.equal(h.requests.length,14);assert.equal(h.get('status-title').textContent,'Generation completed');assert.equal(h.get('api-key').value,'');assert.equal(h.get('call-count').textContent,'14');assert.equal(h.get('attempt-count').textContent,'14');assert.equal(h.get('token-count').textContent,'140');assert.equal(h.get('branch-summary').children.length,3);assert.match(h.get('comparison-summary').textContent,/three retained texts are different/);assert.match(h.get('manuscript').textContent,/Experience applies only/);assert.match(h.get('candidate-state').textContent,/paragraph\(s\) changed/);assert.match(h.get('memory-log').textContent,/conditional_edit/);
+ const selected=h.get('branch-tabs').children.find(x=>x.dataset.branch==='memory');assert.equal(selected.attributes['aria-selected'],'true');h.get('round-select').value='1';h.get('round-select').dispatch('change');assert.match(h.get('candidate-state').textContent,/Candidate retained/);assert.match(h.get('edit-explanation').textContent,/Memory applied: conditional_edit/);assert.notEqual(h.get('before-text').textContent,h.get('after-text').textContent);const tags=node=>[node.tagName,...node.children.flatMap(tags)];assert.ok(tags(h.get('before-text')).includes('del'));assert.ok(tags(h.get('after-text')).includes('ins'));
+ const saved=await h.jsonExport();assert.equal(saved.result.status,'completed');assert.equal(saved.usage.length,14);assert.equal(saved.rawModelResponses.length,14);assert.equal(JSON.stringify(saved).includes('visitor-key-for-tests'),false);assert.equal(saved.result.branches.memory.rounds.length,4);
+ h.get('download-manuscript').click();assert.equal(h.downloads.at(-1).name,'proseledger_memory.md');assert.match(await h.downloads.at(-1).blob.text(),/CC BY 4.0/);
+});
+test('draft mode uses two requests and keeps initial writing downloadable',async()=>{const h=await harness();h.credentials('draft');await h.generate();assert.equal(h.requests.length,2);assert.equal(h.get('download-manuscript').disabled,false);assert.equal(h.get('branch-summary').children.length,0);assert.equal((await h.jsonExport()).result.initialText,initial);});
+test('invalid responses are evicted; resume reuses only successful validated stage replies',async()=>{
+ const h=await harness({invalidAuditOnce:true});h.credentials('draft');await h.generate();assert.equal(h.requests.length,2);assert.equal(h.get('status-title').textContent,'Run stopped');assert.equal(h.get('resume').hidden,false);let saved=await h.jsonExport();assert.equal(saved.result.status,'incomplete');assert.equal(saved.rawModelResponses.length,2);assert.equal(saved.rawModelResponses[0].stage,'draft');assert.equal(saved.rawModelResponses[1].response,'invalid');assert.equal(saved.rawModelResponses[1].invalidated,true);assert.equal(saved.rawModelResponses[1].invalidationReason,'Invalid response');h.credentials('draft');await h.resume();assert.equal(h.requests.length,3);assert.equal(h.get('status-title').textContent,'Generation completed');assert.match(h.get('cache-status').textContent,/1 successful stage/);saved=await h.jsonExport();assert.equal(saved.result.status,'completed');assert.equal(saved.attempts.length,2);assert.equal(saved.usage.length,3);assert.equal(saved.rawModelResponses.length,3);assert.equal(saved.rawModelResponses.filter(r=>r.stage==='audit_initial').length,2);assert.equal(saved.rawModelResponses[2].invalidated,false);assert.equal(h.get('resume').hidden,true);
+});
+test('resume refuses a different model without sending any request',async()=>{const h=await harness({invalidAuditOnce:true});h.credentials('draft');await h.generate();h.credentials('draft');h.get('api-model').value='another-model';await h.resume();assert.equal(h.requests.length,2);assert.match(h.get('error-message').textContent,/original provider endpoint and model/);assert.equal((await h.jsonExport()).result.status,'incomplete');});
+test('preflight errors and later connection tests preserve prior exported results',async()=>{
+ const h=await harness();h.credentials('draft');await h.generate();const before=await h.jsonExport();h.get('consent').checked=false;h.get('generation-form').dispatch('submit');await waitFor(()=>!h.get('error-panel').hidden,'preflight');assert.deepEqual(await h.jsonExport(),before);h.credentials('draft');h.get('test-connection').click();await waitFor(()=>h.get('status-title').textContent==='Connection verified'&&!h.get('generate').disabled,'test');assert.equal(h.requests.length,3);assert.deepEqual(await h.jsonExport(),before);assert.equal(h.get('api-key').value,'');
 });
 
-test('a preflight error does not relabel or overwrite a previous completed result',async()=>{
-  const h=await harness();h.credentials();await h.generate();
-  const before=await h.jsonExport();
-  h.get('consent').checked=false;
-  h.get('generation-form').dispatch('submit');
-  await waitFor(()=>!h.get('error-panel').hidden,'preflight error');
-  const after=await h.jsonExport();
-  assert.equal(h.requests.length,3);
-  assert.equal(after.result.status,'completed');
-  assert.deepEqual(after,before);
-});
+test('identical outputs are stated explicitly instead of manufacturing a branch advantage',async()=>{const h=await harness({identical:true});h.credentials();await h.generate();assert.match(h.get('comparison-summary').textContent,/All three routes retained identical text/);assert.match(h.get('candidate-state').textContent,/identical to the initial/);assert.match(h.get('branch-summary').textContent,/0 words added/);});
+test('invalid Memory candidates stay visible and the run remains resumable',async()=>{const h=await harness({failedMemory:true});h.credentials();await h.generate();assert.match(h.get('status-title').textContent,/3 invalid/);assert.equal(h.get('resume').hidden,false);assert.match(h.get('run-result-summary').textContent,/3 invalid or unreviewed/);h.get('round-select').value='1';h.get('round-select').dispatch('change');assert.match(h.get('candidate-state').textContent,/Invalid \/ failed candidate/);const saved=await h.jsonExport();assert.equal(saved.result.status,'completed_with_errors');assert.equal(saved.result.branches.memory.text,initial);});
 
-test('a later connection test cannot replace exported generation usage or result state',async()=>{
-  const h=await harness();h.credentials();await h.generate();
-  const before=await h.jsonExport();
-  h.credentials();h.get('test-connection').click();
-  await waitFor(()=>h.get('status-title').textContent==='Connection verified' && !h.get('generate').disabled,'connection test');
-  assert.equal(h.requests.length,4);
-  assert.equal(h.get('api-key').value,'');
-  assert.equal(h.get('call-count').textContent,'1');
-  const after=await h.jsonExport();
-  assert.equal(after.result.status,'completed');
-  assert.deepEqual(after,before);
-  assert.equal(after.usage.length,3);
-});
+test('flat zero scores show actual paired preferences and exclude unchanged candidates',async()=>{const h=await harness({scoreValue:0});h.credentials();await h.generate();for(const card of h.get('branch-summary').children){assert.match(card.textContent,/1 preferred/);assert.match(card.textContent,/1 better · 0 tied · 0 worse/);assert.match(card.textContent,/including rejected edits/);assert.match(card.textContent,/Problem severity 0.0 → 0.0/);assert.match(card.textContent,/Writing changed; the absolute score stayed flat/);}assert.match(h.get('comparison-summary').textContent,/three retained texts are different/);});
 
-test('a provider failure after ideation preserves a truthful partial outline export',async()=>{
-  const h=await harness({failDraft:true});h.credentials();await h.generate();
-  assert.equal(h.requests.length,2);
-  assert.equal(h.get('status-title').textContent,'Run stopped');
-  assert.equal(h.get('api-key').value,'');
-  assert.equal(h.get('download-manuscript').disabled,true);
-  const saved=await h.jsonExport();
-  assert.equal(saved.result.status,'incomplete');
-  assert.equal(saved.result.initialText,null);
-  assert.deepEqual(saved.result.outline,outline);
-  assert.equal(saved.usage.length,1);
-  assert.ok(saved.events.some(event=>event.stage==='draft' && event.phase==='error'));
-  assert.deepEqual(saved.result.branches,{});
-});
+test('a tied changed candidate remains inspectable while the prior draft is retained',async()=>{const h=await harness({tiedMemory:true});h.credentials();await h.generate();const memory=h.get('branch-summary').children[2];assert.match(memory.textContent,/0 better · 3 tied · 0 worse/);assert.match(memory.textContent,/0 revision round/);assert.match(h.get('candidate-state').textContent,/identical to the initial draft/);h.get('round-select').value='1';h.get('round-select').dispatch('change');assert.match(h.get('candidate-state').textContent,/Candidate rejected/);assert.match(h.get('candidate-state').textContent,/judgment: tie/);assert.notEqual(h.get('before-text').textContent,h.get('after-text').textContent);assert.equal((await h.jsonExport()).result.branches.memory.text,initial);});
