@@ -1,7 +1,8 @@
 /** Portable paid-work checkpoints. Imported records are data, not authenticated evidence. */
-import { providerEndpoint } from './api-client.js?v=20261030d';
+import { providerEndpoint } from './api-client.js?v=20261030e';
 
-export const CHECKPOINT_CONTRACT = 'proseledger-browser-2-20261030d';
+export const CHECKPOINT_CONTRACT = 'proseledger-browser-3-20261030e';
+const LEGACY_CONTRACT = 'proseledger-browser-2-20261030d';
 export const CHECKPOINT_MAX_BYTES = 8 * 1024 * 1024;
 const SCHEMA = 'proseledger-checkpoint-1';
 const METHODS = new Set(['targeted', 'planner', 'memory']);
@@ -84,6 +85,8 @@ function validateSnapshot(snapshot) {
     need(!cardIds.has(card.id), 'editing card IDs must be unique.'); cardIds.add(card.id); validateCardFields(card); boundedJSON(card, 'Editing card', 6500);
   }
   boundedJSON(snapshot.cards, 'Editing-card catalogue', 24000);
+  optionalString(snapshot.suppliedDraft, 'Supplied proposal', 18000);
+  if (snapshot.ruleMode !== undefined) need(['explicit', 'standard'].includes(snapshot.ruleMode), 'unknown editorial rule mode.');
   optionalString(snapshot.sourceCatalogSHA256, 'Source catalogue fingerprint', 200);
   return snapshot;
 }
@@ -121,7 +124,8 @@ function validateRound(row) {
   for (const key of ['candidateScore', 'retainedScore']) if (row[key] !== null && row[key] !== undefined) number(row[key], key, 20);
   for (const key of ['accepted', 'changed', 'carriedStop']) if (row[key] !== undefined) need(typeof row[key] === 'boolean', 'invalid round flag.');
   if (row.cardIds !== undefined) stringArray(row.cardIds, 'Card IDs', 8, 150);
-  if (row.edits !== undefined) for (const edit of list(row.edits, 'Paragraph edits', 3)) { object(edit, 'Paragraph edit'); for (const key of ['paragraphId', 'before', 'after', 'reason']) optionalString(edit[key], 'Edit ' + key, key === 'paragraphId' ? 30 : 18000); }
+  if (row.edits !== undefined) for (const edit of list(row.edits, 'Paragraph edits', 3)) { object(edit, 'Paragraph edit'); for (const key of ['paragraphId', 'before', 'after', 'reason']) optionalString(edit[key], 'Edit ' + key, key === 'paragraphId' ? 30 : 18000); validateRules(edit.rules);  }
+  validateRules(row.ruleApplications);
   if (row.memoryApplications !== undefined) for (const application of list(row.memoryApplications, 'Memory applications', 8)) {
     object(application, 'Memory application'); string(application.cardId, 'Applied card ID', 150, 1); stringArray(application.paragraphIds, 'Applied paragraph IDs', 3, 30);
     for (const key of ['conditionEvidence', 'reason']) optionalString(application[key], 'Application ' + key, 2000);
@@ -131,16 +135,23 @@ function validateRound(row) {
   if (row.plan !== undefined && row.plan !== null) { object(row.plan, 'Editing plan'); if (row.plan.actions !== undefined) for (const action of list(row.plan.actions, 'Planned actions', 3)) { object(action, 'Planned action'); optionalString(action.goal, 'Plan goal', 1000); if (action.keep !== undefined) stringArray(action.keep, 'Protected phrases', 3, 500); } }
   if (row.pairwiseReview !== undefined) { object(row.pairwiseReview, 'Pairwise review'); string(row.pairwiseReview.verdict, 'Pairwise verdict', 30); optionalString(row.pairwiseReview.reason, 'Pairwise reason', 3000); if (row.pairwiseReview.evidence !== undefined) stringArray(row.pairwiseReview.evidence, 'Pairwise evidence', 3, 1000); }
 }
+function validateRules(rules) {
+  if (rules === undefined) return;
+  for (const rule of list(rules, 'Rule applications', 18)) {
+    object(rule, 'Rule application');
+    for (const key of ['ruleId', 'paragraphId', 'beforeQuote', 'afterQuote', 'reason']) optionalString(rule[key], 'Rule ' + key, key.endsWith('Id') ? 100 : 5000);
+  }
+}
 function validateAudit(audit) {
   if (audit === undefined || audit === null) return;
   object(audit, 'Assessment');
-  if (audit.issues !== undefined) for (const issue of list(audit.issues, 'Assessment issues', 6)) { object(issue, 'Assessment issue'); for (const key of ['id', 'dimension', 'paragraphId', 'quote', 'advice']) optionalString(issue[key], 'Assessment ' + key, 2000); }
+  if (audit.issues !== undefined) for (const issue of list(audit.issues, 'Assessment issues', 6)) { object(issue, 'Assessment issue'); for (const key of ['id', 'dimension', 'paragraphId', 'quote', 'advice', 'ruleId']) optionalString(issue[key], 'Assessment ' + key, 2000); }
   if (audit.dimensions !== undefined) { object(audit.dimensions, 'Assessment dimensions'); for (const dimension of Object.values(audit.dimensions)) { object(dimension, 'Assessment dimension'); number(dimension.score, 'Dimension score', 4); optionalString(dimension.reason, 'Dimension reason', 3000); optionalString(dimension.quote, 'Dimension quotation', 2000); } }
   if (audit.preservation !== undefined) { object(audit.preservation, 'Preservation assessment'); need(typeof audit.preservation.passed === 'boolean', 'invalid preservation verdict.'); if (audit.preservation.issues !== undefined) stringArray(audit.preservation.issues, 'Preservation issues'); }
 }
 function validateResult(result) {
   if (result === null || result === undefined) return null;
-  object(result, 'Run result'); need(result.schema === 'proseledger-browser-2', 'unsupported result schema.');
+  object(result, 'Run result'); need(['proseledger-browser-2', 'proseledger-browser-3'].includes(result.schema), 'unsupported result schema.');
   need(['incomplete', 'cancelled', 'completed', 'completed_with_errors'].includes(result.status), 'unsupported run status.');
   optionalString(result.initialText, 'Initial proposal', 18000); if (result.initialScore !== null && result.initialScore !== undefined) number(result.initialScore, 'Initial score', 20);
   validateAudit(result.initialAudit);
@@ -152,7 +163,7 @@ function validateResult(result) {
   return result;
 }
 function validate(document) {
-  object(document, 'Checkpoint'); need(document.schema === SCHEMA, 'unsupported file format.'); need(document.engineContract === CHECKPOINT_CONTRACT, 'this file belongs to another engine contract.');
+  object(document, 'Checkpoint'); need(document.schema === SCHEMA, 'unsupported file format.'); need([CHECKPOINT_CONTRACT, LEGACY_CONTRACT].includes(document.engineContract), 'this file belongs to another engine contract.');
   const session = object(document.session, 'Session'); validateSnapshot(session.snapshot); validateCache(session.cache, session.snapshot);
   for (const record of list(session.responses, 'Response history', 500)) validateResponse(record, session.snapshot);
   for (const usage of list(session.usage, 'Usage history', 500)) { object(usage, 'Usage record'); for (const key of ['totalTokens', 'promptTokens', 'completionTokens']) if (usage[key] !== undefined && usage[key] !== null) number(usage[key], 'Token count'); }
@@ -167,8 +178,8 @@ function validate(document) {
 /** Returns plain JSON data. API credentials are never part of this file format. */
 export function createCheckpoint(session, result) {
   object(session, 'Session'); need(session.cache instanceof Map, 'the live cache must be a Map.');
-  const snapshot = {}; for (const key of ['base', 'endpoint', 'model', 'topic', 'sources', 'mode', 'cards', 'sourceCatalogSHA256']) if (session.snapshot?.[key] !== undefined) snapshot[key] = session.snapshot[key];
-  const source = {schema: SCHEMA, engineContract: CHECKPOINT_CONTRACT, exportedAt: new Date().toISOString(), session: {
+  const snapshot = {}; for (const key of ['base', 'endpoint', 'model', 'topic', 'sources', 'mode', 'cards', 'sourceCatalogSHA256', 'suppliedDraft', 'ruleMode']) if (session.snapshot?.[key] !== undefined) snapshot[key] = session.snapshot[key];
+  const source = {schema: SCHEMA, engineContract: session.readOnly ? LEGACY_CONTRACT : CHECKPOINT_CONTRACT, exportedAt: new Date().toISOString(), session: {
     snapshot, cache: [...session.cache].map(([request, record]) => ({request, record})),
     responses: session.responses || [], usage: session.usage || [], events: session.events || [],
     attemptCount: session.attemptCount || 0, attempts: session.attempts || [], createdAt: session.createdAt,
@@ -182,6 +193,9 @@ export function restoreCheckpoint(input) {
   if (typeof input === 'string') { need(encoder.encode(input).length <= CHECKPOINT_MAX_BYTES, 'file exceeds 8 MB.'); try { document = JSON.parse(input); } catch { fail('file is not valid JSON.'); } }
   else boundedJSON(input, 'Checkpoint');
   document = validate(clean(document));
-  const session = {...document.session, cache: new Map(document.session.cache.map(entry => [entry.request, entry.record]))};
-  return {session, result: document.result ?? null};
+  const legacy = document.engineContract !== CHECKPOINT_CONTRACT || document.result?.schema === 'proseledger-browser-2'
+    || document.session.attempts.some(attempt => attempt.result?.schema === 'proseledger-browser-2');
+  const session = {...document.session, readOnly: legacy, cache: new Map(document.session.cache.map(entry => [entry.request, entry.record]))};
+  if (legacy) session.cache.clear();
+  return {session, result: document.result ?? null, readOnly: legacy};
 }

@@ -1,5 +1,7 @@
 # Browser workflow validation — 30 October 2026
 
+This page preserves earlier protocol-2 checks. For the current protocol-3 editorial rules, recorded comparisons and limitations, see [Natural-writing validation](NATURALNESS_VALIDATION.md). The older results below are not evidence for the new rule contract.
+
 This is an engineering smoke test of the rewritten browser workflow, not a quality benchmark or evidence that Memory outperforms another route.
 
 ## Latest usability release: 20261030d

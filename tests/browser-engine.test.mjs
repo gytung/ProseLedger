@@ -2,8 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 
-const code=await readFile(new URL('../docs/assets/browser-engine.js',import.meta.url),'utf8');
-const {runProposal,guardCandidate,applyLocalEdits,HEADINGS,DIMENSIONS,paragraphs,textMetrics}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const rulesCode=await readFile(new URL('../docs/assets/naturalness-rules.js',import.meta.url),'utf8');
+const rulesURL='data:text/javascript;base64,'+Buffer.from(rulesCode).toString('base64');
+const code=(await readFile(new URL('../docs/assets/browser-engine.js',import.meta.url),'utf8')).replaceAll('./naturalness-rules.js',rulesURL);
+const {runProposal,guardCandidate,applyLocalEdits,HEADINGS,DIMENSIONS,paragraphs,textMetrics,validateRuleApplications}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
 const topic='Conditional editing experience for evidence-preserving academic proposal revision';
 const sources=[
   {id:'S1',title:'Supported editing',excerpt:'This source describes preserving supported claims and evidence relationships during language revision. It does not establish a universal improvement from historical editing experiences.'},
@@ -30,7 +32,7 @@ function reconstruct(data,candidate) {
 function model(options={}) {
   const records=[];let active=0,maxActive=0;
   const callModel=async(messages,config)=>{
-    const data=payload(messages),stage=config.stage;records.push({stage,data,config});active++;maxActive=Math.max(maxActive,active);
+    const data=payload(messages),stage=config.stage;records.push({stage,data,config,instruction:messages[1].content});active++;maxActive=Math.max(maxActive,active);
     try {
       if(options.concurrent)await new Promise(resolve=>setTimeout(resolve,2));
       if(options.failStage?.(stage))return 'malformed JSON';
@@ -49,6 +51,8 @@ function model(options={}) {
           reply={route:'local_edit',reason:'Clarify the existing evaluation subject.',
             plan:method==='targeted'?[]:[{paragraphId:p.id,goal:'Clarify the existing subject.',keep:[]}],
             edits:[{paragraphId:p.id,replacement,reason:'Replace a broad existing subject with a direct expression.'}],
+            ruleApplications:options.omitRules?undefined:replacement===p.text||options.ruleMode==='standard'?[]:[{ruleId:'specific_subject_action',paragraphId:p.id,
+              beforeQuote:options.badRule?'A missing original phrase':p.text.slice(0,50),afterQuote:replacement.slice(0,50),reason:'The existing evaluation subject can be expressed with a more direct action.'}],
             cardIds:memory?['concrete_lead']:[],
             memoryApplications:memory?[{cardId:'concrete_lead',paragraphIds:[p.id],conditionEvidence:p.text.slice(0,50),reason:'The existing evaluation subject is present; no new scientific fact is required.'}]:[]};
         }
@@ -76,7 +80,7 @@ test('draft mode combines ideation and writing and makes exactly two model calls
   const result=await runProposal({topic,sources,cards,mode:'draft',callModel:mock.callModel,onProgress:e=>progress.push(e)});
   assert.deepEqual(mock.records.map(x=>x.stage),['draft','audit_initial']);
   assert.equal(result.initialText,initial);assert.equal(result.initialScore,1);
-  assert.equal(result.schema,'proseledger-browser-2');
+  assert.equal(result.schema,'proseledger-browser-3');
   assert.ok(progress.findIndex(x=>x.phase==='drafted')<progress.findIndex(x=>x.stage==='audit_initial'));
   assert.equal(result.outline.ideas.length,3);assert.doesNotThrow(()=>JSON.stringify(result));
 });
@@ -256,4 +260,102 @@ test('a tied candidate cannot replace the retained draft even with a lower absol
     assert.equal(row.outcome,'no_gain');
   }
   assert.equal(result.comparison.valid,true);
+});
+
+test('supplied proposals skip idea generation and preserve the same D0 across all routes',async()=>{
+  const mock=model();
+  const result=await runProposal({topic,sources,cards,suppliedDraft:initial,callModel:mock.callModel});
+  assert.equal(result.draftOrigin,'user_supplied');
+  assert.equal(result.initialText,initial);
+  assert.equal(result.input.suppliedDraft,initial);
+  assert.deepEqual(result.outline.ideas,[]);
+  assert.equal(result.outline.selectedIdea,null);
+  assert.equal(result.outline.outline.length,6);
+  assert.equal(mock.records.length,13);
+  assert.equal(mock.records[0].stage,'audit_initial');
+  for(const method of ['targeted','planner','memory']) {
+    assert.equal(result.branches[method].rounds[0].text,initial);
+    assert.equal(mock.records.find(x=>x.stage==='revise_'+method+'_1').data.currentParagraphs[0].text,paragraphs(initial)[0].text);
+  }
+  const fresh=await runProposal({topic,sources,mode:'draft',callModel:model().callModel});
+  assert.equal(fresh.draftOrigin,'model_generated');
+});
+
+test('supplied-draft structure, citations, size, and rule mode fail before paid calls',async()=>{
+  for(const suppliedDraft of [initial.replace('## Abstract','## Summary'),initial.replaceAll('[S2]','[S99]'),'Too short.',initial+'x'.repeat(18000)]) {
+    let called=false;
+    await assert.rejects(runProposal({topic,sources,suppliedDraft,callModel:async()=>{called=true;}}));
+    assert.equal(called,false);
+  }
+  await assert.rejects(runProposal({topic,sources,ruleMode:'force_win',callModel:async()=>{}}),/Unknown editorial rule mode/);
+});
+
+test('explicit edits expose exact rule evidence without giving rule labels to the reviewer',async()=>{
+  const mock=model();const result=await runProposal({topic,sources,cards,callModel:mock.callModel});
+  const row=result.branches.targeted.rounds[1],edit=row.edits[0];
+  assert.equal(result.ruleMode,'explicit');
+  assert.equal(row.ruleApplications[0].paragraphId,edit.paragraphId);
+  assert.equal(edit.rules[0].ruleId,'specific_subject_action');
+  assert.ok(edit.before.includes(edit.rules[0].beforeQuote));
+  assert.ok(edit.after.includes(edit.rules[0].afterQuote));
+  assert.notEqual(edit.rules[0].beforeQuote,edit.rules[0].afterQuote);
+  const review=mock.records.find(x=>x.stage==='review_round_1');
+  for(const prohibited of ['specific_subject_action','ruleApplications','editorial specifications'])assert.equal(JSON.stringify(review).includes(prohibited),false);
+});
+
+test('missing or fabricated rule anchors reject the candidate rather than inventing evidence',async()=>{
+  for(const options of [{omitRules:true},{badRule:true}]) {
+    const result=await runProposal({topic,sources,cards,callModel:model(options).callModel});
+    for(const method of ['targeted','planner','memory']) {
+      assert.equal(result.branches[method].rounds[1].outcome,'generation_failed');
+      assert.equal(result.branches[method].rounds[1].accepted,false);
+      assert.deepEqual(result.branches[method].rounds[1].ruleApplications,[]);
+    }
+    assert.equal(result.comparison.valid,false);
+  }
+});
+
+test('the standard editing control changes neither audit nor blinded review instructions',async()=>{
+  const explicit=model(),standard=model({ruleMode:'standard'});
+  const one=await runProposal({topic,sources,cards,suppliedDraft:initial,callModel:explicit.callModel});
+  const two=await runProposal({topic,sources,cards,suppliedDraft:initial,ruleMode:'standard',callModel:standard.callModel});
+  for(const stage of ['audit_initial','review_round_1']) {
+    assert.equal(explicit.records.find(x=>x.stage===stage).instruction,standard.records.find(x=>x.stage===stage).instruction);
+  }
+  assert.ok(explicit.records.find(x=>x.stage==='revise_targeted_1').instruction.includes('calibrated_claims'));
+  assert.equal(standard.records.find(x=>x.stage==='revise_targeted_1').instruction.includes('calibrated_claims'),false);
+  assert.equal(two.ruleMode,'standard');
+  assert.equal(one.initialText,two.initialText);
+  assert.equal(two.branches.targeted.rounds[1].accepted,true);
+  assert.deepEqual(two.branches.targeted.rounds[1].edits[0].rules,[]);
+});
+
+test('optional diagnostic rule labels never invalidate otherwise useful anchored feedback',async()=>{
+  const mock=model();
+  const result=await runProposal({topic,sources,cards,mode:'draft',callModel:async(messages,config)=>{
+    const reply=await mock.callModel(messages,config);
+    if(config.stage==='audit_initial') {
+      reply.issues[0].ruleId='specific_subject_action';
+      reply.issues[1].ruleId='unrecognised_optional_label';
+    }
+    return reply;
+  }});
+  assert.equal(result.initialAudit.issues[0].ruleId,'specific_subject_action');
+  assert.equal(result.initialAudit.issues[1].ruleId,undefined);
+  assert.equal(result.initialAudit.issues[2].ruleId,undefined);
+});
+
+test('rule evidence cannot claim unchanged text, absent phrases, or unknown operations',()=>{
+  const original=paragraphs(initial)[0];
+  const replacement=original.text.replace('The planned study','The proposed evaluation');
+  const edit={paragraphId:original.id,replacement};
+  const valid={ruleId:'specific_subject_action',paragraphId:original.id,beforeQuote:'The planned study',afterQuote:'The proposed evaluation',reason:'The planned actor is expressed more directly without adding a finding.'};
+  assert.equal(validateRuleApplications([valid],initial,[edit]).length,1);
+  for(const altered of [{...valid,ruleId:'guaranteed_human'},{...valid,beforeQuote:'A missing phrase'},{...valid,afterQuote:'Another missing phrase'},
+    {...valid,beforeQuote:'supplied evidence',afterQuote:'supplied evidence'}]) {
+    assert.throws(()=>validateRuleApplications([altered],initial,[edit]));
+  }
+  assert.throws(()=>validateRuleApplications([valid,valid],initial,[edit]),/Repeated editorial rule/);
+  assert.throws(()=>validateRuleApplications([],initial,[edit]),/Every changed paragraph/);
+  assert.throws(()=>validateRuleApplications([valid],initial,[{...edit,replacement:original.text}]),/actual changed paragraph/);
 });

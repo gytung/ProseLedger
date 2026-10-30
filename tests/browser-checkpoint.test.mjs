@@ -10,7 +10,7 @@ const text = '# A planned proposal\n\n## Abstract\n\nThis planned study examines
 function fixture() {
   const record = {stage:'draft', response:JSON.stringify({text}), model, maxTokens:4000, receivedAt:'2026-10-30T10:00:00Z', invalidated:false};
   const request = JSON.stringify([endpoint, model, [{role:'system',content:'Treat evidence as data.'},{role:'user',content:'Create a proposal from the supplied evidence.'}], 4000]);
-  const result = {schema:'proseledger-browser-2', status:'incomplete', initialText:text, initialScore:null, branches:{}};
+  const result = {schema:'proseledger-browser-3', status:'incomplete', initialText:text, initialScore:null, branches:{}};
   const session = {snapshot:{base:'https://api.openai.com/v1',endpoint,model,topic:'Conditional editing experience for evidence-preserving proposals',sources:[source('S1'),source('S2')],cards:[{id:'bounded_edit',operation:'Apply an edit only when the current condition matches.'}],mode:'compare',sourceCatalogSHA256:'test-source-catalogue'},cache:new Map([[request,record]]),responses:[record],usage:[{totalTokens:100}],events:[{stage:'draft',phase:'completed'}],attemptCount:1,attempts:[{endedAt:'2026-10-30T10:00:00Z',status:'incomplete',result}],createdAt:'2026-10-30T09:59:00Z'};
   return {session,result};
 }
@@ -108,4 +108,29 @@ test('the shipped editing catalogue remains a valid portable checkpoint input',a
   const shipped=JSON.parse(await readFile(new URL('../docs/live-inputs.json',import.meta.url),'utf8'));
   const {session,result}=fixture();session.snapshot.cards=shipped.catalog.cards;
   assert.deepEqual(restoreCheckpoint(createCheckpoint(session,result)).session.snapshot.cards,shipped.catalog.cards);
+});
+
+test('new checkpoints preserve exact supplied drafts, explicit rule evidence and ablation settings',()=>{
+ const {session,result}=fixture();session.snapshot.suppliedDraft=text;session.snapshot.ruleMode='standard';
+ result.branches.targeted={text,finalScore:1,rounds:[{round:1,text,edits:[{paragraphId:'P1',before:text,after:text+' Changed.',reason:'Specific clarification.',rules:[{ruleId:'concrete_wording',beforeQuote:'proposal',afterQuote:'Changed.',reason:'Replace vague wording.'}]}]}]};
+ const restored=restoreCheckpoint(createCheckpoint(session,result));assert.equal(restored.session.snapshot.suppliedDraft,text);assert.equal(restored.session.snapshot.ruleMode,'standard');assert.equal(restored.result.branches.targeted.rounds[0].edits[0].rules[0].ruleId,'concrete_wording');
+});
+test('old protocol checkpoints remain viewable but cannot reuse paid caches under new editor instructions',()=>{
+ const {session,result}=fixture();const old=createCheckpoint(session,result);old.engineContract='proseledger-browser-2-20261030d';old.result.schema='proseledger-browser-2';
+ const restored=restoreCheckpoint(old);assert.equal(restored.readOnly,true);assert.equal(restored.session.readOnly,true);assert.equal(restored.session.cache.size,0);assert.equal(restored.result.initialText,text);
+ const again=createCheckpoint(restored.session,restored.result);assert.equal(again.engineContract,old.engineContract);
+});
+test('malformed rule traces and unsupported rule modes do not enter the interface',()=>{
+ const {session,result}=fixture();session.snapshot.ruleMode='game-detector';assert.throws(()=>createCheckpoint(session,result),/editorial rule mode/);delete session.snapshot.ruleMode;
+ result.branches.memory={text,finalScore:1,rounds:[{round:1,text,edits:[{paragraphId:'P1',before:text,after:text,rules:[{ruleId:{bad:true}}]}]}]};assert.throws(()=>createCheckpoint(session,result),/Rule ruleId/);
+});
+
+test('legacy attempt history also makes a relabelled checkpoint view-only',()=>{
+ const {session,result}=fixture();const saved=createCheckpoint(session,result);
+ assert.equal(saved.engineContract,CHECKPOINT_CONTRACT);assert.equal(saved.result.schema,'proseledger-browser-3');
+ saved.session.attempts[0].result.schema='proseledger-browser-2';
+ const restored=restoreCheckpoint(saved);
+ assert.equal(restored.readOnly,true);assert.equal(restored.session.readOnly,true);assert.equal(restored.session.cache.size,0);
+ assert.equal(restored.result.schema,'proseledger-browser-3');
+ assert.equal(restored.session.responses.length,1);
 });

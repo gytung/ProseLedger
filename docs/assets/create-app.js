@@ -1,6 +1,9 @@
-import { PRESETS, providerEndpoint, createModelClient } from './api-client.js?v=20261030d';
-import { runProposal } from './browser-engine.js?v=20261030b';
-import { createCheckpoint, restoreCheckpoint, CHECKPOINT_MAX_BYTES } from './run-checkpoint.js?v=20261030d';
+import { PRESETS, providerEndpoint, createModelClient } from './api-client.js?v=20261030e';
+import { runProposal } from './browser-engine.js?v=20261030e';
+import { createCheckpoint, restoreCheckpoint, CHECKPOINT_MAX_BYTES } from './run-checkpoint.js?v=20261030e';
+
+import { NATURALNESS_RULES } from './naturalness-rules.js?v=20261030e';
+import { mountExternalValidation } from './external-validation.js?v=20261030e';
 
 const $ = id => document.getElementById(id);
 const names = {initial:'Initial draft',targeted:'Targeted',planner:'Planner-only',memory:'Memory'};
@@ -34,26 +37,57 @@ function sourceInput() {
   if(sources.some(s=>s.excerpt.length<80||s.excerpt.length>4000))throw new Error('Each source excerpt must contain 80–4,000 characters.');
   if(sources.reduce((n,s)=>n+s.excerpt.length,0)>24000)throw new Error('The combined excerpts exceed 24,000 characters.');return sources;
 }
-function loadExample() {if(!defaults||running)return;$('topic').value=defaults.topic;$('source-notes').value=serializeSources(defaults.sources);updateReadiness();}
-function canResume() {return Boolean(session&&result&&result.status!=='completed');}
-function canCompare() {const stages=new Set([...(session?.cache?.values()||[])].map(r=>r.stage));return Boolean(session&&result?.status==='completed'&&session.snapshot.mode==='draft'&&result.initialText&&stages.has('draft')&&stages.has('audit_initial'));}
+function loadExample() {if(!defaults||running)return;$('input-mode').value='generate';$('supplied-draft').value='';updateInputMode();$('topic').value=defaults.topic;$('source-notes').value=serializeSources(defaults.sources);updateReadiness();}
+function canResume() {return Boolean(session&&!session.readOnly&&result&&result.status!=='completed');}
+function canCompare() {const stages=new Set([...(session?.cache?.values()||[])].map(r=>r.stage));return Boolean(session&&!session.readOnly&&result?.status==='completed'&&session.snapshot.mode==='draft'&&result.initialText&&(session.snapshot.suppliedDraft||stages.has('draft'))&&stages.has('audit_initial'));}
+function suppliedDraftInput() {
+  if($('input-mode').value!=='existing')return undefined;
+  const draft=$('supplied-draft').value.trim();
+  if(draft.length<300||draft.length>18000)throw new Error('Your existing draft needs 300–18,000 characters.');
+  const expected=['Abstract','Introduction','Related Work','Methodology','Planned Evaluation','Limitations and Conclusion'];
+  const headings=[...draft.matchAll(/^##\s+(.+)$/gm)].map(m=>m[1].trim());
+  if(JSON.stringify(headings)!==JSON.stringify(expected))throw new Error('Use the six section headings shown in the draft field, in that order.');
+  const ids=new Set(sourceInput().map(s=>s.id)),citations=new Set([...draft.matchAll(/\[(S\d+)\]/g)].map(m=>m[1]).filter(id=>ids.has(id)));
+  if(citations.size<2)throw new Error('Your draft must cite at least two supplied sources, such as [S1] and [S2].');
+  return draft;
+}
+function updateInputMode() {
+  const existing=$('input-mode').value==='existing';$('supplied-draft-field').hidden=!existing;
+  $('run-mode-help').textContent=existing?'Review your supplied draft with 1 call, then compare revision routes from that exact text. Full comparison uses up to 13 calls and usually takes several minutes.':'Start with 2 calls, read the draft, then compare revision routes from that same draft. Full comparison uses up to 14 calls and usually takes several minutes; time depends on your provider.';
+}
+function renderRuleLibrary() {
+  const list=$('rule-library-items');list.replaceChildren();
+  for(const rule of NATURALNESS_RULES){
+    const item=element('details',undefined,'teaching-rule'),summary=element('summary',rule.label);item.append(summary,element('p',rule.goal,'rule-goal'));
+    const conditions=element('div',undefined,'rule-conditions');conditions.append(element('p',`Use when: ${rule.when}`),element('p',`Do not apply when: ${rule.notWhen}`));item.append(conditions);
+    const pair=element('div',undefined,'teaching-pair');for(const [label,value]of[['Before · illustrative',rule.before],['After · illustrative',rule.after]]){const side=element('div');side.append(element('strong',label),element('p',value));pair.append(side);}item.append(pair);
+    item.append(element('p',`Avoid: “${rule.avoid}” ${rule.caution}`,'rule-caution'));list.append(item);
+  }
+}
+function setResultsFocus(enabled) {
+  $('setup-workspace').hidden=enabled;$('workspace-steps').hidden=enabled;
+  $('recording-focus').setAttribute('aria-pressed',String(enabled));$('recording-focus').textContent=enabled?'Show settings':'Focus on results';
+  document.body.setAttribute('data-results-focus',String(enabled));
+  if(enabled)$('results-panel').scrollIntoView?.({behavior:'smooth',block:'start'});
+}
 function updateReadiness() {
   if(!defaults)return;
   let issue='';try{const sources=sourceInput();$('input-summary').textContent=`${sources.length} sources · ${sources.reduce((n,s)=>n+s.excerpt.length,0).toLocaleString()} evidence characters · ready`;$('input-summary').className='input-summary ready';}catch(error){issue=error.message;$('input-summary').textContent=issue;$('input-summary').className='input-summary needs-attention';}
+  try{const draft=suppliedDraftInput();$('supplied-draft-summary').textContent=draft?`${draft.length.toLocaleString()} characters · six sections · supplied text stays unchanged until a revision is accepted`:'';}catch(error){issue=error.message;$('supplied-draft-summary').textContent=issue;}
   const topic=$('topic').value.trim();if(topic.length<10)issue='Describe your research question in at least 10 characters.';
   try{providerEndpoint($('api-base').value);}catch{issue='Enter a valid provider endpoint under Advanced settings.';}
   if(!$('api-model').value.trim())issue='Enter the model ID from your provider.';
   if(!$('api-key').value.trim())issue='Add your API key to begin. Your sources are kept in this tab.';
   else if(!$('consent').checked)issue='Confirm API usage to enable a paid model run.';
-  $('readiness-summary').textContent=running?'Run in progress. Completed steps can be saved as a checkpoint.':issue||($('generation-mode').value==='draft'?'Ready: generate and review one draft with 2 model calls.':'Ready: compare three routes from one common draft, with up to 14 model calls.');
+  $('readiness-summary').textContent=running?'Run in progress. Completed steps can be saved as a checkpoint.':issue||($('input-mode').value==='existing'?($('generation-mode').value==='draft'?'Ready: review your existing draft with 1 model call.':'Ready: revise your existing draft through three routes, with up to 13 model calls.'):$('generation-mode').value==='draft'?'Ready: generate and review one draft with 2 model calls.':'Ready: compare three routes from one common draft, with up to 14 model calls.');
   $('readiness-summary').className=`readiness-summary ${issue?'needs-attention':'ready'}`;
-  $('generate').textContent=pendingComparison?'Compare this saved draft →':$('generation-mode').value==='draft'?'Generate draft →':'Generate and compare →';
+  $('generate').textContent=pendingComparison?'Compare this saved draft →':$('input-mode').value==='existing'?($('generation-mode').value==='draft'?'Review this draft →':'Revise and compare →'):$('generation-mode').value==='draft'?'Generate draft →':'Generate and compare →';
   $('download-checkpoint').disabled=!session||!result;
   $('compare-draft').hidden=!canCompare();$('compare-draft').disabled=running;
 }
 function busy(value) {
   running=value;
-  for(const id of ['provider-preset','api-base','api-model','api-key','topic','source-notes','source-upload','reset-inputs','generation-mode','consent','generate','test-connection','restore-run'])$(id).disabled=value;
+  for(const id of ['provider-preset','api-base','api-model','api-key','topic','input-mode','supplied-draft','source-notes','source-upload','reset-inputs','generation-mode','consent','generate','test-connection','restore-run'])$(id).disabled=value;
   $('cancel').disabled=!value;$('resume').disabled=value;$('resume').hidden=!canResume();
   $('resume-hint').textContent=canResume()?'Unfinished run saved in this tab. Re-enter the original provider/model key and resume, or save a checkpoint before closing. Starting a new run replaces this workspace.':'Nothing is submitted until you start or test. Save a checkpoint before closing to keep the complete record.';
   updateReadiness();
@@ -140,6 +174,36 @@ function renderDiff(before,after) {
   $('diff-context').textContent=shown?`Showing ${shown} changed paragraph pair(s); ${omitted} unchanged paragraph(s) omitted. Full retained and initial manuscripts remain below.`:'No changed paragraphs to compare. Full manuscripts remain below.';
 }
 
+function renderLanguageLab(branch,record) {
+  const counts=$('language-lab-counts'),evidence=$('language-lab-evidence');counts.replaceChildren();evidence.replaceChildren();
+  const rounds=(branch?.rounds||[]).filter(r=>r.round>0),chosen=record?[record]:rounds;
+  const changed=rounds.flatMap(r=>(r.edits||[]).filter(e=>e.before!==e.after).map(edit=>({row:r,edit}))),retained=changed.filter(x=>x.row.accepted),cardBacked=retained.filter(({row,edit})=>(row.memoryApplications||[]).some(a=>(a.paragraphIds||[]).includes(edit.paragraphId)));
+  for(const [label,value] of [['Initial issues',result.initialAudit?.issues?.length??0],['Changed paragraphs',changed.length],['Retained edits',retained.length],['Card-backed retained',cardBacked.length]]){const stat=element('div');stat.append(element('strong',String(value)),element('span',label));counts.append(stat);}
+  if(!branch){
+    const issues=result.initialAudit?.issues||[];
+    evidence.append(element('p',issues.length?'These are diagnoses in the initial draft. They are not completed edits. Select a revision route after comparison to inspect an actual change.':'No anchored expression issue was recorded in the initial review. No rewrite is forced merely to make a score move.','lab-empty'));
+    for(const issue of issues){const item=element('article',undefined,'lab-diagnosis');const rule=NATURALNESS_RULES.find(r=>r.id===issue.ruleId);item.append(element('strong',`${issue.paragraphId} · ${rule?.label||'Expression diagnosis'}`),element('blockquote',issue.quote||''),element('p',issue.advice||''));evidence.append(item);}return;
+  }
+  let shown=0;
+  for(const row of chosen){
+    for(const edit of row.edits||[]){
+      const rules=edit.rules||[];if(edit.before===edit.after)continue;
+      const panel=element('article',undefined,`lab-edit ${row.accepted?'retained':'not-retained'}`);shown++;
+      const heading=element('div',undefined,'lab-edit-heading');heading.append(element('strong',`${names[selected]} · R${row.round} · ${edit.paragraphId}`),element('span',row.accepted?'Retained':isFailure(row)?'Failed / unverified':'Not retained',`lab-outcome ${row.accepted?'accepted':'rejected'}`));panel.append(heading);
+      if(!rules.length)panel.append(element('p','This record has no rule-level evidence. The paragraph change is shown below; no rule attribution is inferred.','lab-empty'));
+      for(const applied of rules){const rule=NATURALNESS_RULES.find(x=>x.id===applied.ruleId),item=element('div',undefined,'lab-rule');item.append(element('h4',rule?.label||applied.ruleId),element('p',applied.reason||edit.reason||'No rule-specific explanation recorded.','lab-reason'));
+        const pair=element('div',undefined,'lab-quote-pair');for(const[label,quote]of[['Original wording',applied.beforeQuote],['Proposed wording',applied.afterQuote]]){const side=element('section');side.append(element('strong',label),element('blockquote',quote||'No quoted span recorded.'));pair.append(side);}item.append(pair);panel.append(item);
+      }
+      const checks=[];checks.push(row.guard?.passed===true?'Structural checks passed':row.guard?.passed===false?'Structural checks failed':'Structural checks not recorded');checks.push(row.audit?.preservation?.passed===true?'Meaning-preservation review passed':row.audit?.preservation?.passed===false?'Meaning-preservation concern':'Meaning-preservation review unavailable');checks.push(`Blind review: ${row.pairwise||'unavailable'}`);
+      panel.append(element('p',checks.join(' · '),'lab-checks'),element('p',row.reason||'No decision explanation recorded.','lab-decision'));
+      const applications=(row.memoryApplications||[]).filter(a=>(a.paragraphIds||[]).includes(edit.paragraphId));if(applications.length)panel.append(element('p',`Experience applied: ${applications.map(a=>a.cardId).join(', ')}. ${row.accepted?'The edit survived review; this alone does not establish a causal memory advantage.':'The candidate was not retained; this is not a successful memory edit.'}`,'lab-memory'));
+      evidence.append(panel);
+    }
+  }
+  if(!shown)evidence.append(element('p',record?(record.route==='stop'?'The route stopped without proposing a change. The previous draft was retained.':'No textual edit was produced in this round. Any failure or reviewer explanation remains below.'):'This route has no changed paragraphs to display. No improvement is inferred from an unchanged output.','lab-empty'));
+  if(!record&&rounds.length)evidence.append(element('p','All changed candidates are listed in round order, including rejected edits. Counts describe edit events; a later round may revise the same paragraph again.','field-help'));
+}
+
 function renderEdit() {
   if(!result)return;const branch=currentBranch(),r=selectedRecord();const explanation=$('edit-explanation');explanation.replaceChildren();
   let before=result.initialText||'',after=selected==='initial'?before:branch?.text||before;
@@ -164,7 +228,7 @@ function renderEdit() {
     if(branch)explanation.append(element('p',`${branch.rounds.filter(r=>r.round>0&&r.accepted&&r.changed).length} revision round(s) with changes retained across ${branch.rounds.filter(r=>r.round>0).length} revision opportunities. Select a round to inspect the actual candidate and the reviewer’s reason.`));
     if(selected==='memory'&&branch)explanation.append(element('p',memorySummary(branch)));
   }
-  renderDiff(before,after);
+  renderLanguageLab(branch,r);renderDiff(before,after);
 }
 function displayBranch(method) {
   selected=method;const branch=currentBranch();if(selectedRound!=='final'&&!branch?.rounds.some(r=>String(r.round)===selectedRound))selectedRound='final';
@@ -191,10 +255,11 @@ function displayResults() {
   if(!result)return;const branches=result.branches||{},failures=failedCount();$('results-panel').hidden=false;
   const draftOnly=session?.snapshot.mode==='draft',done=result.status==='completed';
   $('result-origin').textContent=importedRun?'Imported run record':'Your fresh result';
-  $('results-intro').textContent=draftOnly?'A research proposal grounded in your supplied notes. Read the initial review, download the draft, or continue with three revision routes.':'Read the changes first. Three independent routes start from the same draft; every candidate is checked, including edits that are rejected. A higher-quality revision is not guaranteed.';
-  $('results-heading').textContent=done?(draftOnly?'Your draft is ready. Choose what comes next.':'Read the writing. Inspect the decisions.'):result.status==='completed_with_errors'?'Comparison finished with incomplete candidates.':generating?'Work in progress. Completed steps appear below.':'Your completed work is saved here.';
-  const origin=importedRun?'Imported checkpoint. This is a saved user record, not an independently verified evaluation. ':'';
-  $('run-result-summary').textContent=origin+(failures?`${failures} invalid or unreviewed candidate(s) are visible below. The retained draft is carried forward at those steps; these are not successful revisions. Re-enter your key and resume to retry failed stages.`:done?draftOnly?'Draft and initial review complete. Read or download your proposal, or compare three revision routes using this exact draft. The two completed requests will be reused.':'Run complete. The scores, edits and manuscripts below belong to this run.':'Partial result: only completed stages are shown. Resume after checking the error, or save a checkpoint before closing.');
+  $('results-intro').textContent=session?.readOnly?'Read the saved writing and decisions. This older record is view-only; the current editor has not rerun or rescored it.':draftOnly?'A research proposal grounded in your supplied notes. Read the initial review, download the draft, or continue with three revision routes.':'Read the changes first. Three independent routes start from the same draft; every candidate is checked, including edits that are rejected. A higher-quality revision is not guaranteed.';
+  $('results-heading').textContent=session?.readOnly?'Inspect this saved record.':done?(draftOnly?'Your draft is ready. Choose what comes next.':'Read the writing. Inspect the decisions.'):result.status==='completed_with_errors'?'Comparison finished with incomplete candidates.':generating?'Work in progress. Completed steps appear below.':'Your completed work is saved here.';
+  const origin=importedRun?(session?.readOnly?'Imported legacy record: view-only. Its original prompts and scores are preserved; it cannot resume under the new editing protocol. ':'Imported checkpoint. This is a saved user record, not an independently verified evaluation. '):'';
+  const readOnlySummary=(failures?`${failures} invalid or unreviewed candidate(s) remain recorded. `:!done?'This record is incomplete; only its saved stages are shown. ':'')+'Read or download the saved writing and decisions. Original scores have not been recalculated. Start a new run to use the current editor.';
+  $('run-result-summary').textContent=origin+(session?.readOnly?readOnlySummary:failures?`${failures} invalid or unreviewed candidate(s) are visible below. The retained draft is carried forward at those steps; these are not successful revisions. Re-enter your key and resume to retry failed stages.`:done?draftOnly?(session?.snapshot.suppliedDraft?'Your supplied draft and initial review are ready. Compare three routes using this exact text; the completed review will be reused.':'Draft and initial review complete. Read or download your proposal, or compare three revision routes using this exact draft. The two completed requests will be reused.'):'Run complete. The scores, edits and manuscripts below belong to this run.':'Partial result: only completed stages are shown. Resume after checking the error, or save a checkpoint before closing.');
   $('download-manuscript').disabled=!result.initialText;$('copy-manuscript').disabled=!result.initialText;updateReadiness();
   const initialReview=$('initial-review');initialReview.replaceChildren();
   if(result.initialAudit){const table=element('table');for(const[key,value]of Object.entries(result.initialAudit.dimensions||{})){const row=element('tr');row.append(element('td',key.replaceAll('_',' ')),element('td',`${score(value.score)} / 4`),element('td',value.reason||'No separate issue recorded.'));table.append(row);}initialReview.append(table,element('p','These are expression ratings, not a check that the research design is complete. A low initial score leaves little room for numerical improvement.'));for(const issue of result.initialAudit.issues||[]){initialReview.append(element('p',`${issue.paragraphId}: ${issue.advice}`));if(issue.quote)initialReview.append(element('blockquote',issue.quote));}}
@@ -249,22 +314,22 @@ async function execute(testOnly=false,resuming=false,extending=false) {
     if(!$('consent').checked)throw new Error('Confirm the selected provider and API usage before starting.');
     const config={base:$('api-base').value,model:$('api-model').value,key:$('api-key').value};let snapshot;
     if(resuming||extending){if(resuming&&!canResume())throw new Error('There is no interrupted run in this tab.');if(extending&&!canCompare())throw new Error('Finish a draft-only run before continuing its comparison.');snapshot={...session.snapshot,mode:extending?'compare':session.snapshot.mode};if(providerEndpoint(config.base)!==snapshot.endpoint||config.model.trim()!==snapshot.model)throw new Error('Continue with the original provider endpoint and model. Restore those settings and enter that provider’s key.');}
-    else if(!testOnly){const topic=$('topic').value.trim();if(topic.length<10||topic.length>1600)throw new Error('Enter a topic of 10–1,600 characters.');snapshot={base:config.base,endpoint:providerEndpoint(config.base),model:config.model.trim(),topic,sources:sourceInput(),mode:$('generation-mode').value,cards:structuredClone(defaults.catalog.cards),sourceCatalogSHA256:defaults.source_catalog_sha256};}
+    else if(!testOnly){const topic=$('topic').value.trim();if(topic.length<10||topic.length>1600)throw new Error('Enter a topic of 10–1,600 characters.');snapshot={suppliedDraft:suppliedDraftInput(),ruleMode:'explicit',base:config.base,endpoint:providerEndpoint(config.base),model:config.model.trim(),topic,sources:sourceInput(),mode:$('generation-mode').value,cards:structuredClone(defaults.catalog.cards),sourceCatalogSHA256:defaults.source_catalog_sha256};}
     client=createModelClient(config,{onUsage:u=>{usage.push(u);metrics();},onStatus:statusEvent});
     if(!testOnly){
       if(!resuming&&!extending&&session?.responses.length&&!window.confirm('Start a new run? This replaces the current workspace. Cancel to download a checkpoint first.'))return;
-      startedRun=true;if(!resuming&&!extending){session={snapshot,cache:new Map(),responses:[],usage:[],events:[],attemptCount:0,attempts:[],createdAt:new Date().toISOString()};importedRun=false;result={schema:'proseledger-browser-2',status:'incomplete',initialText:null,initialScore:null,branches:{}};$('results-panel').hidden=true;}else{session.snapshot=snapshot;result.status='incomplete';}
-      pendingComparison=false;$('topic').value=snapshot.topic;$('source-notes').value=serializeSources(snapshot.sources);$('generation-mode').value=snapshot.mode;usage=session.usage;attempts=session.attemptCount;events=[];selected='initial';selectedRound='final';generating=true;
+      startedRun=true;if(!resuming&&!extending){session={snapshot,cache:new Map(),responses:[],usage:[],events:[],attemptCount:0,attempts:[],createdAt:new Date().toISOString()};importedRun=false;result={schema:'proseledger-browser-3',status:'incomplete',initialText:null,initialScore:null,branches:{}};$('results-panel').hidden=true;}else{session.snapshot=snapshot;result.status='incomplete';}
+      pendingComparison=false;$('input-mode').value=snapshot.suppliedDraft?'existing':'generate';$('supplied-draft').value=snapshot.suppliedDraft||'';updateInputMode();$('topic').value=snapshot.topic;$('source-notes').value=serializeSources(snapshot.sources);$('generation-mode').value=snapshot.mode;usage=session.usage;attempts=session.attemptCount;events=[];selected='initial';selectedRound='final';generating=true;
     }
     else {usage=[];events=[];attempts=0;}
     controller=new AbortController();busy(true);started=performance.now();statuses=new Map();logicalDone=new Set();cacheHits=0;
-    $('status-panel').hidden=false;$('status-title').textContent=testOnly?'Testing your model connection':resuming?'Resuming the saved run':extending?'Comparing the same saved draft':snapshot.mode==='draft'?'Generating and reviewing your draft':'Generating a new proposal and actual revisions';$('progress-bar').max=testOnly?1:snapshot.mode==='draft'?2:14;renderStages();metrics();ticker=setInterval(metrics,1000);
+    setResultsFocus(false);$('status-panel').hidden=false;$('status-title').textContent=testOnly?'Testing your model connection':resuming?'Resuming the saved run':extending?'Comparing the same saved draft':snapshot.mode==='draft'?'Generating and reviewing your draft':'Generating a new proposal and actual revisions';$('progress-bar').max=testOnly?1:snapshot.mode==='draft'?(snapshot.suppliedDraft?1:2):(snapshot.suppliedDraft?13:14);renderStages();metrics();ticker=setInterval(metrics,1000);
     $('status-panel').scrollIntoView?.({behavior:'smooth',block:'start'});
     if(testOnly){$('status-message').textContent='Sending one short request directly to the selected provider.';await client.callModel([{role:'user',content:'Reply with OK only.'}],{signal:controller.signal,stage:'connection_test',maxTokens:256});logicalDone.add('connection_test');$('connection-status').textContent='Connected. Ready to generate with this model.';$('status-title').textContent='Connection verified';$('status-message').textContent='The provider returned text. Your key remains in this form until you generate, clear it, or leave the page.';}
     else {
       const cachedModel=async(messages,options={})=>{const key=JSON.stringify([snapshot.endpoint,snapshot.model,messages,options.maxTokens??2500]);const cached=session.cache.get(key);if(cached){if(options.signal?.aborted)throw new DOMException('Generation cancelled.','AbortError');cacheHits++;logicalDone.add(options.stage);statuses.set(options.stage,{stage:options.stage,phase:'cached'});renderStages();metrics();return cached.response;}
         const response=await client.callModel(messages,options);const record={stage:options.stage,response,model:snapshot.model,maxTokens:options.maxTokens??2500,receivedAt:new Date().toISOString(),invalidated:false};session.responses.push(record);for(const[oldKey,old]of session.cache)if(old.stage===options.stage)session.cache.delete(oldKey);session.cache.set(key,record);logicalDone.add(options.stage);metrics();return response;};
-      const complete=await runProposal({topic:snapshot.topic,sources:snapshot.sources,cards:snapshot.cards||defaults.catalog.cards,mode:snapshot.mode,callModel:cachedModel,signal:controller.signal,onProgress});result=complete;
+      const complete=await runProposal({suppliedDraft:snapshot.suppliedDraft,ruleMode:snapshot.ruleMode||'explicit',topic:snapshot.topic,sources:snapshot.sources,cards:snapshot.cards||defaults.catalog.cards,mode:snapshot.mode,callModel:cachedModel,signal:controller.signal,onProgress});result=complete;
       if(failedCount()&&result.status==='completed')result.status='completed_with_errors';if(result.branches?.memory){selected='memory';selectedRound='final';}displayResults();
       const failures=failedCount();$('status-title').textContent=failures?`Finished with ${failures} invalid / unreviewed candidate(s)`:'Generation completed';$('status-message').textContent=failures?'Valid outputs are retained. Failed stages are recorded; re-enter your key to resume without repeating successful requests.':snapshot.mode==='draft'?'Draft and initial review are ready. Download the proposal or compare revision routes using this same draft. Your key has been cleared.':'Inspect the actual edits and reviewer reasons, then download the retained writing. The key has been cleared.';
       if(!failures)$('progress-bar').max=Math.max(1,logicalDone.size);
@@ -280,13 +345,15 @@ async function execute(testOnly=false,resuming=false,extending=false) {
 $('generation-form').addEventListener('submit',e=>{e.preventDefault();execute(false,false,pendingComparison);});$('test-connection').addEventListener('click',()=>execute(true));$('resume').addEventListener('click',()=>execute(false,true));$('cancel').addEventListener('click',()=>controller?.abort());
 $('clear-key').addEventListener('click',()=>{controller?.abort();clearSecret();$('connection-status').textContent='API key cleared.';});
 $('provider-preset').addEventListener('change',()=>{const preset=PRESETS[$('provider-preset').value];$('api-base').value=preset?.base||'';$('api-model').value=preset?.model||'';changeConnection();});$('api-base').addEventListener('input',changeConnection);$('api-model').addEventListener('change',()=>{$('consent').checked=false;updateReadiness();});$('reset-inputs').addEventListener('click',()=>{pendingComparison=false;loadExample();});
-for(const id of ['api-key','consent','topic','source-notes','generation-mode'])$(id).addEventListener(id==='consent'||id==='generation-mode'?'change':'input',()=>{if(['topic','source-notes','generation-mode'].includes(id))pendingComparison=false;updateReadiness();});
+for(const id of ['api-key','consent','topic','source-notes','supplied-draft','generation-mode'])$(id).addEventListener(id==='consent'||id==='generation-mode'?'change':'input',()=>{if(['topic','source-notes','supplied-draft','generation-mode'].includes(id))pendingComparison=false;updateReadiness();});
+$('input-mode').addEventListener('change',()=>{pendingComparison=false;updateInputMode();updateReadiness();});
+$('recording-focus').addEventListener('click',()=>setResultsFocus($('recording-focus').getAttribute('aria-pressed')!=='true'));
 $('source-upload').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>100000||!/\.(txt|md)$/i.test(file.name))throw new Error('Import a TXT or Markdown file smaller than 100 KB.');const imported=await file.text();if(!running){$('source-notes').value=imported;pendingComparison=false;updateReadiness();}}catch(error){showError(error.message);}finally{e.target.value='';}});
 $('compare-draft').addEventListener('click',()=>{
   if(running||!canCompare())return;pendingComparison=true;
   const saved=session.snapshot;let sameConnection=false;try{sameConnection=providerEndpoint($('api-base').value)===saved.endpoint&&$('api-model').value.trim()===saved.model;}catch{}
   if(!sameConnection){clearSecret();$('consent').checked=false;}
-  $('provider-preset').value=Object.entries(PRESETS).find(([,p])=>p.base===saved.base)?.[0]||'custom';$('api-base').value=saved.base;$('api-model').value=saved.model;$('topic').value=saved.topic;$('source-notes').value=serializeSources(saved.sources);$('generation-mode').value='compare';
+  $('provider-preset').value=Object.entries(PRESETS).find(([,p])=>p.base===saved.base)?.[0]||'custom';$('api-base').value=saved.base;$('api-model').value=saved.model;$('input-mode').value=saved.suppliedDraft?'existing':'generate';$('supplied-draft').value=saved.suppliedDraft||'';updateInputMode();setResultsFocus(false);$('topic').value=saved.topic;$('source-notes').value=serializeSources(saved.sources);$('generation-mode').value='compare';
   $('connection-destination').textContent=saved.endpoint;updateReadiness();
   if($('api-key').value.trim()&&$('consent').checked)execute(false,false,true);
   else{$('readiness-summary').textContent='Continue this exact draft: re-enter your API key, confirm API usage, then choose Compare this saved draft. The initial draft and review will be reused.';$('api-key').scrollIntoView?.({behavior:'smooth',block:'center'});$('api-key').focus?.();}
@@ -299,7 +366,7 @@ $('restore-run').addEventListener('change',async e=>{
     const saved=restoreCheckpoint(await file.text());if(!saved.result)throw new Error('This checkpoint has no run result to open.');
     if(session?.responses.length&&!window.confirm('Open this checkpoint and replace the current workspace? Cancel to save your current record first.'))return;
     clearSecret();session=saved.session;result=saved.result;importedRun=true;pendingComparison=false;
-    const snapshot=session.snapshot;$('provider-preset').value=Object.entries(PRESETS).find(([,p])=>p.base===snapshot.base)?.[0]||'custom';$('api-base').value=snapshot.base;$('api-model').value=snapshot.model;changeConnection();$('topic').value=snapshot.topic;$('source-notes').value=serializeSources(snapshot.sources);$('generation-mode').value=snapshot.mode;
+    const snapshot=session.snapshot;$('provider-preset').value=Object.entries(PRESETS).find(([,p])=>p.base===snapshot.base)?.[0]||'custom';$('api-base').value=snapshot.base;$('api-model').value=snapshot.model;changeConnection();$('input-mode').value=snapshot.suppliedDraft?'existing':'generate';$('supplied-draft').value=snapshot.suppliedDraft||'';updateInputMode();$('topic').value=snapshot.topic;$('source-notes').value=serializeSources(snapshot.sources);$('generation-mode').value=snapshot.mode;
     usage=session.usage;events=[];attempts=session.attemptCount;cacheHits=0;started=null;statuses=new Map();logicalDone=new Set();selected=result.branches?.memory?'memory':'initial';selectedRound='final';$('status-panel').hidden=true;$('error-panel').hidden=true;busy(false);displayResults();$('results-panel').scrollIntoView?.({behavior:'smooth',block:'start'});
   }catch(error){showError(`Cannot open this checkpoint: ${error.message}`);}finally{e.target.value='';}
 });
@@ -307,8 +374,8 @@ $('round-select').addEventListener('change',()=>{selectedRound=$('round-select')
 $('zoom-scores').addEventListener('change',()=>{if(result)$('score-chart').replaceChildren(drawChart(result.branches||{}));});
 $('download-manuscript').addEventListener('click',()=>{if(result?.initialText)download(`proseledger_${selected}.md`,manuscriptText(),'text/markdown');});
 $('copy-manuscript').addEventListener('click',async()=>{if(!result?.initialText)return;try{await navigator.clipboard.writeText(manuscriptText());$('copy-manuscript').textContent='Copied';setTimeout(()=>{$('copy-manuscript').textContent='Copy text';},2200);}catch{showError('Clipboard access was blocked. Use Download manuscript instead.');}});
-$('download-json').addEventListener('click',()=>{if(result&&session)download('proseledger_run.json',JSON.stringify({result,metadata:{...session.snapshot,sources:undefined,sourceCatalogSHA256:session.snapshot.sourceCatalogSHA256,startedAt:session.createdAt,protocol:'proseledger-browser-2'},inputProvenance:session.snapshot.sources,usage:session.usage,events:generating?[...session.events,...events]:session.events,attempts:session.attempts,rawModelResponses:session.responses},null,2),'application/json');});
+$('download-json').addEventListener('click',()=>{if(result&&session)download('proseledger_run.json',JSON.stringify({result,metadata:{...session.snapshot,sources:undefined,sourceCatalogSHA256:session.snapshot.sourceCatalogSHA256,startedAt:session.createdAt,protocol:result.schema},inputProvenance:session.snapshot.sources,usage:session.usage,events:generating?[...session.events,...events]:session.events,attempts:session.attempts,rawModelResponses:session.responses},null,2),'application/json');});
 $('download-csv').addEventListener('click',()=>{if(!result)return;const rows=[['Branch','Round','Candidate score','Retained score','Accepted','Pairwise verdict','Route','Outcome','Card IDs','Exact text changed']];for(const[name,b]of Object.entries(result.branches||{}))for(const r of b.rounds)rows.push([names[name],r.round,r.candidateScore??'',r.retainedScore,r.accepted??'',r.pairwise??'',r.route??'initial',r.outcome??'',(r.cardIds||[]).join('; '),r.changed??false]);if(rows.length===1)rows.push(['Initial',0,result.initialScore??'',result.initialScore??'','','','initial','initial','',false]);download('proseledger_round_scores.csv',rows.map(row=>row.map(x=>`"${String(x).replaceAll('"','""')}"`).join(',')).join('\r\n'),'text/csv');});
 window.addEventListener('pagehide',()=>{controller?.abort();clearSecret();});window.addEventListener('beforeunload',e=>{if(running){e.preventDefault();e.returnValue='';}});
-async function initialize() { $('generate').disabled=true;$('test-connection').disabled=true;$('restore-run').disabled=true;try{const response=await fetch('./live-inputs.json',{credentials:'omit',cache:'no-store'});if(!response.ok)throw new Error();defaults=await response.json();$('provider-preset').value='openai';$('api-base').value=PRESETS.openai.base;$('api-model').value=PRESETS.openai.model;changeConnection();loadExample();$('generate').disabled=false;$('test-connection').disabled=false;$('restore-run').disabled=false;$('resume').hidden=true;updateReadiness();}catch{showError('The source bundle did not load. Reload this HTTPS page before starting.');}}
+async function initialize() { $('generate').disabled=true;$('test-connection').disabled=true;$('restore-run').disabled=true;try{const response=await fetch('./live-inputs.json',{credentials:'omit',cache:'no-store'});if(!response.ok)throw new Error();defaults=await response.json();$('provider-preset').value='openai';$('api-base').value=PRESETS.openai.base;$('api-model').value=PRESETS.openai.model;changeConnection();loadExample();renderRuleLibrary();mountExternalValidation($('external-validation-panel'),{getDocuments:()=>result?.initialText?[{id:'initial',label:'Initial draft',text:result.initialText},...Object.entries(result.branches||{}).map(([id,b])=>({id,label:names[id],text:b.text}))]:[],isBusy:()=>running});$('generate').disabled=false;$('test-connection').disabled=false;$('restore-run').disabled=false;$('resume').hidden=true;updateReadiness();}catch{showError('The source bundle did not load. Reload this HTTPS page before starting.');}}
 initialize();
