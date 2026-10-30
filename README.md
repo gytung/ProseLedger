@@ -4,7 +4,7 @@
 
 **DSS5105 Capstone · Group 18 · National University of Singapore**
 
-[Generate in your browser](https://gytung.github.io/ProseLedger/create.html) · [Recorded round scores](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md)
+[Two-minute walkthrough](https://gytung.github.io/ProseLedger/presentation.html) · [Generate in your browser](https://gytung.github.io/ProseLedger/create.html) · [Recorded round scores](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md)
 
 ProseLedger turns a research topic and supplied source notes into a six-section proposal, then compares three revision routes. It separates expression quality from content-preservation checks and records both retained and rejected candidates.
 
@@ -17,6 +17,8 @@ ProseLedger turns a research topic and supplied source notes into a six-section 
 Planner-only and Memory both use their own prior-round feedback. All routes share the initial draft and the first Targeted revision. Later planning decisions choose a local edit, an ordinary targeted rewrite, or a stop. Additional planning calls mean that equal revision opportunities are not equal token budgets.
 
 ## Explore the recorded evaluation
+
+For a presentation recording, use the **[two-minute walkthrough](https://gytung.github.io/ProseLedger/presentation.html)**. Five timed screens cover input, revision routes, an actual card-assisted edit, all six results, and exports. Press **Start 2-minute tour** once. The page embeds its data and has no model calls or external runtime assets. It displays recorded model outputs, not live generation. Manual chapter controls, pause and restart are available. The numbers come from the same `evidence.json` as the slides. See the [recording script](docs/RECORDING_GUIDE.md).
 
 To create new writing without installing anything, open the **[browser generation demo](https://gytung.github.io/ProseLedger/create.html)**. Select a provider, enter your own model API key, and supply a topic with source excerpts. Draft mode has two model stages. Full comparison has up to fourteen: the draft and its initial review, followed by three rounds of three parallel revision routes and one blinded batch review. Inspect paragraph-level before/after edits, content checks, memory use, and all candidate and retained scores. Download the manuscripts and decision record. Bounded transport retries can add API attempts. The browser sends requests directly to the selected provider; no project server receives or stores the key. See the [browser guide](docs/BROWSER_DEMO.md) for privacy and endpoint requirements.
 
@@ -124,7 +126,7 @@ See [architecture](docs/ARCHITECTURE.md), [reproducibility](docs/REPRODUCIBILITY
 ```bash
 python -m pip install -r requirements-dev.txt
 python -m pytest -q
-node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs
+node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs tests/presentation.test.mjs
 python scripts/check_publication.py
 ```
 

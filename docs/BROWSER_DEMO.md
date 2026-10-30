@@ -2,12 +2,14 @@
 
 Open [ProseLedger — Generate a proposal](https://gytung.github.io/ProseLedger/create.html). No installation, local Python environment, or GPU is required. The workflow runs in your browser and sends model requests directly to the provider you select. The model itself runs on the provider's infrastructure, not on your computer.
 
+For a presentation or screen recording, use the [two-minute recorded walkthrough](https://gytung.github.io/ProseLedger/presentation.html). It shows the genuine six-case evaluation used in the slides, requires no API key, and makes no model requests. Fresh generation is a separate workflow and is not expected to reproduce the recorded scores.
+
 This page generates a research **proposal** from supplied evidence. It does not conduct experiments, establish research findings, or reproduce the separate archived Python evaluation.
 
 ## Start a run
 
-1. Choose a provider. OpenRouter is the suggested starting point; OpenAI and a custom OpenAI-compatible Chat Completions endpoint are also supported.
-2. Enter **your own** API key and a model ID available to your account. A ChatGPT or Codex subscription is not an API key. Your provider bills your account for requests.
+1. **OpenAI is selected by default**, with API base `https://api.openai.com/v1` and model `gpt-4.1-mini`. Confirm that the model is available to your API project. OpenRouter and a custom OpenAI-compatible Chat Completions endpoint are also supported.
+2. Enter **your own** OpenAI Platform API key, or the key for the provider you select. API billing is separate from ChatGPT Plus or Codex subscription access. This page has no Sign in with ChatGPT integration: a subscription login is not an API key. Your provider bills your API account for requests. See [OpenAI's ChatGPT and API billing guide](https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform).
 3. Enter a research topic. Use the supplied source excerpts for a first attempt, or provide your own supported source input. Check that the evidence actually supports your topic. The demo uses the supplied text; it does not browse or read the full papers behind links.
 4. Choose a mode. **Draft** has two model stages: ideas, outline and a six-section proposal in one response, followed by an initial review. **Compare** continues through three revision rounds. Each round runs three independent editors concurrently and then reviews the candidates together, for at most fourteen model stages in total. A route that finds no useful safe edit stops early; later round slots explicitly record that no new request was made. Transport retries can add API attempts. Each route has the same number of editing opportunities; the Memory context is longer, so token budgets are not identical.
 5. Review the destination and data notice, confirm that the selected provider may receive your input, then start generation. Keep the tab open until the run finishes.

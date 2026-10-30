@@ -8,13 +8,14 @@
   <meta name="referrer" content="no-referrer">
   <title>ProseLedger · Create a proposal</title>
   <link rel="stylesheet" href="./assets/create.css?v=20261030b">
-  <script type="module" src="./assets/create-app.js?v=20261030b"></script>
+  <script type="module" src="./assets/create-app.js?v=20261030c"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the workspace</a>
   <header class="site-header">
     <a class="brand" href="./index.html#rounds" aria-label="ProseLedger recorded evaluation">ProseLedger<span>Research writing · Revision memory</span></a>
     <nav class="top-nav" aria-label="Main navigation">
+      <a href="./presentation.html">2-minute recorded walkthrough · No API key</a>
       <a href="./create.html" aria-current="page">Create a proposal</a>
       <a href="./index.html#rounds">Recorded evaluation</a>
       <a href="https://github.com/gytung/ProseLedger" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
@@ -60,11 +61,12 @@
       <div class="workspace-grid">
         <section class="panel connection-panel" aria-labelledby="connection-heading">
           <div class="section-head"><div><p class="eyebrow">Connect</p><h2 id="connection-heading">Your model, your session.</h2></div><span class="small-pill">Bring your own key</span></div>
+          <p class="field-help"><strong>OpenAI API access:</strong> enter an OpenAI Platform API key. API billing is separate from ChatGPT Plus or Codex subscription access. This page does not integrate Sign in with ChatGPT; a subscription login is not an API key. <a href="https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform" target="_blank" rel="noopener noreferrer">Billing details ↗</a></p>
           <div class="field-grid">
-            <div class="field"><label for="provider-preset">API provider</label><select id="provider-preset" name="provider"><option value="openrouter" selected>OpenRouter</option><option value="openai">OpenAI</option><option value="custom">Custom compatible endpoint</option></select></div>
-            <div class="field"><label for="api-model">Model ID</label><input id="api-model" name="model" type="text" placeholder="Model available in your account" autocapitalize="none" spellcheck="false" required><p class="field-help">Use an API model ID, not a ChatGPT subscription.</p></div>
+            <div class="field"><label for="provider-preset">API provider</label><select id="provider-preset" name="provider"><option value="openai" selected>OpenAI</option><option value="openrouter">OpenRouter</option><option value="custom">Custom compatible endpoint</option></select></div>
+            <div class="field"><label for="api-model">Model ID</label><input id="api-model" name="model" type="text" value="gpt-4.1-mini" placeholder="Model available in your account" autocapitalize="none" spellcheck="false" required><p class="field-help">Use an API model ID, not a ChatGPT subscription.</p></div>
           </div>
-          <div class="field"><label for="api-base">API base URL</label><input id="api-base" name="endpoint" type="url" value="https://openrouter.ai/api/v1" placeholder="https://api.example.com/v1" autocapitalize="none" spellcheck="false" required aria-describedby="endpoint-help"><p class="field-help" id="endpoint-help">Your browser sends the key and supplied text directly to this HTTPS endpoint. Use a provider you trust.</p><p class="field-help">Request destination: <code id="connection-destination">https://openrouter.ai/api/v1/chat/completions</code></p></div>
+          <div class="field"><label for="api-base">API base URL</label><input id="api-base" name="endpoint" type="url" value="https://api.openai.com/v1" placeholder="https://api.example.com/v1" autocapitalize="none" spellcheck="false" required aria-describedby="endpoint-help"><p class="field-help" id="endpoint-help">Your browser sends the key and supplied text directly to this HTTPS endpoint. Use a provider you trust.</p><p class="field-help">Request destination: <code id="connection-destination">https://api.openai.com/v1/chat/completions</code></p></div>
           <div class="field"><label for="api-key">API key</label><div class="input-action"><input id="api-key" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Paste your own API key" required aria-describedby="key-help"><button type="button" class="button quiet compact" id="clear-key">Clear key</button></div><p class="field-help" id="key-help">Kept in this tab's memory and cleared when the run ends; never saved to browser storage or sent to a ProseLedger server. Use a key with a limited budget. Usage comes from your own account quota; clearing the key does not revoke it at your provider.</p></div>
           <div class="connection-actions"><button type="button" class="button secondary" id="test-connection">Test connection</button><span id="connection-status" class="field-help" role="status" aria-live="polite">A test makes one small, billable API call.</span></div>
           <details class="technical-note"><summary>Which APIs work in a browser?</summary><p>The provider must support the OpenAI-compatible Chat Completions format and allow browser requests from this site (CORS). Some services block direct browser access. A blocked request cannot be fixed by changing your prompt.</p><p>Do not use a public CORS proxy with your API key. If needed, choose another provider or run the local project with a trusted backend.</p></details>
