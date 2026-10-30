@@ -157,16 +157,112 @@ test('a generic 400 is not mistaken for unsupported streaming', async () => {
   assert.equal(calls,1);
 });
 
-test('429 and transient server failures receive at most one retry, with Retry-After capped', async () => {
+test('429 and transient server failures receive at most one retry and respect Retry-After', async () => {
   for(const code of [429,500,502,503,504]) {
     const status=[];let calls=0;
     const client=createModelClient(config,{maxRetryAfterMs:2,retryDelayMs:0,onStatus:x=>status.push(x),fetchImpl:async()=>{
-      calls++;return calls===1?new Response(config.key,{status:code,headers:{'Retry-After':'999999'}}):finished('recovered');
+      calls++;return calls===1?new Response(config.key,{status:code,headers:{'Retry-After':'0.002'}}):finished('recovered');
     }});
     assert.equal(await client.callModel([]),'recovered');assert.equal(calls,2);
     assert.equal(status.find(x=>x.phase==='retrying').retryDelayMs,2);
     assert.equal(JSON.stringify(status).includes(config.key),false);
   }
+});
+
+test('a long Retry-After is not shortened into an early retry', async () => {
+  const status=[];let calls=0;
+  const client=createModelClient(config,{maxRetryAfterMs:10,onStatus:s=>status.push(s),fetchImpl:async()=>{
+    calls++;return new Response('{}',{status:429,headers:{'Retry-After':'90'}});
+  }});
+  await assert.rejects(client.callModel([]),/requested retry pause is longer/);
+  assert.equal(calls,1);
+  assert.equal(status.filter(s=>s.phase==='retrying').length,0);
+  await assert.rejects(client.callModel([]),/longer rate-limit pause/);
+  assert.equal(calls,1);
+});
+
+test('exhausted API credits are not retried as a temporary rate limit', async () => {
+  let calls=0;
+  const client=createModelClient(config,{retryDelayMs:0,fetchImpl:async()=>{
+    calls++;return new Response(JSON.stringify({error:{code:'insufficient_quota',message:config.key}}),{status:429});
+  }});
+  await assert.rejects(client.callModel([]),error=>/no available quota/.test(error.message)&&!error.message.includes(config.key));
+  assert.equal(calls,1);
+});
+
+test('reasoning activity prevents a false first-token timeout without becoming answer text', async () => {
+  const status=[];let calls=0;
+  const client=createModelClient(config,{timeoutMs:1000,firstTokenTimeoutMs:30,idleTimeoutMs:100,onStatus:s=>status.push(s),fetchImpl:async()=>{
+    calls++;
+    return new Response(new ReadableStream({start(controller){
+      controller.enqueue(encoder.encode(event({choices:[{index:0,delta:{reasoning:'private provider reasoning'},finish_reason:null}]})));
+      setTimeout(()=>{
+        controller.enqueue(encoder.encode(event(delta('final answer','stop'))+event('[DONE]')));
+        controller.close();
+      },60);
+    }}),{headers:{'Content-Type':'text/event-stream'}});
+  }});
+  assert.equal(await client.callModel([]),'final answer');
+  assert.equal(calls,1);
+  assert.ok(!JSON.stringify(status).includes('private provider reasoning'));
+  assert.equal(status.at(-1).outputCharacters,'final answer'.length);
+});
+
+test('a reasoning-only truncated answer explains the shared token budget', async () => {
+  const client=createModelClient(config,{fetchImpl:async()=>sse(event({choices:[{index:0,delta:{reasoning:'hidden'},finish_reason:'length'}]}))});
+  await assert.rejects(client.callModel([]),/token limit includes reasoning/);
+});
+
+test('three branch calls are queued with at most two in flight', async () => {
+  const status=[],pending=[];let calls=0;
+  const client=createModelClient(config,{onStatus:s=>status.push(s),fetchImpl:async()=>{
+    calls++;return new Promise(resolve=>pending.push(resolve));
+  }});
+  const a=client.callModel([],{stage:'a'}),b=client.callModel([],{stage:'b'}),c=client.callModel([],{stage:'c'});
+  assert.equal(calls,2);
+  assert.ok(status.some(s=>s.stage==='c'&&s.phase==='queued'));
+  pending.shift()(finished('a'));assert.equal(await a,'a');
+  assert.equal(calls,3);
+  pending.shift()(finished('b'));pending.shift()(finished('c'));
+  assert.deepEqual(await Promise.all([b,c]),['b','c']);
+});
+
+test('a queued branch can be cancelled without sending a request or blocking later calls', async () => {
+  const pending=[];let calls=0;
+  const client=createModelClient(config,{maxConcurrent:1,fetchImpl:async()=>{calls++;return new Promise(resolve=>pending.push(resolve));}});
+  const a=client.callModel([]);
+  const controller=new AbortController();
+  const b=client.callModel([],{signal:controller.signal});controller.abort();
+  await assert.rejects(b,{name:'AbortError'});assert.equal(calls,1);
+  pending.shift()(finished('a'));await a;
+  const c=client.callModel([]);assert.equal(calls,2);
+  pending.shift()(finished('c'));assert.equal(await c,'c');
+});
+
+test('new requests share a provider rate-limit cooldown instead of immediately retrying it', async () => {
+  let client,other,limitedAt=0;
+  const fetched=[];
+  client=createModelClient(config,{maxRetryAfterMs:100,onStatus:s=>{
+    if(s.stage==='first'&&s.phase==='retrying'&&!other) other=client.callModel([],{stage:'other'});
+  },fetchImpl:async()=>{
+    fetched.push(Date.now());
+    if(fetched.length===1){limitedAt=Date.now();return new Response('{}',{status:429,headers:{'Retry-After':'0.03'}});}
+    return finished('complete');
+  }});
+  assert.equal(await client.callModel([],{stage:'first'}),'complete');
+  assert.equal(await other,'complete');
+  assert.equal(fetched.length,3);
+  assert.ok(fetched.slice(1).every(time=>time-limitedAt>=25),'Both follow-up requests must respect the cooldown.');
+});
+
+test('clearing credentials cancels queued as well as active requests', async () => {
+  let calls=0;
+  const client=createModelClient(config,{maxConcurrent:1,fetchImpl:async()=>{calls++;return new Promise(()=>{});}});
+  const a=client.callModel([]),b=client.callModel([]),c=client.callModel([]);
+  client.clear();
+  const settled=await Promise.allSettled([a,b,c]);
+  assert.equal(calls,1);
+  assert.ok(settled.every(item=>item.status==='rejected'&&item.reason.name==='AbortError'));
 });
 
 test('midstream provider errors are not ignored or concatenated with a retried answer', async () => {

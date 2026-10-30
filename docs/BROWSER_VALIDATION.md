@@ -2,7 +2,17 @@
 
 This is an engineering smoke test of the rewritten browser workflow, not a quality benchmark or evidence that Memory outperforms another route.
 
-## Test scope
+## Latest usability release: 20261030d
+
+The live page now starts with a two-call draft, can continue comparison from that same cached draft, supports portable credential-free checkpoints, and separates card application from retained card-guided edits. HTTP concurrency is capped at two; provider cooldowns and reasoning-stream activity are handled explicitly. Score-axis zoom changes only the view.
+
+A new full workflow check completed with **12 fresh model calls in 7 minutes 43 seconds**, with no failed calls or invalid stages. Targeted stopped because the initial reviewer found no actionable expression issue. Planner retained one local clarification; Memory retained no changes. All retained numeric scores remained 0. This illustrates why the interface exposes text changes and decisions, not only a score curve. Memory used a card in one rejected candidate; no retained edit is credited to it.
+
+The run used the unchanged browser engine through an authenticated local model adapter (`gpt-6.1-sol`). It does not validate a visitor’s browser API credentials, provider CORS settings, or a fixed completion time. Transport, interruption, resumption, credential routing, checkpoint validation and UI transitions were covered by 88 passing JavaScript tests; all 84 existing Python tests also passed. Browser import, round navigation and downloads were also inspected using actual model output.
+
+[Latest live-workflow outputs and all 12 model responses](validation/ux-live-check.zip). No archived score was substituted into this run. Earlier checks below remain historical engineering evidence, not a pooled benchmark.
+
+## Earlier test scope
 
 - Two newly generated inputs were run through the exact browser engine with real `gpt-6.1-sol` calls through a local authenticated model adapter. No stage used a saved response in these two runs.
 - This verifies model generation, structured responses, the three-route workflow, content checks, retention and exported records. It is not a claim that authenticated browser requests to every supported API provider were tested.
@@ -52,7 +62,7 @@ The original archived six-case Python evaluation is unchanged and uses a differe
 ## Repeat the automated checks
 
 ```sh
-node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs
+node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs tests/browser-checkpoint.test.mjs tests/presentation.test.mjs
 python -m pytest -q
 python -m proseledger verify
 python scripts/export_round_scores.py --check

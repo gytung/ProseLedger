@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs tests/presentation.test.mjs
+      - run: node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs tests/browser-checkpoint.test.mjs tests/presentation.test.mjs
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m proseledger verify
       - run: python -m pytest -q

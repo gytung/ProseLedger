@@ -49,11 +49,12 @@ const number = value => Number.isFinite(value) && value >= 0 ? value : null;
 const aborted = () => new DOMException('Generation cancelled.', 'AbortError');
 
 class ProviderFailure extends Error {
-  constructor(message, { retryable = false, streamUnsupported = false, retryAfter = null } = {}) {
+  constructor(message, { retryable = false, streamUnsupported = false, retryAfter = null, rateLimited = false } = {}) {
     super(message);
     this.retryable = retryable;
     this.streamUnsupported = streamUnsupported;
     this.retryAfter = retryAfter;
+    this.rateLimited = rateLimited;
   }
 }
 
@@ -78,11 +79,11 @@ function wait(delay, signal) {
   });
 }
 
-function retryAfterMs(value, maximum) {
+function retryAfterMs(value) {
   if (!value) return null;
   const seconds = Number(value);
   const delay = Number.isFinite(seconds) ? seconds * 1000 : Date.parse(value) - Date.now();
-  return Number.isFinite(delay) ? Math.min(maximum, Math.max(0, delay)) : null;
+  return Number.isFinite(delay) ? Math.max(0, delay) : null;
 }
 
 /** Read a bounded response with cancellation, including providers returning JSON. */
@@ -113,20 +114,22 @@ async function readBody(response, { signal, maximum = MAX_BYTES, onChunk = () =>
   }
 }
 
-async function errorResponse(response, signal, streaming, maxRetryAfterMs) {
-  let unsupported = false;
-  if (streaming && [400, 422].includes(response.status)) {
+async function errorResponse(response, signal, streaming) {
+  let unsupported = false, insufficientQuota = false;
+  if ([400, 422, 429].includes(response.status)) {
     let raw = '';
     const decoder = new TextDecoder();
     try {
       await readBody(response, { signal, maximum: 8192, onChunk: chunk => { raw += decoder.decode(chunk, { stream: true }); } });
       raw += decoder.decode();
       const error = JSON.parse(raw).error || {};
+      insufficientQuota = ['insufficient_quota', 'billing_hard_limit_reached', 'billing_not_active'].includes(error.code) ||
+        error.type === 'insufficient_quota';
       const message = `${typeof error.message === 'string' ? error.message : ''} ${typeof error.code === 'string' ? error.code : ''}`;
       const explicitParam = ['stream', 'stream_options'].includes(error.param);
-      unsupported = (explicitParam && /unsupported|not supported|unknown|unrecognized|not allowed|not available/i.test(message)) ||
+      unsupported = streaming && ((explicitParam && /unsupported|not supported|unknown|unrecognized|not allowed|not available/i.test(message)) ||
         /(?:streaming|stream(?:_options)?)\s+(?:is\s+)?(?:not supported|unsupported|not available)/i.test(message) ||
-        /(?:does not|doesn't) support\s+stream(?:ing)?/i.test(message);
+        /(?:does not|doesn't) support\s+stream(?:ing)?/i.test(message));
     } catch (error) {
       if (signal.aborted) throw aborted();
       // Provider error text is used only to recognize a capability mismatch.
@@ -135,9 +138,11 @@ async function errorResponse(response, signal, streaming, maxRetryAfterMs) {
   } else {
     Promise.resolve(response.body?.cancel()).catch(() => {});
   }
-  return new ProviderFailure(HTTP_ERRORS[response.status] || `The model service returned HTTP ${response.status}. Try again later.`, {
-    retryable: TRANSIENT.has(response.status), streamUnsupported: unsupported,
-    retryAfter: retryAfterMs(response.headers.get('retry-after'), maxRetryAfterMs),
+  return new ProviderFailure(insufficientQuota
+    ? 'The API account has no available quota. Check API billing and project limits; retrying cannot add credits.'
+    : HTTP_ERRORS[response.status] || `The model service returned HTTP ${response.status}. Try again later.`, {
+    retryable: TRANSIENT.has(response.status) && !insufficientQuota, streamUnsupported: unsupported,
+    retryAfter: retryAfterMs(response.headers.get('retry-after')), rateLimited: response.status === 429 && !insufficientQuota,
   });
 }
 
@@ -155,7 +160,7 @@ function streamError(error) {
 }
 
 /** SSE is decoded incrementally. Comments, usage-only events, and split UTF-8 are valid. */
-async function completionResponse(response, { signal, key, onBytes, onText }) {
+async function completionResponse(response, { signal, key, onBytes, onText, onActivity }) {
   const decoder = new TextDecoder();
   let format = response.headers.get('content-type')?.includes('text/event-stream') ? 'sse' : null;
   let pending = '', raw = '', content = '', usage = {}, model = null;
@@ -174,13 +179,18 @@ async function completionResponse(response, { signal, key, onBytes, onText }) {
     if (typeof json.model === 'string' && json.model.length <= 160 && !json.model.includes(key)) model = json.model;
     const choice = json.choices?.find(item => item.index === 0) ?? json.choices?.[0];
     if (!choice) return;
+    // Reasoning is activity, not manuscript text. Do not retain or expose its contents.
+    const details = choice.delta ?? choice.message ?? {};
+    if ((typeof details.reasoning === 'string' && details.reasoning.length) ||
+        (typeof details.reasoning_content === 'string' && details.reasoning_content.length) ||
+        (Array.isArray(details.reasoning_details) && details.reasoning_details.length)) onActivity();
     if (choice.finish_reason) {
       finishReason = choice.finish_reason;
       if (!['stop', 'length', 'content_filter', 'tool_calls', 'function_call'].includes(finishReason)) {
         throw new ProviderFailure('The provider ended generation without a successful text completion.');
       }
     }
-    if (finishReason === 'length') throw new ProviderFailure('The model output was truncated. Use a model with adequate output capacity or a shorter task.');
+    if (finishReason === 'length') throw new ProviderFailure('The model output was truncated. The token limit includes reasoning on reasoning models. Use the default text model or shorten the task.');
     if (['content_filter', 'tool_calls', 'function_call'].includes(finishReason)) {
       throw new ProviderFailure('The provider did not return a complete text answer. Use a compatible text model.');
     }
@@ -244,12 +254,34 @@ async function completionResponse(response, { signal, key, onBytes, onText }) {
 export function createModelClient(config, {
   onUsage = () => {}, onStatus = () => {}, fetchImpl = fetch,
   timeoutMs = 180000, firstTokenTimeoutMs = 60000, idleTimeoutMs = 45000,
-  retryDelayMs = 1000, maxRetryAfterMs = 8000,
+  retryDelayMs = 1000, maxRetryAfterMs = 30000, maxConcurrent = 2,
 } = {}) {
   const connection = validateConnection(config);
+  if (!Number.isInteger(maxConcurrent) || maxConcurrent < 1 || maxConcurrent > 3) throw new Error('Concurrency must be an integer from 1 to 3.');
   let secret = connection.key, streamSupported = true;
   delete connection.key;
   const active = new Set();
+  let inFlight = 0, cooldownUntil = 0;
+  const queue = [];
+  const releaseSlot = () => {
+    inFlight -= 1;
+    const next = queue.shift();
+    if (next) { next.signal.removeEventListener('abort', next.abort); inFlight += 1; next.resolve(releaseSlot); }
+  };
+  const acquireSlot = signal => {
+    if (inFlight < maxConcurrent) { inFlight += 1; return releaseSlot; }
+    return new Promise((resolve, reject) => {
+      const entry = { resolve, signal, abort: null };
+      entry.abort = () => {
+        const index = queue.indexOf(entry);
+        if (index >= 0) queue.splice(index, 1);
+        reject(aborted());
+      };
+      queue.push(entry);
+      signal.addEventListener('abort', entry.abort, { once: true });
+      if (signal.aborted) entry.abort();
+    });
+  };
   const callModel = async (messages, { signal, stage = 'model', maxTokens = 2500 } = {}) => {
     if (!secret) throw new Error('The API key has been cleared. Enter it again for a new run.');
     if (signal?.aborted) throw aborted();
@@ -267,11 +299,27 @@ export function createModelClient(config, {
       stage: label, phase, attempt, maxAttempts: MAX_ATTEMPTS, elapsedMs: Date.now() - started,
       receivedBytes, outputCharacters, message, ...extra,
     });
+    let release;
     try {
+      const slot = acquireSlot(logical.signal);
+      if (typeof slot === 'function') release = slot;
+      else {
+        status('queued', 'Waiting for another model request to finish.');
+        release = await slot;
+      }
       let failure;
       while (attempt < MAX_ATTEMPTS) {
         if (logical.signal.aborted) throw aborted();
         if (Date.now() >= deadline) throw new ProviderFailure('The total model-call deadline was reached. Save the partial run and try a faster model.');
+        const cooldown = Math.max(0, cooldownUntil - Date.now());
+        if (cooldown) {
+          if (cooldown > maxRetryAfterMs || Date.now() + cooldown >= deadline) {
+            throw new ProviderFailure('The provider requires a longer rate-limit pause. Keep this page open and resume after the account limit resets.');
+          }
+          status('retrying', 'Waiting for the provider rate limit to reset.', { retryDelayMs: cooldown });
+          await wait(cooldown, logical.signal);
+          if (logical.signal.aborted) throw aborted();
+        }
         attempt += 1; receivedBytes = 0; outputCharacters = 0;
         const request = new AbortController();
         const abortRequest = () => request.abort();
@@ -301,11 +349,12 @@ export function createModelClient(config, {
             cache: 'no-store', redirect: 'error', referrerPolicy: 'no-referrer',
           }), request.signal);
           headersReceived = true;
-          if (!response.ok) throw await errorResponse(response, request.signal, body.stream, maxRetryAfterMs);
+          if (!response.ok) throw await errorResponse(response, request.signal, body.stream);
           const answer = await completionResponse(response, {
             signal: request.signal, key,
             onBytes: bytes => { receivedBytes += bytes; if (firstReceived) armIdle(); progress(); },
             onText: count => { outputCharacters = count; if (!firstReceived) { firstReceived = true; clearTimeout(firstTimer); } armIdle(); progress(); },
+            onActivity: () => { if (!firstReceived) { firstReceived = true; clearTimeout(firstTimer); } armIdle(); progress(); },
           });
           if (logical.signal.aborted) throw aborted();
           const usage = { stage: label, attempt, inputTokens: number(answer.usage.prompt_tokens), outputTokens: number(answer.usage.completion_tokens),
@@ -330,7 +379,11 @@ export function createModelClient(config, {
           logical.signal.removeEventListener('abort', abortRequest);
         }
         const canRetry = attempt < MAX_ATTEMPTS && (failure.retryable || failure.streamUnsupported);
-        const delay = failure.streamUnsupported ? 0 : Math.min(Math.max(0, maxRetryAfterMs), failure.retryAfter ?? Math.max(0, retryDelayMs));
+        const delay = failure.streamUnsupported ? 0 : failure.retryAfter ?? Math.max(0, retryDelayMs);
+        if (failure.rateLimited) cooldownUntil = Math.max(cooldownUntil, Date.now() + delay);
+        if (delay > maxRetryAfterMs && canRetry) {
+          throw new ProviderFailure(`${failure.message} The requested retry pause is longer than this run permits. Keep this page open and resume later.`);
+        }
         if (!canRetry || Date.now() + delay >= deadline) throw failure;
         if (failure.streamUnsupported) streamSupported = false;
         status('retrying', failure.streamUnsupported
@@ -347,6 +400,7 @@ export function createModelClient(config, {
     } finally {
       signal?.removeEventListener('abort', externalAbort);
       active.delete(logical);
+      release?.();
     }
   };
   return { callModel, clear() { secret = ''; for (const controller of active) controller.abort(); }, endpoint: connection.endpoint, model: connection.model };

@@ -126,7 +126,7 @@ See [architecture](docs/ARCHITECTURE.md), [reproducibility](docs/REPRODUCIBILITY
 ```bash
 python -m pip install -r requirements-dev.txt
 python -m pytest -q
-node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs tests/presentation.test.mjs
+node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs tests/browser-checkpoint.test.mjs tests/presentation.test.mjs
 python scripts/check_publication.py
 ```
 
