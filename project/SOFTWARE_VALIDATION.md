@@ -4,7 +4,7 @@ Source-package checks performed on macOS arm64 with Python 3.12.7 and Node.js 25
 
 | Check | Result | Scope |
 |---|---:|---|
-| Desktop Python contracts | 45/45 passed | Workflow, bounds, local transport, run import and loopback HTTP isolation |
+| Desktop Python contracts | 47/47 passed | Workflow, bounds, local transport, run import, UTF-8 artifact bytes and loopback HTTP isolation |
 | Browser JavaScript contracts | 59/59 passed | Cloud transport, checkpoints, revision protocol and detector record binding |
 | Headless Chrome interactions | 10/10 passed | Generation, handoff, repair, retention, resume, cancellation, mobile layout and downloads |
 | Archived research integrity | 143 source files and 15 detector inputs verified | File hashes and original result accounting |
@@ -18,4 +18,4 @@ The public browser modules are based on repository commit `069c56039a0d8c364be59
 
 To repeat the checks, follow the commands in `README.md`. Browser tests use Playwright 1.62.1. A provided `PLAYWRIGHT_EXECUTABLE_PATH` may select an existing Chromium-based browser; otherwise install Playwright's Chromium build. Keep scientific model runs and software-fixture results in separate reports.
 
-The final clean-extraction check on 13 November 2026 repeated all 45 Python and 59 JavaScript contracts, verified the public human-response counts, rendered every report figure and rechecked the 667-file evidence manifest afterward. No frozen experimental record changed during these checks. Plotting dependencies are separate from application dependencies; see `report_figures/README.md`.
+The final clean-extraction check on 13 November 2026 repeated the Python and 59 JavaScript contracts, verified the public human-response counts, rendered every report figure and rechecked the 667-file evidence manifest afterward. The current 47 Python contracts include Unicode export/import and rejection of post-export line-ending changes. Artifact writers use explicit UTF-8 and LF to keep manuscript bytes identical to their recorded hashes on Windows and macOS. No frozen experimental record changed during these checks. Plotting dependencies are separate from application dependencies; see `report_figures/README.md`.

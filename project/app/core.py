@@ -44,7 +44,7 @@ def digest(value):
 def write_json(path, value):
     path = Path(path)
     temp = path.with_suffix(path.suffix + '.tmp')
-    temp.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding='utf-8')
+    temp.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     temp.replace(path)
 
 
@@ -291,7 +291,7 @@ class RevisionRun:
                 self.last_response.replace(self.last_response.with_suffix('.rejected.json'))
             original = self.folder / 'initial.md'
             if original.exists():
-                (self.folder / 'proposal.md').write_text(original.read_text(encoding='utf-8'), encoding='utf-8')
+                (self.folder / 'proposal.md').write_text(original.read_text(encoding='utf-8'), encoding='utf-8', newline='\n')
             self.checkpoint(status='cancelled' if isinstance(e, (Cancelled, KeyboardInterrupt)) else 'failed',
                             error=self.client.safe_error(e), retained='original' if original.exists() else 'none',
                             newCandidateAccepted=False)
@@ -333,7 +333,7 @@ class RevisionRun:
         initial_guard = guard('', draft, sources)
         if not initial_guard['passed']:
             raise ValueError('Input check: ' + '; '.join(initial_guard['findings']))
-        (self.folder / 'initial.md').write_text(draft, encoding='utf-8')
+        (self.folder / 'initial.md').write_text(draft, encoding='utf-8', newline='\n')
         write_json(self.folder / 'sources.json', sources)
         records = []
         for s in sections:
@@ -410,8 +410,8 @@ class RevisionRun:
                         and not audit['issues'] and audit['readability'] != 'worse')
         changed = candidate != draft
         retained = candidate if eligible else draft
-        (self.folder / 'candidate.md').write_text(candidate, encoding='utf-8')
-        (self.folder / 'proposal.md').write_text(retained, encoding='utf-8')
+        (self.folder / 'candidate.md').write_text(candidate, encoding='utf-8', newline='\n')
+        (self.folder / 'proposal.md').write_text(retained, encoding='utf-8', newline='\n')
         write_json(self.folder / 'checks.json', {'guard': checks, 'wordRatio': ratio, 'audit': audit,
             'eligible': eligible, 'bounds': {'maxPatchesPerSection': 3, 'maxMatchedFraction': .35,
             'maxAdditionalRounds': 2 if policy == 'full-audit' else 0, 'finalLengthRatio': [.85, 1.15]}})

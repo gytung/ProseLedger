@@ -1,5 +1,6 @@
 """Completed-run imports preserve texts and reject unsafe or incomplete archives."""
 import io
+import hashlib
 import json
 import stat
 import sys
@@ -50,6 +51,31 @@ class RunImport(unittest.TestCase):
         self.assertEqual(provenance['sourceRunId'], SOURCE_ID)
         self.assertNotIn('audit_sections.response.json', records)
         self.assertEqual(len(provenance['sourceArchiveSHA256']), 64)
+
+    def test_unicode_export_uses_exact_utf8_bytes_and_roundtrips(self):
+        draft = DRAFT.replace('# A proposal', '# A proposal — café')
+        with tempfile.TemporaryDirectory() as directory:
+            result = RevisionRun(directory, FakeClient()).execute({
+                'draft': draft, 'sources': SOURCES, 'topic': 'Unicode evidence · review', 'policy': 'section'})
+            files = {p.name: p.read_bytes() for p in Path(directory).iterdir() if p.is_file()}
+        self.assertEqual(files['initial.md'], draft.encode('utf-8'))
+        for name in ('initial.md', 'candidate.md', 'proposal.md', 'run.json', 'input.json', 'revision_ledger.json'):
+            self.assertNotIn(b'\r\n', files[name], name)
+            files[name].decode('utf-8')
+        ledger = json.loads(files['revision_ledger.json'])
+        self.assertEqual(ledger['originalSHA256'], hashlib.sha256(files['initial.md']).hexdigest())
+        self.assertEqual(ledger['retainedSHA256'], hashlib.sha256(files['proposal.md']).hexdigest())
+        self.assertEqual(result['textSHA256'], hashlib.sha256(files['proposal.md']).hexdigest())
+        records, provenance = read_completed_archive(self.archive(files))
+        self.assertEqual(records['initial.md'], files['initial.md'])
+        self.assertEqual(records['proposal.md'], files['proposal.md'])
+        self.assertEqual(provenance['retainedSHA256'], result['textSHA256'])
+
+    def test_line_ending_change_after_export_is_not_silently_normalized(self):
+        files = dict(self.files)
+        files['proposal.md'] = files['proposal.md'].replace(b'\n', b'\r\n')
+        with self.assertRaisesRegex(ValueError, 'hashes'):
+            read_completed_archive(self.archive(files))
 
     def test_state_import_creates_review_record_and_blocks_resume(self):
         with tempfile.TemporaryDirectory() as directory:

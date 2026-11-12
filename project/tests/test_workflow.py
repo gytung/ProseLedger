@@ -64,13 +64,13 @@ class Contracts(unittest.TestCase):
             c=FakeClient();r=RevisionRun(d,c).execute({'draft':DRAFT,'sources':SOURCES,'topic':'Test topic here','policy':'section'})
             self.assertEqual(r['status'],'completed');self.assertTrue(r['newCandidateAccepted'])
             self.assertEqual(len(c.calls),8)
-            ledger=json.loads((Path(d)/'revision_ledger.json').read_text())
+            ledger=json.loads((Path(d)/'revision_ledger.json').read_text(encoding='utf-8'))
             self.assertEqual(len(ledger['edits']),6);self.assertEqual(ledger['memoryCardsUsed'],0)
     def test_failure_resume_does_not_repeat_completed_calls(self):
         with tempfile.TemporaryDirectory() as d:
             data={'draft':DRAFT,'sources':SOURCES,'topic':'Test topic here','policy':'section'}
             with self.assertRaises(ValueError): RevisionRun(d,FakeClient('rewrite_section_3')).execute(data)
-            self.assertEqual((Path(d)/'proposal.md').read_text(),DRAFT)
+            self.assertEqual((Path(d)/'proposal.md').read_text(encoding='utf-8'),DRAFT)
             c=FakeClient();r=RevisionRun(d,c).execute(data)
             self.assertNotIn('rewrite_section_1',c.calls);self.assertEqual(r['cachedCalls'],2)
     def test_resume_preserves_attempt_history_and_cumulative_usage(self):
@@ -85,7 +85,7 @@ class Contracts(unittest.TestCase):
             data={'draft':DRAFT,'sources':SOURCES,'topic':'Test topic here','policy':'section'}
             with self.assertRaises(ValueError):
                 RevisionRun(d, TimedClient('rewrite_section_3')).execute(data)
-            first=json.loads((Path(d)/'run.json').read_text())
+            first=json.loads((Path(d)/'run.json').read_text(encoding='utf-8'))
             self.assertEqual(first['totalCompletedCalls'],2)
             self.assertEqual(first['elapsedSeconds'],9)
             clock[0] = 200.0  # Time between attempts is not model execution time.
@@ -104,16 +104,16 @@ class Contracts(unittest.TestCase):
             self.assertEqual(r['totalHostedCalls'],2)
             self.assertEqual(r['elapsedSeconds'],18)
             self.assertEqual(r['totalElapsedSeconds'],27)
-            self.assertEqual(json.loads((Path(d)/'run.json').read_text())['attemptHistory'],r['attemptHistory'])
+            self.assertEqual(json.loads((Path(d)/'run.json').read_text(encoding='utf-8'))['attemptHistory'],r['attemptHistory'])
     def test_full_audit_failure_retains_original(self):
         with tempfile.TemporaryDirectory() as d:
             r=RevisionRun(d,FakeClient(full_issues=True)).execute({'draft':DRAFT,'sources':SOURCES,'topic':'Test topic here','policy':'full-audit'})
-            self.assertFalse(r['newCandidateAccepted']);self.assertEqual((Path(d)/'proposal.md').read_text(),DRAFT)
+            self.assertFalse(r['newCandidateAccepted']);self.assertEqual((Path(d)/'proposal.md').read_text(encoding='utf-8'),DRAFT)
     def test_cancel(self):
         with tempfile.TemporaryDirectory() as d:
             event=threading.Event();event.set()
             with self.assertRaises(Cancelled): RevisionRun(d,FakeClient(),event).execute({'draft':DRAFT,'sources':SOURCES,'topic':'Test topic here','policy':'section'})
-            self.assertEqual(json.loads((Path(d)/'run.json').read_text())['status'],'cancelled')
+            self.assertEqual(json.loads((Path(d)/'run.json').read_text(encoding='utf-8'))['status'],'cancelled')
     def test_generation_path(self):
         with tempfile.TemporaryDirectory() as d:
             r=RevisionRun(d,FakeClient()).execute({'draft':'','sources':SOURCES,'topic':'Evidence-preserving editing','policy':'section'})
