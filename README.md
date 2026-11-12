@@ -1,45 +1,32 @@
 # ProseLedger
 
-**Natural academic expression through explicit editing rules, conditional memory, and inspectable revisions.**
+**From a research proposal to a checked, traceable revision.**
 
 **DSS5105 Capstone · Group 18 · National University of Singapore**
 
-[Generate or revise in your browser](https://gytung.github.io/ProseLedger/create.html?v=20261030f) · [Language-edit walkthrough](https://gytung.github.io/ProseLedger/writing-demo.html?v=20261030f) · [Archived six-case scores](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md)
+[Open the writing workspace](https://gytung.github.io/ProseLedger/create.html) · [Usage and limits](docs/REVISION_WORKSPACE.md) · [Archived evaluation](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md)
 
-ProseLedger makes the editing operation visible: **identify a passage-level problem, apply a suitable rule, inspect the exact change, then check whether the candidate preserves meaning and improves expression**. The revision loop controls when to continue. The rules explain what the editor should change. Conditional memory provides historical examples only when their reuse conditions match the current passage.
+ProseLedger generates a research proposal from supplied source notes, edits its language section by section, checks the changes against the original and evidence, and retains a revision only when its checks pass. The final manuscript, rejected candidates, repair decisions and exact-text fingerprints remain inspectable.
 
 ## Current browser workflow
 
-Open the [browser application](https://gytung.github.io/ProseLedger/create.html?v=20261030f) with your own model API key. Generate a six-section research proposal from a topic and attributed source notes, or supply an existing proposal and revise that exact initial text. No local installation or GPU is needed; inference runs at the selected API provider.
+Open **[create.html](https://gytung.github.io/ProseLedger/create.html)** and enter your own model-provider API key. Supply a topic and two to ten source notes, or bring an existing six-section proposal. Choose **Generate and revise** to run the complete workflow:
 
-The current browser protocol is **`proseledger-browser-3`**. It uses six shared editorial rules:
+**Initial proposal → six section revisions → section review → bounded repairs → whole-document audit → retained manuscript and revision ledger.**
 
-| Rule | Intended operation |
-|---|---|
-| Name the actor and action | Clarify an actor or operation already stated in the text. |
-| Use concrete wording | Replace vague framing with existing, supported detail. |
-| Remove redundancy | Delete repeated meaning while keeping qualifications. |
-| Improve information flow | Make referents and established logical relationships clear. |
-| Give sentences a clear focus | Reorganize competing points without losing dependencies. |
-| Calibrate claims | Express uncertainty and planned-study status precisely. |
+Six editorial rules guide the writer: actor and action, concrete wording, redundancy, information flow, sentence focus, and calibrated claims. The writer must preserve scientific content, source attribution, uncertainty, and planned-work status. The application checks citation identifiers and numbers in addition to the model review. These checks are fallible and do not establish scientific truth.
 
-Each rule has an applicability condition, an exception, and illustrative positive and negative examples. These are editorial specifications, not validated results or a recipe for evading AI detectors. The editor does not ban hyphens, passive voice, technical vocabulary, or long sentences. Every changed paragraph in explicit-rule mode must identify its rule and supply exact before/after quotations and a reason. The language-edit view displays that evidence alongside acceptance or rejection.
+Repairs use exact, unique text anchors. At most three non-overlapping patches may cover no more than 35% of a section. The extended policy permits at most two additional whole-document repair cycles. The final candidate must pass the checks, have no unresolved model findings, receive a readability judgment of better or similar, and remain within 85–115% of the initial word count. Otherwise the original is retained.
 
-| Route | Current browser revision policy |
-|---|---|
-| **Targeted** | Apply the shared editing instructions directly to passages identified by current feedback. |
-| **Planner-only** | Inspect the text, formulate a bounded plan, and execute local edits without historical cards. |
-| **Memory** | Use the same planner and executor with a frozen catalogue of conditional editing examples. |
+The page shows **Original, Candidate and Retained** separately. A returned original is not presented as an improved rewrite. Download the manuscript, ledger and complete run record. Save a checkpoint before closing the tab; unchanged input, policy and model settings are required to resume validated stages.
 
-**All three browser routes start independently from the same initial draft. There is no shared first revision.** Each can stop when no useful safe edit exists. All receive their own prior-round decision history; only Memory receives historical cards. The reviewer sees anonymous candidate pairs, not branch names, rule explanations, or card labels. Content checks must pass and the reviewer must prefer the candidate to its own preceding draft before the edit is retained.
+The browser runs the workflow; the selected provider runs the model. **No local model, GPU, Python installation or project server is needed.** API billing is separate from a ChatGPT subscription. Credentials stay in tab memory, are sent only to the chosen provider, and are excluded from application exports. A custom provider must permit browser requests. An optional section-writer Model ID can route the six rewriting calls to another model offered by the same provider; generation, review and repair use the main model.
 
-The browser uses five expression dimensions totaling **0–20 problem severity**. Raw scores are never smoothed to guarantee improvement. Rule counts, accepted edits, and detector probabilities are not quality scores. A card-assisted edit can fail, and an accepted Memory edit may use no historical card. There is no established general Memory advantage.
+The current revision ledger records **this run's edits and checks**. It does not retrieve historical experience cards or train a model. The older three-route memory experiments remain archived below. The public browser adaptation is also separate from the desktop local-Qwen execution profile; its outputs and latency are not reproductions of the Mac experiments.
 
-Draft-only generation uses two model stages; reviewing a supplied draft uses one. Three-round comparison adds at most twelve stages. Transport retries can add HTTP attempts, and context lengths differ across routes. See the [browser guide](docs/BROWSER_DEMO.md) for keys, checkpoints, limitations, and recording instructions.
+**GPTZero is optional and separate.** After the manuscript is retained, a visitor may provide their own GPTZero key to scan the exact original or retained text. Detector observations include text hashes and timestamps. They do not select edits or alter the manuscript. Class probabilities are not the proportion of words written by AI, a naturalness score, or a guarantee of factual accuracy. No fixed score decrease is promised.
 
-The [language-edit walkthrough](https://gytung.github.io/ProseLedger/writing-demo.html?v=20261030f) presents a saved run and its actual before/after evidence without making model calls. Live generation remains available in the separate application. A saved walkthrough is not a new generation or a guarantee that another run will reproduce its numbers.
-
-An optional **GPTZero** panel records an external observation for selected text, with a separate GPTZero key and explicit consent. It does not feed the writer, decide retention, or admit memory. Four authenticated browser scans are recorded for the main walkthrough: the initial draft and all three retained outputs were classified as AI with probability 1.0 and high confidence. The detector did not distinguish these four texts. Each observation is bound to its exact manuscript hash; older observations are labelled when the run or text changes. Human naturalness judgments remain separate from detector authorship estimates.
+See [the current workspace guide](docs/REVISION_WORKSPACE.md) for installation-free use, checkpoint recovery and recording guidance. Earlier [language-edit recordings](https://gytung.github.io/ProseLedger/writing-demo.html) belong to the archived comparison editor and do not describe new runs from this workspace.
 
 ## Archived Python evaluation
 

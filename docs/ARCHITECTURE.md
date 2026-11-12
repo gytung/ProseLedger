@@ -1,5 +1,23 @@
 # Architecture
 
+## Current proposal-to-manuscript workspace
+
+`docs/create.html` is the public entry point. `docs/assets/revision-app.js` owns the form, session-only connections, progress, original/candidate/retained views, checkpoints and exports. `docs/assets/revision-engine.js` implements the hosted adaptation of the desktop section-revision policy.
+
+1. Validate the topic, two to ten supplied sources, and an optional existing six-section draft.
+2. Generate the initial proposal if none was supplied. Keep experiments explicitly planned.
+3. Rewrite each section with the whole original manuscript, sources and six editorial rules as context.
+4. Independently audit every section. Preserve citation occurrences and enforce length bounds; use the original section when a candidate is not acceptable.
+5. Where suitable, request exact-anchor repairs, limited to three non-overlapping patches and 35% of a section.
+6. Audit the assembled document. The extended policy permits up to two additional repair/audit cycles.
+7. Retain the candidate only when all admission conditions pass. Otherwise restore the original manuscript. Preserve the candidate and reasons in either case.
+8. Export the manuscript and revision ledger. Optional GPTZero observations occur afterward and never change admission.
+
+The browser uses the visitor's hosted API connection. A separate section-writer Model ID may use the same provider; it does not install or run local Qwen. The ledger is local to one run, with no historical card retrieval. Model identity, input and policy bind checkpoint reuse; no API key is part of a run record. See [REVISION_WORKSPACE.md](REVISION_WORKSPACE.md).
+
+The following sections preserve the earlier comparison architectures for their recorded evaluations. They are not the runtime path of the current `create.html`.
+
+
 ProseLedger contains a current browser writing application and a preserved Python research prototype. They have different orchestration and retention contracts. The recorded six-case dashboard belongs to the Python protocol; it is not an evaluation of the new browser rules.
 
 | Property | Current browser protocol 3 | Archived Python protocol |

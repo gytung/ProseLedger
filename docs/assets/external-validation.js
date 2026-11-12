@@ -30,7 +30,7 @@ export function parseDetectorResponse(raw) {
 
 export async function checkWithGPTZero({text, key, signal, fetchImpl = globalThis.fetch, timeoutMs = 60000}) {
   if (typeof text !== 'string' || text.length < 250 || text.length > 18000) throw new Error('Select a proposal of 250–18,000 characters.');
-  if (typeof key !== 'string' || !key.trim() || /[\r\n]/.test(key)) throw new Error('Enter a valid GPTZero API key. This is separate from your model API key.');
+  if (typeof key !== 'string' || !key.trim() || key.length > 2048 || /[\r\n]/.test(key)) throw new Error('Enter a valid GPTZero API key. This is separate from your model API key.');
   const controller = new AbortController();
   const abort = () => controller.abort();
   if (signal?.aborted) abort();
@@ -48,6 +48,7 @@ export async function checkWithGPTZero({text, key, signal, fetchImpl = globalThi
       throw new Error(messages[response.status] || `GPTZero request failed (HTTP ${response.status}). Your writing is unaffected.`);
     }
     const raw = await response.json();
+    if (JSON.stringify(raw).includes(key.trim())) throw new Error('The detector response contained credential material and was discarded.');
     const observation = parseDetectorResponse(raw);
     return {...observation, textSHA256:await textFingerprint(text), checkedAt:new Date().toISOString(), source:'GPTZero API'};
   } catch (error) {
