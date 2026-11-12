@@ -753,8 +753,8 @@
     },
     {
       "file": "verify_archive.py",
-      "bytes": 2704,
-      "sha256": "96f1586c1342d0c6669a2549c5612d1c1790d083bc4c95bafc97c53e81b5af91"
+      "bytes": 2768,
+      "sha256": "43ba81acfbd801fc8207af18119d84afb9395ba80b48fa2338aa6a81deeab508"
     }
   ]
 }

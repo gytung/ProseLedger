@@ -5,14 +5,14 @@ ROOT=Path(__file__).resolve().parent
 
 def digest(data):return hashlib.sha256(data).hexdigest()
 def main():
- manifest=json.loads((ROOT/'SOURCE_MANIFEST.json').read_text())
+ manifest=json.loads((ROOT/'SOURCE_MANIFEST.json').read_text(encoding='utf-8'))
  failures=[]
  for item in manifest['files']:
   path=ROOT/item['file']
   if not path.is_file() or digest(path.read_bytes())!=item['packagedSHA256']:failures.append('File fingerprint: '+item['file'])
  detectors=[]
  for file in sorted((ROOT/'archive').rglob('*.gptzero.json')):
-  record=json.loads(file.read_text());text=file.with_suffix('.md')
+  record=json.loads(file.read_text(encoding='utf-8'));text=file.with_suffix('.md')
   # with_suffix removes .json; detector files have a double suffix.
   text=file.with_name(file.name.replace('.gptzero.json','.md'))
   if not text.exists():failures.append('Missing submitted text: '+str(text));continue
@@ -23,12 +23,12 @@ def main():
   detectors.append({'file':str(file.relative_to(ROOT)),'sha256':record['textSHA256'],'ai':raw['class_probabilities']['ai'],'class':raw['predicted_class']})
  cohorts={}
  for name in ['heldout','confirmation']:
-  summary=json.loads((ROOT/'archive'/f'{name}_summary.json').read_text())
+  summary=json.loads((ROOT/'archive'/f'{name}_summary.json').read_text(encoding='utf-8'))
   values=[];outcomes=[]
   for row in summary['rows']:
    folder=ROOT/'archive'/name/row['case'];pair=[]
    for field,stem in [('targeted','dev_targeted'),('new','dev_candidate')]:
-    scan=json.loads((folder/(stem+'.gptzero.json')).read_text());prob=scan['raw']['documents'][0]['class_probabilities']['ai'];pair.append(prob)
+    scan=json.loads((folder/(stem+'.gptzero.json')).read_text(encoding='utf-8'));prob=scan['raw']['documents'][0]['class_probabilities']['ai'];pair.append(prob)
     if abs(prob-row[field]['ai'])>1e-12 or scan['textSHA256']!=row[field]['sha256']:failures.append('Summary/scan mismatch: '+name+'/'+row['case']+'/'+field)
    values.append(pair);outcomes.append('lower' if pair[1]<pair[0] else 'higher' if pair[1]>pair[0] else 'unchanged')
   mean=sum(r[1] for r in values)/len(values)
