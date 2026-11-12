@@ -1,0 +1,28 @@
+{
+  "caseId": "C02",
+  "challenge": "benign",
+  "expectedPass": true,
+  "actualPass": false,
+  "correct": false,
+  "findings": [
+    "Numeric tokens were removed."
+  ],
+  "before": "arrivals from 18 weekdays",
+  "after": "arrivals from eighteen weekdays",
+  "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+  "originalSHA256": "d490512c038f7dbdf72521811483ea279bc61255fec05b39d226df5aef696b4b",
+  "candidateSHA256": "bd66975e6ce2a95203cba84e73b371644f002266129cec4b6334df35bcbdf469",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive propositions, method steps, comparisons, evaluation measures, limitations, source attributions, qualifications and planned-work status are preserved. The only change is “18 weekdays” to “eighteen weekdays,” which preserves meaning and is consistent with S2."
+  },
+  "semanticPass": true,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": false,
+  "issueQuotes": []
+}

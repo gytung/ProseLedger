@@ -1,0 +1,23 @@
+{
+  "guard": {
+    "passed": true,
+    "findings": []
+  },
+  "wordRatio": 1.0028328611898016,
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive claims, method steps, comparisons, evaluation measures, limitations, source attributions, qualifications and planned-work status are preserved. The revisions make minor wording and sentence-order changes without changing meaning or adding unsupported claims."
+  },
+  "eligible": true,
+  "bounds": {
+    "maxPatchesPerSection": 3,
+    "maxMatchedFraction": 0.35,
+    "maxAdditionalRounds": 0,
+    "finalLengthRatio": [
+      0.85,
+      1.15
+    ]
+  }
+}

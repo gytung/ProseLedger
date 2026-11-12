@@ -1,0 +1,1009 @@
+{
+  "profile": "Apple Silicon MLX research profile",
+  "sourceRelease": "ProseLedger_Revision_Study_20261031",
+  "packagingDate": "2026-11-08",
+  "preservation": "Frozen numerical results, model revision and submitted-text hashes are unchanged. Runnable imports and host-specific path metadata are relocated; original and packaged file hashes are both listed. This is packaging validation, not a new model experiment.",
+  "files": [
+    {
+      "source": "research/naturalness_20261031/run_revision.py",
+      "file": "run_revision.py",
+      "sourceSHA256": "be9be30f03c6004fb474ddeb1b3d1c2fb71b350632feec98a1a879896d5407f0",
+      "packagedSHA256": "3bdba33a44c0fa72265c97895e20efc446b776394bafc08b11d1140010d5e2aa",
+      "change": "Documentation wording only; selected lambda=0 policy unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/contrastive_transfer.py",
+      "file": "contrastive_transfer.py",
+      "sourceSHA256": "a95c846035de20c5c29cab6cab708c63826a6832d329b54fc2691eb2007936e9",
+      "packagedSHA256": "a95c846035de20c5c29cab6cab708c63826a6832d329b54fc2691eb2007936e9",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/audit_contrastive.mjs",
+      "file": "audit_contrastive.mjs",
+      "sourceSHA256": "0fcf51a51c9ff45eebda5bb41a9c778310075fca1d6ac9f5d11a8540b4f7a82c",
+      "packagedSHA256": "23449f81f45899d774b736214a0ff8cceed190273d18d31a39ce7ad9624c0442",
+      "change": "Local guard import; algorithm and scientific instructions unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/repair_sections.mjs",
+      "file": "repair_sections.mjs",
+      "sourceSHA256": "317b79d606b430966fc80c7376f53632b64880870a5f2a36c1fb106a73fcde16",
+      "packagedSHA256": "4c53a531bdd6532e6929df1118e2d8169eef7f626f51a236f292dc1ba61be58f",
+      "change": "Local guard import; algorithm and scientific instructions unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/repair_final_audit.mjs",
+      "file": "repair_final_audit.mjs",
+      "sourceSHA256": "7aac920269b21fdb119d619d42b1386e19147a721a28a2f61da28a0253d2f3dd",
+      "packagedSHA256": "ff35e0cb5fc5e71df6f6e9733cd8198ad044e4858ddb672f01a6dfa96cde3384",
+      "change": "Local guard import; algorithm and scientific instructions unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/experiment_utils.mjs",
+      "file": "experiment_utils.mjs",
+      "sourceSHA256": "6988ade52c00945df0cf3ddab846e9671e9b4e280654f000a971d895b26e4f74",
+      "packagedSHA256": "fe879eeeb791c671f3752500e6766806c85fc94f6879805fcc524b710bc71f9e",
+      "change": "Local guard import; algorithm and scientific instructions unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/bounded_patches.mjs",
+      "file": "bounded_patches.mjs",
+      "sourceSHA256": "0e3099d5bed52d944b6c5f6db8821583b475a86d9415ba29a5ca2c3b5cc96efe",
+      "packagedSHA256": "0e3099d5bed52d944b6c5f6db8821583b475a86d9415ba29a5ca2c3b5cc96efe",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/test_bounded_patches.mjs",
+      "file": "test_bounded_patches.mjs",
+      "sourceSHA256": "c51ace62f7272e97a2007e8fc9e04b7732cc1340c3482747e00477d65211a74a",
+      "packagedSHA256": "c51ace62f7272e97a2007e8fc9e04b7732cc1340c3482747e00477d65211a74a",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/prepare_contrastive_model.py",
+      "file": "prepare_contrastive_model.py",
+      "sourceSHA256": "9aee241da0b22df8e30411760761f4499c49937835b7d1b0cc8e2c04e076f314",
+      "packagedSHA256": "9aee241da0b22df8e30411760761f4499c49937835b7d1b0cc8e2c04e076f314",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/detector_console.py",
+      "file": "detector_console.py",
+      "sourceSHA256": "b75f44c870a9217ab97903c8ee8261c1262401d78cf6f5679d41732b250d34fb",
+      "packagedSHA256": "b75f44c870a9217ab97903c8ee8261c1262401d78cf6f5679d41732b250d34fb",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/contrastive_model_source.json",
+      "file": "contrastive_model_source.json",
+      "sourceSHA256": "f5162bdbfa9b3e4f0599bb2362640e7348e2931cb54a2a9d5f4a3f85f6d1b217",
+      "packagedSHA256": "f5162bdbfa9b3e4f0599bb2362640e7348e2931cb54a2a9d5f4a3f85f6d1b217",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/requirements-revision.txt",
+      "file": "requirements-revision.txt",
+      "sourceSHA256": "579d171c8d6ef18219af857902f837f0b1e38d6b40403c09217f6357171e7894",
+      "packagedSHA256": "579d171c8d6ef18219af857902f837f0b1e38d6b40403c09217f6357171e7894",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "docs/assets/browser-engine.js",
+      "file": "guard.mjs",
+      "sourceSHA256": "8d02618ed5ec570dfcb892d6278ec82d7efab08d04e1193102c5396471ac8b10",
+      "packagedSHA256": "6cab9662721f1e65a16bbe2d13ead962cfeda98584ebc56a070f0c720b10fae1",
+      "change": "Extract exact HEADINGS, DIMENSIONS, LIMITS, citations/numbers/difference/structured/guardCandidate definitions only; no logic changes"
+    },
+    {
+      "source": "research/naturalness_20261031/targeted_engine.mjs",
+      "file": "targeted_engine.mjs",
+      "sourceSHA256": "3e57f32bcccd982881a77b67a9c4fe4053d05faa2755838c39b395c2420f11c6",
+      "packagedSHA256": "8b0334da53cbbf5a3aee3fe9175321287d8dc0f4e269076c849fb517ec3f7c79",
+      "change": "Local naturalness-rule import only; Targeted control policy unchanged"
+    },
+    {
+      "source": "docs/assets/naturalness-rules.js",
+      "file": "naturalness-rules.mjs",
+      "sourceSHA256": "2a2baea85a8f0e94589708a9993e76e3a0071dea3774e15f99d4ce4b4a3e26ee",
+      "packagedSHA256": "2a2baea85a8f0e94589708a9993e76e3a0071dea3774e15f99d4ce4b4a3e26ee",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "proseledger/codex_client.py",
+      "file": "_review/codex_client.py",
+      "sourceSHA256": "5993538183606062ad18e6e4d761c7498ec95d170b88269731588e5b130e9d24",
+      "packagedSHA256": "5993538183606062ad18e6e4d761c7498ec95d170b88269731588e5b130e9d24",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "proseledger/processes.py",
+      "file": "_review/processes.py",
+      "sourceSHA256": "3ee9bb44c174e59ee11fd650848de684ab824de9421050805077fff447f0c4c9",
+      "packagedSHA256": "3ee9bb44c174e59ee11fd650848de684ab824de9421050805077fff447f0c4c9",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/model_bridge.py",
+      "file": "model_bridge.py",
+      "sourceSHA256": "b7ebd313b31fc1def0b86a9398be37f61677b74119a5628b7f014a9999c6ee77",
+      "packagedSHA256": "f692495054fd6332ecaa617faab2d84a689aa9f06afc40b82a6f130ee4551a0c",
+      "change": "Vendored relative transport import; portable PATH or PROSELEDGER_CODEX_PATH discovery replaces machine-specific desktop-app fallback"
+    },
+    {
+      "source": "LICENSE",
+      "file": "LICENSE",
+      "sourceSHA256": "7e7262764e4c6b3320aae8e6bae06bd798d078adbec74654fa484cbe156bfbbc",
+      "packagedSHA256": "7e7262764e4c6b3320aae8e6bae06bd798d078adbec74654fa484cbe156bfbbc",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/FINAL_RESULT.json",
+      "file": "archive/FINAL_RESULT.json",
+      "sourceSHA256": "bdcb911300e66fe6acd757b271fc1b2647530db67e305756816e8551865a5f35",
+      "packagedSHA256": "bdcb911300e66fe6acd757b271fc1b2647530db67e305756816e8551865a5f35",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout_summary.json",
+      "file": "archive/heldout_summary.json",
+      "sourceSHA256": "856f77e1e221a3d7b186ab42b9a86c655e0ecc920acc6a769b2b499d587c2a1b",
+      "packagedSHA256": "856f77e1e221a3d7b186ab42b9a86c655e0ecc920acc6a769b2b499d587c2a1b",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation_summary.json",
+      "file": "archive/confirmation_summary.json",
+      "sourceSHA256": "c46f39764f7c24b485e56e01809a0c168955ed50a8bbeaeb5c096ded2aee1b3d",
+      "packagedSHA256": "c46f39764f7c24b485e56e01809a0c168955ed50a8bbeaeb5c096ded2aee1b3d",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/results_summary.json",
+      "file": "archive/results_summary.json",
+      "sourceSHA256": "9f2ae4f378570e4a948c81c0cc08747dabef6c83b69dc85a991a5b052a4eeaa5",
+      "packagedSHA256": "9f2ae4f378570e4a948c81c0cc08747dabef6c83b69dc85a991a5b052a4eeaa5",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout_freeze.json",
+      "file": "archive/heldout_freeze.json",
+      "sourceSHA256": "817947bb67fac5ba64337f578804e9c0665e3a528af1b9136eeda2a44d614187",
+      "packagedSHA256": "817947bb67fac5ba64337f578804e9c0665e3a528af1b9136eeda2a44d614187",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation_freeze.json",
+      "file": "archive/confirmation_freeze.json",
+      "sourceSHA256": "d8a35467339e8e1c9e57fcca18203af2c5b6a64ec83399037669f8eca29b4da8",
+      "packagedSHA256": "d8a35467339e8e1c9e57fcca18203af2c5b6a64ec83399037669f8eca29b4da8",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/protocol.json",
+      "file": "archive/protocol.json",
+      "sourceSHA256": "b1c509a1a944133eed76bc2d3256f768e29fb3af614209c477c2dd30e62d9760",
+      "packagedSHA256": "b1c509a1a944133eed76bc2d3256f768e29fb3af614209c477c2dd30e62d9760",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/runtime_observations.json",
+      "file": "archive/runtime_observations.json",
+      "sourceSHA256": "dee9f676a0e19b1a390cb9e1d253e08f10dbde69d8ca29becf8575a29b061a99",
+      "packagedSHA256": "dee9f676a0e19b1a390cb9e1d253e08f10dbde69d8ca29becf8575a29b061a99",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/PORTABILITY.json",
+      "file": "archive/PORTABILITY.json",
+      "sourceSHA256": "51a5feba1b49da6395c1010368439de4b631e0a0962549a1cd7e804ac6730baa",
+      "packagedSHA256": "51a5feba1b49da6395c1010368439de4b631e0a0962549a1cd7e804ac6730baa",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/request.json",
+      "file": "archive/heldout/case01/request.json",
+      "sourceSHA256": "8a6095f3df054bc50b511324d7ef0dd2460dd142463abe7b49c9a275bdb67b0f",
+      "packagedSHA256": "8a6095f3df054bc50b511324d7ef0dd2460dd142463abe7b49c9a275bdb67b0f",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_input.json",
+      "file": "archive/heldout/case01/dev_input.json",
+      "sourceSHA256": "39ad3595086a531167efd8742d0c7fb06fbe7402386ec48cfff94425f0d57df6",
+      "packagedSHA256": "39ad3595086a531167efd8742d0c7fb06fbe7402386ec48cfff94425f0d57df6",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_initial.md",
+      "file": "archive/heldout/case01/dev_initial.md",
+      "sourceSHA256": "dd2c010e852a0ab3dca7bdb81fea3fe287fff33695345d5dc15431d1400cbbb1",
+      "packagedSHA256": "dd2c010e852a0ab3dca7bdb81fea3fe287fff33695345d5dc15431d1400cbbb1",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_targeted.md",
+      "file": "archive/heldout/case01/dev_targeted.md",
+      "sourceSHA256": "dd2c010e852a0ab3dca7bdb81fea3fe287fff33695345d5dc15431d1400cbbb1",
+      "packagedSHA256": "dd2c010e852a0ab3dca7bdb81fea3fe287fff33695345d5dc15431d1400cbbb1",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_candidate.md",
+      "file": "archive/heldout/case01/dev_candidate.md",
+      "sourceSHA256": "dd2c010e852a0ab3dca7bdb81fea3fe287fff33695345d5dc15431d1400cbbb1",
+      "packagedSHA256": "dd2c010e852a0ab3dca7bdb81fea3fe287fff33695345d5dc15431d1400cbbb1",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/candidate_result.json",
+      "file": "archive/heldout/case01/candidate_result.json",
+      "sourceSHA256": "238c4d700a75ce469c6533a5c0600f9a810960a3d6184f133372e29ae85350dd",
+      "packagedSHA256": "238c4d700a75ce469c6533a5c0600f9a810960a3d6184f133372e29ae85350dd",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/targeted_result.json",
+      "file": "archive/heldout/case01/targeted_result.json",
+      "sourceSHA256": "4ddcaf124e3eed0f6c3181df73d904e05fedd1205369154688f3e786aa011173",
+      "packagedSHA256": "4ddcaf124e3eed0f6c3181df73d904e05fedd1205369154688f3e786aa011173",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_targeted.gptzero.json",
+      "file": "archive/heldout/case01/dev_targeted.gptzero.json",
+      "sourceSHA256": "31060656579d9494262b78b2a2e75b0af768c6f650f54cfc31a9dbbba6e06550",
+      "packagedSHA256": "31060656579d9494262b78b2a2e75b0af768c6f650f54cfc31a9dbbba6e06550",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_candidate.gptzero.json",
+      "file": "archive/heldout/case01/dev_candidate.gptzero.json",
+      "sourceSHA256": "7aeea6ca90206f1c0611456c1da304a9ba531d9184971cdb39c5118924f89630",
+      "packagedSHA256": "7aeea6ca90206f1c0611456c1da304a9ba531d9184971cdb39c5118924f89630",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_qwen_plain.raw.json",
+      "file": "archive/heldout/case01/dev_qwen_plain.raw.json",
+      "sourceSHA256": "b6b22d21bd2d23a416f9cdb81a9c946a61a804301a22daeb800bad6d0e2435a0",
+      "packagedSHA256": "43f9c2481fd8a4292b5fa33798539019c0bc86ff21030772c0bc910863873c59",
+      "change": "Host-specific model-cache path replaced; model revision, outputs, text hashes, request content and measurements unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_qwen_plain_raw.md",
+      "file": "archive/heldout/case01/dev_qwen_plain_raw.md",
+      "sourceSHA256": "733e80f6c694427abcc0642d3032989d50b6ecbe4508ca49bf89ca4b42c42b53",
+      "packagedSHA256": "733e80f6c694427abcc0642d3032989d50b6ecbe4508ca49bf89ca4b42c42b53",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_qwen_plain.checks.json",
+      "file": "archive/heldout/case01/dev_qwen_plain.checks.json",
+      "sourceSHA256": "ef973b66a4532f751ac95c7f0c4180a55c7781fd8243fb3c9fc70e30e53e2181",
+      "packagedSHA256": "ef973b66a4532f751ac95c7f0c4180a55c7781fd8243fb3c9fc70e30e53e2181",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_qwen_plain.full_audit.json",
+      "file": "archive/heldout/case01/dev_qwen_plain.full_audit.json",
+      "sourceSHA256": "9253e9f2340a4895155fc8707be58a5a3e0873b12b36d2d54babf88276339626",
+      "packagedSHA256": "9253e9f2340a4895155fc8707be58a5a3e0873b12b36d2d54babf88276339626",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_qwen_plain.md",
+      "file": "archive/heldout/case01/dev_qwen_plain.md",
+      "sourceSHA256": "3f5333a623c4151ae2aecb68f6a21d6028b6a653fd9f053a034c2f67fa48a5d3",
+      "packagedSHA256": "3f5333a623c4151ae2aecb68f6a21d6028b6a653fd9f053a034c2f67fa48a5d3",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_qwen_plain_repaired.md",
+      "file": "archive/heldout/case01/dev_qwen_plain_repaired.md",
+      "sourceSHA256": "44b2299e11967dcc96e230b6fdb64afd732770a6c6d825b5dff0d7e51a74f7ff",
+      "packagedSHA256": "44b2299e11967dcc96e230b6fdb64afd732770a6c6d825b5dff0d7e51a74f7ff",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case01/dev_qwen_plain_repaired.checks.json",
+      "file": "archive/heldout/case01/dev_qwen_plain_repaired.checks.json",
+      "sourceSHA256": "7334cbfc6ebfd7290310672acdd0621fd01f3bac2b9556cd018d7535a0351834",
+      "packagedSHA256": "7334cbfc6ebfd7290310672acdd0621fd01f3bac2b9556cd018d7535a0351834",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/request.json",
+      "file": "archive/heldout/case02/request.json",
+      "sourceSHA256": "cb1bd10cf1165703c20dae226d0cf355f932f5a856d727ba6316893c20bd10ba",
+      "packagedSHA256": "cb1bd10cf1165703c20dae226d0cf355f932f5a856d727ba6316893c20bd10ba",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_input.json",
+      "file": "archive/heldout/case02/dev_input.json",
+      "sourceSHA256": "80915bfe35ba64daeb52f5a2a4c9b73e697892a8127bc469c74e70f46431c0e7",
+      "packagedSHA256": "80915bfe35ba64daeb52f5a2a4c9b73e697892a8127bc469c74e70f46431c0e7",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_initial.md",
+      "file": "archive/heldout/case02/dev_initial.md",
+      "sourceSHA256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477",
+      "packagedSHA256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_targeted.md",
+      "file": "archive/heldout/case02/dev_targeted.md",
+      "sourceSHA256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477",
+      "packagedSHA256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_candidate.md",
+      "file": "archive/heldout/case02/dev_candidate.md",
+      "sourceSHA256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477",
+      "packagedSHA256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/candidate_result.json",
+      "file": "archive/heldout/case02/candidate_result.json",
+      "sourceSHA256": "134ee02c972bacc5c1f3983c63d8fc1c3848a18643c10fdfe5436de79446e200",
+      "packagedSHA256": "134ee02c972bacc5c1f3983c63d8fc1c3848a18643c10fdfe5436de79446e200",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/targeted_result.json",
+      "file": "archive/heldout/case02/targeted_result.json",
+      "sourceSHA256": "46cf01960d7f44a35209edfc5a2e2376f06e7b5324e3ab6204cec513bc2aefd3",
+      "packagedSHA256": "46cf01960d7f44a35209edfc5a2e2376f06e7b5324e3ab6204cec513bc2aefd3",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_targeted.gptzero.json",
+      "file": "archive/heldout/case02/dev_targeted.gptzero.json",
+      "sourceSHA256": "9d53df4bbd47c78462724d389e21d2c9c02794e95243505648c510a2f7de0900",
+      "packagedSHA256": "9d53df4bbd47c78462724d389e21d2c9c02794e95243505648c510a2f7de0900",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_candidate.gptzero.json",
+      "file": "archive/heldout/case02/dev_candidate.gptzero.json",
+      "sourceSHA256": "04bd045aa09cfe33d0306134c772c972c744be3af27733799596561b55127536",
+      "packagedSHA256": "04bd045aa09cfe33d0306134c772c972c744be3af27733799596561b55127536",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_qwen_plain.raw.json",
+      "file": "archive/heldout/case02/dev_qwen_plain.raw.json",
+      "sourceSHA256": "b6e2e5446190c319c117d12b46bad82de21f308a2e687ef1c0dc74cdf96a7151",
+      "packagedSHA256": "3f526d00469fac7e5b15c83cd0c6fbdac5958a60352c651b6b35329f591a09e7",
+      "change": "Host-specific model-cache path replaced; model revision, outputs, text hashes, request content and measurements unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_qwen_plain_raw.md",
+      "file": "archive/heldout/case02/dev_qwen_plain_raw.md",
+      "sourceSHA256": "11b4f5bee00508d31a049d9506de7ab2fc2e6021746df8ce25f240d1109e4152",
+      "packagedSHA256": "11b4f5bee00508d31a049d9506de7ab2fc2e6021746df8ce25f240d1109e4152",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_qwen_plain.checks.json",
+      "file": "archive/heldout/case02/dev_qwen_plain.checks.json",
+      "sourceSHA256": "41407ae4eeec8069f845522dca202ecc59b04689dbe0781938c2d0811b090329",
+      "packagedSHA256": "41407ae4eeec8069f845522dca202ecc59b04689dbe0781938c2d0811b090329",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_qwen_plain.full_audit.json",
+      "file": "archive/heldout/case02/dev_qwen_plain.full_audit.json",
+      "sourceSHA256": "77f93ef320053a77a7cc9c7bcc96e6ebe8ffd29d617a2816aeff92e991d465a2",
+      "packagedSHA256": "77f93ef320053a77a7cc9c7bcc96e6ebe8ffd29d617a2816aeff92e991d465a2",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_qwen_plain.md",
+      "file": "archive/heldout/case02/dev_qwen_plain.md",
+      "sourceSHA256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477",
+      "packagedSHA256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_qwen_plain_repaired.md",
+      "file": "archive/heldout/case02/dev_qwen_plain_repaired.md",
+      "sourceSHA256": "a85ef5a00abaee3a134dce28f3cc705cf35a8ee09a3fe847a8ae95a7fb7debc2",
+      "packagedSHA256": "a85ef5a00abaee3a134dce28f3cc705cf35a8ee09a3fe847a8ae95a7fb7debc2",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case02/dev_qwen_plain_repaired.checks.json",
+      "file": "archive/heldout/case02/dev_qwen_plain_repaired.checks.json",
+      "sourceSHA256": "4ebb0603020b5596ff579db78f020f136b3bdd38949579ff598e6a13bd1b197e",
+      "packagedSHA256": "4ebb0603020b5596ff579db78f020f136b3bdd38949579ff598e6a13bd1b197e",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/request.json",
+      "file": "archive/heldout/case03/request.json",
+      "sourceSHA256": "ac24e7a85416c487039f0968fecda5bfc56e0b8349b073fe6c0373c63623fab8",
+      "packagedSHA256": "ac24e7a85416c487039f0968fecda5bfc56e0b8349b073fe6c0373c63623fab8",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_input.json",
+      "file": "archive/heldout/case03/dev_input.json",
+      "sourceSHA256": "1b6dad964ce9815f5d30b836ecc76f25108de6761ce2bf825ffa057611ea62c5",
+      "packagedSHA256": "1b6dad964ce9815f5d30b836ecc76f25108de6761ce2bf825ffa057611ea62c5",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_initial.md",
+      "file": "archive/heldout/case03/dev_initial.md",
+      "sourceSHA256": "0ae0498561abdca15478616f1c76223a8af761eb811f24272c8f9a2b04a1a766",
+      "packagedSHA256": "0ae0498561abdca15478616f1c76223a8af761eb811f24272c8f9a2b04a1a766",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_targeted.md",
+      "file": "archive/heldout/case03/dev_targeted.md",
+      "sourceSHA256": "d342ab9e8d69f23d1b3c0604a3cb2407577673f7f0e1a6d824320e659de18371",
+      "packagedSHA256": "d342ab9e8d69f23d1b3c0604a3cb2407577673f7f0e1a6d824320e659de18371",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_candidate.md",
+      "file": "archive/heldout/case03/dev_candidate.md",
+      "sourceSHA256": "2b3d7ebf0bf880000e00e0994513d7b877d0a5bb63a33a36b54ca7595ca68318",
+      "packagedSHA256": "2b3d7ebf0bf880000e00e0994513d7b877d0a5bb63a33a36b54ca7595ca68318",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/candidate_result.json",
+      "file": "archive/heldout/case03/candidate_result.json",
+      "sourceSHA256": "788e75294bc089c60ce60e94a87c8ed6fdf93c0dbd64f2c48a1c53eb459c4fc5",
+      "packagedSHA256": "788e75294bc089c60ce60e94a87c8ed6fdf93c0dbd64f2c48a1c53eb459c4fc5",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/targeted_result.json",
+      "file": "archive/heldout/case03/targeted_result.json",
+      "sourceSHA256": "27ce469f81c220d4e355b249005cc579b08efc0f8b083385cb70333e86f15ab9",
+      "packagedSHA256": "27ce469f81c220d4e355b249005cc579b08efc0f8b083385cb70333e86f15ab9",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_targeted.gptzero.json",
+      "file": "archive/heldout/case03/dev_targeted.gptzero.json",
+      "sourceSHA256": "349c6d9b8135010c0e9148491098be2569369d71645033c93d69d63af410bf75",
+      "packagedSHA256": "349c6d9b8135010c0e9148491098be2569369d71645033c93d69d63af410bf75",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_candidate.gptzero.json",
+      "file": "archive/heldout/case03/dev_candidate.gptzero.json",
+      "sourceSHA256": "a59710f6ecdcc26eaffd8ad1ee3c693a49542ac02a6da3f0e8e93112222eeb33",
+      "packagedSHA256": "a59710f6ecdcc26eaffd8ad1ee3c693a49542ac02a6da3f0e8e93112222eeb33",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_qwen_plain.raw.json",
+      "file": "archive/heldout/case03/dev_qwen_plain.raw.json",
+      "sourceSHA256": "894f4bc25f320dbced1e2fe7cc907ec9aba2b2c267c442fe5f29c21e07b7e40c",
+      "packagedSHA256": "4b878d37485c2bb8a773188a7f59457fe5c468a09ba654c87c59f217b11fe1a8",
+      "change": "Host-specific model-cache path replaced; model revision, outputs, text hashes, request content and measurements unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_qwen_plain_raw.md",
+      "file": "archive/heldout/case03/dev_qwen_plain_raw.md",
+      "sourceSHA256": "8cc5141cd636a42d6fe8e61a26f0c686046346c1eb143cee0eb27743b5e13396",
+      "packagedSHA256": "8cc5141cd636a42d6fe8e61a26f0c686046346c1eb143cee0eb27743b5e13396",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_qwen_plain.checks.json",
+      "file": "archive/heldout/case03/dev_qwen_plain.checks.json",
+      "sourceSHA256": "bba8d2fd1fa4c9b0d9684b1de0f9cf76250c1e1970517c0a1ac9341824c13c38",
+      "packagedSHA256": "bba8d2fd1fa4c9b0d9684b1de0f9cf76250c1e1970517c0a1ac9341824c13c38",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_qwen_plain.full_audit.json",
+      "file": "archive/heldout/case03/dev_qwen_plain.full_audit.json",
+      "sourceSHA256": "ae0e4f3d073428dd22aa23f49ff1f2ac372f92e5f806745875accd65dd198541",
+      "packagedSHA256": "ae0e4f3d073428dd22aa23f49ff1f2ac372f92e5f806745875accd65dd198541",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_qwen_plain.md",
+      "file": "archive/heldout/case03/dev_qwen_plain.md",
+      "sourceSHA256": "664673036f02e9b9a9a130464b15d184832af6bfc494247ef0450289d99f9368",
+      "packagedSHA256": "664673036f02e9b9a9a130464b15d184832af6bfc494247ef0450289d99f9368",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_qwen_plain_repaired.md",
+      "file": "archive/heldout/case03/dev_qwen_plain_repaired.md",
+      "sourceSHA256": "2b3d7ebf0bf880000e00e0994513d7b877d0a5bb63a33a36b54ca7595ca68318",
+      "packagedSHA256": "2b3d7ebf0bf880000e00e0994513d7b877d0a5bb63a33a36b54ca7595ca68318",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case03/dev_qwen_plain_repaired.checks.json",
+      "file": "archive/heldout/case03/dev_qwen_plain_repaired.checks.json",
+      "sourceSHA256": "a3848bbc645563aed68613b62a94d661ffb390fdd5b1a42295d1cd0ce7fe3c13",
+      "packagedSHA256": "a3848bbc645563aed68613b62a94d661ffb390fdd5b1a42295d1cd0ce7fe3c13",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/request.json",
+      "file": "archive/heldout/case04/request.json",
+      "sourceSHA256": "ab9fcae621b13246c4f3dd87411643fdeaa8edf045490832f486eb30f6e590bf",
+      "packagedSHA256": "ab9fcae621b13246c4f3dd87411643fdeaa8edf045490832f486eb30f6e590bf",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_input.json",
+      "file": "archive/heldout/case04/dev_input.json",
+      "sourceSHA256": "513ccea192fb186a01bf539322fae8bd6de12521b5290c05ce1497d7616b7687",
+      "packagedSHA256": "513ccea192fb186a01bf539322fae8bd6de12521b5290c05ce1497d7616b7687",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_initial.md",
+      "file": "archive/heldout/case04/dev_initial.md",
+      "sourceSHA256": "ac14f893fe5cefadf3d0a654fc359d5c8f828b7ef12a1d06e46d356687d4b44d",
+      "packagedSHA256": "ac14f893fe5cefadf3d0a654fc359d5c8f828b7ef12a1d06e46d356687d4b44d",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_targeted.md",
+      "file": "archive/heldout/case04/dev_targeted.md",
+      "sourceSHA256": "ac14f893fe5cefadf3d0a654fc359d5c8f828b7ef12a1d06e46d356687d4b44d",
+      "packagedSHA256": "ac14f893fe5cefadf3d0a654fc359d5c8f828b7ef12a1d06e46d356687d4b44d",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_candidate.md",
+      "file": "archive/heldout/case04/dev_candidate.md",
+      "sourceSHA256": "c2c828baacbb6fac9c0647fc658e62ee4c3e0cc7b1c05dcef2130f6faedb5a18",
+      "packagedSHA256": "c2c828baacbb6fac9c0647fc658e62ee4c3e0cc7b1c05dcef2130f6faedb5a18",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/candidate_result.json",
+      "file": "archive/heldout/case04/candidate_result.json",
+      "sourceSHA256": "5fb5dd8460e4e8c1875c88d00e7d528cfdcd238c383446179ba086ceff19c03c",
+      "packagedSHA256": "5fb5dd8460e4e8c1875c88d00e7d528cfdcd238c383446179ba086ceff19c03c",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/targeted_result.json",
+      "file": "archive/heldout/case04/targeted_result.json",
+      "sourceSHA256": "3ff494b34b750211a58d09cf65cd6b7a73293c5cd48dd34006eee93d651b1afa",
+      "packagedSHA256": "3ff494b34b750211a58d09cf65cd6b7a73293c5cd48dd34006eee93d651b1afa",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_targeted.gptzero.json",
+      "file": "archive/heldout/case04/dev_targeted.gptzero.json",
+      "sourceSHA256": "73b9e049884645c84a0b2774813366f36e6c16fb0678ff7d752359e815fc4af3",
+      "packagedSHA256": "73b9e049884645c84a0b2774813366f36e6c16fb0678ff7d752359e815fc4af3",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_candidate.gptzero.json",
+      "file": "archive/heldout/case04/dev_candidate.gptzero.json",
+      "sourceSHA256": "550f77f281e7ad584c8736aa1a8f34bd4bcd6a73f8386380a0b23649cb496cce",
+      "packagedSHA256": "550f77f281e7ad584c8736aa1a8f34bd4bcd6a73f8386380a0b23649cb496cce",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_qwen_plain.raw.json",
+      "file": "archive/heldout/case04/dev_qwen_plain.raw.json",
+      "sourceSHA256": "2f5b82bd2bef3a527f56a3775b5061b8187e1de8bea29b0dc89c330286cd2a90",
+      "packagedSHA256": "18685db108e5645c2d7e563779825f51768051dae56817cb6ec0a190d139fa82",
+      "change": "Host-specific model-cache path replaced; model revision, outputs, text hashes, request content and measurements unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_qwen_plain_raw.md",
+      "file": "archive/heldout/case04/dev_qwen_plain_raw.md",
+      "sourceSHA256": "818c667c6b31b62a6e04488eb0555e88ae1ff6b741c84b98571bcf8511b2e407",
+      "packagedSHA256": "818c667c6b31b62a6e04488eb0555e88ae1ff6b741c84b98571bcf8511b2e407",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_qwen_plain.checks.json",
+      "file": "archive/heldout/case04/dev_qwen_plain.checks.json",
+      "sourceSHA256": "249dc099c978e42d4e90cd24d144b9fb82b083785c4b11870f09e88a169b52a6",
+      "packagedSHA256": "249dc099c978e42d4e90cd24d144b9fb82b083785c4b11870f09e88a169b52a6",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_qwen_plain.full_audit.json",
+      "file": "archive/heldout/case04/dev_qwen_plain.full_audit.json",
+      "sourceSHA256": "6f4f8a189f7f446c442c9366337f68ad2a2921f4bc2644dd0205f478577b5f53",
+      "packagedSHA256": "6f4f8a189f7f446c442c9366337f68ad2a2921f4bc2644dd0205f478577b5f53",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_qwen_plain.md",
+      "file": "archive/heldout/case04/dev_qwen_plain.md",
+      "sourceSHA256": "5ca626d6e8ef47d75130aa77d82be9461294a1a6b0efaa9142783edcecf8b035",
+      "packagedSHA256": "5ca626d6e8ef47d75130aa77d82be9461294a1a6b0efaa9142783edcecf8b035",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_qwen_plain_repaired.md",
+      "file": "archive/heldout/case04/dev_qwen_plain_repaired.md",
+      "sourceSHA256": "c2c828baacbb6fac9c0647fc658e62ee4c3e0cc7b1c05dcef2130f6faedb5a18",
+      "packagedSHA256": "c2c828baacbb6fac9c0647fc658e62ee4c3e0cc7b1c05dcef2130f6faedb5a18",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/heldout/case04/dev_qwen_plain_repaired.checks.json",
+      "file": "archive/heldout/case04/dev_qwen_plain_repaired.checks.json",
+      "sourceSHA256": "dd78112959bcfc478b15c0e8f640038d349077f87062ec1fedb7eb8cf2a7f4bb",
+      "packagedSHA256": "dd78112959bcfc478b15c0e8f640038d349077f87062ec1fedb7eb8cf2a7f4bb",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/request.json",
+      "file": "archive/confirmation/case01/request.json",
+      "sourceSHA256": "157b6e7600bce62189d4b508f344cabff05cae05f1d28057b548acad7781cb6c",
+      "packagedSHA256": "157b6e7600bce62189d4b508f344cabff05cae05f1d28057b548acad7781cb6c",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_input.json",
+      "file": "archive/confirmation/case01/dev_input.json",
+      "sourceSHA256": "92159efbd643b5327c481e72066a67c852b3688605c2e6378a99bf5ae7bad0bf",
+      "packagedSHA256": "92159efbd643b5327c481e72066a67c852b3688605c2e6378a99bf5ae7bad0bf",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_initial.md",
+      "file": "archive/confirmation/case01/dev_initial.md",
+      "sourceSHA256": "091f3aeedb2c6f5191a9ef252355ba5787cddf4e2d9757f9045f171b42cd0157",
+      "packagedSHA256": "091f3aeedb2c6f5191a9ef252355ba5787cddf4e2d9757f9045f171b42cd0157",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_targeted.md",
+      "file": "archive/confirmation/case01/dev_targeted.md",
+      "sourceSHA256": "008996fd4228f79f619acef2e8e7766bfe17c5ac0df63385421bdf71a67f538c",
+      "packagedSHA256": "008996fd4228f79f619acef2e8e7766bfe17c5ac0df63385421bdf71a67f538c",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_candidate.md",
+      "file": "archive/confirmation/case01/dev_candidate.md",
+      "sourceSHA256": "4519552c048ff9fd44007d4a8c732e4ac286f492fa98d6c2dbbf5d99ed9eec79",
+      "packagedSHA256": "4519552c048ff9fd44007d4a8c732e4ac286f492fa98d6c2dbbf5d99ed9eec79",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/candidate_result.json",
+      "file": "archive/confirmation/case01/candidate_result.json",
+      "sourceSHA256": "903290e642be6bb4d16b3eeaada415680bc9e7dab88a99331c551b8e9fd6f6e6",
+      "packagedSHA256": "903290e642be6bb4d16b3eeaada415680bc9e7dab88a99331c551b8e9fd6f6e6",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/targeted_result.json",
+      "file": "archive/confirmation/case01/targeted_result.json",
+      "sourceSHA256": "06d9ef46cfb9a9a99bfb2add8f2938829de9b6c0d9e5992ea772d9fc04ae496e",
+      "packagedSHA256": "06d9ef46cfb9a9a99bfb2add8f2938829de9b6c0d9e5992ea772d9fc04ae496e",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_targeted.gptzero.json",
+      "file": "archive/confirmation/case01/dev_targeted.gptzero.json",
+      "sourceSHA256": "a51c41f83c035d2a192cbf789d429cc3d49ba0213f5b12b1e921731b9e69d8e3",
+      "packagedSHA256": "a51c41f83c035d2a192cbf789d429cc3d49ba0213f5b12b1e921731b9e69d8e3",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_candidate.gptzero.json",
+      "file": "archive/confirmation/case01/dev_candidate.gptzero.json",
+      "sourceSHA256": "c57379ee0e594a62a1a6c9b085bb8a5d0af043150da8d59c5b225e5f14e173ff",
+      "packagedSHA256": "c57379ee0e594a62a1a6c9b085bb8a5d0af043150da8d59c5b225e5f14e173ff",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_qwen_plain.raw.json",
+      "file": "archive/confirmation/case01/dev_qwen_plain.raw.json",
+      "sourceSHA256": "0f7793c758eb2793a2c5446157bcdba999f3f9759815188f0849890241aeae9f",
+      "packagedSHA256": "5135f95b59def098f348ff45de261fcc7b1129aa2dac55ab8a0c4bd0f45ad610",
+      "change": "Host-specific model-cache path replaced; model revision, outputs, text hashes, request content and measurements unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_qwen_plain_raw.md",
+      "file": "archive/confirmation/case01/dev_qwen_plain_raw.md",
+      "sourceSHA256": "f9c337c80836a7e9fa92b2109676a474dce4e27f2dc934830adcfd8c66bbbfee",
+      "packagedSHA256": "f9c337c80836a7e9fa92b2109676a474dce4e27f2dc934830adcfd8c66bbbfee",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_qwen_plain.checks.json",
+      "file": "archive/confirmation/case01/dev_qwen_plain.checks.json",
+      "sourceSHA256": "4c5fae75002f31ddc8d7d0312159e02e979ada8110f91630d165ffe6f4767504",
+      "packagedSHA256": "4c5fae75002f31ddc8d7d0312159e02e979ada8110f91630d165ffe6f4767504",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_qwen_plain.full_audit.json",
+      "file": "archive/confirmation/case01/dev_qwen_plain.full_audit.json",
+      "sourceSHA256": "27ad67d7de6e9cd5f0d01d8da7df0a1c61b46bbcbd0e5aa7d8a127f917f2a15f",
+      "packagedSHA256": "27ad67d7de6e9cd5f0d01d8da7df0a1c61b46bbcbd0e5aa7d8a127f917f2a15f",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_qwen_plain.md",
+      "file": "archive/confirmation/case01/dev_qwen_plain.md",
+      "sourceSHA256": "c522facf1e03f65311076cc2c2706defcb6848f8b99b607ea8ef41bb5d19dc16",
+      "packagedSHA256": "c522facf1e03f65311076cc2c2706defcb6848f8b99b607ea8ef41bb5d19dc16",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_qwen_plain_repaired.md",
+      "file": "archive/confirmation/case01/dev_qwen_plain_repaired.md",
+      "sourceSHA256": "fc049e709ced72027a9807b6a3dfbfbb4310c3ef60383177e41a27d9fa679163",
+      "packagedSHA256": "fc049e709ced72027a9807b6a3dfbfbb4310c3ef60383177e41a27d9fa679163",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_qwen_plain_repaired.checks.json",
+      "file": "archive/confirmation/case01/dev_qwen_plain_repaired.checks.json",
+      "sourceSHA256": "be986930eb40b0dfa314adae43d7ca72c72a7378913fbd8dd1b52ffec0f755b5",
+      "packagedSHA256": "be986930eb40b0dfa314adae43d7ca72c72a7378913fbd8dd1b52ffec0f755b5",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_qwen_plain_closed.md",
+      "file": "archive/confirmation/case01/dev_qwen_plain_closed.md",
+      "sourceSHA256": "4519552c048ff9fd44007d4a8c732e4ac286f492fa98d6c2dbbf5d99ed9eec79",
+      "packagedSHA256": "4519552c048ff9fd44007d4a8c732e4ac286f492fa98d6c2dbbf5d99ed9eec79",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case01/dev_qwen_plain_closed.checks.json",
+      "file": "archive/confirmation/case01/dev_qwen_plain_closed.checks.json",
+      "sourceSHA256": "d286942fd99adbbb002c291ccd92221c69e51d1ccd7e1612c72316dff6cc80f8",
+      "packagedSHA256": "d286942fd99adbbb002c291ccd92221c69e51d1ccd7e1612c72316dff6cc80f8",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/request.json",
+      "file": "archive/confirmation/case02/request.json",
+      "sourceSHA256": "9b4183bf2e6251eeb2bfa2d65c42fccedfc1d3ac189934810193641a27f34031",
+      "packagedSHA256": "9b4183bf2e6251eeb2bfa2d65c42fccedfc1d3ac189934810193641a27f34031",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_input.json",
+      "file": "archive/confirmation/case02/dev_input.json",
+      "sourceSHA256": "a111fc59e5cd26027ae8280ce96943b30d27368474db54139778001ca8f96e18",
+      "packagedSHA256": "a111fc59e5cd26027ae8280ce96943b30d27368474db54139778001ca8f96e18",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_initial.md",
+      "file": "archive/confirmation/case02/dev_initial.md",
+      "sourceSHA256": "f1e2a25e1971344c2d4d5898681b351c21b7603838e48f5af5985e7d007138d0",
+      "packagedSHA256": "f1e2a25e1971344c2d4d5898681b351c21b7603838e48f5af5985e7d007138d0",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_targeted.md",
+      "file": "archive/confirmation/case02/dev_targeted.md",
+      "sourceSHA256": "f1e2a25e1971344c2d4d5898681b351c21b7603838e48f5af5985e7d007138d0",
+      "packagedSHA256": "f1e2a25e1971344c2d4d5898681b351c21b7603838e48f5af5985e7d007138d0",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_candidate.md",
+      "file": "archive/confirmation/case02/dev_candidate.md",
+      "sourceSHA256": "af78e5b8d2715e71b3ad16ca6254fc595d58dc99ce994524d3a6d59d592d813a",
+      "packagedSHA256": "af78e5b8d2715e71b3ad16ca6254fc595d58dc99ce994524d3a6d59d592d813a",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/candidate_result.json",
+      "file": "archive/confirmation/case02/candidate_result.json",
+      "sourceSHA256": "f474d8d662c75f947ed97cb01bee4a02cff91c15b04dea08e427a2cc4abce4ff",
+      "packagedSHA256": "f474d8d662c75f947ed97cb01bee4a02cff91c15b04dea08e427a2cc4abce4ff",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/targeted_result.json",
+      "file": "archive/confirmation/case02/targeted_result.json",
+      "sourceSHA256": "c179e201493df58c96ab0e6634311b1e0ecf799b4023d7fe1f04e56b9d6b0b94",
+      "packagedSHA256": "c179e201493df58c96ab0e6634311b1e0ecf799b4023d7fe1f04e56b9d6b0b94",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_targeted.gptzero.json",
+      "file": "archive/confirmation/case02/dev_targeted.gptzero.json",
+      "sourceSHA256": "a9e3000b80d3f73c10e830830eace1693c6a0781d68f29455a6c66c37323f2ba",
+      "packagedSHA256": "a9e3000b80d3f73c10e830830eace1693c6a0781d68f29455a6c66c37323f2ba",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_candidate.gptzero.json",
+      "file": "archive/confirmation/case02/dev_candidate.gptzero.json",
+      "sourceSHA256": "260103c7b3ce70916e2090e603fef23e80827cace1d4ad973e4932ea32f1bc1a",
+      "packagedSHA256": "260103c7b3ce70916e2090e603fef23e80827cace1d4ad973e4932ea32f1bc1a",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_qwen_plain.raw.json",
+      "file": "archive/confirmation/case02/dev_qwen_plain.raw.json",
+      "sourceSHA256": "d0a9d83be51caf20b1a1391eec3ff7aeb53766e67ead3bf4d7b9edebd5393bac",
+      "packagedSHA256": "997f996aa2b5217d43c20224baf97c934667186b227d7c86a3fe40c8d2ee8b4f",
+      "change": "Host-specific model-cache path replaced; model revision, outputs, text hashes, request content and measurements unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_qwen_plain_raw.md",
+      "file": "archive/confirmation/case02/dev_qwen_plain_raw.md",
+      "sourceSHA256": "b0f6fda9ad5af3db9d3787703265977ae3e6ab5eeaad7a2e2150f893777082db",
+      "packagedSHA256": "b0f6fda9ad5af3db9d3787703265977ae3e6ab5eeaad7a2e2150f893777082db",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_qwen_plain.checks.json",
+      "file": "archive/confirmation/case02/dev_qwen_plain.checks.json",
+      "sourceSHA256": "e3bc277686cc7f391c9cab183c50eae0b57a8f8dbb485b3f9fb4f268f15e0c6f",
+      "packagedSHA256": "e3bc277686cc7f391c9cab183c50eae0b57a8f8dbb485b3f9fb4f268f15e0c6f",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_qwen_plain.full_audit.json",
+      "file": "archive/confirmation/case02/dev_qwen_plain.full_audit.json",
+      "sourceSHA256": "5a4d863526a52e10e4254fea6265b2a94950ece7c091153f5c04ef808f19a7c4",
+      "packagedSHA256": "5a4d863526a52e10e4254fea6265b2a94950ece7c091153f5c04ef808f19a7c4",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_qwen_plain.md",
+      "file": "archive/confirmation/case02/dev_qwen_plain.md",
+      "sourceSHA256": "88c90dbed198d4e8df944cd9af6375cbb968fcdeb47154a8f72829592a938fc0",
+      "packagedSHA256": "88c90dbed198d4e8df944cd9af6375cbb968fcdeb47154a8f72829592a938fc0",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_qwen_plain_repaired.md",
+      "file": "archive/confirmation/case02/dev_qwen_plain_repaired.md",
+      "sourceSHA256": "0fae2fa12a5d64ebf7cc7159bc38ea207391ac6df028e53bb228f8540aa17edf",
+      "packagedSHA256": "0fae2fa12a5d64ebf7cc7159bc38ea207391ac6df028e53bb228f8540aa17edf",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_qwen_plain_repaired.checks.json",
+      "file": "archive/confirmation/case02/dev_qwen_plain_repaired.checks.json",
+      "sourceSHA256": "3d8205d4868d3b073700e50fbd245b722be2c5feb5729dd25c74bd4a78cdd418",
+      "packagedSHA256": "3d8205d4868d3b073700e50fbd245b722be2c5feb5729dd25c74bd4a78cdd418",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_qwen_plain_closed.md",
+      "file": "archive/confirmation/case02/dev_qwen_plain_closed.md",
+      "sourceSHA256": "af78e5b8d2715e71b3ad16ca6254fc595d58dc99ce994524d3a6d59d592d813a",
+      "packagedSHA256": "af78e5b8d2715e71b3ad16ca6254fc595d58dc99ce994524d3a6d59d592d813a",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/confirmation/case02/dev_qwen_plain_closed.checks.json",
+      "file": "archive/confirmation/case02/dev_qwen_plain_closed.checks.json",
+      "sourceSHA256": "bfd4507930c4ad4761251b24a5c2662c09b73e6bb65e248c0b226b728deb1398",
+      "packagedSHA256": "bfd4507930c4ad4761251b24a5c2662c09b73e6bb65e248c0b226b728deb1398",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_input.json",
+      "file": "archive/development/dev_input.json",
+      "sourceSHA256": "0183ab1a8f3a20038e88c3c6ed00dcda8c51c1c19929a93e53c6cd686d9a7017",
+      "packagedSHA256": "0183ab1a8f3a20038e88c3c6ed00dcda8c51c1c19929a93e53c6cd686d9a7017",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_initial.md",
+      "file": "archive/development/dev_initial.md",
+      "sourceSHA256": "8cdacb1cfb025c7e73861afbbd8979278120d44a7911dd3215934fc1b5cf42ce",
+      "packagedSHA256": "8cdacb1cfb025c7e73861afbbd8979278120d44a7911dd3215934fc1b5cf42ce",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_targeted.md",
+      "file": "archive/development/dev_targeted.md",
+      "sourceSHA256": "f07f06771ba75d8ffd6c3ff74fdd0c6a07d0936cf43c97c91362bc50c84c2f5f",
+      "packagedSHA256": "f07f06771ba75d8ffd6c3ff74fdd0c6a07d0936cf43c97c91362bc50c84c2f5f",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_initial.gptzero.json",
+      "file": "archive/development/dev_initial.gptzero.json",
+      "sourceSHA256": "80968c7e4a16ef47aa97933fcef18d33ad76fa7441420a67e23b898801c0e190",
+      "packagedSHA256": "80968c7e4a16ef47aa97933fcef18d33ad76fa7441420a67e23b898801c0e190",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_targeted.gptzero.json",
+      "file": "archive/development/dev_targeted.gptzero.json",
+      "sourceSHA256": "0ca3d557f1cbbbfd801dde64564690065cbf4468a03ac8c76967e74e637da12c",
+      "packagedSHA256": "0ca3d557f1cbbbfd801dde64564690065cbf4468a03ac8c76967e74e637da12c",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_qwen_plain.raw.json",
+      "file": "archive/development/dev_qwen_plain.raw.json",
+      "sourceSHA256": "a0d26de89a4e22f4cb763296eef97640ca940013a8fe9d73760a4dcd5e5c2a28",
+      "packagedSHA256": "eb5de9a3b5abcf46a9eaf8b7c486a5436d4d4d726a4fe521dc692a5ee5051b92",
+      "change": "Host-specific model-cache path replaced; model revision, outputs, text hashes, request content and measurements unchanged"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_qwen_plain_raw.md",
+      "file": "archive/development/dev_qwen_plain_raw.md",
+      "sourceSHA256": "4ef73ddbc8250ec9a0a04a5e884f8c8129c9e413682c026a85e34f28c8ab0c3c",
+      "packagedSHA256": "4ef73ddbc8250ec9a0a04a5e884f8c8129c9e413682c026a85e34f28c8ab0c3c",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_qwen_plain.checks.json",
+      "file": "archive/development/dev_qwen_plain.checks.json",
+      "sourceSHA256": "4b3e5aeaf794da9015fb2781b25a4c02901cb4ead9094ec1c8d55a3992adddd5",
+      "packagedSHA256": "4b3e5aeaf794da9015fb2781b25a4c02901cb4ead9094ec1c8d55a3992adddd5",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_qwen_plain.full_audit.json",
+      "file": "archive/development/dev_qwen_plain.full_audit.json",
+      "sourceSHA256": "5ed078f5a848d7ab8309bbcff40fdbfb2a00f4a87b6cac01cd03cd8bd4a54cb5",
+      "packagedSHA256": "5ed078f5a848d7ab8309bbcff40fdbfb2a00f4a87b6cac01cd03cd8bd4a54cb5",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_qwen_plain.md",
+      "file": "archive/development/dev_qwen_plain.md",
+      "sourceSHA256": "d8b68a4bb3b5a15a45b33bf12d04959f9919882acb107eb7e0252a6baf5d50ab",
+      "packagedSHA256": "d8b68a4bb3b5a15a45b33bf12d04959f9919882acb107eb7e0252a6baf5d50ab",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_qwen_plain_repaired.md",
+      "file": "archive/development/dev_qwen_plain_repaired.md",
+      "sourceSHA256": "7b88ae5c0f1bd12e8394c95a5c3a8b94d81db6dd9a1c0915dc49013be3abe468",
+      "packagedSHA256": "7b88ae5c0f1bd12e8394c95a5c3a8b94d81db6dd9a1c0915dc49013be3abe468",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_qwen_plain_repaired.checks.json",
+      "file": "archive/development/dev_qwen_plain_repaired.checks.json",
+      "sourceSHA256": "d05c0bee3a13530f54daec985e7119254c3a7760db71c8fa2479746cbec9c105",
+      "packagedSHA256": "d05c0bee3a13530f54daec985e7119254c3a7760db71c8fa2479746cbec9c105",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_qwen_plain_repaired.gptzero.json",
+      "file": "archive/development/dev_qwen_plain_repaired.gptzero.json",
+      "sourceSHA256": "cd6e7bc3f28594426737fbc5d1128fe7be0caa66321aeb8547936f1c636eecf0",
+      "packagedSHA256": "cd6e7bc3f28594426737fbc5d1128fe7be0caa66321aeb8547936f1c636eecf0",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_qwen_contrastive_repaired.checks.json",
+      "file": "archive/development/dev_qwen_contrastive_repaired.checks.json",
+      "sourceSHA256": "ceae5079479bf713a4a728a4bb7f0bdbf33db3d446b3a5191bf15ebc24dc21e0",
+      "packagedSHA256": "ceae5079479bf713a4a728a4bb7f0bdbf33db3d446b3a5191bf15ebc24dc21e0",
+      "change": "Unchanged source file"
+    },
+    {
+      "source": "research/naturalness_20261031/dev_qwen_contrastive_repaired.md",
+      "file": "archive/development/dev_qwen_contrastive_repaired.md",
+      "sourceSHA256": "37a991190e95da997ffc88ee64de7b639819b75638980f25da228fafde6c0776",
+      "packagedSHA256": "37a991190e95da997ffc88ee64de7b639819b75638980f25da228fafde6c0776",
+      "change": "Unchanged source file"
+    }
+  ]
+}

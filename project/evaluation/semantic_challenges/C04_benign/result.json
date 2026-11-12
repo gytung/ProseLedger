@@ -1,0 +1,26 @@
+{
+  "caseId": "C04",
+  "challenge": "benign",
+  "expectedPass": true,
+  "actualPass": true,
+  "correct": true,
+  "findings": [],
+  "before": "General advice can be correct in principle yet difficult to apply to a particular function.",
+  "after": "General advice may be correct in principle but difficult to apply to a particular function.",
+  "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+  "originalSHA256": "6a91fbc02ebc88262788f6d114f56a2710aa7d90f6099e77d5c4ba1b62e5bfe5",
+  "candidateSHA256": "2e838051c1e2af74eba848ac626e8d8b60a822c5ed671263cc61699d68e12100",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The only change replaces “can be correct in principle yet difficult” with the equivalent “may be correct in principle but difficult” in Introduction. All substantive propositions, method steps, comparisons, evaluation measures, limitations, source attributions, qualifications and planned-work status are preserved. Claims attributed to S1 and S2 remain consistent with the supplied excerpts."
+  },
+  "semanticPass": true,
+  "combinedPass": true,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": []
+}

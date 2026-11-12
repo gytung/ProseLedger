@@ -1,0 +1,81 @@
+{
+  "cases": [
+    {
+      "caseId": "C01",
+      "order0": "generic",
+      "order1": "rules",
+      "result": "inconclusive"
+    },
+    {
+      "caseId": "C02",
+      "order0": "rules",
+      "order1": "rules",
+      "result": "rules"
+    },
+    {
+      "caseId": "C03",
+      "order0": "rules",
+      "order1": "rules",
+      "result": "rules"
+    },
+    {
+      "caseId": "C04",
+      "order0": "generic",
+      "order1": "generic",
+      "result": "generic"
+    },
+    {
+      "caseId": "C05",
+      "order0": "generic",
+      "order1": "generic",
+      "result": "generic"
+    },
+    {
+      "caseId": "C06",
+      "order0": "rules",
+      "order1": "rules",
+      "result": "rules"
+    },
+    {
+      "caseId": "C07",
+      "order0": "tie",
+      "order1": "rules",
+      "result": "inconclusive"
+    },
+    {
+      "caseId": "C08",
+      "order0": "rules",
+      "order1": "rules",
+      "result": "rules"
+    },
+    {
+      "caseId": "C09",
+      "order0": "generic",
+      "order1": "tie",
+      "result": "inconclusive"
+    },
+    {
+      "caseId": "C10",
+      "order0": "rules",
+      "order1": "rules",
+      "result": "rules"
+    },
+    {
+      "caseId": "C11",
+      "order0": "rules",
+      "order1": "rules",
+      "result": "rules"
+    },
+    {
+      "caseId": "C12",
+      "order0": "rules",
+      "order1": "rules",
+      "result": "rules"
+    }
+  ],
+  "counts": {
+    "inconclusive": 3,
+    "rules": 7,
+    "generic": 2
+  }
+}

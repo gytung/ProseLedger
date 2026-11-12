@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The software study concerns suggestions for Python code review. A test suite can check the supplied examples but cannot prove program correctness for every input. Reviewers will receive the code and a short issue description. The assistant will suggest changes; a developer retains the final decision.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "The planned sample contains 36 small functions. Both review conditions receive the same functions and issue descriptions. One condition produces a free-form suggestion, and the other must identify an exact edit location. Passing tests is necessary but is not sufficient for accepting a suggestion.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

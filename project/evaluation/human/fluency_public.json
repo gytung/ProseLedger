@@ -1,0 +1,92 @@
+{
+  "schema": "proseledger-fluency-pilot-public-1",
+  "study": "fluency_revision_sprint3",
+  "record_group_count": 1,
+  "distinct_human_count": null,
+  "privacy": "Participant identifiers, codes and timestamps removed.",
+  "unit": "One original-versus-retained-revision passage preference.",
+  "responses": [
+    {
+      "sample_id": "FL-01",
+      "chosen_more_natural": "B",
+      "reason": "",
+      "original_revised_position_key": null
+    },
+    {
+      "sample_id": "FL-02",
+      "chosen_more_natural": "B",
+      "reason": "",
+      "original_revised_position_key": null
+    },
+    {
+      "sample_id": "FL-03",
+      "chosen_more_natural": "B",
+      "reason": "",
+      "original_revised_position_key": null
+    },
+    {
+      "sample_id": "FL-04",
+      "chosen_more_natural": "Cannot tell",
+      "reason": "no difference",
+      "original_revised_position_key": null
+    },
+    {
+      "sample_id": "FL-05",
+      "chosen_more_natural": "A",
+      "reason": "",
+      "original_revised_position_key": null
+    },
+    {
+      "sample_id": "FL-06",
+      "chosen_more_natural": "B",
+      "reason": "",
+      "original_revised_position_key": null
+    },
+    {
+      "sample_id": "FL-07",
+      "chosen_more_natural": "B",
+      "reason": "",
+      "original_revised_position_key": null
+    },
+    {
+      "sample_id": "FL-08",
+      "chosen_more_natural": "A",
+      "reason": "",
+      "original_revised_position_key": null
+    },
+    {
+      "sample_id": "FL-09",
+      "chosen_more_natural": "A",
+      "reason": "",
+      "original_revised_position_key": null
+    },
+    {
+      "sample_id": "FL-10",
+      "chosen_more_natural": "A",
+      "reason": "",
+      "original_revised_position_key": null
+    }
+  ],
+  "summary": {
+    "answered": 10,
+    "a_choices": 4,
+    "b_choices": 5,
+    "cannot_tell": 1,
+    "revised_preferred": 4,
+    "original_preferred": 5,
+    "revised_preference_over_all": 0.4,
+    "revised_preference_over_decisive": 0.4444444444444444
+  },
+  "branch_mapping_evidence": {
+    "aggregate_source": "Finalized application result page inspected on 2026-11-13",
+    "ui_text": "Your revised-draft choice rate 40.0%; You selected the retained revision in 4 of 10 answered comparisons.",
+    "row_mapping": "Not present in exported JSON. Per-row original/revised assignments must not be inferred.",
+    "materials": "Fluency export contains no compared text; manuscript/run/model identity is not independently recoverable from this export."
+  },
+  "organizer_recruitment_note": {
+    "estimated_classmates": 10,
+    "estimate_status": "approximate organizer recollection; not verified distinct-rater count",
+    "reported_overlap": "One person reportedly completed both tasks",
+    "shared_code_allocation": "Approximately two items per person where a code was shared; exact assignment unavailable"
+  }
+}

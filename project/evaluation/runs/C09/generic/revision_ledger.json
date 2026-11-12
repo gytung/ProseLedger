@@ -1,0 +1,170 @@
+{
+  "scope": "This run only; no historical card retrieval",
+  "memoryCardsUsed": 0,
+  "originalSHA256": "2ba03f973131aad1f8b1ed891c218287a104ec17c1a8d7df87bfb27464fb84b4",
+  "retainedSHA256": "080a685868b2a15ec5ff3b9fa85ce56b01e090041d7d67c2f145053f71dcbceb",
+  "detectorUsedForAdmission": false,
+  "fullAudit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The candidate preserves all substantive claims, method steps, comparisons, evaluation measures, limitations, source attributions, uncertainty and planned-work status. Its changes are equivalent paraphrases and sentence combinations, with no material change in meaning or evidential support."
+  },
+  "repairHistory": [],
+  "edits": [
+    {
+      "id": 0,
+      "heading": "Abstract",
+      "original": "A sorting process can recover more material while producing a less pure output. We propose to compare manual and optical sorting for a stream containing aluminium and plastic. The study will report recovery and purity separately because the two measures use different denominators [S2]. It will not infer environmental benefits from recovered mass alone.",
+      "candidate": "A sorting process can recover more material while producing a less pure output. We propose to compare manual and optical sorting for a stream containing aluminium and plastic. The study will report recovery and purity separately, as these measures use different denominators [S2]. It will not infer environmental benefits solely from the recovered mass.",
+      "text": "A sorting process can recover more material while producing a less pure output. We propose to compare manual and optical sorting for a stream containing aluminium and plastic. The study will report recovery and purity separately, as these measures use different denominators [S2]. It will not infer environmental benefits solely from the recovered mass.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 0,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A sorting process can recover more material while producing a less pure output. We propose to compare manual and optical sorting for a stream containing aluminium and plastic. The study will report recovery and purity separately, as these measures use different denominators [S2]. It will not infer environmental benefits solely from the recovered mass.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 1,
+      "heading": "Introduction",
+      "original": "A single weight can conceal a trade-off between useful material and contaminants. If an output contains more unwanted material, its mass may increase without an improvement in recovery quality [S1]. This proposal therefore treats the identity of the material as part of the measurement. Aluminium and plastic will not be merged into an unspecified total that obscures the sorting task.",
+      "candidate": "A single weight can obscure the trade-off between useful material and contaminants. If an output contains more unwanted material, its mass may increase without an improvement in recovery quality [S1]. This proposal therefore treats the identity of the material as part of the measurement. Aluminium and plastic will not be combined into an unspecified total that obscures the sorting task.",
+      "text": "A single weight can obscure the trade-off between useful material and contaminants. If an output contains more unwanted material, its mass may increase without an improvement in recovery quality [S1]. This proposal therefore treats the identity of the material as part of the measurement. Aluminium and plastic will not be combined into an unspecified total that obscures the sorting task.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 1,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A single weight can obscure the trade-off between useful material and contaminants. If an output contains more unwanted material, its mass may increase without an improvement in recovery quality [S1]. This proposal therefore treats the identity of the material as part of the measurement. Aluminium and plastic will not be combined into an unspecified total that obscures the sorting task.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 2,
+      "heading": "Related Work",
+      "original": "The material brief distinguishes recovered mass from purity and warns that mass alone does not establish lifecycle emissions [S1]. The methods brief defines recovery relative to target material in the input, while purity uses recovered output mass [S2]. Those definitions will be fixed before the comparison. Neither percentage will be substituted for the other in the report.",
+      "candidate": "The material brief distinguishes recovered mass from purity and warns that mass alone does not establish lifecycle emissions [S1]. The methods brief defines recovery relative to the target material in the input, while purity is defined relative to the recovered output mass [S2]. These definitions will be fixed before the comparison, and neither percentage will be substituted for the other in the report.",
+      "text": "The material brief distinguishes recovered mass from purity and warns that mass alone does not establish lifecycle emissions [S1]. The methods brief defines recovery relative to the target material in the input, while purity is defined relative to the recovered output mass [S2]. These definitions will be fixed before the comparison, and neither percentage will be substituted for the other in the report.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 2,
+        "approve": true,
+        "issues": [],
+        "readability": "better"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The material brief distinguishes recovered mass from purity and warns that mass alone does not establish lifecycle emissions [S1]. The methods brief defines recovery relative to the target material in the input, while purity is defined relative to the recovered output mass [S2]. These definitions will be fixed before the comparison, and neither percentage will be substituted for the other in the report.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 3,
+      "heading": "Methodology",
+      "original": "We will compare manual and optical sorting over 20 batches [S2]. Each method will process an equal input mass from each batch. The recovered output will be separated into target material and contaminants before the measures are calculated. We will retain the batch-level records so that a high average does not hide a small number of poorly sorted batches.",
+      "candidate": "We will compare manual and optical sorting over 20 batches [S2]. Each method will process an equal input mass from each batch. The recovered output will be separated into target material and contaminants before calculating the measures. We will retain batch-level records to ensure that a high average does not mask the performance of poorly sorted batches.",
+      "text": "We will compare manual and optical sorting over 20 batches [S2]. Each method will process an equal input mass from each batch. The recovered output will be separated into target material and contaminants before the measures are calculated. We will retain batch-level records so that a high average does not hide a small number of poorly sorted batches.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 3,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "before the measures are calculated",
+            "revisedQuote": "before calculating the measures",
+            "problem": "The implied subject of 'calculating' is the recovered output, creating an awkward modifier. Retain the passive clause or explicitly identify who calculates the measures."
+          },
+          {
+            "originalQuote": "so that a high average does not hide a small number of poorly sorted batches",
+            "revisedQuote": "to ensure that a high average does not mask the performance of poorly sorted batches",
+            "problem": "The revision loses the explicit concern about a small number of poorly sorted batches and strengthens the wording to a guarantee, although retaining records alone does not ensure that aggregate reporting exposes those batches."
+          }
+        ],
+        "readability": "worse"
+      },
+      "repair": {
+        "ok": true,
+        "text": "We will compare manual and optical sorting over 20 batches [S2]. Each method will process an equal input mass from each batch. The recovered output will be separated into target material and contaminants before the measures are calculated. We will retain batch-level records so that a high average does not hide a small number of poorly sorted batches.",
+        "spans": [
+          {
+            "before": "before calculating the measures",
+            "after": "before the measures are calculated",
+            "issueIndex": 0,
+            "start": 204,
+            "end": 235
+          },
+          {
+            "before": "to ensure that",
+            "after": "so that",
+            "issueIndex": 1,
+            "start": 272,
+            "end": 286
+          },
+          {
+            "before": "mask the performance of poorly sorted batches",
+            "after": "hide a small number of poorly sorted batches",
+            "issueIndex": 1,
+            "start": 311,
+            "end": 356
+          }
+        ]
+      },
+      "retained": "We will compare manual and optical sorting over 20 batches [S2]. Each method will process an equal input mass from each batch. The recovered output will be separated into target material and contaminants before the measures are calculated. We will retain batch-level records so that a high average does not hide a small number of poorly sorted batches.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 4,
+      "heading": "Planned Evaluation",
+      "original": "The evaluation will report recovery and purity for both methods, together with their variation across batches. We will examine cases where one method improves recovery while reducing purity. Such cases will be described as a trade-off rather than converted into an overall win through an unplanned weighting rule. Input and output masses will remain available for checking each denominator.",
+      "candidate": "The evaluation will report recovery and purity for both methods, along with their variation across batches. We will examine cases where one method improves recovery while reducing purity, describing such cases as trade-offs rather than converting them into an overall win through an unplanned weighting rule. Input and output masses will remain available for checking each denominator.",
+      "text": "The evaluation will report recovery and purity for both methods, along with their variation across batches. We will examine cases where one method improves recovery while reducing purity, describing such cases as trade-offs rather than converting them into an overall win through an unplanned weighting rule. Input and output masses will remain available for checking each denominator.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 4,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The evaluation will report recovery and purity for both methods, along with their variation across batches. We will examine cases where one method improves recovery while reducing purity, describing such cases as trade-offs rather than converting them into an overall win through an unplanned weighting rule. Input and output masses will remain available for checking each denominator.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 5,
+      "heading": "Limitations and Conclusion",
+      "original": "The comparison is limited to the supplied material stream and sorting conditions. It will not establish lifecycle emissions or the environmental effect of processing the recovered material [S1]. A useful result may be a more explicit trade-off rather than a uniformly better sorting method. Keeping the measures separate is necessary for that interpretation.",
+      "candidate": "The comparison is limited to the supplied material stream and sorting conditions and will not establish lifecycle emissions or the environmental impact of processing the recovered material [S1]. A useful outcome may be a more explicit trade-off rather than a uniformly better sorting method. Separating the measures is essential for this interpretation.",
+      "text": "The comparison is limited to the supplied material stream and sorting conditions and will not establish lifecycle emissions or the environmental impact of processing the recovered material [S1]. A useful outcome may be a more explicit trade-off rather than a uniformly better sorting method. Separating the measures is essential for this interpretation.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 5,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The comparison is limited to the supplied material stream and sorting conditions and will not establish lifecycle emissions or the environmental impact of processing the recovered material [S1]. A useful outcome may be a more explicit trade-off rather than a uniformly better sorting method. Separating the measures is essential for this interpretation.",
+      "status": "verified_edit"
+    }
+  ]
+}

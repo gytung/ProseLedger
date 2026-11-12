@@ -1,0 +1,42 @@
+{
+  "sections": [
+    {
+      "id": 2,
+      "patches": [
+        {
+          "before": "This design ensures that any changes in alert counts are attributable to the correction process rather than alterations in the alert policy.",
+          "after": "This isolates the effect of correction from a change in alert policy.",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Restores the controlled-comparison claim without asserting a blanket causal guarantee."
+    },
+    {
+      "id": 3,
+      "patches": [
+        {
+          "before": "periods with missing reference measurements will be recorded rather than inventing corrections",
+          "after": "we will record periods with missing reference measurements rather than invent corrections",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Restores the researchers as the explicit grammatical actor while preserving the planned work."
+    },
+    {
+      "id": 5,
+      "patches": [
+        {
+          "before": "observation period [S1].",
+          "after": "observation period.",
+          "issueIndex": 0
+        },
+        {
+          "before": "focus on measurement agreement and alert behavior",
+          "after": "stop at measurement agreement and alert behavior",
+          "issueIndex": 1
+        }
+      ],
+      "reason": "Removes unsupported source attribution and restores the explicit boundary of the proposed analysis."
+    }
+  ]
+}

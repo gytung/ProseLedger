@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "heading": "Abstract",
+    "original": "Sensor drift can change the number of water quality alerts even when the alert threshold stays fixed. We propose to compare raw and drift-corrected conductivity readings against a reference instrument. Both versions will use the same threshold [S2]. The study concerns the reliability of conductivity alerts and will not interpret those alerts as direct evidence of pathogen concentration.",
+    "candidate": "Sensor drift can alter the number of water quality alerts, even when the alert threshold remains constant. We propose comparing raw and drift-corrected conductivity readings against a reference instrument, using the same threshold [S2]. The study focuses on the reliability of conductivity alerts, without interpreting them as direct evidence of pathogen concentration.",
+    "text": "Sensor drift can alter the number of water quality alerts, even when the alert threshold remains constant. We propose comparing raw and drift-corrected conductivity readings against a reference instrument, using the same threshold [S2]. The study focuses on the reliability of conductivity alerts, without interpreting them as direct evidence of pathogen concentration."
+  },
+  {
+    "id": 1,
+    "heading": "Introduction",
+    "original": "An alert may be easy to display yet difficult to interpret if a sensor slowly moves away from its reference. Correcting such drift should depend on measurement evidence, not on whether an alert seems reasonable. Conductivity also measures a different property from pathogen concentration [S1]. The proposal keeps this distinction explicit so that a technical threshold is not mistaken for a drinking-water safety decision.",
+    "candidate": "An alert may be easy to display but difficult to interpret if a sensor slowly deviates from its reference. Correcting such drift should rely on measurement evidence rather than the apparent reasonableness of an alert. Conductivity measures a different property from pathogen concentration [S1]. The proposal maintains this distinction to prevent a technical threshold from being mistaken for a drinking-water safety decision.",
+    "text": "An alert may be easy to display but difficult to interpret if a sensor slowly deviates from its reference. Correcting such drift should rely on measurement evidence rather than the apparent reasonableness of an alert. Conductivity measures a different property from pathogen concentration [S1]. The proposal maintains this distinction to prevent a technical threshold from being mistaken for a drinking-water safety decision."
+  },
+  {
+    "id": 2,
+    "heading": "Related Work",
+    "original": "The measurement brief specifies a threshold of 900 microsiemens per centimetre and defines an exceedance as a reading above that value [S1]. Equality is therefore not an exceedance. The experimental brief requires the threshold to remain fixed for both raw and corrected readings [S2]. This isolates the effect of correction from a change in alert policy.",
+    "candidate": "The measurement brief sets a threshold of 900 microsiemens per centimetre, defining an exceedance as any reading above that value [S1]. Equality to the threshold does not constitute an exceedance. The experimental brief mandates that this threshold remain constant for both raw and drift-corrected readings [S2]. This design ensures that any changes in alert counts are attributable to the correction process rather than alterations in the alert policy.",
+    "text": "The measurement brief sets a threshold of 900 microsiemens per centimetre, defining an exceedance as any reading above that value [S1]. Equality to the threshold does not constitute an exceedance. The experimental brief mandates that this threshold remain constant for both raw and drift-corrected readings [S2]. This design ensures that any changes in alert counts are attributable to the correction process rather than alterations in the alert policy."
+  },
+  {
+    "id": 3,
+    "heading": "Methodology",
+    "original": "We will compare eight sensors over 21 days [S2]. Drift corrections will be estimated from the reference instrument and applied without consulting the resulting alert counts. The raw readings will remain available for inspection. We will record periods with missing reference measurements rather than invent corrections for intervals where the necessary evidence is unavailable.",
+    "candidate": "We will compare eight sensors over 21 days [S2]. Drift corrections will be estimated from the reference instrument and applied without consulting the resulting alert counts. Raw readings will be retained for inspection, and periods with missing reference measurements will be recorded rather than inventing corrections for intervals where evidence is unavailable.",
+    "text": "We will compare eight sensors over 21 days [S2]. Drift corrections will be estimated from the reference instrument and applied without consulting the resulting alert counts. Raw readings will be retained for inspection, and periods with missing reference measurements will be recorded rather than inventing corrections for intervals where evidence is unavailable."
+  },
+  {
+    "id": 4,
+    "heading": "Planned Evaluation",
+    "original": "Planned measures include disagreement with the reference instrument, the number of threshold exceedances and the duration of missing-reference periods. We will examine values near the threshold separately, since a small measurement change may alter their alert status. Both newly created and removed alerts will be reported. No claim about improved field performance is made before these comparisons are run.",
+    "candidate": "Planned evaluation measures will include disagreement with the reference instrument, the number of threshold exceedances, and the duration of missing-reference periods. We will separately examine values near the threshold, as small measurement changes can alter their alert status. Both newly created and removed alerts will be reported. No claim about improved field performance will be made before these comparisons are run.",
+    "text": "Planned evaluation measures will include disagreement with the reference instrument, the number of threshold exceedances, and the duration of missing-reference periods. We will separately examine values near the threshold, as small measurement changes can alter their alert status. Both newly created and removed alerts will be reported. No claim about improved field performance will be made before these comparisons are run."
+  },
+  {
+    "id": 5,
+    "heading": "Limitations and Conclusion",
+    "original": "A reference instrument can itself have error, and the study covers only a limited observation period. Conductivity alerts cannot establish pathogen concentration or determine whether water is safe to drink [S1]. The proposed analysis will therefore stop at measurement agreement and alert behaviour. It will not provide drinking-water safety recommendations [S2].",
+    "candidate": "A reference instrument can itself have errors, and the study covers only a limited observation period [S1]. Conductivity alerts cannot establish pathogen concentration or determine whether water is safe to drink [S1]. The proposed analysis will therefore focus on measurement agreement and alert behavior, without providing drinking-water safety recommendations [S2].",
+    "text": "A reference instrument can itself have errors, and the study covers only a limited observation period [S1]. Conductivity alerts cannot establish pathogen concentration or determine whether water is safe to drink [S1]. The proposed analysis will therefore focus on measurement agreement and alert behavior, without providing drinking-water safety recommendations [S2]."
+  }
+]

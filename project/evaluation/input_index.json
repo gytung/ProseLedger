@@ -1,0 +1,98 @@
+[
+  {
+    "caseId": "C01",
+    "title": "When a Glacier Map Is Allowed to Abstain",
+    "theme": "Missing observations and conditional scope",
+    "words": 386,
+    "inputSHA256": "fc88d069b649df7af354ddb6a41c86f517cee87e45509d447501533791dd8faf",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C02",
+    "title": "Bus Reliability Beyond the Average Wait",
+    "theme": "Subgroup qualification and negative conclusions",
+    "words": 383,
+    "inputSHA256": "856071eeed9b983c6c84fdd9490c427c808b50345e8a2295c381e68e27c8296b",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C03",
+    "title": "Distinguishing Salt Stress from Slow Growth",
+    "theme": "Treatment identity and directional quantities",
+    "words": 372,
+    "inputSHA256": "58110e0ae76327777f8e82d2855e6d89e1707c643077832499daaa2c8c04b518",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C04",
+    "title": "Code Review Suggestions with a Measured Scope",
+    "theme": "Actor attribution and proposal status",
+    "words": 377,
+    "inputSHA256": "bf6fb45bd5b10fa862aa34c194328d4cc5c810f6c649a315c820cb7a03e3e7d1",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C05",
+    "title": "Museum Descriptions without Invented Provenance",
+    "theme": "Uncertainty and missing evidence",
+    "words": 375,
+    "inputSHA256": "b010d1de6e8c81fa8ba410cf2f5c0ace62aff8fc4784f7cdd6343b07bbc697ad",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C06",
+    "title": "Water Quality Alerts under Sensor Drift",
+    "theme": "Threshold comparisons and measurement meaning",
+    "words": 365,
+    "inputSHA256": "1d5fc2ec106c0a818437ce073bd746a1e999a5b8d5a129ec17d65a73480863f0",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C07",
+    "title": "Oral Histories with Conflicting Accounts",
+    "theme": "Attribution, disagreement and negation",
+    "words": 382,
+    "inputSHA256": "76180734200bf8e7ed989e6e9f29d68b40b76052e7a736485a8a72f727aa40ec",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C08",
+    "title": "Energy Forecasts with a Fixed Information Cutoff",
+    "theme": "Temporal leakage and comparison fairness",
+    "words": 378,
+    "inputSHA256": "5ed66901afbaa71b5bec096a353f043073a8045298ab0a210941d7e883194953",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C09",
+    "title": "Recycling Claims with Separate Material Fractions",
+    "theme": "Denominators and material identity",
+    "words": 365,
+    "inputSHA256": "fa6df0925caaa08385250af05a6371f7dd23c90bd976f9775f249a4942ac7694",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C10",
+    "title": "Accessible Routes without Assuming Accessible Doors",
+    "theme": "Conjunctions and partial evidence",
+    "words": 362,
+    "inputSHA256": "4a91fa7f8dc5bd911ecf10dd7a145303dfcd4acf2fcb74c3f0b429f69c8bba59",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C11",
+    "title": "Feedback that Identifies a Reasoning Gap",
+    "theme": "Assistance boundaries and outcome attribution",
+    "words": 360,
+    "inputSHA256": "faaaf0bf676528ca3f0e49bc85d8b74d114a2957e6943add05570dc781fe83a3",
+    "knownFactCount": 6
+  },
+  {
+    "caseId": "C12",
+    "title": "Archaeological Dates as Intervals, Not Events",
+    "theme": "Ranges, evidence association and temporal claims",
+    "words": 377,
+    "inputSHA256": "2c0afd2489f4a88d28f565398abaf3a58e2d402df0c9cafb963da0114307ce7b",
+    "knownFactCount": 6
+  }
+]

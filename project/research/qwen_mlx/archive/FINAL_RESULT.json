@@ -1,0 +1,30 @@
+{
+  "completedAtUTC": "2026-10-30T17:30:34.012104+00:00",
+  "developmentAIProbability": 0.6260916940036801,
+  "firstFrozenBatch": {
+    "n": 4,
+    "targetedMean": 1,
+    "newMean": 0.9085579844067697,
+    "wins": 1,
+    "ties": 3,
+    "losses": 0
+  },
+  "secondFrozenBatch": {
+    "n": 2,
+    "targetedMean": 1,
+    "newMean": 1,
+    "wins": 0,
+    "ties": 2,
+    "losses": 0
+  },
+  "successfulDetectorScans": 24,
+  "newCasesRemainClassifiedAI": true,
+  "noIsolatedMemoryBenefitClaim": true,
+  "mainEntry": "Project/revise.py",
+  "defaultPolicy": "section",
+  "experimentalPolicy": "full-audit",
+  "publicWebAppChanged": false,
+  "hardware": "Apple Silicon local Qwen writer plus authenticated Codex CLI verifier",
+  "credentialsIncluded": false,
+  "modelWeightsIncluded": false
+}

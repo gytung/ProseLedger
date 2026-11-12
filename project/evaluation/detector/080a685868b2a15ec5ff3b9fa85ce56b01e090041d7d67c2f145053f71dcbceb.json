@@ -1,0 +1,670 @@
+{
+  "textSHA256": "080a685868b2a15ec5ff3b9fa85ce56b01e090041d7d67c2f145053f71dcbceb",
+  "characters": 2418,
+  "scannedAtUTC": "2026-11-12T20:54:07.624772+00:00",
+  "elapsedSeconds": 1.73,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 12,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 15,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 20,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 24,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 25,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9999997300521601,
+            "sentence": "# Recycling Claims with Separate Material Fractions",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.699478398838721e-07,
+              "ai": 0.9999629654270691,
+              "paraphrased": 3.6764625091048485e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997300521059,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6994789410637383e-07,
+              "ai": 0.9999631802097732,
+              "paraphrased": 3.654984233271763e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997300521252,
+            "sentence": "A sorting process can recover more material while producing a less pure output.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6994787481764177e-07,
+              "ai": 0.9999631087588663,
+              "paraphrased": 3.6621293258881304e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997300521252,
+            "sentence": "We propose to compare manual and optical sorting for a stream containing aluminium and plastic.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6994787481764177e-07,
+              "ai": 0.9999631087588663,
+              "paraphrased": 3.6621293258881304e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997383575304,
+            "sentence": "The study will report recovery and purity separately, as these measures use different denominators [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.616424695595458e-07,
+              "ai": 0.9999630454704386,
+              "paraphrased": 3.6692887091820974e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997383575492,
+            "sentence": "It will not infer environmental benefits solely from the recovered mass.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6164245078906985e-07,
+              "ai": 0.9999629737321528,
+              "paraphrased": 3.676462539639308e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999996941092509,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.058907490364855e-07,
+              "ai": 0.9999622043959085,
+              "paraphrased": 3.748971334241959e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997300520558,
+            "sentence": "A single weight can obscure the trade-off between useful material and contaminants.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6994794423049006e-07,
+              "ai": 0.999963393738159,
+              "paraphrased": 3.6336313896772066e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997300519776,
+            "sentence": "If an output contains more unwanted material, its mass may increase without an improvement in recovery quality [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.699480224374922e-07,
+              "ai": 0.9999636060114488,
+              "paraphrased": 3.612404052876192e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997383574454,
+            "sentence": "This proposal therefore treats the identity of the material as part of the measurement.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6164255454861525e-07,
+              "ai": 0.9999634020432469,
+              "paraphrased": 3.6336314198559395e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997383574112,
+            "sentence": "Aluminium and plastic will not be combined into an unspecified total that obscures the sorting task.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.616425888432329e-07,
+              "ai": 0.9999635436980189,
+              "paraphrased": 3.619465939230492e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999653380636,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.4661936396826447e-07,
+              "ai": 0.9999613495466302,
+              "paraphrased": 3.830383400586441e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997214826781,
+            "sentence": "The material brief distinguishes recovered mass from purity and warns that mass alone does not establish lifecycle emissions [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.7851732188557136e-07,
+              "ai": 0.9999643652396328,
+              "paraphrased": 3.535624304529635e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999996193136431,
+            "sentence": "The methods brief defines recovery relative to the target material in the input, while purity is defined relative to the recovered output mass [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.806863569068633e-07,
+              "ai": 0.999960022375285,
+              "paraphrased": 3.959693835807903e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997300519622,
+            "sentence": "These definitions will be fixed before the comparison, and neither percentage will be substituted for the other in the report.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6994803770541156e-07,
+              "ai": 0.9999636764953892,
+              "paraphrased": 3.605355657304544e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999996072294337,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.927705663281349e-07,
+              "ai": 0.9999598553187251,
+              "paraphrased": 3.975191070859671e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995686263611,
+            "sentence": "We will compare manual and optical sorting over 20 batches [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.31373638921244e-07,
+              "ai": 0.9999587945074685,
+              "paraphrased": 4.077411889253154e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994796663285,
+            "sentence": "Each method will process an equal input mass from each batch.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.203336714446979e-07,
+              "ai": 0.9999544350943443,
+              "paraphrased": 4.504457198421429e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999721482488,
+            "sentence": "The recovered output will be separated into target material and contaminants before the measures are calculated.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.7851751208510956e-07,
+              "ai": 0.9999650490714146,
+              "paraphrased": 3.4672411073315025e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997300518264,
+            "sentence": "We will retain batch-level records so that a high average does not hide a small number of poorly sorted batches.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6994817355644876e-07,
+              "ai": 0.9999642354349941,
+              "paraphrased": 3.5494616832331736e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993916676266,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.083323734267657e-07,
+              "ai": 0.999955562047194,
+              "paraphrased": 4.3829620432576785e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999996941088716,
+            "sentence": "The evaluation will report recovery and purity for both methods, along with their variation across batches.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.058911283693235e-07,
+              "ai": 0.9999634286906376,
+              "paraphrased": 3.6265418234030876e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999996310262779,
+            "sentence": "We will examine cases where one method improves recovery while reducing purity, describing such cases as trade-offs rather than converting them into an overall win through an unplanned weighting rule.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.6897372215306473e-07,
+              "ai": 0.9999595673489368,
+              "paraphrased": 4.006367734112634e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999996640448278,
+            "sentence": "Input and output masses will remain available for checking each denominator.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.3595517222660366e-07,
+              "ai": 0.9999619540304926,
+              "paraphrased": 3.7710014335150264e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995818978945,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.1810210552027154e-07,
+              "ai": 0.9999598299870919,
+              "paraphrased": 3.975191080258393e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995818977511,
+            "sentence": "The comparison is limited to the supplied material stream and sorting conditions and will not establish lifecycle emissions or the environmental impact of processing the recovered material [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.181022488613969e-07,
+              "ai": 0.999960139328766,
+              "paraphrased": 3.944256898507164e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995262293271,
+            "sentence": "A useful outcome may be a more explicit trade-off rather than a uniformly better sorting method.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.737706729186834e-07,
+              "ai": 0.9999575399421075,
+              "paraphrased": 4.1986287219585566e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994631482353,
+            "sentence": "Separating the measures is essential for this interpretation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.368517647762452e-07,
+              "ai": 0.9999561441332988,
+              "paraphrased": 4.331901493646647e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Recycling Claims with Separate Material Fractions\n\n## Abstract\n\nA sorting process can recover more material while producing a less pure output. We propose to compare manual and optical sorting for a stream containing aluminium and plastic. The study will report recovery and purity separately, as these measures use different denominators [S2]. It will not infer environmental benefits solely from the recovered mass.\n\n## Introduction\n\nA single weight can obscure the trade-off between useful material and contaminants. If an output contains more unwanted material, its mass may increase without an improvement in recovery quality [S1]. This proposal therefore treats the identity of the material as part of the measurement. Aluminium and plastic will not be combined into an unspecified total that obscures the sorting task.\n\n## Related Work\n\nThe material brief distinguishes recovered mass from purity and warns that mass alone does not establish lifecycle emissions [S1]. The methods brief defines recovery relative to the target material in the input, while purity is defined relative to the recovered output mass [S2]. These definitions will be fixed before the comparison, and neither percentage will be substituted for the other in the report.\n\n## Methodology\n\nWe will compare manual and optical sorting over 20 batches [S2]. Each method will process an equal input mass from each batch. The recovered output will be separated into target material and contaminants before the measures are calculated. We will retain batch-level records so that a high average does not hide a small number of poorly sorted batches.\n\n## Planned Evaluation\n\nThe evaluation will report recovery and purity for both methods, along with their variation across batches. We will examine cases where one method improves recovery while reducing purity, describing such cases as trade-offs rather than converting them into an overall win through an unplanned weighting rule. Input and output masses will remain available for checking each denominator.\n\n## Limitations and Conclusion\n\nThe comparison is limited to the supplied material stream and sorting conditions and will not establish lifecycle emissions or the environmental impact of processing the recovered material [S1]. A useful outcome may be a more explicit trade-off rather than a uniformly better sorting method. Separating the measures is essential for this interpretation.",
+        "document_id": null
+      }
+    ]
+  }
+}

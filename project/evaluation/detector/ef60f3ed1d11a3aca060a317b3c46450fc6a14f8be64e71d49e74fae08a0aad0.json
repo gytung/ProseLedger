@@ -1,0 +1,670 @@
+{
+  "textSHA256": "ef60f3ed1d11a3aca060a317b3c46450fc6a14f8be64e71d49e74fae08a0aad0",
+  "characters": 2447,
+  "scannedAtUTC": "2026-11-12T20:53:37.285324+00:00",
+  "elapsedSeconds": 2.569,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 12,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 15,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 20,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 25,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 26,
+            "num_sentences": 2,
+            "completely_generated_prob": 0.8254776901813464
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9990656394159033,
+            "sentence": "# Code Review Suggestions with a Measured Scope",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0009343605840966139,
+              "ai": 0.9931255953587467,
+              "paraphrased": 0.005940044057156689
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9990509064113552,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0009490935886447581,
+              "ai": 0.9931454473520546,
+              "paraphrased": 0.005905459059300663
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9991082660388574,
+            "sentence": "A plausible code review suggestion is useful only if a developer can understand where it applies and what it changes.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0008917339611425913,
+              "ai": 0.9933047760572765,
+              "paraphrased": 0.005803489981580919
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9991082509129835,
+            "sentence": "We propose comparing free-form suggestions with those that identify an exact edit location.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0008917490870164664,
+              "ai": 0.993321640362149,
+              "paraphrased": 0.0057866105508345535
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9990508033218352,
+            "sentence": "Both conditions will receive the same Python function and issue description [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0009491966781648713,
+              "ai": 0.9932532786906716,
+              "paraphrased": 0.005797524631163582
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9991082358265383,
+            "sentence": "The assistant will propose changes, while a developer retains authority over acceptance.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0008917641734616776,
+              "ai": 0.993338455514309,
+              "paraphrased": 0.005769780312229336
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989897570435226,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0010102429564774874,
+              "ai": 0.9930846597487273,
+              "paraphrased": 0.0059050972947952245
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9990508248636143,
+            "sentence": "General advice can be correct in principle but difficult to apply to a specific function.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0009491751363857589,
+              "ai": 0.9932307416561693,
+              "paraphrased": 0.0058200832074449425
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9990941646298629,
+            "sentence": "Conversely, a precise edit might still alter behavior in an unintended way.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0009058353701371495,
+              "ai": 0.9933691085397851,
+              "paraphrased": 0.005725056090077738
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9991082207301284,
+            "sentence": "The study therefore distinguishes the location of a suggestion from its correctness.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0008917792698716894,
+              "ai": 0.993355222161644,
+              "paraphrased": 0.0057529985684844015
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989075337622931,
+            "sentence": "Tests will check the supplied examples, but passing them will not be presented as proof that the program is correct for every input [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0010924662377067903,
+              "ai": 0.9932057355703682,
+              "paraphrased": 0.005701798191924997
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9987136376673666,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0012863623326332923,
+              "ai": 0.9925286140143761,
+              "paraphrased": 0.006185023652990594
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9986931124592393,
+            "sentence": "The task brief assigns the assistant a supporting role in code review, leaving the final decision with the developer [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0013068875407607435,
+              "ai": 0.9927321821233078,
+              "paraphrased": 0.005960930335931475
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9985313394938288,
+            "sentence": "The evaluation brief distinguishes free-form suggestions from those anchored to an exact edit location [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0014686605061712274,
+              "ai": 0.992250675263473,
+              "paraphrased": 0.006280664230355783
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989738760938595,
+            "sentence": "We use these conditions to examine whether specificity aids reviewers in assessing a proposal, rather than assuming that more specific suggestions are inherently safer.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.001026123906140521,
+              "ai": 0.9930573968910913,
+              "paraphrased": 0.005916479202768148
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9984735821995843,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.001526417800415769,
+              "ai": 0.9917649676378227,
+              "paraphrased": 0.006708614561761546
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.998800701808884,
+            "sentence": "The planned sample includes 36 small functions [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0011992981911158973,
+              "ai": 0.9927575605562147,
+              "paraphrased": 0.006043141252669403
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9990798923896644,
+            "sentence": "For each function, both conditions will receive identical code and the same short issue description.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.000920107610335549,
+              "ai": 0.9933771101907597,
+              "paraphrased": 0.005702782198904756
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9990050585954341,
+            "sentence": "We will retain the original tests and separately record any proposed test changes.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.000994941404565966,
+              "ai": 0.993444871706169,
+              "paraphrased": 0.005560186889265038
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989573828809474,
+            "sentence": "A suggestion must pass the supplied tests to be considered for acceptance, but passing is only one requirement.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0010426171190526167,
+              "ai": 0.9933758219596363,
+              "paraphrased": 0.005581560921311164
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9978153852661713,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.002184614733828673,
+              "ai": 0.9909132546003688,
+              "paraphrased": 0.006902130665802444
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9985068582128056,
+            "sentence": "Reviewers will evaluate each suggestion to determine if it addresses the stated issue, changes unrelated behaviour, or leaves an unclear edit location.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0014931417871943398,
+              "ai": 0.9931508108378795,
+              "paraphrased": 0.005356047374926145
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.998662709255573,
+            "sentence": "We will report the acceptance of each suggestion alongside test outcomes and review time.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.001337290744427015,
+              "ai": 0.9922953001941468,
+              "paraphrased": 0.006367409061426157
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9980103100675576,
+            "sentence": "Rejected suggestions will be recorded with their reasons.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.001989689932442397,
+              "ai": 0.9911999325649797,
+              "paraphrased": 0.006810377502577813
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989900067086473,
+            "sentence": "This distinction allows a passing test result to coexist with a developer decision that the change is unsuitable.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.001009993291352635,
+              "ai": 0.9928391931804912,
+              "paraphrased": 0.006150813528156207
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.998554129486514,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0014458705134859733,
+              "ai": 0.9922366456457503,
+              "paraphrased": 0.006317483840763716
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.998989964388623,
+            "sentence": "Small functions are easier to inspect than production repositories, and the supplied tests may miss important behaviors.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.001010035611377042,
+              "ai": 0.9928807978399775,
+              "paraphrased": 0.006109166548645481
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9988995245232528,
+            "sentence": "While the experiment cannot establish the reliability of autonomous code modification, its narrower aim is to examine how the form of a suggestion affects developer review, with the developer retaining the final decision.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0011004754767471295,
+              "ai": 0.9927013304057579,
+              "paraphrased": 0.006198194117494911
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Code Review Suggestions with a Measured Scope\n\n## Abstract\n\nA plausible code review suggestion is useful only if a developer can understand where it applies and what it changes. We propose comparing free-form suggestions with those that identify an exact edit location. Both conditions will receive the same Python function and issue description [S2]. The assistant will propose changes, while a developer retains authority over acceptance.\n\n## Introduction\n\nGeneral advice can be correct in principle but difficult to apply to a specific function. Conversely, a precise edit might still alter behavior in an unintended way. The study therefore distinguishes the location of a suggestion from its correctness. Tests will check the supplied examples, but passing them will not be presented as proof that the program is correct for every input [S1].\n\n## Related Work\n\nThe task brief assigns the assistant a supporting role in code review, leaving the final decision with the developer [S1]. The evaluation brief distinguishes free-form suggestions from those anchored to an exact edit location [S2]. We use these conditions to examine whether specificity aids reviewers in assessing a proposal, rather than assuming that more specific suggestions are inherently safer.\n\n## Methodology\n\nThe planned sample includes 36 small functions [S2]. For each function, both conditions will receive identical code and the same short issue description. We will retain the original tests and separately record any proposed test changes. A suggestion must pass the supplied tests to be considered for acceptance, but passing is only one requirement.\n\n## Planned Evaluation\n\nReviewers will evaluate each suggestion to determine if it addresses the stated issue, changes unrelated behaviour, or leaves an unclear edit location. We will report the acceptance of each suggestion alongside test outcomes and review time. Rejected suggestions will be recorded with their reasons. This distinction allows a passing test result to coexist with a developer decision that the change is unsuitable.\n\n## Limitations and Conclusion\n\nSmall functions are easier to inspect than production repositories, and the supplied tests may miss important behaviors. While the experiment cannot establish the reliability of autonomous code modification, its narrower aim is to examine how the form of a suggestion affects developer review, with the developer retaining the final decision.",
+        "document_id": null
+      }
+    ]
+  }
+}

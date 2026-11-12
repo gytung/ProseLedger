@@ -1,0 +1,56 @@
+{
+  "reviews": [
+    {
+      "id": 0,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 1,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 2,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 3,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 4,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 5,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "An abstention rule may make the limits of the evidence clearer while leaving a less complete map.",
+          "revisedQuote": "An abstention rule may make the limits of the evidence clearer, but it will leave a less complete map.",
+          "problem": "Changes a possible tradeoff into a definite prediction that the map will be less complete."
+        },
+        {
+          "originalQuote": "A local inventory may also contain outdated boundaries.",
+          "revisedQuote": "A local inventory might contain outdated boundaries, as no field measurements have been collected for this proposal [S1].",
+          "problem": "Adds an unsupported causal connection: the absence of field measurements for this proposal does not explain whether the inventory boundaries are outdated."
+        },
+        {
+          "originalQuote": "Its contribution would be a more explicit account of what the available images can support.",
+          "revisedQuote": "Instead, its contribution will be a more explicit account of what the available images can support.",
+          "problem": "Replaces a conditional proposed contribution with a definite outcome, weakening the original uncertainty."
+        }
+      ],
+      "readability": "similar"
+    }
+  ]
+}

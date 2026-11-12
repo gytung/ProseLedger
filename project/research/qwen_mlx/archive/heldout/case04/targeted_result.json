@@ -1,0 +1,756 @@
+{
+  "schema": "proseledger-browser-3",
+  "mode": "compare",
+  "draftOrigin": "model_generated",
+  "ruleMode": "explicit",
+  "status": "completed",
+  "startedAt": "2026-10-30T17:01:42.823Z",
+  "completedAt": "2026-10-30T17:03:06.373Z",
+  "protocol": {
+    "id": "proseledger-browser-3",
+    "scope": "Compact browser adaptation; not the frozen Python evaluation.",
+    "score": "Five model-rated problem dimensions, 0–4 each, decimals allowed; total 0–20. Lower is better.",
+    "comparability": "These scores are not comparable to archived Python composite scores or other models.",
+    "retention": "Common content checks must pass and the branch-blind pairwise reviewer must rate the changed candidate better than its own previous draft. Ties retain the previous draft; all candidates remain visible.",
+    "scoreVariation": "Absolute ratings remain unmodified. A retained score may rise when the pairwise reviewer prefers the candidate; both judgments are recorded.",
+    "uncertainty": "Automated ratings and content checks are fallible, not human ground truth.",
+    "budget": "Three independent routes start from one initial draft. Each round has three parallel revision calls and one common blinded review. Token use can differ.",
+    "naturalness": "Six conditional editorial rules with exact before/after evidence. Rule use is an auditable action, not a proof of improved writing.",
+    "memory": "Frozen conditional operation cards and branch-local decision history; no training or cross-visitor learning."
+  },
+  "input": {
+    "topic": "Preserving negative findings and uncertainty in literature synthesis",
+    "sources": [
+      {
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "venue": "EMNLP 2023",
+        "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+        "authors": [
+          "Tianyu Gao",
+          "Howard Yen",
+          "Jiatong Yu",
+          "Danqi Chen"
+        ],
+        "year": 2023,
+        "id": "S1",
+        "title": "Enabling Large Language Models to Generate Text with Citations",
+        "excerpt": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nLarge language models (LLMs) have emerged as a widely-used tool for information seeking, but their generated outputs are prone to hallucination. In this work, our aim is to allow LLMs to generate text with citations, improving their factual correctness and verifiability. Existing work mainly relies on commercial search engines and human evaluation, making it challenging to reproduce and compare different modeling approaches. We propose ALCE, the first benchmark for Automatic LLMs’ Citation Evaluation. ALCE collects a diverse set of questions and retrieval corpora and requires building end-to-end systems to retrieve supporting evidence and generate answers with citations. We develop automatic metrics along three dimensions—fluency, correctness, and citation quality—and demonstrate their strong correlation with human judgements. Our experiments with state-of-the-art LLMs and novel prompting strategies show that current systems have considerable room for improvement—For example, on the ELI5 dataset, even the best models lack complete citation support 50% of the time. Our analyses further highlight promising future directions, including developing better retrievers, advancing long-context LLMs, and improving the ability to synthesize information from multiple sources.\n\nORIGINAL EXCERPT (PDF page 1; Section 1 Introduction, opening paragraph):\nLarge language models (LLMs; Brown et al., 2020; OpenAI, 2023) have gained increasing popularity as a tool for information seeking. While they generate engaging and coherent responses, their outputs are prone to hallucination and often contain factually incorrect information (Ji et al., 2023). This makes it harder for users to trust and verify LLM-generated outputs without any supporting evidence.",
+        "url": "https://aclanthology.org/2023.emnlp-main.398/"
+      },
+      {
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "venue": "ACL 2024 (Long Papers)",
+        "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+        "authors": [
+          "Aviv Slobodkin",
+          "Eran Hirsch",
+          "Arie Cattan",
+          "Tal Schuster",
+          "Ido Dagan"
+        ],
+        "year": 2024,
+        "id": "S2",
+        "title": "Attribute First, then Generate: Locally-attributable Grounded Text Generation",
+        "excerpt": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nRecent efforts to address hallucinations in Large Language Models (LLMs) have focused on attributed text generation, which supplements generated texts with citations of supporting sources for post-generation fact-checking and corrections. Yet, these citations often point to entire documents or paragraphs, burdening users with extensive verification work. In this paper, we introduce a locally-attributable text generation approach, prioritizing concise attributions. Our method, named “Attribute First, then Generate“, breaks down the conventional end-to-end generation process into three intuitive steps: content selection, sentence planning, and sequential sentence generation. By initially identifying relevant source segments (“select first“) and then conditioning the generation process on them (“then generate“), we ensure these segments also act as the output’s fine-grained attributions (“select“ becomes “attribute“). Tested on Multi-document Summarization and Long-form Question-answering, our method not only yields more concise citations than the baselines but also maintains - and in some cases enhances - both generation quality and attribution accuracy. Furthermore, it significantly reduces the time required for fact verification by human assessors.\n\nORIGINAL EXCERPT (PDF page 3; Section 3.1 Attribute First, then Generate, opening paragraph):\nTo reliably achieve the desirable fine-grained attribution, we introduce the Attribute First, then Generate paradigm, outlined in Fig. 2. This method is structured around three key steps, mirroring the inherent decision-making processes involved in text generation: content selection, sentence-planning, and sentence-by-sentence generation. Though applicable to any grounded text generation task, we specifically test its application in Multi-document Summarization (MDS) and Long-form Question-answering (LFQA), adapting only the content selection step to each task’s unique requirements.",
+        "url": "https://aclanthology.org/2024.acl-long.182/"
+      },
+      {
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "venue": "BEA 2024",
+        "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+        "authors": [
+          "Masato Mita",
+          "Keisuke Sakaguchi",
+          "Masato Hagiwara",
+          "Tomoya Mizumoto",
+          "Jun Suzuki",
+          "Kentaro Inui"
+        ],
+        "year": 2024,
+        "id": "S3",
+        "title": "Towards Automated Document Revision: Grammatical Error Correction, Fluency Edits, and Beyond",
+        "excerpt": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nNatural language processing (NLP) technology has rapidly improved automated grammatical error correction (GEC) tasks, and the GEC community has begun to explore document-level revision. However, there are two major obstacles to going beyond automated sentence-level GEC to NLP-based document-level revision support: (1) there are few public corpora with document-level revisions annotated by professional editors, and (2) it is infeasible to obtain all possible references and evaluate revision quality using such references because there are infinite revision possibilities. To address these challenges, this paper proposes a new document revision corpus, Text Revision of ACL papers (TETRA), in which multiple professional editors have revised academic papers sampled from the ACL anthology. This corpus enables us to focus on document-level and paragraph-level edits, such as edits related to coherence and consistency. Additionally, as a case study using the TETRA corpus, we investigate reference-less and interpretable methods for meta-evaluation to detect quality improvements according to document revisions. We show the uniqueness of TETRA compared with existing document revision corpora and demonstrate that a fine-tuned pre-trained language model can discriminate the quality of documents after revision even when the difference is subtle.\n\nORIGINAL EXCERPT (PDF page 1; Section 1 Introduction, opening paragraph):\nDocument revision is a crucial step in the process of writing essays and argumentative texts. The writing process consists of two major parts: content organization and selection planning (henceforth, planning part) and realization of text improvement (henceforth, realization part), which are hierarchical and recursive. In addition, according to previous studies on argumentative writing (Flower and Hayes, 1981; Beason, 1993; Buchman et al., 2000; Seow, 2002; Allal et al., 2004), realization part in writing process typically comprises three main stages: Revising, Editing, and Proofreading. Revising is the initial editing step used to plan and structure the overall document at a high level, Editing focuses on making sentence-level or phrase-level expressions, and Proofreading is used to identify and correct errors such as spelling and grammar errors (see Figure 1, left). While the order of these steps is not set in stone, the writing process typically starts with a broad, high-level perspective, and gradually narrows down the scope of edits.",
+        "url": "https://aclanthology.org/2024.bea-1.21/"
+      },
+      {
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "venue": "ACL 2025 (Long Papers)",
+        "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+        "authors": [
+          "Léane Jourdan",
+          "Florian Boudin",
+          "Nicolas Hernandez",
+          "Richard Dufour"
+        ],
+        "year": 2025,
+        "id": "S4",
+        "title": "Identifying Reliable Evaluation Metrics for Scientific Text Revision",
+        "excerpt": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nEvaluating text revision in scientific writing remains a challenge, as traditional metrics such as ROUGE and BERTScore primarily focus on similarity rather than capturing meaningful improvements. In this work, we analyse and identify the limitations of these metrics and explore alternative evaluation methods that better align with human judgments. We first conduct a manual annotation study to assess the quality of different revisions. Then, we investigate reference-free evaluation metrics from related NLP domains. Additionally, we examine LLM-as-a-judge approaches, analysing their ability to assess revisions with and without a gold reference. Our results show that LLMs effectively assess instruction-following but struggle with correctness, while domain-specific metrics provide complementary insights. We find that a hybrid approach combining LLM-as-a-judge evaluation and task-specific metrics offers the most reliable assessment of revision.\n\nORIGINAL EXCERPT (PDF page 1; Section 1 Introduction, opening paragraph):\nEffective revision is a critical step in scientific writing, ensuring clarity, coherence, and adherence to academic standards. The writing process typically consists of four stages: 1) Prewriting, 2) Drafting, 3) Revising, and 4) Editing (Jourdan et al., 2023). The revision stage involves substantial modifications to improve readability, style, and formality (Du et al., 2022; Li et al., 2022). This step is particularly critical, as poor writing quality can obscure research findings and often contributes to paper rejection (Amano et al., 2023). As illustrated in Figure 1, the revision task takes an original paragraph and an instruction specifying the required modification as input. The expected output is a revised paragraph that aligns with the given instruction.",
+        "url": "https://aclanthology.org/2025.acl-long.335/"
+      },
+      {
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "venue": "EMNLP 2024",
+        "evidence_scope": "Only the quoted abstract and identified excerpt are supplied as evidence to the generation workflow. This is not full-text retrieval. Reported results belong to the cited authors, not this project.",
+        "authors": [
+          "Xiangkun Hu",
+          "Dongyu Ru",
+          "Lin Qiu",
+          "Qipeng Guo",
+          "Tianhang Zhang",
+          "Yang Xu",
+          "Yun Luo",
+          "Pengfei Liu",
+          "Yue Zhang",
+          "Zheng Zhang"
+        ],
+        "year": 2024,
+        "id": "S5",
+        "title": "Knowledge-Centric Hallucination Detection",
+        "excerpt": "ORIGINAL ABSTRACT (official ACL Anthology metadata; not an independent replication):\nLarge Language Models (LLMs) have shown impressive capabilities but also a concerning tendency to hallucinate. This paper presents RefChecker, a framework that introduces claim-triplets to represent claims in LLM responses, aiming to detect fine-grained hallucinations. In RefChecker, an extractor generates claim-triplets from a response, which are then evaluated by a checker against a reference. We delineate three task settings: Zero, Noisy and Accurate Context, to reflect various real-world use cases. We curated a benchmark spanning various NLP tasks and annotated 11k claim-triplets from 2.1k responses by seven LLMs. RefChecker supports both proprietary and open-source models as the extractor and checker. Experiments demonstrate that claim-triplets enable superior hallucination detection, compared to other granularities such as response, sentence and sub-sentence level claims. RefChecker outperforms prior methods by 18.2 to 27.2 points on our benchmark and the checking results of RefChecker are strongly aligned with human judgments.\n\nORIGINAL EXCERPT (PDF page 2; Figure 2 caption (framework description)):\nThe REFCHECKER framework comprises two main components: an extractor denoted as E and a checker denoted as C. Given a text to be checked, typically a response generated by an LLM, the extractor takes it as input and generates a set of knowledge triplets, referred to as claim-triplets. Subsequently, the checker assesses each claim-triplet by comparing it against a reference, assigning a hallucination label based on the evaluation.",
+        "url": "https://aclanthology.org/2024.emnlp-main.395/"
+      }
+    ],
+    "cards": [],
+    "suppliedDraft": "",
+    "ruleMode": "explicit"
+  },
+  "outline": {
+    "ideas": [
+      "Develop an evidence-ledger synthesis method that preserves negative findings, uncertainty, and study conditions through source selection, drafting, and verification.",
+      "Design a revision audit that detects when editing removes qualifications or changes the polarity of scientific findings.",
+      "Create a human evaluation protocol for measuring whether literature summaries faithfully communicate conflicting and inconclusive evidence."
+    ],
+    "selectedIdea": 0,
+    "outline": [
+      {
+        "heading": "Abstract",
+        "plan": "Introduce an evidence-ledger approach and the planned assessment of negative-finding and uncertainty preservation."
+      },
+      {
+        "heading": "Introduction",
+        "plan": "Define the synthesis problem and distinguish citation support from coverage of consequential qualifications."
+      },
+      {
+        "heading": "Related Work",
+        "plan": "Connect citation evaluation, attribution-first generation, claim checking, and revision evaluation to the proposed task."
+      },
+      {
+        "heading": "Methodology",
+        "plan": "Describe evidence annotation, coverage-aware planning, grounded generation, and bidirectional verification."
+      },
+      {
+        "heading": "Planned Evaluation",
+        "plan": "Specify source-grounded comparisons, human judgments, metrics, and ablations."
+      },
+      {
+        "heading": "Limitations and Conclusion",
+        "plan": "Bound conclusions by source availability, annotation ambiguity, and the exploratory evaluation scope."
+      }
+    ]
+  },
+  "initialText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+  "initialScore": 0,
+  "initialAudit": {
+    "dimensions": {
+      "clarity": {
+        "score": 0,
+        "reason": "Reviewer rating; no separate actionable issue recorded.",
+        "quote": ""
+      },
+      "specificity": {
+        "score": 0,
+        "reason": "Reviewer rating; no separate actionable issue recorded.",
+        "quote": ""
+      },
+      "flow": {
+        "score": 0,
+        "reason": "Reviewer rating; no separate actionable issue recorded.",
+        "quote": ""
+      },
+      "concision": {
+        "score": 0,
+        "reason": "Reviewer rating; no separate actionable issue recorded.",
+        "quote": ""
+      },
+      "academic_style": {
+        "score": 0,
+        "reason": "Reviewer rating; no separate actionable issue recorded.",
+        "quote": ""
+      }
+    },
+    "issues": [],
+    "preservation": {
+      "passed": true,
+      "issues": [],
+      "rawIssues": []
+    },
+    "score": 0
+  },
+  "initialGuard": {
+    "passed": true,
+    "findings": []
+  },
+  "branches": {
+    "targeted": {
+      "text": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+      "finalScore": 0,
+      "rounds": [
+        {
+          "round": 0,
+          "route": "initial",
+          "candidateScore": 0,
+          "retainedScore": 0,
+          "accepted": true,
+          "changed": false,
+          "cardIds": [],
+          "outcome": "initial",
+          "reason": "Common initial proposal; independent revision routes.",
+          "guard": {
+            "passed": true,
+            "findings": []
+          },
+          "audit": {
+            "dimensions": {
+              "clarity": {
+                "score": 0,
+                "reason": "Reviewer rating; no separate actionable issue recorded.",
+                "quote": ""
+              },
+              "specificity": {
+                "score": 0,
+                "reason": "Reviewer rating; no separate actionable issue recorded.",
+                "quote": ""
+              },
+              "flow": {
+                "score": 0,
+                "reason": "Reviewer rating; no separate actionable issue recorded.",
+                "quote": ""
+              },
+              "concision": {
+                "score": 0,
+                "reason": "Reviewer rating; no separate actionable issue recorded.",
+                "quote": ""
+              },
+              "academic_style": {
+                "score": 0,
+                "reason": "Reviewer rating; no separate actionable issue recorded.",
+                "quote": ""
+              }
+            },
+            "issues": [],
+            "preservation": {
+              "passed": true,
+              "issues": [],
+              "rawIssues": []
+            },
+            "score": 0
+          },
+          "text": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "candidateText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "beforeText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "edits": [],
+          "memoryApplications": [],
+          "ruleApplications": [],
+          "pairwise": null,
+          "textMetrics": {
+            "words": 631,
+            "paragraphs": 11,
+            "sentences": 36,
+            "meanWordsPerSentence": 17.5,
+            "longSentences": 0,
+            "citationIds": [
+              "S1",
+              "S2",
+              "S5",
+              "S4"
+            ],
+            "note": "Descriptive counts only, not a quality score."
+          }
+        },
+        {
+          "round": 1,
+          "carriedStop": false,
+          "route": "stop",
+          "candidateScore": null,
+          "retainedScore": 0,
+          "accepted": false,
+          "changed": false,
+          "cardIds": [],
+          "outcome": "stop",
+          "error": null,
+          "failureStage": null,
+          "reason": "The current diagnosis names no paragraphs for editing and records no actionable issues.",
+          "guard": {
+            "passed": true,
+            "findings": []
+          },
+          "audit": null,
+          "plan": {
+            "actions": [],
+            "reason": "The current diagnosis names no paragraphs for editing and records no actionable issues.",
+            "applicability": "See conditional memory applications."
+          },
+          "text": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "candidateText": null,
+          "beforeText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "edits": [],
+          "pairwise": null,
+          "memoryApplications": [],
+          "ruleApplications": [],
+          "textMetrics": {
+            "words": 631,
+            "paragraphs": 11,
+            "sentences": 36,
+            "meanWordsPerSentence": 17.5,
+            "longSentences": 0,
+            "citationIds": [
+              "S1",
+              "S2",
+              "S5",
+              "S4"
+            ],
+            "note": "Descriptive counts only, not a quality score."
+          }
+        },
+        {
+          "round": 2,
+          "carriedStop": true,
+          "route": "stop",
+          "candidateScore": null,
+          "retainedScore": 0,
+          "accepted": false,
+          "changed": false,
+          "cardIds": [],
+          "outcome": "stop",
+          "error": null,
+          "failureStage": null,
+          "reason": "Stopped after round 1; no further model call was made for this unchanged draft.",
+          "guard": {
+            "passed": true,
+            "findings": []
+          },
+          "audit": null,
+          "plan": {
+            "actions": [],
+            "reason": "Stopped after round 1; no further model call was made for this unchanged draft.",
+            "applicability": "See conditional memory applications."
+          },
+          "text": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "candidateText": null,
+          "beforeText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "edits": [],
+          "pairwise": null,
+          "memoryApplications": [],
+          "ruleApplications": [],
+          "textMetrics": {
+            "words": 631,
+            "paragraphs": 11,
+            "sentences": 36,
+            "meanWordsPerSentence": 17.5,
+            "longSentences": 0,
+            "citationIds": [
+              "S1",
+              "S2",
+              "S5",
+              "S4"
+            ],
+            "note": "Descriptive counts only, not a quality score."
+          }
+        },
+        {
+          "round": 3,
+          "carriedStop": true,
+          "route": "stop",
+          "candidateScore": null,
+          "retainedScore": 0,
+          "accepted": false,
+          "changed": false,
+          "cardIds": [],
+          "outcome": "stop",
+          "error": null,
+          "failureStage": null,
+          "reason": "Stopped after round 1; no further model call was made for this unchanged draft.",
+          "guard": {
+            "passed": true,
+            "findings": []
+          },
+          "audit": null,
+          "plan": {
+            "actions": [],
+            "reason": "Stopped after round 1; no further model call was made for this unchanged draft.",
+            "applicability": "See conditional memory applications."
+          },
+          "text": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "candidateText": null,
+          "beforeText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "edits": [],
+          "pairwise": null,
+          "memoryApplications": [],
+          "ruleApplications": [],
+          "textMetrics": {
+            "words": 631,
+            "paragraphs": 11,
+            "sentences": 36,
+            "meanWordsPerSentence": 17.5,
+            "longSentences": 0,
+            "citationIds": [
+              "S1",
+              "S2",
+              "S5",
+              "S4"
+            ],
+            "note": "Descriptive counts only, not a quality score."
+          }
+        }
+      ]
+    }
+  },
+  "calls": [
+    {
+      "stage": "draft",
+      "startedAt": "2026-10-30T17:01:42.823Z",
+      "status": "completed",
+      "maxTokens": 4000,
+      "finishedAt": "2026-10-30T17:02:36.996Z"
+    },
+    {
+      "stage": "audit_initial",
+      "startedAt": "2026-10-30T17:02:36.997Z",
+      "status": "completed",
+      "maxTokens": 1600,
+      "finishedAt": "2026-10-30T17:02:53.350Z"
+    },
+    {
+      "stage": "revise_targeted_1",
+      "startedAt": "2026-10-30T17:02:53.358Z",
+      "status": "completed",
+      "maxTokens": 2200,
+      "finishedAt": "2026-10-30T17:03:06.371Z"
+    }
+  ],
+  "events": [
+    {
+      "stage": "draft",
+      "phase": "calling",
+      "message": "Calling the model: draft.",
+      "detail": {},
+      "calls": 1,
+      "at": "2026-10-30T17:01:42.823Z"
+    },
+    {
+      "stage": "ideation",
+      "phase": "completed",
+      "message": "Three ideas, the selected first idea, and an outline are ready.",
+      "detail": {
+        "outline": {
+          "ideas": [
+            "Develop an evidence-ledger synthesis method that preserves negative findings, uncertainty, and study conditions through source selection, drafting, and verification.",
+            "Design a revision audit that detects when editing removes qualifications or changes the polarity of scientific findings.",
+            "Create a human evaluation protocol for measuring whether literature summaries faithfully communicate conflicting and inconclusive evidence."
+          ],
+          "selectedIdea": 0,
+          "outline": [
+            {
+              "heading": "Abstract",
+              "plan": "Introduce an evidence-ledger approach and the planned assessment of negative-finding and uncertainty preservation."
+            },
+            {
+              "heading": "Introduction",
+              "plan": "Define the synthesis problem and distinguish citation support from coverage of consequential qualifications."
+            },
+            {
+              "heading": "Related Work",
+              "plan": "Connect citation evaluation, attribution-first generation, claim checking, and revision evaluation to the proposed task."
+            },
+            {
+              "heading": "Methodology",
+              "plan": "Describe evidence annotation, coverage-aware planning, grounded generation, and bidirectional verification."
+            },
+            {
+              "heading": "Planned Evaluation",
+              "plan": "Specify source-grounded comparisons, human judgments, metrics, and ablations."
+            },
+            {
+              "heading": "Limitations and Conclusion",
+              "plan": "Bound conclusions by source availability, annotation ambiguity, and the exploratory evaluation scope."
+            }
+          ]
+        }
+      },
+      "calls": 1,
+      "at": "2026-10-30T17:02:36.996Z"
+    },
+    {
+      "stage": "draft",
+      "phase": "drafted",
+      "message": "Initial proposal generated; independent diagnosis is next.",
+      "detail": {
+        "initialText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+        "draftOrigin": "model_generated"
+      },
+      "calls": 1,
+      "at": "2026-10-30T17:02:36.996Z"
+    },
+    {
+      "stage": "audit_initial",
+      "phase": "calling",
+      "message": "Calling the model: audit_initial.",
+      "detail": {},
+      "calls": 2,
+      "at": "2026-10-30T17:02:36.997Z"
+    },
+    {
+      "stage": "draft",
+      "phase": "draft",
+      "message": "Initial proposal loaded and diagnosed.",
+      "detail": {
+        "initialText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+        "initialScore": 0,
+        "audit": {
+          "dimensions": {
+            "clarity": {
+              "score": 0,
+              "reason": "Reviewer rating; no separate actionable issue recorded.",
+              "quote": ""
+            },
+            "specificity": {
+              "score": 0,
+              "reason": "Reviewer rating; no separate actionable issue recorded.",
+              "quote": ""
+            },
+            "flow": {
+              "score": 0,
+              "reason": "Reviewer rating; no separate actionable issue recorded.",
+              "quote": ""
+            },
+            "concision": {
+              "score": 0,
+              "reason": "Reviewer rating; no separate actionable issue recorded.",
+              "quote": ""
+            },
+            "academic_style": {
+              "score": 0,
+              "reason": "Reviewer rating; no separate actionable issue recorded.",
+              "quote": ""
+            }
+          },
+          "issues": [],
+          "preservation": {
+            "passed": true,
+            "issues": [],
+            "rawIssues": []
+          },
+          "score": 0
+        },
+        "guard": {
+          "passed": true,
+          "findings": []
+        }
+      },
+      "calls": 2,
+      "at": "2026-10-30T17:02:53.350Z"
+    },
+    {
+      "stage": "revise_targeted_1",
+      "phase": "calling",
+      "message": "Calling the model: revise_targeted_1.",
+      "detail": {},
+      "calls": 3,
+      "at": "2026-10-30T17:02:53.358Z"
+    },
+    {
+      "stage": "targeted",
+      "phase": "candidate",
+      "message": "Revision 1 candidate prepared for common review.",
+      "detail": {
+        "branch": "targeted",
+        "round": 1,
+        "edits": [],
+        "memoryApplications": [],
+        "ruleApplications": [],
+        "route": "stop"
+      },
+      "calls": 3,
+      "at": "2026-10-30T17:03:06.371Z"
+    },
+    {
+      "stage": "targeted",
+      "phase": "round",
+      "message": "targeted: revision 1 stopped.",
+      "detail": {
+        "branch": "targeted",
+        "round": 1,
+        "record": {
+          "round": 1,
+          "carriedStop": false,
+          "route": "stop",
+          "candidateScore": null,
+          "retainedScore": 0,
+          "accepted": false,
+          "changed": false,
+          "cardIds": [],
+          "outcome": "stop",
+          "error": null,
+          "failureStage": null,
+          "reason": "The current diagnosis names no paragraphs for editing and records no actionable issues.",
+          "guard": {
+            "passed": true,
+            "findings": []
+          },
+          "audit": null,
+          "plan": {
+            "actions": [],
+            "reason": "The current diagnosis names no paragraphs for editing and records no actionable issues.",
+            "applicability": "See conditional memory applications."
+          },
+          "text": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "candidateText": null,
+          "beforeText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "edits": [],
+          "pairwise": null,
+          "memoryApplications": [],
+          "ruleApplications": [],
+          "textMetrics": {
+            "words": 631,
+            "paragraphs": 11,
+            "sentences": 36,
+            "meanWordsPerSentence": 17.5,
+            "longSentences": 0,
+            "citationIds": [
+              "S1",
+              "S2",
+              "S5",
+              "S4"
+            ],
+            "note": "Descriptive counts only, not a quality score."
+          }
+        }
+      },
+      "calls": 3,
+      "at": "2026-10-30T17:03:06.372Z"
+    },
+    {
+      "stage": "targeted",
+      "phase": "round",
+      "message": "targeted: revision 2 stopped.",
+      "detail": {
+        "branch": "targeted",
+        "round": 2,
+        "record": {
+          "round": 2,
+          "carriedStop": true,
+          "route": "stop",
+          "candidateScore": null,
+          "retainedScore": 0,
+          "accepted": false,
+          "changed": false,
+          "cardIds": [],
+          "outcome": "stop",
+          "error": null,
+          "failureStage": null,
+          "reason": "Stopped after round 1; no further model call was made for this unchanged draft.",
+          "guard": {
+            "passed": true,
+            "findings": []
+          },
+          "audit": null,
+          "plan": {
+            "actions": [],
+            "reason": "Stopped after round 1; no further model call was made for this unchanged draft.",
+            "applicability": "See conditional memory applications."
+          },
+          "text": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "candidateText": null,
+          "beforeText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "edits": [],
+          "pairwise": null,
+          "memoryApplications": [],
+          "ruleApplications": [],
+          "textMetrics": {
+            "words": 631,
+            "paragraphs": 11,
+            "sentences": 36,
+            "meanWordsPerSentence": 17.5,
+            "longSentences": 0,
+            "citationIds": [
+              "S1",
+              "S2",
+              "S5",
+              "S4"
+            ],
+            "note": "Descriptive counts only, not a quality score."
+          }
+        }
+      },
+      "calls": 3,
+      "at": "2026-10-30T17:03:06.372Z"
+    },
+    {
+      "stage": "targeted",
+      "phase": "round",
+      "message": "targeted: revision 3 stopped.",
+      "detail": {
+        "branch": "targeted",
+        "round": 3,
+        "record": {
+          "round": 3,
+          "carriedStop": true,
+          "route": "stop",
+          "candidateScore": null,
+          "retainedScore": 0,
+          "accepted": false,
+          "changed": false,
+          "cardIds": [],
+          "outcome": "stop",
+          "error": null,
+          "failureStage": null,
+          "reason": "Stopped after round 1; no further model call was made for this unchanged draft.",
+          "guard": {
+            "passed": true,
+            "findings": []
+          },
+          "audit": null,
+          "plan": {
+            "actions": [],
+            "reason": "Stopped after round 1; no further model call was made for this unchanged draft.",
+            "applicability": "See conditional memory applications."
+          },
+          "text": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "candidateText": null,
+          "beforeText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+          "edits": [],
+          "pairwise": null,
+          "memoryApplications": [],
+          "ruleApplications": [],
+          "textMetrics": {
+            "words": 631,
+            "paragraphs": 11,
+            "sentences": 36,
+            "meanWordsPerSentence": 17.5,
+            "longSentences": 0,
+            "citationIds": [
+              "S1",
+              "S2",
+              "S5",
+              "S4"
+            ],
+            "note": "Descriptive counts only, not a quality score."
+          }
+        }
+      },
+      "calls": 3,
+      "at": "2026-10-30T17:03:06.373Z"
+    }
+  ],
+  "warnings": [],
+  "comparison": {
+    "valid": true,
+    "scope": "Targeted-only control: unchanged Targeted instructions, candidate validation, and retention rule; review batches contain this route only."
+  }
+}

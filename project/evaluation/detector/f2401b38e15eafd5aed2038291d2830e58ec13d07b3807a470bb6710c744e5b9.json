@@ -1,0 +1,724 @@
+{
+  "textSHA256": "f2401b38e15eafd5aed2038291d2830e58ec13d07b3807a470bb6710c744e5b9",
+  "characters": 2368,
+  "scannedAtUTC": "2026-11-12T20:54:13.224610+00:00",
+  "elapsedSeconds": 1.801,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 12,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 17,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 22,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 26,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 27,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9999975178238483,
+            "sentence": "# Accessible Routes without Assuming Accessible Doors",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.4821761517447276e-06,
+              "ai": 0.9998750836970749,
+              "paraphrased": 0.0001224341267733483
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999975178227103,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.4821772896758525e-06,
+              "ai": 0.9998755609623317,
+              "paraphrased": 0.0001219568603786857
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999976681936593,
+            "sentence": "A route can be step-free yet still end at a door that a traveler cannot use.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.331806340658663e-06,
+              "ai": 0.9998826511061233,
+              "paraphrased": 0.00011501708753603243
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999977399366999,
+            "sentence": "We propose testing a campus routing interface that distinguishes between a step-free path and a verified accessible destination.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.260063300124775e-06,
+              "ai": 0.9998822727244102,
+              "paraphrased": 0.00011546721228969451
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999976681936593,
+            "sentence": "A verified route will require evidence for both the path and the entrance [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.331806340658663e-06,
+              "ai": 0.9998826511061233,
+              "paraphrased": 0.00011501708753603243
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999977399356234,
+            "sentence": "Missing door measurements will remain visible as unknown information.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.2600643766077835e-06,
+              "ai": 0.9998827228462718,
+              "paraphrased": 0.00011501708935158677
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999974390265889,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.560973411112572e-06,
+              "ai": 0.9998769028440205,
+              "paraphrased": 0.00012053618256834727
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999975941690191,
+            "sentence": "A single accessibility label can obscure the extent of a journey's verification.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.405830980885931e-06,
+              "ai": 0.9998848014712306,
+              "paraphrased": 0.00011279269778847438
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999997187336633,
+            "sentence": "The campus map records paths and entrances, but some door measurements are missing [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.8126633669271026e-06,
+              "ai": 0.9998713596772143,
+              "paraphrased": 0.00012582765941873903
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999976681925888,
+            "sentence": "Treating an unmeasured door as usable would make the map more complete but at the cost of an unsupported claim.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.3318074111190265e-06,
+              "ai": 0.9998830994674082,
+              "paraphrased": 0.00011456872518070076
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999976681925888,
+            "sentence": "The interface should help users recognize this gap before they begin a trip.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.3318074111190265e-06,
+              "ai": 0.9998830994674082,
+              "paraphrased": 0.00011456872518070076
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999971873311626,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.8126688373958e-06,
+              "ai": 0.9998733102055349,
+              "paraphrased": 0.00012387712562767923
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999970059257663,
+            "sentence": "The task brief explicitly separates path properties from entrance properties [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.99407423359626e-06,
+              "ai": 0.9998745718614862,
+              "paraphrased": 0.00012243406428014977
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999970059228136,
+            "sentence": "The evaluation brief defines verification as the conjunction of both requirements [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.994077186438832e-06,
+              "ai": 0.999875524528871,
+              "paraphrased": 0.00012148139394258122
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999973577252667,
+            "sentence": "We will preserve this distinction in route descriptions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6422747333443814e-06,
+              "ai": 0.9998796134480351,
+              "paraphrased": 0.00011774427723157997
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999970980419665,
+            "sentence": "A step-free path may be reported as such, but it will not automatically receive the label of a verified accessible route.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.9019580335099816e-06,
+              "ai": 0.9998751412328182,
+              "paraphrased": 0.00012195680914827582
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999962738483286,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.7261516713767362e-06,
+              "ai": 0.9998654345634045,
+              "paraphrased": 0.00013083928492409284
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999959076526734,
+            "sentence": "We plan to test 32 origin-destination pairs [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.092347326519476e-06,
+              "ai": 0.9998582535786454,
+              "paraphrased": 0.00013765407402802754
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999970980476884,
+            "sentence": "For each pair, the system will retrieve the path record and destination entrance record.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.901952311579966e-06,
+              "ai": 0.9998732209331209,
+              "paraphrased": 0.00012387711456746797
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999970980406064,
+            "sentence": "The route will be marked verified only if both the path and the entrance meet the recorded requirements.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.901959393588449e-06,
+              "ai": 0.9998756166354048,
+              "paraphrased": 0.00012148140520160602
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999971873297813,
+            "sentence": "Unknown entrances will be displayed separately, alongside the missing measurement, rather than included among the verified options.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.8126702187017574e-06,
+              "ai": 0.9998737931087261,
+              "paraphrased": 0.0001233942210550974
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999953627626159,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.6372373841019475e-06,
+              "ai": 0.9998582453643444,
+              "paraphrased": 0.0001371173982714518
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999997187333941,
+            "sentence": "Evaluation will compare the displayed route status against the supplied records.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.8126660589441496e-06,
+              "ai": 0.9998723387682976,
+              "paraphrased": 0.00012484856564346088
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999968128436459,
+            "sentence": "We will report unsupported verification labels, correctly identified unknown entrances, and the clarity of the explanation shown to users.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.187156354074875e-06,
+              "ai": 0.9998685038351167,
+              "paraphrased": 0.00012830900852922546
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999939519437413,
+            "sentence": "A hard case will have a step-free path but no usable entrance evidence.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.048056258803725e-06,
+              "ai": 0.9998513733803771,
+              "paraphrased": 0.00014257856336414454
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999955054470506,
+            "sentence": "Success requires preserving this distinction, not merely finding a path through the map.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.4945529494028375e-06,
+              "ai": 0.9998556839888172,
+              "paraphrased": 0.0001398214582334389
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999945785331726,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.42146682740308e-06,
+              "ai": 0.9998558451615133,
+              "paraphrased": 0.0001387333716593192
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999952155539859,
+            "sentence": "The records may become outdated, and accessibility needs vary between users.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.784446014113544e-06,
+              "ai": 0.9998596954149137,
+              "paraphrased": 0.0001355201390721833
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999957777366915,
+            "sentence": "The study cannot guarantee that a route will be suitable for every traveler.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.222263308577066e-06,
+              "ai": 0.9998607858006777,
+              "paraphrased": 0.00013499193601369388
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999667935181242,
+            "sentence": "It will also make no inference about unmeasured doors [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.320648187571011e-05,
+              "ai": 0.9997344870430287,
+              "paraphrased": 0.00023230647509554043
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999955054495593,
+            "sentence": "The proposed contribution is a clearer representation of which journey components are supported by the available records and which still need verification.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.494550440689384e-06,
+              "ai": 0.9998551368324242,
+              "paraphrased": 0.00014036861713506563
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Accessible Routes without Assuming Accessible Doors\n\n## Abstract\n\nA route can be step-free yet still end at a door that a traveler cannot use. We propose testing a campus routing interface that distinguishes between a step-free path and a verified accessible destination. A verified route will require evidence for both the path and the entrance [S2]. Missing door measurements will remain visible as unknown information.\n\n## Introduction\n\nA single accessibility label can obscure the extent of a journey's verification. The campus map records paths and entrances, but some door measurements are missing [S1]. Treating an unmeasured door as usable would make the map more complete but at the cost of an unsupported claim. The interface should help users recognize this gap before they begin a trip.\n\n## Related Work\n\nThe task brief explicitly separates path properties from entrance properties [S1]. The evaluation brief defines verification as the conjunction of both requirements [S2]. We will preserve this distinction in route descriptions. A step-free path may be reported as such, but it will not automatically receive the label of a verified accessible route.\n\n## Methodology\n\nWe plan to test 32 origin-destination pairs [S2]. For each pair, the system will retrieve the path record and destination entrance record. The route will be marked verified only if both the path and the entrance meet the recorded requirements. Unknown entrances will be displayed separately, alongside the missing measurement, rather than included among the verified options.\n\n## Planned Evaluation\n\nEvaluation will compare the displayed route status against the supplied records. We will report unsupported verification labels, correctly identified unknown entrances, and the clarity of the explanation shown to users. A hard case will have a step-free path but no usable entrance evidence. Success requires preserving this distinction, not merely finding a path through the map.\n\n## Limitations and Conclusion\n\nThe records may become outdated, and accessibility needs vary between users. The study cannot guarantee that a route will be suitable for every traveler. It will also make no inference about unmeasured doors [S2]. The proposed contribution is a clearer representation of which journey components are supported by the available records and which still need verification.",
+        "document_id": null
+      }
+    ]
+  }
+}

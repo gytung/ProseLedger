@@ -1,0 +1,26 @@
+{
+  "caseId": "C01",
+  "challenge": "benign",
+  "expectedPass": true,
+  "actualPass": true,
+  "correct": true,
+  "findings": [],
+  "before": "A glacier outline can change because the ice moved or because the observation is incomplete.",
+  "after": "A glacier outline may change because the ice moved or the observation is incomplete.",
+  "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+  "originalSHA256": "53bb11a91147eda5a1d09fd405b5ab3577d96b1c2025b561daa6b2895b55f5e4",
+  "candidateSHA256": "ef1547b1b438de365365ce048c32f35e088f395850da894d7b6c5378ae90b6a6",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive propositions, method steps, comparisons, evaluation measures, limitations, attributions, uncertainty and planned-work status are preserved. The only change, from “can change because the ice moved or because the observation is incomplete” to “may change because the ice moved or the observation is incomplete,” is an equivalent paraphrase. The candidate remains consistent with the supplied sources."
+  },
+  "semanticPass": true,
+  "combinedPass": true,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": []
+}

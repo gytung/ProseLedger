@@ -1,0 +1,30 @@
+{
+  "guard": {
+    "passed": true,
+    "findings": []
+  },
+  "wordRatio": 0.9837837837837838,
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Introduction",
+        "originalQuote": "Tests will check the supplied examples, but passing them will not be presented as proof that a program is correct for every input [S1].",
+        "revisedQuote": "While tests will verify the supplied examples, passing them does not guarantee the program's correctness for all inputs [S1].",
+        "problem": "The candidate preserves the limitation of testing but omits the explicit commitment not to present passing tests as proof of correctness for every input."
+      }
+    ],
+    "readability": "similar",
+    "reason": "The candidate otherwise preserves the substantive design, comparisons, evaluation measures, limitations, attribution, developer authority and planned-work status. Its readability is comparable, with some wordier phrasing."
+  },
+  "eligible": false,
+  "bounds": {
+    "maxPatchesPerSection": 3,
+    "maxMatchedFraction": 0.35,
+    "maxAdditionalRounds": 0,
+    "finalLengthRatio": [
+      0.85,
+      1.15
+    ]
+  }
+}

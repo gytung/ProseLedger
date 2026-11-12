@@ -1,0 +1,9 @@
+{
+  "system": "macOS",
+  "architecture": "arm64",
+  "processor": "Apple M4",
+  "systemMemoryGiB": 16,
+  "inferenceBackend": "Metal",
+  "source": "Ollama local runtime device and system-memory report",
+  "note": "This records the measured host; it does not imply Windows inference was run."
+}

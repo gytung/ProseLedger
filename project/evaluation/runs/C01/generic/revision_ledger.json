@@ -1,0 +1,190 @@
+{
+  "scope": "This run only; no historical card retrieval",
+  "memoryCardsUsed": 0,
+  "originalSHA256": "53bb11a91147eda5a1d09fd405b5ab3577d96b1c2025b561daa6b2895b55f5e4",
+  "retainedSHA256": "07ce066d00430711c2783441f57296dcc79575ecec5ef263a4199cfc3b064163",
+  "detectorUsedForAdmission": false,
+  "fullAudit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The candidate preserves all substantive claims, method steps, comparisons, evaluation measures, limitations, source attribution, uncertainty, and planned-work status. Changes are equivalent paraphrases, with no concrete substantive meaning changes."
+  },
+  "repairHistory": [],
+  "edits": [
+    {
+      "id": 0,
+      "heading": "Abstract",
+      "original": "A glacier outline can change because the ice moved or because the observation is incomplete. We propose to test whether allowing a mapping model to abstain on cloud-covered pixels improves the reliability of boundary comparisons. The study will use two summer visits and a local outline inventory [S1]. It concerns how uncertainty is represented, rather than whether a particular glacier has retreated.",
+      "candidate": "A glacier outline can change due to ice movement or incomplete observation. We propose testing whether allowing a mapping model to abstain on cloud-covered pixels enhances the reliability of boundary comparisons. The study will utilize two summer visits and a local outline inventory [S1]. The focus is on representing uncertainty rather than determining whether a specific glacier has retreated.",
+      "text": "A glacier outline can change due to ice movement or incomplete observation. We propose testing whether allowing a mapping model to abstain on cloud-covered pixels enhances the reliability of boundary comparisons. The study will utilize two summer visits and a local outline inventory [S1]. The focus is on representing uncertainty rather than determining whether a specific glacier has retreated.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 0,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A glacier outline can change due to ice movement or incomplete observation. We propose testing whether allowing a mapping model to abstain on cloud-covered pixels enhances the reliability of boundary comparisons. The study will utilize two summer visits and a local outline inventory [S1]. The focus is on representing uncertainty rather than determining whether a specific glacier has retreated.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 1,
+      "heading": "Introduction",
+      "original": "Missing pixels are often inconvenient for a mapping workflow because the output is expected to cover the entire image. Filling every location with a label can nevertheless turn missing evidence into an apparently definite boundary. In this proposal, cloud cover will remain an unavailable observation. The inventory gives a starting outline; it does not by itself provide evidence of recent retreat [S1].",
+      "candidate": "Missing pixels can complicate a mapping workflow, as the output is expected to cover the entire image. Filling every location with a label, however, can transform missing evidence into a seemingly definite boundary. In this proposal, cloud cover will remain an unavailable observation. The inventory provides a starting outline but does not itself establish recent retreat [S1].",
+      "text": "Missing pixels can complicate a mapping workflow, as the output is expected to cover the entire image. Filling every location with a label, however, can transform missing evidence into a seemingly definite boundary. In this proposal, cloud cover will remain an unavailable observation. The inventory provides a starting outline but does not itself establish recent retreat [S1].",
+      "sectionAccepted": true,
+      "review": {
+        "id": 1,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "Missing pixels can complicate a mapping workflow, as the output is expected to cover the entire image. Filling every location with a label, however, can transform missing evidence into a seemingly definite boundary. In this proposal, cloud cover will remain an unavailable observation. The inventory provides a starting outline but does not itself establish recent retreat [S1].",
+      "status": "verified_edit"
+    },
+    {
+      "id": 2,
+      "heading": "Related Work",
+      "original": "The source packet distinguishes an inventory from a change measurement [S1]. It also defines mandatory classification and abstention as the two conditions to compare [S2]. These definitions motivate a narrow experiment: the image evidence will be held fixed while the output rule changes. We will not use the inventory as an independent reference for the direction of glacier change.",
+      "candidate": "The source packet distinguishes between an inventory and a change measurement [S1]. It also defines mandatory classification and abstention as the two conditions to compare [S2]. These definitions motivate a focused experiment: the image evidence remains constant while the output rule varies. We will not use the inventory as an independent reference for the direction of glacier change.",
+      "text": "The source packet distinguishes between an inventory and a change measurement [S1]. It also defines mandatory classification and abstention as the two conditions to compare [S2]. These definitions motivate a focused experiment: the image evidence remains constant while the output rule varies. We will not use the inventory as an independent reference for the direction of glacier change.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 2,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The source packet distinguishes between an inventory and a change measurement [S1]. It also defines mandatory classification and abstention as the two conditions to compare [S2]. These definitions motivate a focused experiment: the image evidence remains constant while the output rule varies. We will not use the inventory as an independent reference for the direction of glacier change.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 3,
+      "heading": "Methodology",
+      "original": "We will provide the same image pairs to a boundary model under both conditions. In the first condition, the model must assign a label to every pixel. In the second, it may abstain where cloud cover makes the observation unavailable. The proposed sample contains 24 image pairs [S2]. Reviewers will examine the resulting boundaries without seeing the condition names.",
+      "candidate": "We will provide the same image pairs to a boundary model under both conditions. In the first condition, the model must assign a label to every pixel. In the second condition, it may abstain where cloud cover makes the observation unavailable. The proposed sample includes 24 image pairs [S2]. Reviewers will examine the resulting boundaries without knowing the condition names.",
+      "text": "We will provide the same image pairs to a boundary model under both conditions. In the first condition, the model must assign a label to every pixel. In the second condition, it may abstain where cloud cover makes the observation unavailable. The proposed sample includes 24 image pairs [S2]. Reviewers will examine the resulting boundaries without knowing the condition names.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 3,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "We will provide the same image pairs to a boundary model under both conditions. In the first condition, the model must assign a label to every pixel. In the second condition, it may abstain where cloud cover makes the observation unavailable. The proposed sample includes 24 image pairs [S2]. Reviewers will examine the resulting boundaries without knowing the condition names.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 4,
+      "heading": "Planned Evaluation",
+      "original": "The evaluation will report boundary disagreement on observable terrain and the fraction of pixels left unresolved. Abstentions will be reported separately from correct classifications, so the system cannot appear accurate simply by declining most cases. We will also inspect examples in which a cloud edge resembles an ice boundary. These are planned comparisons, and no field measurements are yet available.",
+      "candidate": "The evaluation will report boundary disagreement on observable terrain and the fraction of pixels left unresolved. Abstentions will be reported separately from correct classifications to ensure the system's accuracy is not inflated by avoiding difficult cases. We will also examine examples where a cloud edge closely resembles an ice boundary. These comparisons are planned, and no field measurements are currently available.",
+      "text": "The evaluation will report boundary disagreement on observable terrain and the fraction of pixels left unresolved. Abstentions will be reported separately from correct classifications so the system cannot appear accurate simply by declining most cases. We will also examine examples where a cloud edge closely resembles an ice boundary. These comparisons are planned, and no field measurements are currently available.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 4,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "so the system cannot appear accurate simply by declining most cases",
+            "revisedQuote": "to ensure the system's accuracy is not inflated by avoiding difficult cases",
+            "problem": "Replaces the explicit safeguard against declining most cases with a claim about avoiding difficult cases. Difficulty is not the abstention criterion, and separate reporting does not ensure that selective avoidance cannot inflate accuracy."
+          }
+        ],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": true,
+        "text": "The evaluation will report boundary disagreement on observable terrain and the fraction of pixels left unresolved. Abstentions will be reported separately from correct classifications so the system cannot appear accurate simply by declining most cases. We will also examine examples where a cloud edge closely resembles an ice boundary. These comparisons are planned, and no field measurements are currently available.",
+        "spans": [
+          {
+            "before": "to ensure the system's accuracy is not inflated by avoiding difficult cases",
+            "after": "so the system cannot appear accurate simply by declining most cases",
+            "issueIndex": 0,
+            "start": 184,
+            "end": 259
+          }
+        ]
+      },
+      "retained": "The evaluation will report boundary disagreement on observable terrain and the fraction of pixels left unresolved. Abstentions will be reported separately from correct classifications so the system cannot appear accurate simply by declining most cases. We will also examine examples where a cloud edge closely resembles an ice boundary. These comparisons are planned, and no field measurements are currently available.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 5,
+      "heading": "Limitations and Conclusion",
+      "original": "An abstention rule may make the limits of the evidence clearer while leaving a less complete map. A local inventory may also contain outdated boundaries. The proposed experiment will therefore not estimate annual retreat rates or establish that any particular glacier is shrinking [S2]. Its contribution would be a more explicit account of what the available images can support.",
+      "candidate": "An abstention rule may make the limits of the evidence clearer, albeit at the cost of a less complete map. A local inventory, however, may contain outdated boundaries. Consequently, the proposed experiment will not estimate annual retreat rates or definitively establish that any particular glacier is shrinking [S2]. Instead, its contribution lies in providing a more explicit account of what the available images can support.",
+      "text": "An abstention rule may make the limits of the evidence clearer, albeit at the cost of a less complete map. A local inventory may also contain outdated boundaries. Consequently, the proposed experiment will not estimate annual retreat rates or establish that any particular glacier is shrinking [S2]. Instead, its contribution would be a more explicit account of what the available images can support.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 5,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "or establish that any particular glacier is shrinking",
+            "revisedQuote": "or definitively establish that any particular glacier is shrinking",
+            "problem": "Adding 'definitively' weakens the stated limitation by leaving open that the experiment could establish glacier shrinkage less definitively."
+          },
+          {
+            "originalQuote": "Its contribution would be a more explicit account",
+            "revisedQuote": "its contribution lies in providing a more explicit account",
+            "problem": "Recasts a conditional, prospective contribution as an existing contribution, weakening the distinction between proposed and completed work."
+          },
+          {
+            "originalQuote": "A local inventory may also contain outdated boundaries.",
+            "revisedQuote": "A local inventory, however, may contain outdated boundaries.",
+            "problem": "'However' introduces an unsupported contrast with the preceding abstention tradeoff; this is an additional limitation."
+          }
+        ],
+        "readability": "worse"
+      },
+      "repair": {
+        "ok": true,
+        "text": "An abstention rule may make the limits of the evidence clearer, albeit at the cost of a less complete map. A local inventory may also contain outdated boundaries. Consequently, the proposed experiment will not estimate annual retreat rates or establish that any particular glacier is shrinking [S2]. Instead, its contribution would be a more explicit account of what the available images can support.",
+        "spans": [
+          {
+            "before": "A local inventory, however, may",
+            "after": "A local inventory may also",
+            "issueIndex": 2,
+            "start": 107,
+            "end": 138
+          },
+          {
+            "before": "or definitively establish",
+            "after": "or establish",
+            "issueIndex": 0,
+            "start": 245,
+            "end": 270
+          },
+          {
+            "before": "its contribution lies in providing",
+            "after": "its contribution would be",
+            "issueIndex": 1,
+            "start": 327,
+            "end": 361
+          }
+        ]
+      },
+      "retained": "An abstention rule may make the limits of the evidence clearer, albeit at the cost of a less complete map. A local inventory may also contain outdated boundaries. Consequently, the proposed experiment will not estimate annual retreat rates or establish that any particular glacier is shrinking [S2]. Instead, its contribution would be a more explicit account of what the available images can support.",
+      "status": "verified_edit"
+    }
+  ]
+}

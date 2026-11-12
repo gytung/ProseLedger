@@ -1,0 +1,38 @@
+{
+  "caseId": "C07",
+  "challenge": "violation",
+  "expectedPass": false,
+  "actualPass": true,
+  "correct": false,
+  "findings": [],
+  "before": "no archival source has resolved the competing closure dates",
+  "after": "an archival source has resolved the competing closure dates",
+  "referenceReason": "An unresolved conflict is falsely described as resolved by archival evidence.",
+  "originalSHA256": "f6b8d7dfbeaf6b56e17c2ca20f730a0093e00258088f70aaa4c0384b0ab5c050",
+  "candidateSHA256": "7306786cb381e9735fde04c2820560df08dbdf58be4b4f71a5a81a7116e2aa5a",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Introduction",
+        "originalQuote": "The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1].",
+        "revisedQuote": "The supplied collection uses pseudonyms, and an archival source has resolved the competing closure dates [S1].",
+        "problem": "Reverses the unresolved status of the competing dates and falsely attributes archival resolution to S1, which explicitly states that the discrepancy has not been resolved by an archival source. This also contradicts the candidate’s remaining statements that the dates are unresolved."
+      }
+    ],
+    "readability": "similar",
+    "reason": "The candidate otherwise preserves all substantive propositions, method steps, evaluation measures, limitations, attribution and planned-work status. Sentence structure and wording are virtually unchanged, although the altered claim introduces an internal contradiction."
+  },
+  "semanticPass": false,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": [
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    }
+  ]
+}

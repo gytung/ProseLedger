@@ -1,0 +1,136 @@
+{
+  "scope": "This run only; no historical card retrieval",
+  "memoryCardsUsed": 0,
+  "originalSHA256": "f6b8d7dfbeaf6b56e17c2ca20f730a0093e00258088f70aaa4c0384b0ab5c050",
+  "retainedSHA256": "31ee59b4f817dd31eded6dd30aeb20589a26b33e5f3b238c4d514e647ea68969",
+  "detectorUsedForAdmission": false,
+  "fullAudit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive claims, source attributions, method steps, evaluation measures, limitations, qualifications, and planned-work status are preserved. The candidate retains the 16-excerpt comparison, speaker-specific attribution, unresolved dates, consistent pseudonyms, checks for collapsed accounts and unsupported negative historical claims, and restrictions on inferring motives or reconciling dates without new evidence. Changes are equivalent paraphrases and minor sentence restructuring, with little overall effect on readability."
+  },
+  "repairHistory": [],
+  "edits": [
+    {
+      "id": 0,
+      "heading": "Abstract",
+      "original": "A concise oral-history summary can make a disputed event appear settled if it merges different speakers into a single account. We propose to compare ordinary concise summaries with summaries that retain attribution when accounts conflict. The collection concerns a factory closure for which two speakers give different dates [S1]. The disagreement will remain part of the evidence rather than become an error for the summarizer to fix.",
+      "candidate": "A concise oral-history summary can make a disputed event appear settled if it merges different speakers into a single account. We propose comparing ordinary concise summaries with summaries that retain attribution when accounts conflict. The collection concerns a factory closure for which two speakers give different dates [S1]. The disagreement will remain part of the evidence rather than become an error for the summarizer to fix.",
+      "text": "A concise oral-history summary can make a disputed event appear settled if it merges different speakers into a single account. We propose comparing ordinary concise summaries with summaries that retain attribution when accounts conflict. The collection concerns a factory closure for which two speakers give different dates [S1]. The disagreement will remain part of the evidence rather than become an error for the summarizer to fix.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 0,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A concise oral-history summary can make a disputed event appear settled if it merges different speakers into a single account. We propose comparing ordinary concise summaries with summaries that retain attribution when accounts conflict. The collection concerns a factory closure for which two speakers give different dates [S1]. The disagreement will remain part of the evidence rather than become an error for the summarizer to fix.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 1,
+      "heading": "Introduction",
+      "original": "Interview transcripts record what a speaker says, not an automatically verified history of the event. The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1]. A summary should therefore distinguish the absence of corroboration from the absence of an event. It should also avoid assigning a motive that the speaker did not state.",
+      "candidate": "Interview transcripts record what a speaker says, not an automatically verified history of the event. The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1]. Therefore, a summary should distinguish the absence of corroboration from the absence of an event and avoid assigning a motive that the speaker did not state.",
+      "text": "Interview transcripts record what a speaker says, not an automatically verified history of the event. The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1]. Therefore, a summary should distinguish the absence of corroboration from the absence of an event and avoid assigning a motive that the speaker did not state.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 1,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "Interview transcripts record what a speaker says, not an automatically verified history of the event. The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1]. Therefore, a summary should distinguish the absence of corroboration from the absence of an event and avoid assigning a motive that the speaker did not state.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 2,
+      "heading": "Related Work",
+      "original": "The collection brief identifies unresolved disagreement and makes speaker attribution necessary for interpreting it [S1]. The method brief requires disputed dates to stay attached to the speakers who supplied them [S2]. We will use this constraint to test whether a shorter account remains faithful to the structure of the evidence, rather than judge it only by how smoothly the narrative reads.",
+      "candidate": "The collection brief identifies unresolved disagreement and makes speaker attribution necessary for interpreting it [S1]. The method brief requires disputed dates to remain attached to the speakers who supplied them [S2]. We will use this constraint to test whether a shorter account remains faithful to the structure of the evidence, rather than judge it solely by how smoothly the narrative reads.",
+      "text": "The collection brief identifies unresolved disagreement and makes speaker attribution necessary for interpreting it [S1]. The method brief requires disputed dates to remain attached to the speakers who supplied them [S2]. We will use this constraint to test whether a shorter account remains faithful to the structure of the evidence, rather than judge it solely by how smoothly the narrative reads.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 2,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The collection brief identifies unresolved disagreement and makes speaker attribution necessary for interpreting it [S1]. The method brief requires disputed dates to remain attached to the speakers who supplied them [S2]. We will use this constraint to test whether a shorter account remains faithful to the structure of the evidence, rather than judge it solely by how smoothly the narrative reads.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 3,
+      "heading": "Methodology",
+      "original": "We will summarize 16 interview excerpts under both conditions [S2]. The ordinary condition will request a concise account, while the attribution-preserving condition will explicitly retain disagreement. Reviewers will receive the source excerpts and identify any statement that assigns a date, motive or event to the wrong speaker. The pseudonyms will be used consistently in both versions.",
+      "candidate": "We will summarize 16 interview excerpts under both conditions [S2]. In the ordinary condition, we will request concise accounts, while in the attribution-preserving condition, we will explicitly retain any disagreements. Reviewers will receive the source excerpts and identify any statement that assigns a date, motive, or event to the wrong speaker. Pseudonyms will be used consistently in both versions.",
+      "text": "We will summarize 16 interview excerpts under both conditions [S2]. In the ordinary condition, we will request concise accounts, while in the attribution-preserving condition, we will explicitly retain any disagreements. Reviewers will receive the source excerpts and identify any statement that assigns a date, motive, or event to the wrong speaker. Pseudonyms will be used consistently in both versions.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 3,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "We will summarize 16 interview excerpts under both conditions [S2]. In the ordinary condition, we will request concise accounts, while in the attribution-preserving condition, we will explicitly retain any disagreements. Reviewers will receive the source excerpts and identify any statement that assigns a date, motive, or event to the wrong speaker. Pseudonyms will be used consistently in both versions.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 4,
+      "heading": "Planned Evaluation",
+      "original": "Evaluation will cover readability, attribution accuracy and the handling of unresolved dates. We will retain cases in which a summary is readable but collapses two accounts into one. A separate check will examine whether a silence in the transcript becomes a negative historical claim. Reviewers will not be asked to decide the true closure date from evidence that does not establish it.",
+      "candidate": "Evaluation will cover readability, attribution accuracy, and the handling of unresolved dates. We will retain cases where a summary is readable but collapses two accounts into one. Additionally, a separate check will determine whether a silence in the transcript is interpreted as a negative historical claim. Reviewers will not be asked to decide the true closure date based on evidence that does not establish it.",
+      "text": "Evaluation will cover readability, attribution accuracy, and the handling of unresolved dates. We will retain cases where a summary is readable but collapses two accounts into one. Additionally, a separate check will determine whether a silence in the transcript is interpreted as a negative historical claim. Reviewers will not be asked to decide the true closure date based on evidence that does not establish it.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 4,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "Evaluation will cover readability, attribution accuracy, and the handling of unresolved dates. We will retain cases where a summary is readable but collapses two accounts into one. Additionally, a separate check will determine whether a silence in the transcript is interpreted as a negative historical claim. Reviewers will not be asked to decide the true closure date based on evidence that does not establish it.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 5,
+      "heading": "Limitations and Conclusion",
+      "original": "The study cannot resolve the underlying historical disagreement. A faithful summary may consequently be less tidy than a single chronological narrative. We will not reconcile the dates or infer motives without new evidence [S2]. The intended benefit is a clearer account of who said what and where the source packet still leaves the history uncertain.",
+      "candidate": "The study cannot resolve the underlying historical disagreement. A faithful summary may consequently be less tidy than a single chronological narrative. We will not reconcile the dates or infer motives without new evidence [S2]. The intended benefit is to provide a clearer account of who said what, and where the source packet still leaves the history uncertain.",
+      "text": "The study cannot resolve the underlying historical disagreement. A faithful summary may consequently be less tidy than a single chronological narrative. We will not reconcile the dates or infer motives without new evidence [S2]. The intended benefit is to provide a clearer account of who said what, and where the source packet still leaves the history uncertain.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 5,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The study cannot resolve the underlying historical disagreement. A faithful summary may consequently be less tidy than a single chronological narrative. We will not reconcile the dates or infer motives without new evidence [S2]. The intended benefit is to provide a clearer account of who said what, and where the source packet still leaves the history uncertain.",
+      "status": "verified_edit"
+    }
+  ]
+}

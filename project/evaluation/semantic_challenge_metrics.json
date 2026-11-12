@@ -1,0 +1,87 @@
+{
+  "completed": 24,
+  "scheduled": 24,
+  "metrics": {
+    "deterministic": {
+      "accuracy": {
+        "proportion": 0.5416666666666666,
+        "lower95": 0.3507486535891948,
+        "upper95": 0.72108666268789,
+        "numerator": 13,
+        "denominator": 24
+      },
+      "sensitivity": {
+        "proportion": 0.16666666666666666,
+        "lower95": 0.04696514218385378,
+        "upper95": 0.4480308622529734,
+        "numerator": 2,
+        "denominator": 12
+      },
+      "specificity": {
+        "proportion": 0.9166666666666666,
+        "lower95": 0.646120088858883,
+        "upper95": 0.9851349055950829,
+        "numerator": 11,
+        "denominator": 12
+      },
+      "TP": 2,
+      "FN": 10,
+      "TN": 11,
+      "FP": 1
+    },
+    "semantic": {
+      "accuracy": {
+        "proportion": 1.0,
+        "lower95": 0.8620237953250198,
+        "upper95": 1.0,
+        "numerator": 24,
+        "denominator": 24
+      },
+      "sensitivity": {
+        "proportion": 1.0,
+        "lower95": 0.7575059933447592,
+        "upper95": 1.0,
+        "numerator": 12,
+        "denominator": 12
+      },
+      "specificity": {
+        "proportion": 1.0,
+        "lower95": 0.7575059933447592,
+        "upper95": 1.0,
+        "numerator": 12,
+        "denominator": 12
+      },
+      "TP": 12,
+      "FN": 0,
+      "TN": 12,
+      "FP": 0
+    },
+    "combined": {
+      "accuracy": {
+        "proportion": 0.9583333333333334,
+        "lower95": 0.7975819352134406,
+        "upper95": 0.9926065438344942,
+        "numerator": 23,
+        "denominator": 24
+      },
+      "sensitivity": {
+        "proportion": 1.0,
+        "lower95": 0.7575059933447592,
+        "upper95": 1.0,
+        "numerator": 12,
+        "denominator": 12
+      },
+      "specificity": {
+        "proportion": 0.9166666666666666,
+        "lower95": 0.646120088858883,
+        "upper95": 0.9851349055950829,
+        "numerator": 11,
+        "denominator": 12
+      },
+      "TP": 12,
+      "FN": 0,
+      "TN": 11,
+      "FP": 1
+    }
+  }
+}

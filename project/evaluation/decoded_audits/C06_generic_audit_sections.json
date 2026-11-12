@@ -1,0 +1,63 @@
+{
+  "reviews": [
+    {
+      "id": 0,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 1,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 2,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "This isolates the effect of correction from a change in alert policy.",
+          "revisedQuote": "This design ensures that any changes in alert counts are attributable to the correction process rather than alterations in the alert policy.",
+          "problem": "The revision strengthens a controlled comparison into a blanket causal guarantee. A fixed threshold rules out threshold changes as an explanation but does not establish that any change in alert counts must result from correction."
+        }
+      ],
+      "readability": "similar"
+    },
+    {
+      "id": 3,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "We will record periods with missing reference measurements rather than invent corrections for intervals where the necessary evidence is unavailable.",
+          "revisedQuote": "periods with missing reference measurements will be recorded rather than inventing corrections for intervals where evidence is unavailable.",
+          "problem": "The passive construction leaves 'inventing corrections' without a coherent grammatical actor. Preserve the explicit statement that the researchers will record missing-reference periods rather than invent corrections."
+        }
+      ],
+      "readability": "worse"
+    },
+    {
+      "id": 4,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 5,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "A reference instrument can itself have error, and the study covers only a limited observation period.",
+          "revisedQuote": "A reference instrument can itself have errors, and the study covers only a limited observation period [S1].",
+          "problem": "The added citation attributes reference-instrument error and the limited observation period to S1, which states neither."
+        },
+        {
+          "originalQuote": "The proposed analysis will therefore stop at measurement agreement and alert behaviour.",
+          "revisedQuote": "The proposed analysis will therefore focus on measurement agreement and alert behavior",
+          "problem": "'Focus on' weakens the explicit boundary that the analysis will stop at measurement agreement and alert behaviour."
+        }
+      ],
+      "readability": "similar"
+    }
+  ]
+}

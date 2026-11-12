@@ -1,0 +1,166 @@
+{
+  "scope": "This run only; no historical card retrieval",
+  "memoryCardsUsed": 0,
+  "originalSHA256": "2e894c504922a73ffe8b3a45fa63582ab4bacf0a389061272f4ebb65192c02b7",
+  "retainedSHA256": "d79faec1b2f77826494701eb8cef0f76d63a4234012e6bbea07bf418dcbebbf7",
+  "detectorUsedForAdmission": false,
+  "fullAudit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive claims, method steps, comparisons, outcome priorities, uncertainty, limitations, source attributions and planned-work status are preserved and consistent with the supplied sources. The paraphrases introduce no concrete meaning changes. Readability remains similar, with slightly wordier phrasing in Introduction and Related Work."
+  },
+  "repairHistory": [],
+  "edits": [
+    {
+      "id": 0,
+      "heading": "Abstract",
+      "original": "Reduced seedling growth can be consistent with salt stress without directly revealing cellular damage. We propose to compare a salt treatment with a water-only control, using change in height as the primary outcome. Leaf colour will provide a secondary observation [S2]. The experiment is intended to characterize an observable growth response, not to identify the biological mechanism responsible for it.",
+      "candidate": "Reduced seedling growth can be consistent with salt stress without directly revealing cellular damage. We propose comparing a salt treatment with a water-only control, using change in height as the primary outcome. Leaf colour will provide a secondary observation [S2]. The experiment is intended to characterize an observable growth response, not to identify the biological mechanism responsible for it.",
+      "text": "Reduced seedling growth can be consistent with salt stress without directly revealing cellular damage. We propose comparing a salt treatment with a water-only control, using change in height as the primary outcome. Leaf colour will provide a secondary observation [S2]. The experiment is intended to characterize an observable growth response, not to identify the biological mechanism responsible for it.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 0,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "Reduced seedling growth can be consistent with salt stress without directly revealing cellular damage. We propose comparing a salt treatment with a water-only control, using change in height as the primary outcome. Leaf colour will provide a secondary observation [S2]. The experiment is intended to characterize an observable growth response, not to identify the biological mechanism responsible for it.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 1,
+      "heading": "Introduction",
+      "original": "A short plant experiment often collects measurements that are easier to obtain than the process of interest. Height and leaf colour are practical observations, but neither is a direct measure of cellular injury [S1]. Keeping this distinction explicit matters when interpreting a treatment effect. A shorter plant would indicate slower growth under this design, rather than establish why growth slowed.",
+      "candidate": "A short plant experiment often collects measurements that are easier to obtain than the process of interest. Height and leaf colour are practical observations, but neither is a direct measure of cellular injury [S1]. It is crucial to keep this distinction explicit when interpreting a treatment effect. A shorter plant would indicate slower growth under this design, rather than establish the reasons behind the slowed growth.",
+      "text": "A short plant experiment often collects measurements that are easier to obtain than the process of interest. Height and leaf colour are practical observations, but neither is a direct measure of cellular injury [S1]. It is crucial to keep this distinction explicit when interpreting a treatment effect. A shorter plant would indicate slower growth under this design, rather than establish the reasons behind the slowed growth.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 1,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A short plant experiment often collects measurements that are easier to obtain than the process of interest. Height and leaf colour are practical observations, but neither is a direct measure of cellular injury [S1]. It is crucial to keep this distinction explicit when interpreting a treatment effect. A shorter plant would indicate slower growth under this design, rather than establish the reasons behind the slowed growth.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 2,
+      "heading": "Related Work",
+      "original": "The supplied design brief defines the treatment as 40 millimolar salt and the comparison as water with no added salt [S1]. The methods brief makes height change primary and leaf colour secondary [S2]. These roles will remain fixed before observation begins. We will not replace the primary outcome with whichever measure produces a clearer difference.",
+      "candidate": "The design brief specifies a 40 millimolar salt treatment and a water-only control [S1]. The methods brief prioritizes height change as the primary outcome and leaf colour as a secondary observation [S2]. These roles will be maintained until observations begin, and we will not substitute the primary outcome with another measure simply for clearer differentiation.",
+      "text": "The design brief specifies a 40 millimolar salt treatment and a water-only control [S1]. The methods brief prioritizes height change as the primary outcome and leaf colour as a secondary observation [S2]. These roles will be fixed before observations begin and remain fixed throughout the study, and we will not substitute the primary outcome with another measure simply for clearer differentiation.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 2,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "These roles will remain fixed before observation begins.",
+            "revisedQuote": "These roles will be maintained until observations begin",
+            "problem": "“Until” implies that the commitment to fixed outcome roles ends when observation begins, weakening the prespecified outcome hierarchy."
+          }
+        ],
+        "readability": "worse"
+      },
+      "repair": {
+        "ok": true,
+        "text": "The design brief specifies a 40 millimolar salt treatment and a water-only control [S1]. The methods brief prioritizes height change as the primary outcome and leaf colour as a secondary observation [S2]. These roles will be fixed before observations begin and remain fixed throughout the study, and we will not substitute the primary outcome with another measure simply for clearer differentiation.",
+        "spans": [
+          {
+            "before": "These roles will be maintained until observations begin",
+            "after": "These roles will be fixed before observations begin and remain fixed throughout the study",
+            "issueIndex": 0,
+            "start": 205,
+            "end": 260
+          }
+        ]
+      },
+      "retained": "The design brief specifies a 40 millimolar salt treatment and a water-only control [S1]. The methods brief prioritizes height change as the primary outcome and leaf colour as a secondary observation [S2]. These roles will be fixed before observations begin and remain fixed throughout the study, and we will not substitute the primary outcome with another measure simply for clearer differentiation.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 3,
+      "heading": "Methodology",
+      "original": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2]. Height will be measured using the same procedure at each visit. Leaf colour will be recorded separately rather than combined into an unvalidated stress score. Plants that fail to grow will remain in the analysis, because excluding them could hide an important treatment response.",
+      "candidate": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2]. Height will be measured using the same procedure at each visit. Leaf colour will be recorded separately rather than combined into an unvalidated stress score. Plants that fail to grow will remain in the analysis, as excluding them could hide an important treatment response.",
+      "text": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2]. Height will be measured using the same procedure at each visit. Leaf colour will be recorded separately rather than combined into an unvalidated stress score. Plants that fail to grow will remain in the analysis, as excluding them could hide an important treatment response.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 3,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2]. Height will be measured using the same procedure at each visit. Leaf colour will be recorded separately rather than combined into an unvalidated stress score. Plants that fail to grow will remain in the analysis, as excluding them could hide an important treatment response.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 4,
+      "heading": "Planned Evaluation",
+      "original": "The comparison will report the distribution of height changes in each condition and the uncertainty around their difference. Leaf colour observations will be presented as a secondary description. We will examine whether missing observations are more common under either condition and distinguish missing measurements from an observed absence of growth. No treatment effects have yet been measured.",
+      "candidate": "The comparison will report the distribution of height changes in each condition and the uncertainty around their difference. Leaf colour observations will be presented as a secondary description. We will examine whether missing observations are more common under either condition and distinguish missing measurements from an observed absence of growth. No treatment effects have been measured yet.",
+      "text": "The comparison will report the distribution of height changes in each condition and the uncertainty around their difference. Leaf colour observations will be presented as a secondary description. We will examine whether missing observations are more common under either condition and distinguish missing measurements from an observed absence of growth. No treatment effects have been measured yet.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 4,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The comparison will report the distribution of height changes in each condition and the uncertainty around their difference. Leaf colour observations will be presented as a secondary description. We will examine whether missing observations are more common under either condition and distinguish missing measurements from an observed absence of growth. No treatment effects have been measured yet.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 5,
+      "heading": "Limitations and Conclusion",
+      "original": "The study is small and focuses on a short observation period. Even a clear difference in growth would not directly demonstrate cellular damage [S1]. The design also does not test whether seedlings recover after salt is removed [S2]. Those questions would need additional measurements and a different follow-up period rather than stronger wording about the same observations.",
+      "candidate": "The study is small and focuses on a short observation period. Even a clear difference in growth would not directly demonstrate cellular damage [S1]. The design also does not test whether seedlings recover after salt is removed [S2]. Additional measurements and a different follow-up period would be needed to address these questions.",
+      "text": "The study is small and focuses on a short observation period. Even a clear difference in growth would not directly demonstrate cellular damage [S1]. The design also does not test whether seedlings recover after salt is removed [S2]. Additional measurements and a different follow-up period would be needed to address these questions; stronger wording about the same observations would not answer them.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 5,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "Those questions would need additional measurements and a different follow-up period rather than stronger wording about the same observations.",
+            "revisedQuote": "Additional measurements and a different follow-up period would be needed to address these questions.",
+            "problem": "Omits the explicit interpretive limitation that stronger wording about existing observations cannot answer the questions about cellular damage or recovery."
+          }
+        ],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": true,
+        "text": "The study is small and focuses on a short observation period. Even a clear difference in growth would not directly demonstrate cellular damage [S1]. The design also does not test whether seedlings recover after salt is removed [S2]. Additional measurements and a different follow-up period would be needed to address these questions; stronger wording about the same observations would not answer them.",
+        "spans": [
+          {
+            "before": "to address these questions.",
+            "after": "to address these questions; stronger wording about the same observations would not answer them.",
+            "issueIndex": 0,
+            "start": 306,
+            "end": 333
+          }
+        ]
+      },
+      "retained": "The study is small and focuses on a short observation period. Even a clear difference in growth would not directly demonstrate cellular damage [S1]. The design also does not test whether seedlings recover after salt is removed [S2]. Additional measurements and a different follow-up period would be needed to address these questions; stronger wording about the same observations would not answer them.",
+      "status": "verified_edit"
+    }
+  ]
+}

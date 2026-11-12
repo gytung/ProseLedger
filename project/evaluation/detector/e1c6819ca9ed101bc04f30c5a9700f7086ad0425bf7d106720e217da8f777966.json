@@ -1,0 +1,652 @@
+{
+  "textSHA256": "e1c6819ca9ed101bc04f30c5a9700f7086ad0425bf7d106720e217da8f777966",
+  "characters": 2468,
+  "scannedAtUTC": "2026-11-12T20:53:50.161453+00:00",
+  "elapsedSeconds": 2.381,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 5,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 10,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 14,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 15,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 18,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 19,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 23,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 24,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9999943180429727,
+            "sentence": "# Water Quality Alerts under Sensor Drift",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.6819570273457504e-06,
+              "ai": 0.9999101674270053,
+              "paraphrased": 8.415061596732164e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999943180357352,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.681964264773242e-06,
+              "ai": 0.999911471948665,
+              "paraphrased": 8.284608707016783e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999944061289608,
+            "sentence": "Sensor drift can alter the number of water quality alerts, even when the alert threshold remains constant.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.5938710391858615e-06,
+              "ai": 0.9999109103204791,
+              "paraphrased": 8.349580848175827e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999944061327154,
+            "sentence": "We propose comparing raw and drift-corrected conductivity readings against a reference instrument, using the same threshold [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.593867284583807e-06,
+              "ai": 0.9999102555048162,
+              "paraphrased": 8.41506278992685e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999944928610968,
+            "sentence": "The study focuses on the reliability of conductivity alerts, without interpreting them as direct evidence of pathogen concentration.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.507138903267728e-06,
+              "ai": 0.999909682280065,
+              "paraphrased": 8.481058103171108e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999944061327154,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.593867284583807e-06,
+              "ai": 0.9999102555048162,
+              "paraphrased": 8.41506278992685e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999942285578852,
+            "sentence": "An alert may be easy to display but difficult to interpret if a sensor slowly drifts away from its reference.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.771442114828942e-06,
+              "ai": 0.999911382478228,
+              "paraphrased": 8.284607965723597e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999948264869614,
+            "sentence": "Correcting such drift should depend on measurement evidence, not on whether an alert seems reasonable.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.173513038598768e-06,
+              "ai": 0.9999163890044322,
+              "paraphrased": 7.843748252915611e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999913361787672,
+            "sentence": "Conductivity measures a different property from pathogen concentration [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.663821232713841e-06,
+              "ai": 0.9998952345938475,
+              "paraphrased": 9.610158491973642e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999944061220222,
+            "sentence": "The proposal keeps this distinction explicit to avoid mistaking a technical threshold for a drinking-water safety decision.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.593877977825696e-06,
+              "ai": 0.9999122046906637,
+              "paraphrased": 8.220143135845481e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999910611766686,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.9388233314936e-06,
+              "ai": 0.9998934463889927,
+              "paraphrased": 9.76147876758392e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999991861047938,
+            "sentence": "The measurement brief specifies a threshold of 900 microsiemens per centimetre, defining an exceedance as a reading above that value [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.13895206187195e-06,
+              "ai": 0.9999008733847794,
+              "paraphrased": 9.09876631586786e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999865814482461,
+            "sentence": "Equality is therefore not an exceedance.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.3418551753915867e-05,
+              "ai": 0.9998776860053786,
+              "paraphrased": 0.00010889544286746876
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999931463063851,
+            "sentence": "The experimental brief requires the threshold to remain fixed for both raw and corrected readings [S2], thereby isolating the effect of correction from a change in alert policy.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.853693614925059e-06,
+              "ai": 0.9999021585291914,
+              "paraphrased": 9.098777719373008e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999852627804644,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4737219535521513e-05,
+              "ai": 0.9998656659643609,
+              "paraphrased": 0.00011959681610357007
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999417197000658,
+            "sentence": "We will compare eight sensors over 21 days [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.8280299934142516e-05,
+              "ai": 0.9997535885863019,
+              "paraphrased": 0.00018813111376388104
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999938563545046,
+            "sentence": "Drift corrections will be estimated from the reference instrument and applied without consulting the resulting alert counts.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.143645495451386e-06,
+              "ai": 0.9999077103758262,
+              "paraphrased": 8.614597867838964e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999945782304313,
+            "sentence": "Raw readings will remain available for inspection, and we will record periods with missing reference measurements rather than invent corrections for intervals where the necessary evidence is unavailable.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.421769568786662e-06,
+              "ai": 0.9999117321223316,
+              "paraphrased": 8.28461080995842e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999883417006201,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.165829937987688e-05,
+              "ai": 0.9998827960723536,
+              "paraphrased": 0.00010554562826650227
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999741359672955,
+            "sentence": "Planned evaluation measures will include disagreement with the reference instrument, the number of threshold exceedances, and the duration of missing-reference periods.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.58640327045948e-05,
+              "ai": 0.99984278755414,
+              "paraphrased": 0.00013134841315539967
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999911997065989,
+            "sentence": "Values near the threshold will be examined separately, as small measurement changes may alter their alert status.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.800293401152715e-06,
+              "ai": 0.9998994985506998,
+              "paraphrased": 9.17011558990188e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999417180429497,
+            "sentence": "Both newly created and removed alerts will be reported.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.8281957050325254e-05,
+              "ai": 0.9997820486919557,
+              "paraphrased": 0.00015966935099393675
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999881580353085,
+            "sentence": "No claim about improved field performance is made before these comparisons are run.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.1841964691550445e-05,
+              "ai": 0.999889006480935,
+              "paraphrased": 9.915155437340433e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999865815791548,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.3418420845145378e-05,
+              "ai": 0.9998679152002449,
+              "paraphrased": 0.00011866637890993531
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999940453737369,
+            "sentence": "A reference instrument can itself have error, and the study covers only a limited observation period.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.9546262630921875e-06,
+              "ai": 0.9999078993774881,
+              "paraphrased": 8.614599624880094e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999918609763131,
+            "sentence": "Conductivity alerts cannot establish pathogen concentration or determine whether water is safe to drink [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.139023686924344e-06,
+              "ai": 0.9999096597520967,
+              "paraphrased": 8.220122421640776e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999910611107745,
+            "sentence": "The proposed analysis will therefore stop at measurement agreement and alert behavior, without providing drinking-water safety recommendations [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.93888922549086e-06,
+              "ai": 0.9999007815340196,
+              "paraphrased": 9.027957675489139e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Water Quality Alerts under Sensor Drift\n\n## Abstract\n\nSensor drift can alter the number of water quality alerts, even when the alert threshold remains constant. We propose comparing raw and drift-corrected conductivity readings against a reference instrument, using the same threshold [S2]. The study focuses on the reliability of conductivity alerts, without interpreting them as direct evidence of pathogen concentration.\n\n## Introduction\n\nAn alert may be easy to display but difficult to interpret if a sensor slowly drifts away from its reference. Correcting such drift should depend on measurement evidence, not on whether an alert seems reasonable. Conductivity measures a different property from pathogen concentration [S1]. The proposal keeps this distinction explicit to avoid mistaking a technical threshold for a drinking-water safety decision.\n\n## Related Work\n\nThe measurement brief specifies a threshold of 900 microsiemens per centimetre, defining an exceedance as a reading above that value [S1]. Equality is therefore not an exceedance. The experimental brief requires the threshold to remain fixed for both raw and corrected readings [S2], thereby isolating the effect of correction from a change in alert policy.\n\n## Methodology\n\nWe will compare eight sensors over 21 days [S2]. Drift corrections will be estimated from the reference instrument and applied without consulting the resulting alert counts. Raw readings will remain available for inspection, and we will record periods with missing reference measurements rather than invent corrections for intervals where the necessary evidence is unavailable.\n\n## Planned Evaluation\n\nPlanned evaluation measures will include disagreement with the reference instrument, the number of threshold exceedances, and the duration of missing-reference periods. Values near the threshold will be examined separately, as small measurement changes may alter their alert status. Both newly created and removed alerts will be reported. No claim about improved field performance is made before these comparisons are run.\n\n## Limitations and Conclusion\n\nA reference instrument can itself have error, and the study covers only a limited observation period. Conductivity alerts cannot establish pathogen concentration or determine whether water is safe to drink [S1]. The proposed analysis will therefore stop at measurement agreement and alert behavior, without providing drinking-water safety recommendations [S2].",
+        "document_id": null
+      }
+    ]
+  }
+}

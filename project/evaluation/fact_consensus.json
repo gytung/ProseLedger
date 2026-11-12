@@ -1,0 +1,3477 @@
+{
+  "scope": "72 reference facts per condition, with two-order automated agreement per fact. Two judgments do not create two independent facts. Exact quote checks validate substring presence, not entailment.",
+  "totals": {
+    "generic": {
+      "referenceFacts": 72,
+      "counts": {
+        "consistent_preserved": 72
+      },
+      "consistentPreservedWithBothQuotesExact": 71
+    },
+    "rules": {
+      "referenceFacts": 72,
+      "counts": {
+        "consistent_preserved": 72
+      },
+      "consistentPreservedWithBothQuotesExact": 71
+    }
+  },
+  "facts": [
+    {
+      "caseId": "C01",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "Cloud-covered pixels are unavailable observations, not ice-free terrain.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "In the second condition, it may abstain where cloud cover makes the observation unavailable.",
+          "reason": "Cloud cover is treated as unavailable evidence rather than evidence of ice-free terrain.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "In the second condition, it may abstain where cloud cover makes the observation unavailable.",
+          "reason": "Cloud cover is explicitly treated as unavailable evidence, not as evidence of ice-free terrain.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "Cloud-covered pixels are unavailable observations, not ice-free terrain.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "In the second, it may abstain where cloud cover makes the observation unavailable.",
+          "reason": "Cloud cover is treated as unavailable evidence rather than evidence of ice-free terrain.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "In the second, it may abstain where cloud cover makes the observation unavailable.",
+          "reason": "Cloud cover is explicitly treated as unavailable evidence, not as evidence of ice-free terrain.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "The same image pairs are used in both conditions.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will provide the same image pairs to a boundary model under both conditions.",
+          "reason": "Explicitly holds the image pairs constant across conditions.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will provide the same image pairs to a boundary model under both conditions.",
+          "reason": "Explicitly specifies identical image pairs across conditions.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "The same image pairs are used in both conditions.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will provide the same image pairs to a boundary model under both conditions.",
+          "reason": "Explicitly holds the image pairs constant across conditions.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will provide the same image pairs to a boundary model under both conditions.",
+          "reason": "Explicitly specifies identical image pairs across conditions.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "The planned sample is 24 image pairs.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The proposed sample includes 24 image pairs [S2].",
+          "reason": "Preserves both the sample size and its proposed status.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The proposed sample includes 24 image pairs [S2].",
+          "reason": "Preserves both the sample size and its proposed status.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "The planned sample is 24 image pairs.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The evaluation set will contain 24 image pairs [S2].",
+          "reason": "Preserves the planned sample size and its prospective status.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The evaluation set will contain 24 image pairs [S2].",
+          "reason": "Explicitly specifies a planned set of 24 image pairs.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "No annual retreat rates will be estimated.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Consequently, the proposed experiment will not estimate annual retreat rates or establish that any particular glacier is shrinking [S2].",
+          "reason": "Explicitly excludes estimating annual retreat rates.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Consequently, the proposed experiment will not estimate annual retreat rates or establish that any particular glacier is shrinking [S2].",
+          "reason": "Explicitly excludes estimation of annual retreat rates.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "No annual retreat rates will be estimated.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The proposed experiment will therefore not estimate annual retreat rates or establish that any particular glacier is shrinking [S2].",
+          "reason": "Explicitly excludes estimating annual retreat rates.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The proposed experiment will therefore not estimate annual retreat rates or establish that any particular glacier is shrinking [S2].",
+          "reason": "Explicitly excludes estimation of annual retreat rates.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "The local inventory does not establish recent retreat.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The inventory provides a starting outline but does not itself establish recent retreat [S1].",
+          "reason": "Explicitly states that the inventory does not establish recent retreat.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The inventory provides a starting outline but does not itself establish recent retreat [S1].",
+          "reason": "Explicitly preserves the inventory's evidentiary limitation.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "The local inventory does not establish recent retreat.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The inventory provides a starting outline but does not by itself provide evidence of recent retreat [S1].",
+          "reason": "Explicitly limits the inventory's ability to support a recent-retreat claim.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The inventory provides a starting outline but does not by itself provide evidence of recent retreat [S1].",
+          "reason": "Explicitly preserves the inventory's evidentiary limitation.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "No field measurements have yet been collected.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "These comparisons are planned, and no field measurements are currently available.",
+          "reason": "Preserves the proposal's stated absence of field measurements, with no suggestion that collection has occurred.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "These comparisons are planned, and no field measurements are currently available.",
+          "reason": "Preserves the absence of field measurements in the proposal's current evidence, consistent with none having yet been collected.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C01",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "No field measurements have yet been collected.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "These comparisons are planned, and no field measurements are yet available.",
+          "reason": "Preserves the proposal's stated absence of field measurements, with no suggestion that collection has occurred.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "These comparisons are planned, and no field measurements are yet available.",
+          "reason": "Preserves the absence of field measurements in the proposal's current evidence, consistent with none having yet been collected.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "The log comes from one route.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "using an anonymized arrival log from one bus route",
+          "reason": "Explicitly identifies a single route.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "using an anonymized arrival log from one bus route",
+          "reason": "Explicitly identifies one route as the source.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "The log comes from one route.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "using an anonymized arrival log from one bus route",
+          "reason": "Explicitly identifies a single route.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "using an anonymized arrival log from one bus route",
+          "reason": "Explicitly identifies one route as the source.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "The log includes no passenger identities.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1].",
+          "reason": "Explicitly states that passenger identities are absent.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1].",
+          "reason": "Explicitly states that passenger identities are absent.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "The log includes no passenger identities.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1].",
+          "reason": "Explicitly states that passenger identities are absent.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1].",
+          "reason": "Explicitly states that passenger identities are absent.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "The evaluation uses 18 weekdays.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2].",
+          "reason": "Specifies the required 18 weekdays.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2].",
+          "reason": "Specifies the required 18 weekdays.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "The evaluation uses 18 weekdays.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2].",
+          "reason": "Specifies the required 18 weekdays.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2].",
+          "reason": "Specifies the required 18 weekdays.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "Both policies use the same recorded arrivals.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The experimental brief mandates that both policies use the same recorded arrivals [S2].",
+          "reason": "Explicitly requires identical recorded arrivals for both policies.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The experimental brief mandates that both policies use the same recorded arrivals [S2].",
+          "reason": "Explicitly requires identical recorded arrivals for both policies.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "Both policies use the same recorded arrivals.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The experimental brief requires both policies to use the same recorded arrivals [S2].",
+          "reason": "Explicitly requires identical recorded arrivals for both policies.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The experimental brief requires both policies to use the same recorded arrivals [S2].",
+          "reason": "Explicitly requires identical recorded arrivals for both policies.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "Peak and off-peak periods are reported separately.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "with peak and off-peak periods reported separately [S2]",
+          "reason": "Explicitly commits to separate reporting.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "with peak and off-peak periods reported separately [S2]",
+          "reason": "Explicitly commits to separate reporting.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "Peak and off-peak periods are reported separately.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "with peak and off-peak periods reported separately [S2]",
+          "reason": "Explicitly commits to separate reporting.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "with peak and off-peak periods reported separately [S2]",
+          "reason": "Explicitly commits to separate reporting.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "The study will not make a causal claim about passenger satisfaction.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Therefore, we will make no causal claim about passenger satisfaction [S2].",
+          "reason": "Explicitly excludes causal claims about passenger satisfaction.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Therefore, we will make no causal claim about passenger satisfaction [S2].",
+          "reason": "Explicitly rules out the specified causal claim.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C02",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "The study will not make a causal claim about passenger satisfaction.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Therefore, we will make no causal claim about passenger satisfaction [S2].",
+          "reason": "Explicitly excludes causal claims about passenger satisfaction.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Therefore, we will make no causal claim about passenger satisfaction [S2].",
+          "reason": "Explicitly rules out the specified causal claim.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "The treatment is 40 millimolar salt.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The design brief specifies a treatment of 40 millimolar salt and a water-only control [S1].",
+          "reason": "Explicitly preserves the salt concentration.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The design brief specifies a treatment of 40 millimolar salt and a water-only control [S1].",
+          "reason": "Explicitly specifies the required salt concentration.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "The treatment is 40 millimolar salt.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The design brief specifies a 40 millimolar salt treatment and a water-only control [S1].",
+          "reason": "Explicitly preserves the salt concentration.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The design brief specifies a 40 millimolar salt treatment and a water-only control [S1].",
+          "reason": "Explicitly specifies the required salt concentration.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "The control contains no added salt.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The design brief specifies a treatment of 40 millimolar salt and a water-only control [S1].",
+          "reason": "A water-only control contains no added salt.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The design brief specifies a treatment of 40 millimolar salt and a water-only control [S1].",
+          "reason": "“Water-only control” conveys that no salt is added.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "The control contains no added salt.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The design brief specifies a 40 millimolar salt treatment and a water-only control [S1].",
+          "reason": "A water-only control contains no added salt.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The design brief specifies a 40 millimolar salt treatment and a water-only control [S1].",
+          "reason": "“Water-only control” conveys that no salt is added.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "There are 30 seedlings in each condition.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2].",
+          "reason": "Explicitly specifies 30 seedlings per condition.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2].",
+          "reason": "Retains 30 seedlings per condition as a planned design feature.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "There are 30 seedlings in each condition.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2].",
+          "reason": "Explicitly specifies 30 seedlings per condition.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2].",
+          "reason": "Retains 30 seedlings per condition as a planned design feature.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "Observation lasts 12 days.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2].",
+          "reason": "Explicitly preserves the 12-day observation period.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2].",
+          "reason": "Explicitly retains the planned 12-day observation period.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "Observation lasts 12 days.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2].",
+          "reason": "Explicitly preserves the 12-day observation period.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2].",
+          "reason": "Explicitly retains the planned 12-day observation period.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "Plants that fail to grow remain in the analysis.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Plants that fail to grow will remain in the analysis, as excluding them could hide important treatment responses.",
+          "reason": "Explicitly retains plants that fail to grow.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Plants that fail to grow will remain in the analysis, as excluding them could hide important treatment responses.",
+          "reason": "Explicitly retains plants with no growth in the analysis.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "Plants that fail to grow remain in the analysis.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Plants that fail to grow will remain in the analysis, as excluding them could hide an important treatment response.",
+          "reason": "Explicitly retains plants that fail to grow.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Plants that fail to grow will remain in the analysis, as excluding them could hide an important treatment response.",
+          "reason": "Explicitly retains plants with no growth in the analysis.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "Recovery after treatment removal is not tested.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Additionally, the design does not test whether seedlings recover after salt is removed [S2].",
+          "reason": "Explicitly states that recovery after treatment removal is not tested.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Additionally, the design does not test whether seedlings recover after salt is removed [S2].",
+          "reason": "Explicitly states that recovery after treatment removal is not tested.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C03",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "Recovery after treatment removal is not tested.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The design also does not test whether seedlings recover after salt is removed [S2].",
+          "reason": "Explicitly states that recovery after treatment removal is not tested.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The design also does not test whether seedlings recover after salt is removed [S2].",
+          "reason": "Explicitly states that recovery after treatment removal is not tested.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C04",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "The sample contains 36 small Python functions.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Both conditions will receive the same Python function and issue description [S2].\n\nThe planned sample contains 36 small functions [S2].",
+          "reason": "The abstract establishes Python as the language, and the methodology specifies 36 small functions.",
+          "exactQuoteVerified": false
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Both conditions will receive the same Python function and issue description [S2].",
+          "reason": "This establishes Python as the language; the methodology separately specifies a planned sample of 36 small functions.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": false
+    },
+    {
+      "caseId": "C04",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "The sample contains 36 small Python functions.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Both conditions will receive the same Python function and issue description [S2].\n\nThe planned sample includes 36 small functions [S2].",
+          "reason": "The abstract establishes Python as the language, and the methodology specifies 36 small functions.",
+          "exactQuoteVerified": false
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Both conditions will receive the same Python function and issue description [S2].",
+          "reason": "This establishes Python as the language; the methodology separately specifies a planned sample of 36 small functions.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": false
+    },
+    {
+      "caseId": "C04",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "Both conditions receive the same functions and issue descriptions.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "For each function, both conditions will see identical code and the same short issue description.",
+          "reason": "Explicitly gives both conditions identical code and issue descriptions.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "For each function, both conditions will see identical code and the same short issue description.",
+          "reason": "Explicitly preserves identical functions and issue descriptions across conditions.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C04",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "Both conditions receive the same functions and issue descriptions.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "For each function, both conditions will receive identical code and the same short issue description.",
+          "reason": "Explicitly gives both conditions identical code and issue descriptions.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "For each function, both conditions will receive identical code and the same short issue description.",
+          "reason": "Explicitly preserves identical functions and issue descriptions across conditions.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C04",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "One condition requires an exact edit location.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We propose to compare free-form suggestions with suggestions that identify an exact edit location.",
+          "reason": "Defines the second condition by its identification of an exact edit location.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We propose to compare free-form suggestions with suggestions that identify an exact edit location.",
+          "reason": "Defines the second condition by its identification of an exact edit location.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C04",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "One condition requires an exact edit location.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We propose comparing free-form suggestions with those that identify an exact edit location.",
+          "reason": "Defines the second condition by its identification of an exact edit location.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We propose comparing free-form suggestions with those that identify an exact edit location.",
+          "reason": "Defines the second condition by its identification of an exact edit location.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C04",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "Passing tests is necessary but not sufficient for acceptance.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A suggestion must pass the supplied tests before it can be considered for acceptance, but passing is only one requirement.",
+          "reason": "Explicitly makes passing necessary and insufficient for acceptance.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A suggestion must pass the supplied tests before it can be considered for acceptance, but passing is only one requirement.",
+          "reason": "Explicitly states that passing tests is necessary and insufficient on its own.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C04",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "Passing tests is necessary but not sufficient for acceptance.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A suggestion must pass the supplied tests to be considered for acceptance, but passing is only one requirement.",
+          "reason": "Explicitly makes passing necessary and insufficient for acceptance.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A suggestion must pass the supplied tests to be considered for acceptance, but passing is only one requirement.",
+          "reason": "Explicitly states that passing tests is necessary and insufficient on its own.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C04",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "The developer retains the final decision.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The task brief assigns the assistant a supporting role in code review and leaves the final decision with the developer [S1].",
+          "reason": "Explicitly assigns the final decision to the developer.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The task brief assigns the assistant a supporting role in code review and leaves the final decision with the developer [S1].",
+          "reason": "Explicitly reserves the final decision for the developer.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C04",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "The developer retains the final decision.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The task brief assigns the assistant a supporting role in code review, leaving the final decision with the developer [S1].",
+          "reason": "Explicitly assigns the final decision to the developer.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The task brief assigns the assistant a supporting role in code review, leaving the final decision with the developer [S1].",
+          "reason": "Explicitly reserves the final decision for the developer.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C04",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "Tests cannot prove correctness for every input.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Tests will check the supplied examples, but passing them will not be presented as proof that a program is correct for every input [S1].",
+          "reason": "Preserves the limitation that passing the supplied tests does not establish correctness for every input.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Tests will check the supplied examples, but passing them will not be presented as proof that a program is correct for every input [S1].",
+          "reason": "Preserves the distinction between checking supplied examples and proving correctness for every input.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C04",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "Tests cannot prove correctness for every input.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Tests will check the supplied examples, but passing them will not be presented as proof that the program is correct for every input [S1].",
+          "reason": "Preserves the limitation that passing the supplied tests does not establish correctness for every input.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Tests will check the supplied examples, but passing them will not be presented as proof that the program is correct for every input [S1].",
+          "reason": "Preserves the distinction between checking supplied examples and proving correctness for every input.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "The sample contains 28 objects.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to study 28 objects",
+          "reason": "Explicitly retains the proposed sample of 28 objects.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to study 28 objects",
+          "reason": "Explicitly preserves the proposed sample size.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "The sample contains 28 objects.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to study 28 objects",
+          "reason": "Explicitly retains the proposed sample of 28 objects.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to study 28 objects",
+          "reason": "Explicitly preserves the proposed sample size.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "Only the catalogue entry and curator note may be used.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "using only the supplied entry and curator note",
+          "reason": "Explicitly restricts the descriptions to the two supplied records.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "using only the supplied entry and curator note",
+          "reason": "Explicitly limits the evidence to the two supplied records.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "Only the catalogue entry and curator note may be used.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "using only the supplied entry and curator note",
+          "reason": "Explicitly restricts the descriptions to the two supplied records.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "using only the supplied entry and curator note",
+          "reason": "Explicitly limits the evidence to the two supplied records.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "Approximate dates must remain approximate.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "an approximate date should not become precise merely because the new sentence reads more smoothly",
+          "reason": "Explicitly requires retention of date uncertainty.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "an approximate date should not become precise merely because the new sentence reads more smoothly",
+          "reason": "Explicitly requires retaining the date's approximation.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "Approximate dates must remain approximate.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "an approximate date should not become precise merely because the new sentence reads more smoothly",
+          "reason": "Explicitly requires retention of date uncertainty.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "an approximate date should not become precise merely because the new sentence reads more smoothly",
+          "reason": "Explicitly requires retaining the date's approximation.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "A missing maker field is not evidence of anonymous production.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A blank maker field does not establish that an object was made anonymously [S1].",
+          "reason": "Explicitly distinguishes missing maker information from evidence of anonymous production.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A blank maker field does not establish that an object was made anonymously [S1].",
+          "reason": "Explicitly rejects anonymous production as an inference from a missing maker field.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "A missing maker field is not evidence of anonymous production.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A blank maker field does not establish that an object was made anonymously [S1].",
+          "reason": "Explicitly distinguishes missing maker information from evidence of anonymous production.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A blank maker field does not establish that an object was made anonymously [S1].",
+          "reason": "Explicitly rejects anonymous production as an inference from a missing maker field.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "Disputed locations must remain qualified.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The revised description must present the disagreement clearly without taking a side unsupported by the packet.",
+          "reason": "In the context of conflicting location records, explicitly requires the dispute to remain visible without unsupported resolution.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The revised description must present the disagreement clearly without taking a side unsupported by the packet.",
+          "reason": "In the discussion of conflicting location records, explicitly requires preserving the disagreement without an unsupported resolution.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "Disputed locations must remain qualified.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The revised description must present the disagreement clearly without taking a side unsupported by the packet.",
+          "reason": "In the context of conflicting location records, explicitly requires the dispute to remain visible without unsupported resolution.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The revised description must present the disagreement clearly without taking a side unsupported by the packet.",
+          "reason": "In the discussion of conflicting location records, explicitly requires preserving the disagreement without an unsupported resolution.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "No new provenance research will be conducted.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The study will not conduct new provenance research.",
+          "reason": "Explicitly excludes new provenance research.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The study will not conduct new provenance research.",
+          "reason": "Explicitly excludes new provenance research.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C05",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "No new provenance research will be conducted.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "No new provenance research will be conducted.",
+          "reason": "Explicitly excludes new provenance research.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "No new provenance research will be conducted.",
+          "reason": "Explicitly excludes new provenance research.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "There are eight sensors observed over 21 days.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will compare eight sensors over 21 days [S2].",
+          "reason": "Explicitly preserves both the sensor count and observation period.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will compare eight sensors over 21 days [S2].",
+          "reason": "Explicitly preserves the sensor count and observation period.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "There are eight sensors observed over 21 days.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will compare eight sensors over 21 days [S2].",
+          "reason": "Explicitly preserves both the sensor count and observation period.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will compare eight sensors over 21 days [S2].",
+          "reason": "Explicitly preserves the sensor count and observation period.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "The threshold is 900 microsiemens per centimetre.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The measurement brief sets a threshold of 900 microsiemens per centimetre",
+          "reason": "Preserves the threshold value and units.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The measurement brief sets a threshold of 900 microsiemens per centimetre",
+          "reason": "Preserves the threshold value and units.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "The threshold is 900 microsiemens per centimetre.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The measurement brief specifies a threshold of 900 microsiemens per centimetre",
+          "reason": "Preserves the threshold value and units.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The measurement brief specifies a threshold of 900 microsiemens per centimetre",
+          "reason": "Preserves the threshold value and units.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "Equality to the threshold is not an exceedance.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Equality to the threshold does not constitute an exceedance.",
+          "reason": "Explicitly excludes equality from exceedances.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Equality to the threshold does not constitute an exceedance.",
+          "reason": "Explicitly excludes equality from exceedances.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "Equality to the threshold is not an exceedance.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Equality is therefore not an exceedance.",
+          "reason": "Explicitly excludes equality from exceedances.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Equality is therefore not an exceedance.",
+          "reason": "Explicitly excludes equality from exceedances.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "Raw and corrected readings use the same threshold.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The experimental brief mandates that this threshold remain constant for both raw and drift-corrected readings [S2].",
+          "reason": "Requires the same fixed threshold for both versions.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The experimental brief mandates that this threshold remain constant for both raw and drift-corrected readings [S2].",
+          "reason": "Explicitly requires the same fixed threshold for both versions.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "Raw and corrected readings use the same threshold.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The experimental brief requires the threshold to remain fixed for both raw and corrected readings [S2]",
+          "reason": "Requires the same fixed threshold for both versions.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The experimental brief requires the threshold to remain fixed for both raw and corrected readings [S2]",
+          "reason": "Explicitly requires the same fixed threshold for both versions.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "Corrections come from the reference instrument, not alert plausibility.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Correcting such drift should rely on measurement evidence rather than the apparent reasonableness of an alert.",
+          "reason": "Explicitly rejects alert plausibility as the basis for correction; the methodology also specifies estimation from the reference instrument.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Correcting such drift should rely on measurement evidence rather than the apparent reasonableness of an alert.",
+          "reason": "Explicitly rejects alert plausibility as a basis for correction; the methodology also explicitly identifies the reference instrument as the source of correction estimates.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "Corrections come from the reference instrument, not alert plausibility.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Correcting such drift should depend on measurement evidence, not on whether an alert seems reasonable.",
+          "reason": "Explicitly rejects alert plausibility as the basis for correction; the methodology also specifies estimation from the reference instrument.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Correcting such drift should depend on measurement evidence, not on whether an alert seems reasonable.",
+          "reason": "Explicitly rejects alert plausibility as a basis for correction; the methodology also explicitly identifies the reference instrument as the source of correction estimates.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "The study does not make drinking-water safety recommendations.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The proposed analysis will therefore stop at measurement agreement and alert behavior, without providing drinking-water safety recommendations [S2].",
+          "reason": "Explicitly excludes drinking-water safety recommendations.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The proposed analysis will therefore stop at measurement agreement and alert behavior, without providing drinking-water safety recommendations [S2].",
+          "reason": "Explicitly excludes drinking-water safety recommendations.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C06",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "The study does not make drinking-water safety recommendations.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The proposed analysis will therefore stop at measurement agreement and alert behavior, without providing drinking-water safety recommendations [S2].",
+          "reason": "Explicitly excludes drinking-water safety recommendations.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The proposed analysis will therefore stop at measurement agreement and alert behavior, without providing drinking-water safety recommendations [S2].",
+          "reason": "Explicitly excludes drinking-water safety recommendations.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "Two speakers supply different factory closure dates.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The collection concerns a factory closure for which two speakers give different dates [S1].",
+          "reason": "Explicitly identifies two speakers supplying different factory closure dates.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The collection concerns a factory closure for which two speakers give different dates [S1].",
+          "reason": "Explicitly identifies two speakers giving different factory closure dates.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "Two speakers supply different factory closure dates.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The collection concerns a factory closure for which two speakers give different dates [S1].",
+          "reason": "Explicitly identifies two speakers supplying different factory closure dates.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The collection concerns a factory closure for which two speakers give different dates [S1].",
+          "reason": "Explicitly identifies two speakers giving different factory closure dates.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "No archival source has resolved the discrepancy.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1].",
+          "reason": "Explicitly states that archival evidence has not resolved the discrepancy.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1].",
+          "reason": "Explicitly states that archival evidence has not resolved the discrepancy.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "No archival source has resolved the discrepancy.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1].",
+          "reason": "Explicitly states that archival evidence has not resolved the discrepancy.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1].",
+          "reason": "Explicitly states that archival evidence has not resolved the discrepancy.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "Speaker labels are pseudonyms.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Pseudonyms will be used consistently in both versions.",
+          "reason": "In context, identifies the speaker labels as pseudonyms and requires consistent use.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Pseudonyms will be used consistently in both versions.",
+          "reason": "Preserves the use of pseudonyms for speakers across both summary versions.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "Speaker labels are pseudonyms.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The pseudonyms will be used consistently in both versions.",
+          "reason": "In context, identifies the speaker labels as pseudonyms and requires consistent use.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The pseudonyms will be used consistently in both versions.",
+          "reason": "Preserves the use of pseudonyms for speakers across both summary versions.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "The sample contains 16 interview excerpts.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will summarize 16 interview excerpts under both conditions [S2].",
+          "reason": "Preserves the sample size and unit of analysis.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will summarize 16 interview excerpts under both conditions [S2].",
+          "reason": "Retains the sample size and unit of analysis.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "The sample contains 16 interview excerpts.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will summarize 16 interview excerpts under both conditions [S2].",
+          "reason": "Preserves the sample size and unit of analysis.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will summarize 16 interview excerpts under both conditions [S2].",
+          "reason": "Retains the sample size and unit of analysis.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "Disputed dates must remain attached to speakers.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The method brief requires disputed dates to remain attached to the speakers who supplied them [S2].",
+          "reason": "Explicitly preserves the requirement to attribute disputed dates to their speakers.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The method brief requires disputed dates to remain attached to the speakers who supplied them [S2].",
+          "reason": "Explicitly requires speaker attribution for disputed dates.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "Disputed dates must remain attached to speakers.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Disputed dates must remain attached to the speakers who supplied them [S2].",
+          "reason": "Explicitly preserves the requirement to attribute disputed dates to their speakers.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Disputed dates must remain attached to the speakers who supplied them [S2].",
+          "reason": "Explicitly requires speaker attribution for disputed dates.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "The summaries must not infer motives or reconcile dates without evidence.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will not reconcile the dates or infer motives without new evidence [S2].",
+          "reason": "Preserves both prohibitions and the qualification that new evidence is required.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will not reconcile the dates or infer motives without new evidence [S2].",
+          "reason": "Preserves both prohibitions and the qualification that new evidence is required.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C07",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "The summaries must not infer motives or reconcile dates without evidence.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will not reconcile the dates or infer motives without new evidence [S2].",
+          "reason": "Preserves both prohibitions and the qualification that new evidence is required.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will not reconcile the dates or infer motives without new evidence [S2].",
+          "reason": "Preserves both prohibitions and the qualification that new evidence is required.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "The target is next-day demand for one campus building.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We propose comparing a seasonal baseline with a learned forecaster for next-day demand in a single campus building.",
+          "reason": "Explicitly preserves the next-day target and single campus building.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "for next-day demand in a single campus building",
+          "reason": "Explicitly preserves both the forecast horizon and the single-campus-building scope.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "The target is next-day demand for one campus building.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We propose comparing a seasonal baseline with a learned forecaster for next-day demand in a single campus building.",
+          "reason": "Explicitly preserves the next-day target and single campus building.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "for next-day demand in a single campus building",
+          "reason": "Explicitly preserves both the forecast horizon and the single-campus-building scope.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "Weather observed after the deadline is unavailable.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A weather reading collected after a forecast deadline can explain demand retrospectively but cannot support the earlier prediction. The task brief excludes such observations [S1]",
+          "reason": "Explicitly excludes weather observations collected after the forecast deadline.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A weather reading collected after a forecast deadline can explain demand retrospectively but cannot support the earlier prediction. The task brief excludes such observations [S1]",
+          "reason": "Explicitly excludes weather observations collected after the deadline.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "Weather observed after the deadline is unavailable.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A weather reading collected after a forecast deadline can explain demand retrospectively but cannot support the earlier prediction. The task brief excludes such observations [S1]",
+          "reason": "Explicitly excludes weather observations collected after the forecast deadline.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A weather reading collected after a forecast deadline can explain demand retrospectively but cannot support the earlier prediction. The task brief excludes such observations [S1]",
+          "reason": "Explicitly excludes weather observations collected after the deadline.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "Occupancy comes from a public timetable, not personal tracking.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "represents occupancy through a published timetable, without tracking individuals.",
+          "reason": "Preserves the published timetable as the occupancy source and explicitly excludes individual tracking.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "represents occupancy through a published timetable, without tracking individuals",
+          "reason": "Preserves timetable-based occupancy and the exclusion of personal tracking.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "Occupancy comes from a public timetable, not personal tracking.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "represents occupancy through a published timetable, without tracking individuals.",
+          "reason": "Preserves the published timetable as the occupancy source and explicitly excludes individual tracking.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "represents occupancy through a published timetable, without tracking individuals",
+          "reason": "Preserves timetable-based occupancy and the exclusion of personal tracking.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "The series covers 42 consecutive days.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The evaluation will span 42 consecutive days",
+          "reason": "Preserves both the duration and consecutiveness.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The evaluation will span 42 consecutive days",
+          "reason": "Preserves the exact duration and consecutiveness.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "The series covers 42 consecutive days.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The evaluation will cover 42 consecutive days",
+          "reason": "Preserves both the duration and consecutiveness.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The evaluation will cover 42 consecutive days",
+          "reason": "Preserves the exact duration and consecutiveness.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "The final 14 days are held out from fitting.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "with the final 14 days held out from the fitting process [S2].",
+          "reason": "Explicitly reserves the final 14 days from fitting.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "with the final 14 days held out from the fitting process",
+          "reason": "Explicitly preserves which days are withheld and their exclusion from fitting.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "The final 14 days are held out from fitting.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "with the final 14 days held out from fitting [S2].",
+          "reason": "Explicitly reserves the final 14 days from fitting.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "with the final 14 days held out from fitting",
+          "reason": "Explicitly preserves which days are withheld and their exclusion from fitting.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "Unusually hot days remain in overall results.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to report forecast errors for each evaluation day and separately inspect unusually hot days. Difficult days will remain included in the overall results [S2].",
+          "reason": "Reporting every day and retaining difficult days in the overall results preserves inclusion of unusually hot days.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to report forecast errors for each evaluation day and separately inspect unusually hot days. Difficult days will remain included in the overall results [S2].",
+          "reason": "Reporting every evaluation day and retaining difficult days preserves hot days in the overall results.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C08",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "Unusually hot days remain in overall results.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to report forecast errors for each evaluation day and separately inspect unusually hot days. Difficult days will remain in the overall results [S2].",
+          "reason": "Reporting every day and retaining difficult days in the overall results preserves inclusion of unusually hot days.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to report forecast errors for each evaluation day and separately inspect unusually hot days. Difficult days will remain in the overall results [S2].",
+          "reason": "Reporting every evaluation day and retaining difficult days preserves hot days in the overall results.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "The stream contains aluminium and plastic.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We propose to compare manual and optical sorting for a stream containing aluminium and plastic.",
+          "reason": "Explicitly identifies both materials in the stream.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We propose to compare manual and optical sorting for a stream containing aluminium and plastic.",
+          "reason": "Explicitly identifies both materials.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "The stream contains aluminium and plastic.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We propose to compare manual and optical sorting for a stream containing aluminium and plastic.",
+          "reason": "Explicitly identifies both materials in the stream.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We propose to compare manual and optical sorting for a stream containing aluminium and plastic.",
+          "reason": "Explicitly identifies both materials.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "The sample contains 20 batches.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will compare manual and optical sorting over 20 batches [S2].",
+          "reason": "Explicitly specifies 20 batches.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will compare manual and optical sorting over 20 batches [S2].",
+          "reason": "Explicitly retains the 20-batch sample.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "The sample contains 20 batches.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We will compare manual and optical sorting over 20 batches [S2].",
+          "reason": "Explicitly specifies 20 batches.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We will compare manual and optical sorting over 20 batches [S2].",
+          "reason": "Explicitly retains the 20-batch sample.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "Both methods receive equal input mass from each batch.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Each method will process an equal input mass from each batch.",
+          "reason": "Preserves equal input mass for both methods within every batch.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Each method will process an equal input mass from each batch.",
+          "reason": "Retains equal input mass for both methods within every batch.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "Both methods receive equal input mass from each batch.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Each method will process an equal input mass from each batch.",
+          "reason": "Preserves equal input mass for both methods within every batch.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Each method will process an equal input mass from each batch.",
+          "reason": "Retains equal input mass for both methods within every batch.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "Recovery uses target material in the input as denominator.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The methods brief defines recovery relative to the target material in the input, while purity is defined relative to the recovered output mass [S2].",
+          "reason": "Correctly identifies target material in the input as the recovery denominator.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The methods brief defines recovery relative to the target material in the input",
+          "reason": "Correctly identifies target material in the input as the recovery denominator.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "Recovery uses target material in the input as denominator.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Recovery is defined relative to target material in the input, while purity uses recovered output mass [S2].",
+          "reason": "Correctly identifies target material in the input as the recovery denominator.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Recovery is defined relative to target material in the input",
+          "reason": "Correctly identifies target material in the input as the recovery denominator.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "Purity uses recovered output mass as denominator.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The methods brief defines recovery relative to the target material in the input, while purity is defined relative to the recovered output mass [S2].",
+          "reason": "Correctly identifies recovered output mass as the purity denominator.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "purity is defined relative to the recovered output mass [S2].",
+          "reason": "Correctly identifies recovered output mass as the purity denominator.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "Purity uses recovered output mass as denominator.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Recovery is defined relative to target material in the input, while purity uses recovered output mass [S2].",
+          "reason": "Correctly identifies recovered output mass as the purity denominator.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "purity uses recovered output mass [S2].",
+          "reason": "In the paired definitions, recovered output mass clearly serves as the purity denominator.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "Mass measurements alone do not support lifecycle-emissions claims.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The material brief distinguishes recovered mass from purity and warns that mass alone does not establish lifecycle emissions [S1].",
+          "reason": "Explicitly preserves the limitation on lifecycle-emissions claims from mass alone.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The material brief distinguishes recovered mass from purity and warns that mass alone does not establish lifecycle emissions [S1].",
+          "reason": "Explicitly retains the restriction on drawing lifecycle-emissions conclusions from mass alone.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C09",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "Mass measurements alone do not support lifecycle-emissions claims.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The material brief distinguishes recovered mass from purity and warns that mass alone does not establish lifecycle emissions [S1].",
+          "reason": "Explicitly preserves the limitation on lifecycle-emissions claims from mass alone.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The material brief distinguishes recovered mass from purity and warns that mass alone does not establish lifecycle emissions [S1].",
+          "reason": "Explicitly retains the restriction on drawing lifecycle-emissions conclusions from mass alone.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "A step-free path does not establish a usable destination door.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A route can be step-free yet still end at a door that a traveler cannot use.",
+          "reason": "Explicitly states that a step-free route does not establish door usability.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A route can be step-free yet still end at a door that a traveler cannot use.",
+          "reason": "Explicitly states that a step-free path does not establish door usability.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "A step-free path does not establish a usable destination door.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A route can be step-free yet end at a door that a traveler cannot use.",
+          "reason": "Explicitly states that a step-free route does not establish door usability.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A route can be step-free yet end at a door that a traveler cannot use.",
+          "reason": "Explicitly states that a step-free path does not establish door usability.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "Some door measurements are missing.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The campus map records paths and entrances, but some door measurements are missing [S1].",
+          "reason": "Explicitly identifies missing door measurements.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The campus map records paths and entrances, but some door measurements are missing [S1].",
+          "reason": "Explicitly acknowledges missing door measurements.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "Some door measurements are missing.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The campus map records paths and entrances, but some door measurements are absent [S1].",
+          "reason": "Explicitly identifies missing door measurements.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The campus map records paths and entrances, but some door measurements are absent [S1].",
+          "reason": "Explicitly acknowledges missing door measurements.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "The sample contains 32 origin-destination pairs.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to test 32 origin-destination pairs [S2].",
+          "reason": "Preserves the sample size and planned status.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to test 32 origin-destination pairs [S2].",
+          "reason": "Preserves the planned sample size and unit.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "The sample contains 32 origin-destination pairs.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to test 32 origin-destination pairs [S2].",
+          "reason": "Preserves the sample size and planned status.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to test 32 origin-destination pairs [S2].",
+          "reason": "Preserves the planned sample size and unit.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "Verification requires both path and entrance requirements.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The route will be marked verified only if both the path and the entrance meet the recorded requirements.",
+          "reason": "Explicitly requires both components to meet the recorded requirements.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The route will be marked verified only if both the path and the entrance meet the recorded requirements.",
+          "reason": "Makes both requirements necessary; the preceding sentence identifies the entrance record as the destination entrance record.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "Verification requires both path and entrance requirements.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The route will be marked verified only if both the path and the destination entrance meet the recorded requirements.",
+          "reason": "Explicitly requires both the path and destination entrance to meet the recorded requirements.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The route will be marked verified only if both the path and the destination entrance meet the recorded requirements.",
+          "reason": "Makes both requirements necessary for verification.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "Unknown entrances are separate from verified routes.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "Unknown entrances will be displayed separately, alongside the missing measurement, rather than included among the verified options.",
+          "reason": "Explicitly separates unknown entrances from verified options.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Unknown entrances will be displayed separately, alongside the missing measurement, rather than included among the verified options.",
+          "reason": "Explicitly separates unknown entrances from verified options.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "Unknown entrances are separate from verified routes.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "An unknown entrance will be displayed separately, together with the missing measurement, rather than silently included among the verified options.",
+          "reason": "Explicitly separates unknown entrances from verified options.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "An unknown entrance will be displayed separately, together with the missing measurement, rather than silently included among the verified options.",
+          "reason": "Explicitly separates unknown entrances from verified options.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "Accessibility is not inferred for unmeasured doors.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "It will also make no inference about unmeasured doors [S2].",
+          "reason": "Explicitly rules out inferring accessibility for unmeasured doors.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "It will also make no inference about unmeasured doors [S2].",
+          "reason": "Explicitly rules out inferring accessibility for unmeasured doors.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C10",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "Accessibility is not inferred for unmeasured doors.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "It will also make no inference about unmeasured doors [S2].",
+          "reason": "Explicitly rules out inferring accessibility for unmeasured doors.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "It will also make no inference about unmeasured doors [S2].",
+          "reason": "Explicitly rules out inferring accessibility for unmeasured doors.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "The assistant must not provide a complete replacement answer.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The assistant may highlight a gap but will not provide a complete replacement answer [S1].",
+          "reason": "Explicitly retains the prohibition on complete replacement answers.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The assistant may highlight a gap but will not provide a complete replacement answer [S1].",
+          "reason": "Explicitly retains the prohibition on complete replacement answers.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "The assistant must not provide a complete replacement answer.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The assistant may highlight a gap but will not provide a complete replacement answer [S1].",
+          "reason": "Explicitly retains the prohibition on complete replacement answers.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The assistant may highlight a gap but will not provide a complete replacement answer [S1].",
+          "reason": "Explicitly retains the prohibition on complete replacement answers.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "Fluent explanations can be statistically incorrect.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A fluent explanation can still confuse association with causation [S1].",
+          "reason": "Explicitly identifies a statistical error that fluent prose can contain.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A fluent explanation can still confuse association with causation [S1].",
+          "reason": "Explicitly identifies a statistical reasoning error that fluent prose can contain.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "Fluent explanations can be statistically incorrect.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A fluent explanation can still confuse association with causation [S1].",
+          "reason": "Explicitly identifies a statistical error that fluent prose can contain.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A fluent explanation can still confuse association with causation [S1].",
+          "reason": "Explicitly identifies a statistical reasoning error that fluent prose can contain.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "The sample contains 40 anonymized responses to one question.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The planned sample includes 40 anonymized responses to the same question [S2].",
+          "reason": "Retains the sample size, anonymization and single shared question.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The planned sample includes 40 anonymized responses to the same question [S2].",
+          "reason": "Retains the sample size, anonymization, and single shared question.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "The sample contains 40 anonymized responses to one question.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The planned sample includes 40 anonymized responses to the same question [S2].",
+          "reason": "Retains the sample size, anonymization and single shared question.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The planned sample includes 40 anonymized responses to the same question [S2].",
+          "reason": "Retains the sample size, anonymization, and single shared question.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "The comparator is a rubric-only condition.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We propose comparing assistant feedback with a rubric-only condition for short statistics explanations.",
+          "reason": "Explicitly names the rubric-only comparator.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We propose comparing assistant feedback with a rubric-only condition for short statistics explanations.",
+          "reason": "Explicitly identifies the rubric-only comparator.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "The comparator is a rubric-only condition.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We propose comparing assistant feedback with a rubric-only condition for short statistics explanations.",
+          "reason": "Explicitly names the rubric-only comparator.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We propose comparing assistant feedback with a rubric-only condition for short statistics explanations.",
+          "reason": "Explicitly identifies the rubric-only comparator.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "Association versus causation is a prespecified hard case.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The prespecified hard case involves confusing association with causation [S2].",
+          "reason": "Retains both the causal-reasoning confusion and its prespecified status.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The prespecified hard case involves confusing association with causation [S2].",
+          "reason": "Retains both the specific reasoning error and its prespecified status.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "Association versus causation is a prespecified hard case.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The prespecified hard case involves a response that confuses association with causation [S2].",
+          "reason": "Retains both the causal-reasoning confusion and its prespecified status.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The prespecified hard case involves a response that confuses association with causation [S2].",
+          "reason": "Retains both the specific reasoning error and its prespecified status.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "The study assigns no grades and does not claim improved learning from one review.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A single review cannot demonstrate whether a student later learns the underlying concept. Therefore, the study will not claim improved learning from this design [S2]. It also does not assign course grades [S1].",
+          "reason": "Explicitly excludes course grading and claims of improved learning from a single review.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A single review cannot demonstrate whether a student later learns the underlying concept. Therefore, the study will not claim improved learning from this design [S2]. It also does not assign course grades [S1].",
+          "reason": "Explicitly excludes course grading and claims of improved learning from a single review.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C11",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "The study assigns no grades and does not claim improved learning from one review.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A single review cannot demonstrate whether a student later learns the underlying concept. Therefore, the study will not claim improved learning from this design [S2]. It also does not assign course grades [S1].",
+          "reason": "Explicitly excludes course grading and claims of improved learning from a single review.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A single review cannot demonstrate whether a student later learns the underlying concept. Therefore, the study will not claim improved learning from this design [S2]. It also does not assign course grades [S1].",
+          "reason": "Explicitly excludes course grading and claims of improved learning from a single review.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 0,
+      "condition": "generic",
+      "referenceFact": "The sampled material is charcoal.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The source brief distinguishes the age of a charcoal fragment from the timing of a building event [S1].",
+          "reason": "Explicitly identifies the dated fragment as charcoal.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The source brief distinguishes the age of a charcoal fragment from the timing of a building event [S1].",
+          "reason": "Identifies the dated fragment as charcoal.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 0,
+      "condition": "rules",
+      "referenceFact": "The sampled material is charcoal.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The source brief distinguishes the age of a charcoal fragment from the timing of a building event [S1].",
+          "reason": "Explicitly identifies the dated fragment as charcoal.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The source brief distinguishes the age of a charcoal fragment from the timing of a building event [S1].",
+          "reason": "Identifies the dated fragment as charcoal.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 1,
+      "condition": "generic",
+      "referenceFact": "The date interval is 1180 to 1260 CE.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The supplied interval is 1180 to 1260 CE [S1].",
+          "reason": "Preserves both endpoints and the CE designation.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The supplied interval is 1180 to 1260 CE [S1].",
+          "reason": "Preserves both endpoints and the era.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 1,
+      "condition": "rules",
+      "referenceFact": "The date interval is 1180 to 1260 CE.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The supplied interval is 1180 to 1260 CE [S1].",
+          "reason": "Preserves both endpoints and the CE designation.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The supplied interval is 1180 to 1260 CE [S1].",
+          "reason": "Preserves both endpoints and the era.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 2,
+      "condition": "generic",
+      "referenceFact": "Material age does not necessarily date a building event.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A synthesis must preserve this interval and avoid treating the material age as an established construction date.",
+          "reason": "Explicitly rejects treating material age as an established date for construction.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "A dated fragment can assist in interpreting a site without directly dating the event of interest to archaeologists.",
+          "reason": "Preserves the distinction between dating material and dating an event; the abstract subsequently identifies construction as the relevant event.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 2,
+      "condition": "rules",
+      "referenceFact": "Material age does not necessarily date a building event.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "A synthesis must preserve this interval and avoid turning material age into an established construction date.",
+          "reason": "Explicitly rejects treating material age as an established date for construction.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "Readers might treat a date next to a building description as the construction date, but this inference is not always supported by the sampled material [S1].",
+          "reason": "Explicitly qualifies the inference from material age to construction timing.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 3,
+      "condition": "generic",
+      "referenceFact": "The charcoal-building association remains uncertain.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "In this proposal, the association between the charcoal and the building remains uncertain [S1].",
+          "reason": "Explicitly retains uncertainty about the charcoal-building association.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "In this proposal, the association between the charcoal and the building remains uncertain [S1].",
+          "reason": "Explicitly retains the uncertain association.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 3,
+      "condition": "rules",
+      "referenceFact": "The charcoal-building association remains uncertain.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "In this proposal, the association between the charcoal and the building remains uncertain.",
+          "reason": "Explicitly retains uncertainty about the charcoal-building association.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "In this proposal, the association between the charcoal and the building remains uncertain.",
+          "reason": "Explicitly retains the uncertain association.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 4,
+      "condition": "generic",
+      "referenceFact": "The sample contains 14 context descriptions.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to compare 14 context descriptions [S2].",
+          "reason": "Preserves the planned comparison and exact number of descriptions.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to compare 14 context descriptions [S2].",
+          "reason": "Preserves the planned sample size and unit.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 4,
+      "condition": "rules",
+      "referenceFact": "The sample contains 14 context descriptions.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "We plan to compare 14 context descriptions [S2].",
+          "reason": "Preserves the planned comparison and exact number of descriptions.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "We plan to compare 14 context descriptions [S2].",
+          "reason": "Preserves the planned sample size and unit.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 5,
+      "condition": "generic",
+      "referenceFact": "The interval midpoint is not an established construction date.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The interval midpoint will not be treated as an established construction date [S2].",
+          "reason": "Explicitly preserves the restriction on interpreting the midpoint.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The interval midpoint will not be treated as an established construction date [S2].",
+          "reason": "Explicitly rejects treating the midpoint as an established construction date.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    },
+    {
+      "caseId": "C12",
+      "factId": 5,
+      "condition": "rules",
+      "referenceFact": "The interval midpoint is not an established construction date.",
+      "consensus": "consistent_preserved",
+      "judgments": [
+        {
+          "order": 0,
+          "status": "preserved",
+          "quote": "The interval midpoint will not be treated as an established construction date [S2], and these errors will be recorded separately from ordinary stylistic issues.",
+          "reason": "Explicitly preserves the restriction on interpreting the midpoint.",
+          "exactQuoteVerified": true
+        },
+        {
+          "order": 1,
+          "status": "preserved",
+          "quote": "The interval midpoint will not be treated as an established construction date [S2], and these errors will be recorded separately from ordinary stylistic issues.",
+          "reason": "Explicitly rejects treating the midpoint as an established construction date.",
+          "exactQuoteVerified": true
+        }
+      ],
+      "bothQuotesExact": true
+    }
+  ]
+}

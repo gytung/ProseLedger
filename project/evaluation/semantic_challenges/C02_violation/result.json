@@ -1,0 +1,41 @@
+{
+  "caseId": "C02",
+  "challenge": "violation",
+  "expectedPass": false,
+  "actualPass": false,
+  "correct": true,
+  "findings": [
+    "Numeric tokens were added.",
+    "Numeric tokens were removed."
+  ],
+  "before": "arrivals from 18 weekdays",
+  "after": "arrivals from 81 weekdays",
+  "referenceReason": "The planned number of days changes from 18 to 81.",
+  "originalSHA256": "d490512c038f7dbdf72521811483ea279bc61255fec05b39d226df5aef696b4b",
+  "candidateSHA256": "5bf501f31aa88f310c2baa2dae42add6568856dcba54f5af2a02b774c19dbc6d",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Methodology",
+        "originalQuote": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2].",
+        "revisedQuote": "We will apply the fixed timetable and holding policy to arrivals from 81 weekdays [S2].",
+        "problem": "The candidate changes the planned analysis coverage from 18 to 81 weekdays, contradicting both the original and S2, which specifies \"The analysis will use 18 weekdays\". The citation therefore no longer supports the stated coverage."
+      }
+    ],
+    "readability": "similar",
+    "reason": "The candidate is otherwise identical to the original, preserving all other substantive propositions, method steps, comparisons, evaluation measures, limitations, attribution, uncertainty and planned-work status. The numerical change does not affect readability."
+  },
+  "semanticPass": false,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": [
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    }
+  ]
+}

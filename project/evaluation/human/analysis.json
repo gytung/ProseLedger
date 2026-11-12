@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-13",
+  "status": "Two finalized shared-code response-record exports; organizer estimates approximately ten classmates, but exact distinct-rater count and allocation remain unavailable.",
+  "source_summary": {
+    "answered": 10,
+    "correct": 4,
+    "incorrect": 5,
+    "cannot_tell": 1,
+    "correct_over_all": 0.4,
+    "correct_over_decisive": 0.4444444444444444,
+    "generated_chosen_as_published": 5
+  },
+  "fluency_summary": {
+    "answered": 10,
+    "a_choices": 4,
+    "b_choices": 5,
+    "cannot_tell": 1,
+    "revised_preferred": 4,
+    "original_preferred": 5,
+    "revised_preference_over_all": 0.4,
+    "revised_preference_over_decisive": 0.4444444444444444
+  },
+  "source_length_summary": {
+    "word_count_rule": "Python str.split on the supplied text",
+    "generated_mean": 66.5,
+    "generated_range": [
+      42,
+      96
+    ],
+    "published_mean": 63.4,
+    "published_range": [
+      40,
+      99
+    ],
+    "average_generated_minus_published": 3.1
+  },
+  "answered_feature_scale_entries": 0,
+  "possible_feature_scale_entries": 100,
+  "source_side_balance": {
+    "A": 5,
+    "B": 5
+  },
+  "rows": [
+    {
+      "source_item": "S3-01",
+      "source_published_side": "A",
+      "source_choice": "A",
+      "source_outcome": "correct",
+      "source_generated_words": 54,
+      "source_published_words": 44,
+      "fluency_item": "FL-01",
+      "fluency_choice": "B",
+      "fluency_outcome": "branch key unavailable"
+    },
+    {
+      "source_item": "S3-02",
+      "source_published_side": "B",
+      "source_choice": "B",
+      "source_outcome": "correct",
+      "source_generated_words": 65,
+      "source_published_words": 55,
+      "fluency_item": "FL-02",
+      "fluency_choice": "B",
+      "fluency_outcome": "branch key unavailable"
+    },
+    {
+      "source_item": "S3-03",
+      "source_published_side": "A",
+      "source_choice": "B",
+      "source_outcome": "incorrect",
+      "source_generated_words": 70,
+      "source_published_words": 68,
+      "fluency_item": "FL-03",
+      "fluency_choice": "B",
+      "fluency_outcome": "branch key unavailable"
+    },
+    {
+      "source_item": "S3-04",
+      "source_published_side": "B",
+      "source_choice": "B",
+      "source_outcome": "correct",
+      "source_generated_words": 77,
+      "source_published_words": 74,
+      "fluency_item": "FL-04",
+      "fluency_choice": "Cannot tell",
+      "fluency_outcome": "cannot_tell"
+    },
+    {
+      "source_item": "S3-05",
+      "source_published_side": "A",
+      "source_choice": "A",
+      "source_outcome": "correct",
+      "source_generated_words": 96,
+      "source_published_words": 99,
+      "fluency_item": "FL-05",
+      "fluency_choice": "A",
+      "fluency_outcome": "branch key unavailable"
+    },
+    {
+      "source_item": "S3-06",
+      "source_published_side": "B",
+      "source_choice": "A",
+      "source_outcome": "incorrect",
+      "source_generated_words": 75,
+      "source_published_words": 62,
+      "fluency_item": "FL-06",
+      "fluency_choice": "B",
+      "fluency_outcome": "branch key unavailable"
+    },
+    {
+      "source_item": "S3-07",
+      "source_published_side": "A",
+      "source_choice": "B",
+      "source_outcome": "incorrect",
+      "source_generated_words": 62,
+      "source_published_words": 65,
+      "fluency_item": "FL-07",
+      "fluency_choice": "B",
+      "fluency_outcome": "branch key unavailable"
+    },
+    {
+      "source_item": "S3-08",
+      "source_published_side": "B",
+      "source_choice": "Cannot tell",
+      "source_outcome": "cannot_tell",
+      "source_generated_words": 58,
+      "source_published_words": 64,
+      "fluency_item": "FL-08",
+      "fluency_choice": "A",
+      "fluency_outcome": "branch key unavailable"
+    },
+    {
+      "source_item": "S3-09",
+      "source_published_side": "A",
+      "source_choice": "B",
+      "source_outcome": "incorrect",
+      "source_generated_words": 42,
+      "source_published_words": 40,
+      "fluency_item": "FL-09",
+      "fluency_choice": "A",
+      "fluency_outcome": "branch key unavailable"
+    },
+    {
+      "source_item": "S3-10",
+      "source_published_side": "B",
+      "source_choice": "A",
+      "source_outcome": "incorrect",
+      "source_generated_words": 66,
+      "source_published_words": 63,
+      "fluency_item": "FL-10",
+      "fluency_choice": "A",
+      "fluency_outcome": "branch key unavailable"
+    }
+  ],
+  "exact_archive_match_items": [
+    "S3-03",
+    "S3-04",
+    "S3-05",
+    "S3-10"
+  ],
+  "scope": [
+    "Do not call ten item decisions ten people.",
+    "Cannot tell is abstention/indecision, not a positive preference tie or an incorrect decisive choice.",
+    "Source identification and original/revision preference measure different constructs.",
+    "No new end-to-end-pipeline improvement can be attributed from exports lacking run/model identity.",
+    "All feature ratings are missing; do not impute zero or compute naturalness means.",
+    "No inferential statistics: independent participant/sample units have not been established.",
+    "Several source-study generated excerpts duplicate the seen development manuscript."
+  ],
+  "private_raw_hashes": {
+    "source": "fe860df3798c450d63aa11c6fbcc7fd74ad9f4cc9f323fb2322833cedfe339ae",
+    "fluency": "ec09ec281e8be11154918884d490f01cf7923e16064ac1e5fdd60843c4f62ce3"
+  },
+  "organizer_recruitment_note": {
+    "estimated_classmates": 10,
+    "estimate_status": "approximate organizer recollection; not verified distinct-rater count",
+    "reported_overlap": "One person reportedly completed both tasks",
+    "shared_code_allocation": "Approximately two items per person where a code was shared; exact assignment unavailable"
+  }
+}

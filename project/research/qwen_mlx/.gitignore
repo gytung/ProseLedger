@@ -1,0 +1,6 @@
+contrastive_model_path.json
+__pycache__/
+*.pyc
+*.log
+runs/
+.qwen-env/

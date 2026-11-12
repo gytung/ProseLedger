@@ -1,0 +1,10 @@
+{
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "size": 4683087332,
+  "ollamaVersion": "0.40.15",
+  "hostSystem": "Darwin",
+  "hostArchitecture": "arm64",
+  "runtime": "Ollama",
+  "quantization": "Q4_K_M"
+}

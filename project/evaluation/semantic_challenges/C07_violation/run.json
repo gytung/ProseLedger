@@ -1,0 +1,31 @@
+{
+  "protocol": "proseledger-desktop-revision-1",
+  "status": "completed",
+  "stage": "Finished",
+  "completedCalls": 1,
+  "cachedCalls": 0,
+  "localWriterCalls": 0,
+  "hostedCalls": 1,
+  "attempt": 1,
+  "attemptHistory": [],
+  "policy": null,
+  "detectorUsedForSelection": false,
+  "memoryCardsUsed": 0,
+  "model": {
+    "model": "gpt-6.1-sol",
+    "mode": "official-native-cli",
+    "task": "fixed-known-answer-semantic-audit"
+  },
+  "attemptStartedAt": 1794514770.162029,
+  "executionHost": {
+    "system": "Darwin",
+    "architecture": "arm64",
+    "python": "3.12.7"
+  },
+  "currentBackend": "hosted",
+  "elapsedSeconds": 18.1,
+  "totalCompletedCalls": 1,
+  "totalLocalWriterCalls": 0,
+  "totalHostedCalls": 1,
+  "totalElapsedSeconds": 18.1
+}

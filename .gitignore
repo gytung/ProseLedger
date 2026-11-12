@@ -23,8 +23,8 @@ credentials.json
 *.pem
 *.key
 
-# Generated manuscripts, source uploads and raw model request/response traces
-runs/
+# Local run outputs; frozen evaluation records remain tracked within project/.
+/runs/
 uploads/
 temp/
 call_cache/

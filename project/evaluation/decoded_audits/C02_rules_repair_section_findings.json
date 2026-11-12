@@ -1,0 +1,48 @@
+{
+  "sections": [
+    {
+      "id": 0,
+      "patches": [
+        {
+          "before": "but may make some journeys less reliable",
+          "after": "while leaving some journeys less reliable",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Removes the added causal claim and restores the original description of uneven reliability."
+    },
+    {
+      "id": 1,
+      "patches": [
+        {
+          "before": "equally about",
+          "after": "as much about",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Restores the grammatical comparative construction “as much about ... as”."
+    },
+    {
+      "id": 3,
+      "patches": [
+        {
+          "before": "To ensure a realistic assessment, we will",
+          "after": "We will",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Removes the unsupported assurance while preserving the planned treatment of disruptions."
+    },
+    {
+      "id": 4,
+      "patches": [
+        {
+          "before": "without favouring either policy",
+          "after": "without selecting the definition that most favours either policy",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Restores the explicit planned safeguard against selecting the most favourable definition."
+    }
+  ]
+}

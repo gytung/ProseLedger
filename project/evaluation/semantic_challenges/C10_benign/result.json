@@ -1,0 +1,26 @@
+{
+  "caseId": "C10",
+  "challenge": "benign",
+  "expectedPass": true,
+  "actualPass": true,
+  "correct": true,
+  "findings": [],
+  "before": "The records may become outdated, and accessibility needs differ between users.",
+  "after": "The records may become outdated, and users differ in their accessibility needs.",
+  "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+  "originalSHA256": "ab7a06375432b8cfde6152ec57ba384f0a0991f9ce7d5e2778b32f568ea09530",
+  "candidateSHA256": "099c748249aca37e4a23920d89260d33e93e15199569a15d0dcb95062c2be233",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The only change, from “accessibility needs differ between users” to “users differ in their accessibility needs,” is equivalent in meaning and readability. All substantive claims, method steps, evaluation measures, limitations, source attributions, uncertainty and planned-work status are preserved. The candidate remains consistent with the supplied sources."
+  },
+  "semanticPass": true,
+  "combinedPass": true,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": []
+}

@@ -1,0 +1,52 @@
+{
+  "reviews": [
+    {
+      "id": 0,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 1,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 2,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 3,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "We will preserve instances of service disruption, since removing difficult days could make the policy appear more dependable than it is.",
+          "revisedQuote": "We will retain instances of service disruption to ensure the policy's reliability is accurately reflected.",
+          "problem": "Retaining disruptions helps avoid an overly favourable assessment but cannot ensure accurate reliability estimates. The revision replaces a qualified bias concern with an unsupported guarantee."
+        }
+      ],
+      "readability": "similar"
+    },
+    {
+      "id": 4,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+          "revisedQuote": "Sensitivity checks will vary the definition of a long wait without favoring either policy.",
+          "problem": "The revision loses the explicit commitment against selecting whichever long-wait definition most favours a policy. A general statement of impartiality does not preserve this methodological safeguard."
+        }
+      ],
+      "readability": "similar"
+    },
+    {
+      "id": 5,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    }
+  ]
+}

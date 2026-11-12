@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The planned plant study compares seedlings under salt treatment with a water-only control. The treatment is 40 millimolar salt; the control contains no added salt. Height and leaf colour are observations, not direct measures of cellular damage. The proposal contains no completed experimental findings.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "There will be 30 seedlings in each condition, observed for 12 days. The primary comparison is change in height, with leaf colour as a secondary observation. Plants that fail to grow will remain in the analysis. The design does not test recovery after treatment removal.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

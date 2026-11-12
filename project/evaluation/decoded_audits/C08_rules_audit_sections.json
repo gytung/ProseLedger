@@ -1,0 +1,46 @@
+{
+  "reviews": [
+    {
+      "id": 0,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 1,
+      "approve": true,
+      "issues": [],
+      "readability": "better"
+    },
+    {
+      "id": 2,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 3,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 4,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "Difficult days will remain in the overall result [S2].",
+          "revisedQuote": "Difficult days will remain in the overall results.",
+          "problem": "The revision removes the citation to S2, losing explicit attribution for the requirement to include difficult days in the overall results."
+        }
+      ],
+      "readability": "similar"
+    },
+    {
+      "id": 5,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    }
+  ]
+}

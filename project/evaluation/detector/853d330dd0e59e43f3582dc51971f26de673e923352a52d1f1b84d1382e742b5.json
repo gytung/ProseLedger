@@ -1,0 +1,688 @@
+{
+  "textSHA256": "853d330dd0e59e43f3582dc51971f26de673e923352a52d1f1b84d1382e742b5",
+  "characters": 2445,
+  "scannedAtUTC": "2026-11-12T20:53:22.924251+00:00",
+  "elapsedSeconds": 1.81,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 12,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 17,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 22,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 25,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 26,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9999898868711166,
+            "sentence": "# Bus Reliability Beyond the Average Wait",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0113128883402448e-05,
+              "ai": 0.9983252703841912,
+              "paraphrased": 0.0016646164869253976
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999989886740166,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0113259834007249e-05,
+              "ai": 0.9983382029502416,
+              "paraphrased": 0.0016516837899243815
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999904992375651,
+            "sentence": "A timetable can reduce average waiting time, but may leave some journeys less reliable.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.500762434877091e-06,
+              "ai": 0.9983627935919963,
+              "paraphrased": 0.0016277056455687663
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999898869038669,
+            "sentence": "We propose to compare a fixed timetable with a holding policy using an anonymized arrival log from one bus route.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0113096133088684e-05,
+              "ai": 0.9983220214660211,
+              "paraphrased": 0.0016678654378457516
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999898868381326,
+            "sentence": "The study will examine mean waiting time alongside instances of long waits, with peak and off-peak periods reported separately [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0113161867409356e-05,
+              "ai": 0.9983285129437353,
+              "paraphrased": 0.0016613738943973427
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999892342570252,
+            "sentence": "A better overall average will not be considered evidence that all passengers benefit.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.076574297477997e-05,
+              "ai": 0.9983599429793817,
+              "paraphrased": 0.001629291277643506
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999874141318243,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2585868175584599e-05,
+              "ai": 0.9983154827258046,
+              "paraphrased": 0.0016719314060197816
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999881760541937,
+            "sentence": "Passengers may care equally about an unusually long delay and a typical journey.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.182394580630857e-05,
+              "ai": 0.9983675999317476,
+              "paraphrased": 0.0016205761224460536
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999988540564458,
+            "sentence": "A single average can obscure these differences.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.145943554206543e-05,
+              "ai": 0.9983043374525588,
+              "paraphrased": 0.0016842031118992195
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999888926251794,
+            "sentence": "The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.11073748205779e-05,
+              "ai": 0.9983500428259657,
+              "paraphrased": 0.0016388497992136793
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999874136335253,
+            "sentence": "While it supports a comparison of service patterns, it cannot establish how individual passengers experienced those patterns.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2586366474685635e-05,
+              "ai": 0.998354945288472,
+              "paraphrased": 0.001632468345053246
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999811084154551,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.88915845448964e-05,
+              "ai": 0.9982076111346536,
+              "paraphrased": 0.0017734972808014938
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999822508338293,
+            "sentence": "The data brief limits the available evidence to a single route and weekday service [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.7749166170715286e-05,
+              "ai": 0.9983293714928114,
+              "paraphrased": 0.001652879341017881
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999772107893543,
+            "sentence": "The experimental brief mandates that both policies use the same recorded arrivals [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.278921064564691e-05,
+              "ai": 0.9982781842446476,
+              "paraphrased": 0.0016990265447066762
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999833270682466,
+            "sentence": "This comparison will control the input sequence rather than assert that the historical service operated under both policies.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6672931753502284e-05,
+              "ai": 0.9982774438501021,
+              "paraphrased": 0.001705883218144465
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999935108336423,
+            "sentence": "Passenger satisfaction is not captured in the source packet.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.489166357698027e-05,
+              "ai": 0.9978359712037427,
+              "paraphrased": 0.0020991371326803177
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999956099155822,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.390084417808816e-05,
+              "ai": 0.9976756474913951,
+              "paraphrased": 0.0022804516644268206
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999798889559325,
+            "sentence": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.011104406753334e-05,
+              "ai": 0.9982600265938447,
+              "paraphrased": 0.0017198623620877877
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999843364986503,
+            "sentence": "Each simulated decision will use only information available at that point in the log.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.566350134972797e-05,
+              "ai": 0.9983240851437389,
+              "paraphrased": 0.001660251354911324
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999140076118828,
+            "sentence": "Peak and off-peak periods will be analyzed separately.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.5992388117237e-05,
+              "ai": 0.9981250022808672,
+              "paraphrased": 0.001789005331015603
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999560847528465,
+            "sentence": "We will retain instances of service disruption , since removing difficult days could make the policy appear more dependable than it is.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.391524715355792e-05,
+              "ai": 0.9980029646066138,
+              "paraphrased": 0.0019531201462327453
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999217390697938,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.826093020621356e-05,
+              "ai": 0.9976656757186062,
+              "paraphrased": 0.0022560633511875604
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999741777799143,
+            "sentence": "The planned measures include mean waiting time, the frequency of long waits, and the difference between peak and off-peak outcomes.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.5822220085659964e-05,
+              "ai": 0.9982264370448831,
+              "paraphrased": 0.0017477407350311904
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999698124661368,
+            "sentence": "We will report days when the holding policy performs worse, as well as those where it improves the average.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.0187533863180467e-05,
+              "ai": 0.9981702124811638,
+              "paraphrased": 0.001799599984972992
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999848195122134,
+            "sentence": "Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.5180487786636263e-05,
+              "ai": 0.9982519054152804,
+              "paraphrased": 0.0017329140969329813
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999716436757018,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.8356324298220918e-05,
+              "ai": 0.9980913448283076,
+              "paraphrased": 0.0018802988473941018
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999668591853894,
+            "sentence": "A replay of historical arrivals is a limited test of an operational policy, as it does not capture changes in boarding behavior or traffic resulting from a different timetable.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.314081461052093e-05,
+              "ai": 0.9977574675671647,
+              "paraphrased": 0.0022093916182247837
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999635984857612,
+            "sentence": "Therefore, we will make no causal claim about passenger satisfaction [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.640151423873689e-05,
+              "ai": 0.997852091362551,
+              "paraphrased": 0.0021115071232101854
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.99998481967939,
+            "sentence": "The intended result is a clearer comparison of reliability trade-offs on the supplied route, rather than a general guarantee for all bus services.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.518032061002922e-05,
+              "ai": 0.9982408897624981,
+              "paraphrased": 0.0017439299168918298
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Bus Reliability Beyond the Average Wait\n\n## Abstract\n\nA timetable can reduce average waiting time, but may leave some journeys less reliable. We propose to compare a fixed timetable with a holding policy using an anonymized arrival log from one bus route. The study will examine mean waiting time alongside instances of long waits, with peak and off-peak periods reported separately [S2]. A better overall average will not be considered evidence that all passengers benefit.\n\n## Introduction\n\nPassengers may care equally about an unusually long delay and a typical journey. A single average can obscure these differences. The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1]. While it supports a comparison of service patterns, it cannot establish how individual passengers experienced those patterns.\n\n## Related Work\n\nThe data brief limits the available evidence to a single route and weekday service [S1]. The experimental brief mandates that both policies use the same recorded arrivals [S2]. This comparison will control the input sequence rather than assert that the historical service operated under both policies. Passenger satisfaction is not captured in the source packet.\n\n## Methodology\n\nWe will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2]. Each simulated decision will use only information available at that point in the log. Peak and off-peak periods will be analyzed separately. We will retain instances of service disruption , since removing difficult days could make the policy appear more dependable than it is.\n\n## Planned Evaluation\n\nThe planned measures include mean waiting time, the frequency of long waits, and the difference between peak and off-peak outcomes. We will report days when the holding policy performs worse, as well as those where it improves the average. Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.\n\n## Limitations and Conclusion\n\nA replay of historical arrivals is a limited test of an operational policy, as it does not capture changes in boarding behavior or traffic resulting from a different timetable. Therefore, we will make no causal claim about passenger satisfaction [S2]. The intended result is a clearer comparison of reliability trade-offs on the supplied route, rather than a general guarantee for all bus services.",
+        "document_id": null
+      }
+    ]
+  }
+}

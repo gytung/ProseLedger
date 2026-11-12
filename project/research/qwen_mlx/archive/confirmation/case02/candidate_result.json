@@ -1,0 +1,9 @@
+{
+  "case": "case02",
+  "status": "completed",
+  "eligibleNewCandidate": true,
+  "retained": "repaired_new_candidate",
+  "textSHA256": "af78e5b8d2715e71b3ad16ca6254fc595d58dc99ce994524d3a6d59d592d813a",
+  "checksFile": "dev_qwen_plain_closed.checks.json",
+  "selectionUsedDetector": false
+}

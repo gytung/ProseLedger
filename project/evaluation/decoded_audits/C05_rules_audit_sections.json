@@ -1,0 +1,46 @@
+{
+  "reviews": [
+    {
+      "id": 0,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 1,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 2,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "They will not be counted as unnecessary hedging when an editor assesses whether a revision is more concise.",
+          "revisedQuote": "We will consider these qualifications as integral content and not count them as unnecessary hedging when assessing conciseness.",
+          "problem": "The revision removes the explicit role of an editor in assessing conciseness and instead assigns the assessment to the authors. Preserve the specified assessor."
+        }
+      ],
+      "readability": "similar"
+    },
+    {
+      "id": 3,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 4,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 5,
+      "approve": true,
+      "issues": [],
+      "readability": "better"
+    }
+  ]
+}

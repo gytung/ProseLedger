@@ -1,0 +1,1006 @@
+{
+  "label": "heldout_case04_targeted",
+  "textSHA256": "ac14f893fe5cefadf3d0a654fc359d5c8f828b7ef12a1d06e46d356687d4b44d",
+  "characters": 4964,
+  "requestVersion": "provider-default-returned-version-recorded",
+  "elapsedSeconds": 0.89,
+  "raw": {
+    "version": "2026-10-07-base",
+    "neatVersion": "4.1o",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 2,
+            "completely_generated_prob": 0.8254776901813464
+          },
+          {
+            "start_sentence_index": 13,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 14,
+            "num_sentences": 2,
+            "completely_generated_prob": 0.8254776901813464
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 20,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 24,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 27,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 31,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 32,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 35,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 39,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 40,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [
+          {
+            "start": 0,
+            "end": 70,
+            "text": "# Preserving Negative Findings and Uncertainty in Literature Synthesis",
+            "reason": "header"
+          },
+          {
+            "start": 72,
+            "end": 83,
+            "text": "## Abstract",
+            "reason": "header"
+          },
+          {
+            "start": 640,
+            "end": 655,
+            "text": "## Introduction",
+            "reason": "header"
+          },
+          {
+            "start": 1427,
+            "end": 1442,
+            "text": "## Related Work",
+            "reason": "header"
+          },
+          {
+            "start": 2468,
+            "end": 2482,
+            "text": "## Methodology",
+            "reason": "header"
+          },
+          {
+            "start": 3650,
+            "end": 3671,
+            "text": "## Planned Evaluation",
+            "reason": "header"
+          },
+          {
+            "start": 4531,
+            "end": 4560,
+            "text": "## Limitations and Conclusion",
+            "reason": "header"
+          }
+        ],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0,
+            "sentence": "# Preserving Negative Findings and Uncertainty in Literature Synthesis",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999364941969,
+            "sentence": "Literature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.350580310804426e-07,
+              "ai": 0.9999817935240434,
+              "paraphrased": 1.7571417925522817e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992339721067,
+            "sentence": "This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.660278932881632e-07,
+              "ai": 0.9999839676260337,
+              "paraphrased": 1.5266346072984213e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995206329598,
+            "sentence": "The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.793670401837807e-07,
+              "ai": 0.9999820177145128,
+              "paraphrased": 1.750291844702164e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.99999959157499,
+            "sentence": "Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.084250100258356e-07,
+              "ai": 0.999979989277715,
+              "paraphrased": 1.960229727495841e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995769608596,
+            "sentence": "A synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.2303914038135373e-07,
+              "ai": 0.9999801272067946,
+              "paraphrased": 1.944975406502643e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995531836534,
+            "sentence": "For example, a reported failure to detect an effect should not become evidence that no effect exists.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.468163464989252e-07,
+              "ai": 0.9999755360540068,
+              "paraphrased": 2.4017129646653087e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999996338918269,
+            "sentence": "Likewise, a result limited to particular conditions should not become an unrestricted conclusion.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.661081731777881e-07,
+              "ai": 0.9999754992036065,
+              "paraphrased": 2.413468822035862e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999414957612,
+            "sentence": "These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.85042387929874e-07,
+              "ai": 0.9999810002846168,
+              "paraphrased": 1.8414672995264186e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993422184663,
+            "sentence": "The project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.577815336028634e-07,
+              "ai": 0.9999820093975037,
+              "paraphrased": 1.7332820962641668e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994373699533,
+            "sentence": "Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.626300466280323e-07,
+              "ai": 0.9999814492646815,
+              "paraphrased": 1.7988105271894718e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999953621877194,
+            "sentence": "Gao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.637812280503491e-06,
+              "ai": 0.9999821244613348,
+              "paraphrased": 1.3237726384630026e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999989364748744,
+            "sentence": "This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.06352512563822e-06,
+              "ai": 0.9999847344305306,
+              "paraphrased": 1.420204434372882e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999997418659849,
+            "sentence": "Slobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.5813401509602185e-06,
+              "ai": 0.9999856677134626,
+              "paraphrased": 1.1750946386354675e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999989611095614,
+            "sentence": "The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0388904385904099e-06,
+              "ai": 0.9999864033261264,
+              "paraphrased": 1.2557783435025121e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999980438757876,
+            "sentence": "RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.9561242124424997e-06,
+              "ai": 0.9999857289893366,
+              "paraphrased": 1.2314886451011573e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999980739519225,
+            "sentence": "Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.9260480774997354e-05,
+              "ai": 0.9999666482508612,
+              "paraphrased": 1.4091268363740436e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985965452527,
+            "sentence": "Each source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4034547472673692e-06,
+              "ai": 0.9999888355921425,
+              "paraphrased": 9.760953110232007e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993549393917,
+            "sentence": "The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.450606082797407e-07,
+              "ai": 0.9999846734276205,
+              "paraphrased": 1.4681511771224464e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995769587914,
+            "sentence": "Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.2304120861573546e-07,
+              "ai": 0.9999850664870668,
+              "paraphrased": 1.4510471724664608e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992487858024,
+            "sentence": "A planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.512141975836152e-07,
+              "ai": 0.9999875207470773,
+              "paraphrased": 1.1728038725054933e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.99999953173621,
+            "sentence": "Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.682637899779913e-07,
+              "ai": 0.9999847061481792,
+              "paraphrased": 1.482558803075928e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995187557638,
+            "sentence": "The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.812442363127067e-07,
+              "ai": 0.9999840422570642,
+              "paraphrased": 1.5476498699541995e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992661897813,
+            "sentence": "Verification will operate in both directions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.338102186625074e-07,
+              "ai": 0.9999846133262251,
+              "paraphrased": 1.4652863556173694e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994673114807,
+            "sentence": "Output claims will be checked against their source spans for support, polarity, scope, and certainty.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.326885193094752e-07,
+              "ai": 0.9999834995429859,
+              "paraphrased": 1.5967768494746373e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995054164101,
+            "sentence": "Selected ledger entries will also be checked against the draft to identify consequential omissions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.945835898555379e-07,
+              "ai": 0.9999815874367982,
+              "paraphrased": 1.791797961193157e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999313337969,
+            "sentence": "Flagged passages will be revised and checked again.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.866620310082318e-07,
+              "ai": 0.9999826119281441,
+              "paraphrased": 1.6701409824886597e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994034167669,
+            "sentence": "The study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.965832330994043e-07,
+              "ai": 0.9999841668563338,
+              "paraphrased": 1.5236560433008296e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993318560231,
+            "sentence": "Independent annotators will identify relevant evidence units and adjudicate disagreements.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.681439769098106e-07,
+              "ai": 0.9999878530950549,
+              "paraphrased": 1.1478760968239123e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993698811981,
+            "sentence": "Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.301188018877286e-07,
+              "ai": 0.9999863373323876,
+              "paraphrased": 1.3032548810478425e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991353562983,
+            "sentence": "Human reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.646437017131066e-07,
+              "ai": 0.9999891429263655,
+              "paraphrased": 9.992429932760407e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999377221554,
+            "sentence": "Verification time will provide a complementary usability measure.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.227784459812557e-07,
+              "ai": 0.9999874178699555,
+              "paraphrased": 1.1959351598526854e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999988810672739,
+            "sentence": "Ablations will remove uncertainty fields or omission checking to examine their contributions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.118932726106453e-06,
+              "ai": 0.9999898006027451,
+              "paraphrased": 9.080464528758442e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991940658257,
+            "sentence": "Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.059341743572625e-07,
+              "ai": 0.999986237657199,
+              "paraphrased": 1.2956408626725138e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992943001182,
+            "sentence": "A ledger cannot recover findings missing from available sources or correct publication bias.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.056998817888923e-07,
+              "ai": 0.9999867365124426,
+              "paraphrased": 1.2557787675562733e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993318564065,
+            "sentence": "Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.681435934772659e-07,
+              "ai": 0.9999872787074292,
+              "paraphrased": 1.2053148977372384e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994796508643,
+            "sentence": "The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.203491356554062e-07,
+              "ai": 0.9999841235898558,
+              "paraphrased": 1.5356061008537364e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "4.1o",
+        "version": "2026-10-07-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Preserving Negative Findings and Uncertainty in Literature Synthesis\n\n## Abstract\n\nLiterature synthesis should communicate what studies support, what they fail to establish, and where uncertainty remains. This proposal investigates whether an explicit evidence ledger can help language models preserve these distinctions. The proposed method will record findings alongside their polarity, qualifications, and study conditions before generating a synthesis. Planned evaluation will examine evidence retention, attribution accuracy, readability, and verification effort without assuming that the method will outperform simpler approaches.\n\n## Introduction\n\nA synthesis can contain supported statements while omitting negative findings or qualifications that materially affect its interpretation. For example, a reported failure to detect an effect should not become evidence that no effect exists. Likewise, a result limited to particular conditions should not become an unrestricted conclusion. These distinctions motivate a research question: can structured evidence planning preserve consequential negative and uncertain findings without overwhelming readers?\n\nThe project will investigate fidelity to the supplied evidence, rather than infer the true state of an entire research field. Its intended contribution is a generation and evaluation procedure that makes omissions and changes in evidential strength inspectable.\n\n## Related Work\n\nGao and colleagues introduce ALCE to evaluate citation-bearing generation through fluency, correctness, and citation quality, reporting substantial remaining gaps in citation support [S1]. This establishes a relevant evaluation foundation, although the supplied excerpts do not establish a dedicated measure of negative-finding retention.\n\nSlobodkin and colleagues organize grounded generation into content selection, sentence planning, and sequential generation, using selected source segments as fine-grained attributions [S2]. The proposed method will adapt this planning structure by explicitly representing qualifications and findings that warrant inclusion. RefChecker extracts claim-triplets and checks them against references [S5]; this motivates granular verification, while our proposed representation will additionally retain uncertainty and scope. Jourdan and colleagues report that LLM judges struggle with correctness in scientific revision evaluation [S4], supporting the inclusion of human evidence checks.\n\n## Methodology\n\nEach source passage will be mapped into an evidence ledger containing the reported finding, supporting span, finding polarity, uncertainty language, relevant conditions, and stated limitations. The ledger will distinguish an explicit negative finding from an inconclusive result and from information simply absent from the passage. Ambiguous cases will retain the source wording rather than receive an unjustifiably definite label.\n\nA planning stage will identify evidence needed to answer the synthesis question, including qualifications that could change a reader’s interpretation. Inclusion decisions will depend on relevance and consequence, avoiding a fixed quota for negative statements. The generator will then draft sentences linked to selected ledger entries, preserving differences between individual studies when aggregation would conceal disagreement.\n\nVerification will operate in both directions. Output claims will be checked against their source spans for support, polarity, scope, and certainty. Selected ledger entries will also be checked against the draft to identify consequential omissions. Flagged passages will be revised and checked again.\n\n## Planned Evaluation\n\nThe study will assemble source bundles containing explicit negative, inconclusive, qualified, and conflicting findings. Independent annotators will identify relevant evidence units and adjudicate disagreements. Comparisons will include direct citation-based synthesis, attribution-first generation, and the proposed ledger method under matched source access and length budgets.\n\nHuman reviewers will assess supported-claim precision, retention of relevant negative and uncertain findings, changes in certainty, citation accuracy, and readability. Verification time will provide a complementary usability measure. Ablations will remove uncertainty fields or omission checking to examine their contributions. Results will include uncertainty estimates and qualitative error analysis; relevance judgments will be fixed before reviewers inspect system outputs.\n\n## Limitations and Conclusion\n\nA ledger cannot recover findings missing from available sources or correct publication bias. Annotation may also simplify nuanced scientific language, and preservation requirements may reduce concision. The planned study will therefore test whether explicit evidence tracking improves faithful synthesis under bounded conditions, while documenting cases where its added structure offers little benefit.",
+        "document_id": null
+      }
+    ]
+  }
+}

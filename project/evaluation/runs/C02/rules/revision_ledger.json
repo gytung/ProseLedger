@@ -1,0 +1,196 @@
+{
+  "scope": "This run only; no historical card retrieval",
+  "memoryCardsUsed": 0,
+  "originalSHA256": "d490512c038f7dbdf72521811483ea279bc61255fec05b39d226df5aef696b4b",
+  "retainedSHA256": "8454b75de1b7481cf85a26fcd781cf6e658893b207d088157aa43a642dde89b6",
+  "detectorUsedForAdmission": false,
+  "fullAudit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The candidate preserves all substantive claims, method steps, comparisons, evaluation measures, limitations, source attributions, qualifications and planned-work status. Specifying the frequency of long waits in the Abstract is consistent with the original Planned Evaluation. Other changes are equivalent paraphrases or minor stylistic edits, with little overall effect on readability."
+  },
+  "repairHistory": [],
+  "edits": [
+    {
+      "id": 0,
+      "heading": "Abstract",
+      "original": "A timetable can lower average waiting time while leaving some journeys less reliable. We propose to compare a fixed timetable with a holding policy using an anonymized arrival log from one bus route. The study will examine mean waiting time alongside long waits, with peak and off-peak periods reported separately [S2]. A better overall average will not be treated as evidence that all passengers benefit.",
+      "candidate": "A timetable can reduce average waiting time but may make some journeys less reliable. We propose comparing a fixed timetable with a holding policy using an anonymized arrival log from one bus route. The study will examine mean waiting time alongside the frequency of long waits, with peak and off-peak periods reported separately [S2]. A better overall average will not be treated as evidence that all passengers benefit.",
+      "text": "A timetable can reduce average waiting time while leaving some journeys less reliable. We propose comparing a fixed timetable with a holding policy using an anonymized arrival log from one bus route. The study will examine mean waiting time alongside the frequency of long waits, with peak and off-peak periods reported separately [S2]. A better overall average will not be treated as evidence that all passengers benefit.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 0,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "while leaving some journeys less reliable",
+            "revisedQuote": "but may make some journeys less reliable",
+            "problem": "The revision introduces a claim that the timetable may cause reliability to deteriorate for some journeys. The original describes uneven reliability despite a lower average, without asserting such deterioration."
+          }
+        ],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": true,
+        "text": "A timetable can reduce average waiting time while leaving some journeys less reliable. We propose comparing a fixed timetable with a holding policy using an anonymized arrival log from one bus route. The study will examine mean waiting time alongside the frequency of long waits, with peak and off-peak periods reported separately [S2]. A better overall average will not be treated as evidence that all passengers benefit.",
+        "spans": [
+          {
+            "before": "but may make some journeys less reliable",
+            "after": "while leaving some journeys less reliable",
+            "issueIndex": 0,
+            "start": 44,
+            "end": 84
+          }
+        ]
+      },
+      "retained": "A timetable can reduce average waiting time while leaving some journeys less reliable. We propose comparing a fixed timetable with a holding policy using an anonymized arrival log from one bus route. The study will examine mean waiting time alongside the frequency of long waits, with peak and off-peak periods reported separately [S2]. A better overall average will not be treated as evidence that all passengers benefit.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 1,
+      "heading": "Introduction",
+      "original": "Passengers may care as much about an unusually long delay as they do about a typical journey. A single average can hide these differences. The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1]. It can support a comparison of service patterns, although it cannot establish how individual passengers experienced those patterns.",
+      "candidate": "Passengers may care equally about an unusually long delay as they do about a typical journey. A single average waiting time can obscure these differences. The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1]. While it supports a comparison of service patterns, it cannot establish how individual passengers experienced those patterns.",
+      "text": "Passengers may care as much about an unusually long delay as they do about a typical journey. A single average waiting time can obscure these differences. The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1]. While it supports a comparison of service patterns, it cannot establish how individual passengers experienced those patterns.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 1,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "may care as much about an unusually long delay as they do about a typical journey",
+            "revisedQuote": "may care equally about an unusually long delay as they do about a typical journey",
+            "problem": "“Equally about ... as they do about” is an awkward comparative construction. Retain “as much about ... as” or use “equally about ... and ...”."
+          }
+        ],
+        "readability": "worse"
+      },
+      "repair": {
+        "ok": true,
+        "text": "Passengers may care as much about an unusually long delay as they do about a typical journey. A single average waiting time can obscure these differences. The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1]. While it supports a comparison of service patterns, it cannot establish how individual passengers experienced those patterns.",
+        "spans": [
+          {
+            "before": "equally about",
+            "after": "as much about",
+            "issueIndex": 0,
+            "start": 20,
+            "end": 33
+          }
+        ]
+      },
+      "retained": "Passengers may care as much about an unusually long delay as they do about a typical journey. A single average waiting time can obscure these differences. The available log records scheduled and observed arrivals on weekdays but includes no passenger identities [S1]. While it supports a comparison of service patterns, it cannot establish how individual passengers experienced those patterns.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 2,
+      "heading": "Related Work",
+      "original": "The data brief limits the available evidence to one route and to weekday service [S1]. The experimental brief requires both policies to use the same recorded arrivals [S2]. This comparison will control the input sequence rather than claim that the historical service operated under both policies. Passenger satisfaction is outside the information recorded in the source packet.",
+      "candidate": "The data brief limits the available evidence to one route and weekday service [S1]. The experimental brief requires both policies to use the same recorded arrivals [S2]. This comparison will control the input sequence, rather than claim that the historical service operated under both policies. Passenger satisfaction is outside the information recorded in the source packet.",
+      "text": "The data brief limits the available evidence to one route and weekday service [S1]. The experimental brief requires both policies to use the same recorded arrivals [S2]. This comparison will control the input sequence, rather than claim that the historical service operated under both policies. Passenger satisfaction is outside the information recorded in the source packet.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 2,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The data brief limits the available evidence to one route and weekday service [S1]. The experimental brief requires both policies to use the same recorded arrivals [S2]. This comparison will control the input sequence, rather than claim that the historical service operated under both policies. Passenger satisfaction is outside the information recorded in the source packet.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 3,
+      "heading": "Methodology",
+      "original": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2]. Each simulated decision will use only information available at that point in the log. Peak and off-peak periods will remain separate throughout analysis. We will preserve instances of service disruption, since removing difficult days could make the policy appear more dependable than it is.",
+      "candidate": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2]. Each simulated decision will use only information available at that point in the log. Peak and off-peak periods will remain separate throughout analysis. To ensure a realistic assessment, we will preserve instances of service disruption, as removing difficult days could make the policy appear more dependable than it is.",
+      "text": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2]. Each simulated decision will use only information available at that point in the log. Peak and off-peak periods will remain separate throughout analysis. We will preserve instances of service disruption, as removing difficult days could make the policy appear more dependable than it is.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 3,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "We will preserve instances of service disruption, since removing difficult days could make the policy appear more dependable than it is.",
+            "revisedQuote": "To ensure a realistic assessment, we will preserve instances of service disruption, as removing difficult days could make the policy appear more dependable than it is.",
+            "problem": "“Ensure a realistic assessment” adds an unsupported assurance. Preserving disruptions reduces a potential bias but does not ensure realism, especially given the manuscript’s stated limitations of historical replay."
+          }
+        ],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": true,
+        "text": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2]. Each simulated decision will use only information available at that point in the log. Peak and off-peak periods will remain separate throughout analysis. We will preserve instances of service disruption, as removing difficult days could make the policy appear more dependable than it is.",
+        "spans": [
+          {
+            "before": "To ensure a realistic assessment, we will",
+            "after": "We will",
+            "issueIndex": 0,
+            "start": 242,
+            "end": 283
+          }
+        ]
+      },
+      "retained": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2]. Each simulated decision will use only information available at that point in the log. Peak and off-peak periods will remain separate throughout analysis. We will preserve instances of service disruption, as removing difficult days could make the policy appear more dependable than it is.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 4,
+      "heading": "Planned Evaluation",
+      "original": "The planned measures are mean waiting time, the frequency of long waits and the difference between peak and off-peak outcomes. We will report days on which the holding policy performs worse as well as those on which it improves the average. Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+      "candidate": "The planned measures include mean waiting time, the frequency of long waits, and the difference between peak and off-peak outcomes. We will report days when the holding policy performs worse as well as those where it improves the average. Sensitivity checks will vary the definition of a long wait without favouring either policy.",
+      "text": "The planned measures include mean waiting time, the frequency of long waits, and the difference between peak and off-peak outcomes. We will report days when the holding policy performs worse as well as those where it improves the average. Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 4,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+            "revisedQuote": "Sensitivity checks will vary the definition of a long wait without favouring either policy.",
+            "problem": "The revision removes the explicit commitment against selecting the most favourable definition. A general promise of neutrality does not preserve this concrete safeguard against selective reporting."
+          }
+        ],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": true,
+        "text": "The planned measures include mean waiting time, the frequency of long waits, and the difference between peak and off-peak outcomes. We will report days when the holding policy performs worse as well as those where it improves the average. Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+        "spans": [
+          {
+            "before": "without favouring either policy",
+            "after": "without selecting the definition that most favours either policy",
+            "issueIndex": 0,
+            "start": 298,
+            "end": 329
+          }
+        ]
+      },
+      "retained": "The planned measures include mean waiting time, the frequency of long waits, and the difference between peak and off-peak outcomes. We will report days when the holding policy performs worse as well as those where it improves the average. Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 5,
+      "heading": "Limitations and Conclusion",
+      "original": "A replay of historical arrivals is a limited test of an operational policy. It does not capture changes in boarding behaviour or traffic caused by a different timetable. We will therefore make no causal claim about passenger satisfaction [S2]. The intended result is a clearer comparison of reliability trade-offs on the supplied route, not a general guarantee for all bus services.",
+      "candidate": "A replay of historical arrivals is a limited test of an operational policy. It does not capture changes in boarding behaviour or traffic caused by a different timetable. Therefore, we will make no causal claim about passenger satisfaction [S2]. The intended result is a clearer comparison of reliability trade-offs on the supplied route, not a general guarantee for all bus services.",
+      "text": "A replay of historical arrivals is a limited test of an operational policy. It does not capture changes in boarding behaviour or traffic caused by a different timetable. Therefore, we will make no causal claim about passenger satisfaction [S2]. The intended result is a clearer comparison of reliability trade-offs on the supplied route, not a general guarantee for all bus services.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 5,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A replay of historical arrivals is a limited test of an operational policy. It does not capture changes in boarding behaviour or traffic caused by a different timetable. Therefore, we will make no causal claim about passenger satisfaction [S2]. The intended result is a clearer comparison of reliability trade-offs on the supplied route, not a general guarantee for all bus services.",
+      "status": "verified_edit"
+    }
+  ]
+}

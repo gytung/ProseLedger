@@ -1,0 +1,811 @@
+{
+  "protocol": "known-answer-semantic-audit-extension-20261113",
+  "scheduled": 24,
+  "completed": 24,
+  "cases": [
+    {
+      "caseId": "C01",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "The proposed experiment will therefore not estimate annual retreat rates",
+      "after": "The proposed experiment will therefore estimate annual retreat rates",
+      "referenceReason": "Negation removal changes a declared exclusion into a planned estimate.",
+      "originalSHA256": "53bb11a91147eda5a1d09fd405b5ab3577d96b1c2025b561daa6b2895b55f5e4",
+      "candidateSHA256": "15d4a672ca620d185dd8a54f1a8d03d08d6789e1568a499f570e92ff43c2c5da",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Limitations and Conclusion",
+            "originalQuote": "The proposed experiment will therefore not estimate annual retreat rates or establish that any particular glacier is shrinking [S2].",
+            "revisedQuote": "The proposed experiment will therefore estimate annual retreat rates or establish that any particular glacier is shrinking [S2].",
+            "problem": "Removing “not” reverses the stated scope limitation into a planned claim to estimate retreat rates or establish glacier shrinkage. This contradicts S2’s explicit exclusion of annual retreat-rate estimation and is unsupported by the supplied evidence concerning glacier shrinkage."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate is otherwise identical to the original. Removing the negation changes substantive meaning without improving readability; all other claims, methods, evaluation measures, qualifications, attributions and planned-work status are preserved."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C02",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": false,
+      "correct": true,
+      "findings": [
+        "Numeric tokens were added.",
+        "Numeric tokens were removed."
+      ],
+      "before": "arrivals from 18 weekdays",
+      "after": "arrivals from 81 weekdays",
+      "referenceReason": "The planned number of days changes from 18 to 81.",
+      "originalSHA256": "d490512c038f7dbdf72521811483ea279bc61255fec05b39d226df5aef696b4b",
+      "candidateSHA256": "5bf501f31aa88f310c2baa2dae42add6568856dcba54f5af2a02b774c19dbc6d",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Methodology",
+            "originalQuote": "We will apply the fixed timetable and holding policy to arrivals from 18 weekdays [S2].",
+            "revisedQuote": "We will apply the fixed timetable and holding policy to arrivals from 81 weekdays [S2].",
+            "problem": "The candidate changes the planned analysis coverage from 18 to 81 weekdays, contradicting both the original and S2, which specifies \"The analysis will use 18 weekdays\". The citation therefore no longer supports the stated coverage."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate is otherwise identical to the original, preserving all other substantive propositions, method steps, comparisons, evaluation measures, limitations, attribution, uncertainty and planned-work status. The numerical change does not affect readability."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C03",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "assign 30 seedlings to each condition and observe them for 12 days",
+      "after": "assign 12 seedlings to each condition and observe them for 30 days",
+      "referenceReason": "Sample size and duration are exchanged while the set of numeric tokens is unchanged.",
+      "originalSHA256": "2e894c504922a73ffe8b3a45fa63582ab4bacf0a389061272f4ebb65192c02b7",
+      "candidateSHA256": "e831265eb9d1d88036cc83264a9c8f3cf0623df477d65454efdba7b34bbf30d5",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Methodology",
+            "originalQuote": "We plan to assign 30 seedlings to each condition",
+            "revisedQuote": "We plan to assign 12 seedlings to each condition",
+            "problem": "Changes the planned sample size from 30 to 12 seedlings per condition, contradicting the original and source S2."
+          },
+          {
+            "section": "Methodology",
+            "originalQuote": "observe them for 12 days [S2]",
+            "revisedQuote": "observe them for 30 days [S2]",
+            "problem": "Changes the planned observation period from 12 to 30 days while retaining attribution to S2, which specifies 12 days."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate preserves all other substantive propositions, method steps, comparisons, evaluation measures, limitations, qualifications, source attribution and planned-work status. Its wording and structure are otherwise identical, so readability is unchanged."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        },
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C04",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "a developer will retain authority over acceptance",
+      "after": "the assistant will retain authority over acceptance",
+      "referenceReason": "The actor holding the final decision changes from developer to assistant.",
+      "originalSHA256": "6a91fbc02ebc88262788f6d114f56a2710aa7d90f6099e77d5c4ba1b62e5bfe5",
+      "candidateSHA256": "55c8410dfdf015f5902c43d1a99b4408dc05836aba4a70585f2f487a3730b4dd",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Abstract",
+            "originalQuote": "The assistant will propose changes, while a developer will retain authority over acceptance.",
+            "revisedQuote": "The assistant will propose changes, while the assistant will retain authority over acceptance.",
+            "problem": "Transfers acceptance authority from the developer to the assistant, contradicting the original, source S1, and the candidate’s own Related Work and Limitations and Conclusion sections."
+          }
+        ],
+        "readability": "similar",
+        "reason": "All other substantive propositions, method steps, comparisons, evaluation measures, limitations, attributions, qualifications and planned-work status are unchanged. The single substitution preserves sentence structure but reverses who controls acceptance."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C05",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "A blank maker field also does not establish that an object was made anonymously",
+      "after": "A blank maker field also establishes that an object was made anonymously",
+      "referenceReason": "Missing metadata is turned into evidence of anonymous production.",
+      "originalSHA256": "c2df0a24737c7e9ca3acc0c4d59451ac2b9f33c005f9faa883c8b1200814f6f2",
+      "candidateSHA256": "ae02ec711fed5df6c305f0dc7c2a24c9ad4cc55594ce5a92d52876985228131b",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Introduction",
+            "originalQuote": "A blank maker field also does not establish that an object was made anonymously [S1].",
+            "revisedQuote": "A blank maker field also establishes that an object was made anonymously [S1].",
+            "problem": "Reverses the original claim and contradicts S1, which explicitly states that a missing maker field is not evidence of anonymous production. It also contradicts the candidate’s retained commitment not to infer a maker from a missing field."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate changes only one sentence, reversing its meaning without materially changing readability. All other substantive claims, method steps, evaluation measures, qualifications, limitations, attributions and planned-work status are preserved."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C06",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "Equality is therefore not an exceedance",
+      "after": "Equality is therefore an exceedance",
+      "referenceReason": "The boundary convention changes from a strict threshold to an inclusive one.",
+      "originalSHA256": "3f8d97b40fc49843b836109f5ecd6457308c916addb5ac64c467a8b2670fcb80",
+      "candidateSHA256": "b95ff8bbb3f88dca446746023a6c8fa9f0f3b403591443073f072ccb9fbbe09b",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Related Work",
+            "originalQuote": "Equality is therefore not an exceedance.",
+            "revisedQuote": "Equality is therefore an exceedance.",
+            "problem": "Reverses the threshold rule: readings equal to 900 microsiemens per centimetre become exceedances, contradicting both the original and S1, which explicitly excludes equality."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate otherwise preserves all substantive claims, methods, evaluation measures, limitations, attribution, uncertainty and planned-work status. Wording is otherwise identical, but the changed equality rule creates an internal contradiction with the definition of exceedance as a reading above the threshold."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C07",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "no archival source has resolved the competing closure dates",
+      "after": "an archival source has resolved the competing closure dates",
+      "referenceReason": "An unresolved conflict is falsely described as resolved by archival evidence.",
+      "originalSHA256": "f6b8d7dfbeaf6b56e17c2ca20f730a0093e00258088f70aaa4c0384b0ab5c050",
+      "candidateSHA256": "7306786cb381e9735fde04c2820560df08dbdf58be4b4f71a5a81a7116e2aa5a",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Introduction",
+            "originalQuote": "The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1].",
+            "revisedQuote": "The supplied collection uses pseudonyms, and an archival source has resolved the competing closure dates [S1].",
+            "problem": "Reverses the unresolved status of the competing dates and falsely attributes archival resolution to S1, which explicitly states that the discrepancy has not been resolved by an archival source. This also contradicts the candidate’s remaining statements that the dates are unresolved."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate otherwise preserves all substantive propositions, method steps, evaluation measures, limitations, attribution and planned-work status. Sentence structure and wording are virtually unchanged, although the altered claim introduces an internal contradiction."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C08",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "with the final 14 days held out from fitting",
+      "after": "with the first 14 days held out from fitting",
+      "referenceReason": "The temporal test split changes while its size is unchanged.",
+      "originalSHA256": "0ca9551ea92f4c302854d16ce438b837c36a3f84e394edb7592c3736a2f4df1f",
+      "candidateSHA256": "dda119b0758331ac39b1bcd4b78ad30f283f2005cd448523cb91c8575bea7679",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Methodology",
+            "originalQuote": "The evaluation will cover 42 consecutive days, with the final 14 days held out from fitting [S2].",
+            "revisedQuote": "The evaluation will cover 42 consecutive days, with the first 14 days held out from fitting [S2].",
+            "problem": "Changes the held-out period from the final 14 days to the first 14 days, altering the temporal evaluation design and contradicting source S2 while retaining its citation."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate changes only the held-out period; all other substantive propositions, qualifications, source attributions and planned-work status are preserved. The substitution has no material effect on readability."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C09",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "recovery relative to target material in the input, while purity uses recovered output mass",
+      "after": "purity relative to target material in the input, while recovery uses recovered output mass",
+      "referenceReason": "The definitions of recovery and purity exchange denominators.",
+      "originalSHA256": "2ba03f973131aad1f8b1ed891c218287a104ec17c1a8d7df87bfb27464fb84b4",
+      "candidateSHA256": "b42b3e7411923f24b1e1c18eb93c9faaf93e32711349e1b884e0afe55247934f",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Related Work",
+            "originalQuote": "The methods brief defines recovery relative to target material in the input, while purity uses recovered output mass [S2].",
+            "revisedQuote": "The methods brief defines purity relative to target material in the input, while recovery uses recovered output mass [S2].",
+            "problem": "The candidate swaps the denominators for recovery and purity, changing both evaluation measures and incorrectly attributing the reversed definitions to S2. S2 defines recovery relative to target material in the input and purity relative to recovered output mass."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate has identical structure and otherwise unchanged wording. All other substantive claims, method steps, comparisons, evaluation plans, limitations, qualifications, attributions and planned-work status are preserved, but the swapped definitions introduce a substantive technical error."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C10",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "only if both meet the recorded requirements",
+      "after": "if either meets the recorded requirements",
+      "referenceReason": "The verification conjunction changes to a disjunction.",
+      "originalSHA256": "ab7a06375432b8cfde6152ec57ba384f0a0991f9ce7d5e2778b32f568ea09530",
+      "candidateSHA256": "5a998aa8070ee410ee946cd253aa84b3d5e976d49e79c23007d0e8e0da1848cd",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Methodology",
+            "originalQuote": "It will mark the route verified only if both meet the recorded requirements.",
+            "revisedQuote": "It will mark the route verified if either meets the recorded requirements.",
+            "problem": "Changes verification from requiring both the path and destination entrance to meet requirements to accepting either alone. This contradicts S2 and permits verification when one component lacks qualifying evidence, including an unknown entrance."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate otherwise reproduces the original exactly. The changed verification rule is equally readable but substantively incorrect."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C11",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "It also does not assign course grades",
+      "after": "It also assigns course grades",
+      "referenceReason": "An explicitly excluded grading use becomes a claimed study function.",
+      "originalSHA256": "9441cc51fbf0d7c38864461c82ad1e935472486e5266750f07cbbc1f60049287",
+      "candidateSHA256": "e0f3dd954c5ac58cfecf6817f199c78ae4f6f309690d333e2b1e45c8ada1d279",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Limitations and Conclusion",
+            "originalQuote": "It also does not assign course grades [S1].",
+            "revisedQuote": "It also assigns course grades [S1].",
+            "problem": "Reverses the exclusion of course grading, contradicts S1’s statement that the task “does not assign course grades,” and conflicts with the candidate’s Related Work section."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate is otherwise identical to the original. Removing the negation changes a substantive study boundary without improving readability."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C12",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": false,
+      "correct": true,
+      "findings": [
+        "Numeric tokens were added.",
+        "Numeric tokens were removed."
+      ],
+      "before": "1180 to 1260 CE",
+      "after": "1180 to 1261 CE",
+      "referenceReason": "The upper endpoint of the date interval changes.",
+      "originalSHA256": "fbc1ed9b4e2bf27a0cc5dc8dc228d24b4a091436cab7d497ac465ffb813aa3c2",
+      "candidateSHA256": "38920f51dab1c28fae5985fe6b93c29445c7563eb6711e7808e4b039a90ea321",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": false,
+        "issues": [
+          {
+            "section": "Abstract",
+            "originalQuote": "The supplied interval is 1180 to 1260 CE [S1].",
+            "revisedQuote": "The supplied interval is 1180 to 1261 CE [S1].",
+            "problem": "The upper endpoint changes from 1260 to 1261 CE, contradicting both the original and S1 and failing to preserve the full supplied interval."
+          }
+        ],
+        "readability": "similar",
+        "reason": "The candidate is otherwise identical to the original. All other substantive claims, method steps, evaluation measures, limitations, source attributions, uncertainty and planned-work status are preserved; the changed date does not affect readability."
+      },
+      "semanticPass": false,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": [
+        {
+          "originalQuoteExact": true,
+          "revisedQuoteExact": true
+        }
+      ]
+    },
+    {
+      "caseId": "C01",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "A glacier outline can change because the ice moved or because the observation is incomplete.",
+      "after": "A glacier outline may change because the ice moved or the observation is incomplete.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "53bb11a91147eda5a1d09fd405b5ab3577d96b1c2025b561daa6b2895b55f5e4",
+      "candidateSHA256": "ef1547b1b438de365365ce048c32f35e088f395850da894d7b6c5378ae90b6a6",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "All substantive propositions, method steps, comparisons, evaluation measures, limitations, attributions, uncertainty and planned-work status are preserved. The only change, from “can change because the ice moved or because the observation is incomplete” to “may change because the ice moved or the observation is incomplete,” is an equivalent paraphrase. The candidate remains consistent with the supplied sources."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C02",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": false,
+      "correct": false,
+      "findings": [
+        "Numeric tokens were removed."
+      ],
+      "before": "arrivals from 18 weekdays",
+      "after": "arrivals from eighteen weekdays",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "d490512c038f7dbdf72521811483ea279bc61255fec05b39d226df5aef696b4b",
+      "candidateSHA256": "bd66975e6ce2a95203cba84e73b371644f002266129cec4b6334df35bcbdf469",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "All substantive propositions, method steps, comparisons, evaluation measures, limitations, source attributions, qualifications and planned-work status are preserved. The only change is “18 weekdays” to “eighteen weekdays,” which preserves meaning and is consistent with S2."
+      },
+      "semanticPass": true,
+      "combinedPass": false,
+      "semanticCorrect": true,
+      "combinedCorrect": false,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C03",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The study is small and focuses on a short observation period.",
+      "after": "The study is small and covers a short observation period.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "2e894c504922a73ffe8b3a45fa63582ab4bacf0a389061272f4ebb65192c02b7",
+      "candidateSHA256": "05a9aafa4fc7bc2adaaa659b722b212b3a335a9fcc9f4a32f00f06b67b7b4340",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "All substantive claims, method steps, comparisons, evaluation measures, limitations, source attributions, uncertainty, and planned-work status are preserved and consistent with the supplied sources. The sole change, from “focuses on a short observation period” to “covers a short observation period,” is an equivalent paraphrase with similar readability."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C04",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "General advice can be correct in principle yet difficult to apply to a particular function.",
+      "after": "General advice may be correct in principle but difficult to apply to a particular function.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "6a91fbc02ebc88262788f6d114f56a2710aa7d90f6099e77d5c4ba1b62e5bfe5",
+      "candidateSHA256": "2e838051c1e2af74eba848ac626e8d8b60a822c5ed671263cc61699d68e12100",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "The only change replaces “can be correct in principle yet difficult” with the equivalent “may be correct in principle but difficult” in Introduction. All substantive propositions, method steps, comparisons, evaluation measures, limitations, source attributions, qualifications and planned-work status are preserved. Claims attributed to S1 and S2 remain consistent with the supplied excerpts."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C05",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The source records may themselves be incomplete or inconsistent.",
+      "after": "The source records themselves may be incomplete or inconsistent.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "c2df0a24737c7e9ca3acc0c4d59451ac2b9f33c005f9faa883c8b1200814f6f2",
+      "candidateSHA256": "83461e6430dd31085ea8c54d0ff7927f583f45a371b133573a997e925567959f",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "The only change moves “themselves” within the first sentence of Limitations and Conclusion without changing its meaning. All substantive claims, method steps, comparisons, evaluation measures, limitations, source attributions, uncertainty and planned-work status are preserved. The candidate remains consistent with the supplied sources."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C06",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The raw readings will remain available for inspection.",
+      "after": "The raw readings will remain available to inspect.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "3f8d97b40fc49843b836109f5ecd6457308c916addb5ac64c467a8b2670fcb80",
+      "candidateSHA256": "c877867700009123ec09314110ad256380580437c58e0b165a4b9345a63b497f",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "All substantive claims, method steps, evaluation measures, limitations, source attributions, qualifications and planned-work status are preserved. The only change, from “available for inspection” to “available to inspect” in Methodology, is an equivalent paraphrase with negligible effect on readability."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C07",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The study cannot resolve the underlying historical disagreement.",
+      "after": "The study cannot resolve the historical disagreement itself.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "f6b8d7dfbeaf6b56e17c2ca20f730a0093e00258088f70aaa4c0384b0ab5c050",
+      "candidateSHA256": "ca0393324af858fd367333febb7bfeeff8e950506808cccd20ce19e7c5010f04",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "All substantive propositions, method steps, comparisons, evaluation measures, limitations, source attributions, uncertainty and planned-work status are preserved. The sole change, from “the underlying historical disagreement” to “the historical disagreement itself,” is equivalent in meaning. Claims attributed to S1 and S2 remain consistent with the supplied excerpts."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C08",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "A short series from one building cannot establish performance across seasons or sites.",
+      "after": "A short series from one building cannot establish performance across different seasons or sites.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "0ca9551ea92f4c302854d16ce438b837c36a3f84e394edb7592c3736a2f4df1f",
+      "candidateSHA256": "429472a94aec5211ff0cc2c7dc7291f956858d72c9757b62350756b6fa07fa3b",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "All substantive claims, method steps, comparisons, evaluation measures, limitations, source attributions, uncertainty, and planned-work status are preserved. The only change, from “across seasons or sites” to “across different seasons or sites,” is an equivalent paraphrase. The candidate remains consistent with the supplied sources."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C09",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The comparison is limited to the supplied material stream and sorting conditions.",
+      "after": "The comparison concerns only the supplied material stream and sorting conditions.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "2ba03f973131aad1f8b1ed891c218287a104ec17c1a8d7df87bfb27464fb84b4",
+      "candidateSHA256": "befd7505014c984d96ed14e2811db86a5a7431356be7554b1c8759bf52ffd99c",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "The only change, from “is limited to” to “concerns only” in Limitations and Conclusion, preserves the scope restriction. All substantive claims, method steps, comparisons, measures, limitations, source attributions, uncertainty and planned-work status remain unchanged and consistent with the supplied sources."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C10",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The records may become outdated, and accessibility needs differ between users.",
+      "after": "The records may become outdated, and users differ in their accessibility needs.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "ab7a06375432b8cfde6152ec57ba384f0a0991f9ce7d5e2778b32f568ea09530",
+      "candidateSHA256": "099c748249aca37e4a23920d89260d33e93e15199569a15d0dcb95062c2be233",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "The only change, from “accessibility needs differ between users” to “users differ in their accessibility needs,” is equivalent in meaning and readability. All substantive claims, method steps, evaluation measures, limitations, source attributions, uncertainty and planned-work status are preserved. The candidate remains consistent with the supplied sources."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C11",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "A single review cannot show whether a student later learns the underlying concept.",
+      "after": "A single review cannot establish whether a student later learns the underlying concept.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "9441cc51fbf0d7c38864461c82ad1e935472486e5266750f07cbbc1f60049287",
+      "candidateSHA256": "4a400eca38f61d9c0db499386b5ecb55ae52171c6bf0ccc9fb615e8a3aede56b",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "All substantive propositions, method steps, comparisons, evaluation measures, limitations, source attributions, qualifications and planned-work status are preserved. The only change, from “cannot show” to “cannot establish” in “Limitations and Conclusion,” is an equivalent paraphrase with similar readability."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    },
+    {
+      "caseId": "C12",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The proposed study concerns the communication of existing evidence, not a new dating analysis.",
+      "after": "The proposed study concerns how existing evidence is communicated, not a new dating analysis.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+      "originalSHA256": "fbc1ed9b4e2bf27a0cc5dc8dc228d24b4a091436cab7d497ac465ffb813aa3c2",
+      "candidateSHA256": "6c64de02030daef6b97b528237854e41817c1a3f0bd8a541f02df20a8eea7c9f",
+      "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+      "status": "completed",
+      "audit": {
+        "contentPreserved": true,
+        "issues": [],
+        "readability": "similar",
+        "reason": "The candidate preserves all substantive propositions, method steps, evaluation measures, limitations, source attribution, uncertainty and planned-work status. The only change, from “the communication of existing evidence” to “how existing evidence is communicated” in “Limitations and Conclusion,” is an equivalent paraphrase. The full interval, uncertain building association and distinction between material age and event timing remain consistent with the supplied sources."
+      },
+      "semanticPass": true,
+      "combinedPass": true,
+      "semanticCorrect": true,
+      "combinedCorrect": true,
+      "issueQuotes": []
+    }
+  ],
+  "semantic": {
+    "TP": 12,
+    "FN": 0,
+    "TN": 12,
+    "FP": 0
+  },
+  "combined": {
+    "TP": 12,
+    "FN": 0,
+    "TN": 11,
+    "FP": 1
+  },
+  "deterministic": {
+    "TP": 2,
+    "FN": 10,
+    "TN": 11,
+    "FP": 1
+  }
+}

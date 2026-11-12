@@ -1,0 +1,52 @@
+{
+  "reviews": [
+    {
+      "id": 0,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 1,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 2,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "These roles will remain fixed before observation begins.",
+          "revisedQuote": "These roles will be maintained until observations begin",
+          "problem": "“Until” implies that the commitment to fixed outcome roles ends when observation begins, weakening the prespecified outcome hierarchy."
+        }
+      ],
+      "readability": "worse"
+    },
+    {
+      "id": 3,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 4,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 5,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "Those questions would need additional measurements and a different follow-up period rather than stronger wording about the same observations.",
+          "revisedQuote": "Additional measurements and a different follow-up period would be needed to address these questions.",
+          "problem": "Omits the explicit interpretive limitation that stronger wording about existing observations cannot answer the questions about cellular damage or recovery."
+        }
+      ],
+      "readability": "similar"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The museum task uses catalogue entries for objects whose maker is sometimes unknown. An approximate date must remain approximate. A missing maker field is not evidence that an object was produced anonymously. Descriptions may use only the supplied catalogue entry and curator note.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "The proposed sample contains 28 objects. A concise description will be compared with the original catalogue prose. The study will measure readability and whether uncertain dates, disputed locations and unknown makers are preserved. No new provenance research will be conducted.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

@@ -1,0 +1,136 @@
+{
+  "scope": "This run only; no historical card retrieval",
+  "memoryCardsUsed": 0,
+  "originalSHA256": "6a91fbc02ebc88262788f6d114f56a2710aa7d90f6099e77d5c4ba1b62e5bfe5",
+  "retainedSHA256": "ef60f3ed1d11a3aca060a317b3c46450fc6a14f8be64e71d49e74fae08a0aad0",
+  "detectorUsedForAdmission": false,
+  "fullAudit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The candidate preserves all substantive claims, method steps, comparison conditions, evaluation measures, limitations, source attribution, qualifications, and planned-work status. The final-decision wording remains equivalent in context: the developer retains authority, and passing tests remains necessary but insufficient for acceptance. Changes are primarily stylistic, with similar overall readability."
+  },
+  "repairHistory": [],
+  "edits": [
+    {
+      "id": 0,
+      "heading": "Abstract",
+      "original": "A plausible code review suggestion is useful only if a developer can understand where it applies and what it changes. We propose to compare free-form suggestions with suggestions that identify an exact edit location. Both conditions will receive the same Python function and issue description [S2]. The assistant will propose changes, while a developer will retain authority over acceptance.",
+      "candidate": "A plausible code review suggestion is useful only if a developer can understand where it applies and what it changes. We propose comparing free-form suggestions with those that identify an exact edit location. Both conditions will receive the same Python function and issue description [S2]. The assistant will propose changes, while a developer retains authority over acceptance.",
+      "text": "A plausible code review suggestion is useful only if a developer can understand where it applies and what it changes. We propose comparing free-form suggestions with those that identify an exact edit location. Both conditions will receive the same Python function and issue description [S2]. The assistant will propose changes, while a developer retains authority over acceptance.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 0,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A plausible code review suggestion is useful only if a developer can understand where it applies and what it changes. We propose comparing free-form suggestions with those that identify an exact edit location. Both conditions will receive the same Python function and issue description [S2]. The assistant will propose changes, while a developer retains authority over acceptance.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 1,
+      "heading": "Introduction",
+      "original": "General advice can be correct in principle yet difficult to apply to a particular function. Conversely, a precise edit can still alter behaviour in an unintended way. The study therefore separates the location of a suggestion from its correctness. Tests will check the supplied examples, but passing them will not be presented as proof that a program is correct for every input [S1].",
+      "candidate": "General advice can be correct in principle but difficult to apply to a specific function. Conversely, a precise edit might still alter behavior in an unintended way. The study therefore distinguishes the location of a suggestion from its correctness. Tests will check the supplied examples, but passing them will not be presented as proof that the program is correct for every input [S1].",
+      "text": "General advice can be correct in principle but difficult to apply to a specific function. Conversely, a precise edit might still alter behavior in an unintended way. The study therefore distinguishes the location of a suggestion from its correctness. Tests will check the supplied examples, but passing them will not be presented as proof that the program is correct for every input [S1].",
+      "sectionAccepted": true,
+      "review": {
+        "id": 1,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "General advice can be correct in principle but difficult to apply to a specific function. Conversely, a precise edit might still alter behavior in an unintended way. The study therefore distinguishes the location of a suggestion from its correctness. Tests will check the supplied examples, but passing them will not be presented as proof that the program is correct for every input [S1].",
+      "status": "verified_edit"
+    },
+    {
+      "id": 2,
+      "heading": "Related Work",
+      "original": "The task brief assigns the assistant a supporting role in code review and leaves the final decision with the developer [S1]. The evaluation brief distinguishes free-form suggestions from suggestions anchored to an edit location [S2]. We use these conditions to examine whether specificity helps reviewers assess a proposal, rather than assume that more specific suggestions are necessarily safer.",
+      "candidate": "The task brief assigns the assistant a supporting role in code review, leaving the final decision with the developer [S1]. The evaluation brief distinguishes free-form suggestions from those anchored to an exact edit location [S2]. We use these conditions to examine whether specificity aids reviewers in assessing a proposal, rather than assuming that more specific suggestions are inherently safer.",
+      "text": "The task brief assigns the assistant a supporting role in code review, leaving the final decision with the developer [S1]. The evaluation brief distinguishes free-form suggestions from those anchored to an exact edit location [S2]. We use these conditions to examine whether specificity aids reviewers in assessing a proposal, rather than assuming that more specific suggestions are inherently safer.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 2,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The task brief assigns the assistant a supporting role in code review, leaving the final decision with the developer [S1]. The evaluation brief distinguishes free-form suggestions from those anchored to an exact edit location [S2]. We use these conditions to examine whether specificity aids reviewers in assessing a proposal, rather than assuming that more specific suggestions are inherently safer.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 3,
+      "heading": "Methodology",
+      "original": "The planned sample contains 36 small functions [S2]. For each function, both conditions will see identical code and the same short issue description. We will preserve the original tests and record any proposed test changes separately. A suggestion must pass the supplied tests before it can be considered for acceptance, but passing is only one requirement.",
+      "candidate": "The planned sample includes 36 small functions [S2]. For each function, both conditions will receive identical code and the same short issue description. We will retain the original tests and separately record any proposed test changes. A suggestion must pass the supplied tests to be considered for acceptance, but passing is only one requirement.",
+      "text": "The planned sample includes 36 small functions [S2]. For each function, both conditions will receive identical code and the same short issue description. We will retain the original tests and separately record any proposed test changes. A suggestion must pass the supplied tests to be considered for acceptance, but passing is only one requirement.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 3,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The planned sample includes 36 small functions [S2]. For each function, both conditions will receive identical code and the same short issue description. We will retain the original tests and separately record any proposed test changes. A suggestion must pass the supplied tests to be considered for acceptance, but passing is only one requirement.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 4,
+      "heading": "Planned Evaluation",
+      "original": "Reviewers will judge whether each suggestion addresses the stated issue, changes unrelated behaviour or leaves an unclear edit location. We will report acceptance alongside test outcomes and review time. A rejected suggestion will remain in the record with its reason. This distinction will allow a passing test result to coexist with a developer decision that the change is unsuitable.",
+      "candidate": "Reviewers will evaluate each suggestion to determine if it addresses the stated issue, changes unrelated behaviour, or leaves an unclear edit location. We will report the acceptance of each suggestion alongside test outcomes and review time. Rejected suggestions will be recorded with their reasons. This distinction allows a passing test result to coexist with a developer decision that the change is unsuitable.",
+      "text": "Reviewers will evaluate each suggestion to determine if it addresses the stated issue, changes unrelated behaviour, or leaves an unclear edit location. We will report the acceptance of each suggestion alongside test outcomes and review time. Rejected suggestions will be recorded with their reasons. This distinction allows a passing test result to coexist with a developer decision that the change is unsuitable.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 4,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "Reviewers will evaluate each suggestion to determine if it addresses the stated issue, changes unrelated behaviour, or leaves an unclear edit location. We will report the acceptance of each suggestion alongside test outcomes and review time. Rejected suggestions will be recorded with their reasons. This distinction allows a passing test result to coexist with a developer decision that the change is unsuitable.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 5,
+      "heading": "Limitations and Conclusion",
+      "original": "Small functions are easier to inspect than production repositories, and the supplied tests may miss important behaviours. The experiment cannot establish the reliability of autonomous code modification. Its narrower aim is to examine how the form of a suggestion affects developer review while keeping the developer, rather than the assistant or the tests, responsible for the final decision.",
+      "candidate": "Small functions are easier to inspect than production repositories, and the supplied tests may miss important behaviors. While the experiment cannot establish the reliability of autonomous code modification, its narrower aim is to examine how the form of a suggestion affects developer review, with the developer retaining the final decision.",
+      "text": "Small functions are easier to inspect than production repositories, and the supplied tests may miss important behaviors. While the experiment cannot establish the reliability of autonomous code modification, its narrower aim is to examine how the form of a suggestion affects developer review, with the developer retaining the final decision.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 5,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "Small functions are easier to inspect than production repositories, and the supplied tests may miss important behaviors. While the experiment cannot establish the reliability of autonomous code modification, its narrower aim is to examine how the form of a suggestion affects developer review, with the developer retaining the final decision.",
+      "status": "verified_edit"
+    }
+  ]
+}

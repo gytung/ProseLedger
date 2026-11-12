@@ -1,0 +1,26 @@
+{
+  "caseId": "C03",
+  "challenge": "benign",
+  "expectedPass": true,
+  "actualPass": true,
+  "correct": true,
+  "findings": [],
+  "before": "The study is small and focuses on a short observation period.",
+  "after": "The study is small and covers a short observation period.",
+  "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+  "originalSHA256": "2e894c504922a73ffe8b3a45fa63582ab4bacf0a389061272f4ebb65192c02b7",
+  "candidateSHA256": "05a9aafa4fc7bc2adaaa659b722b212b3a335a9fcc9f4a32f00f06b67b7b4340",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive claims, method steps, comparisons, evaluation measures, limitations, source attributions, uncertainty, and planned-work status are preserved and consistent with the supplied sources. The sole change, from “focuses on a short observation period” to “covers a short observation period,” is an equivalent paraphrase with similar readability."
+  },
+  "semanticPass": true,
+  "combinedPass": true,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": []
+}

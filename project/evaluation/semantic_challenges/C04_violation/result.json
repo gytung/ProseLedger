@@ -1,0 +1,38 @@
+{
+  "caseId": "C04",
+  "challenge": "violation",
+  "expectedPass": false,
+  "actualPass": true,
+  "correct": false,
+  "findings": [],
+  "before": "a developer will retain authority over acceptance",
+  "after": "the assistant will retain authority over acceptance",
+  "referenceReason": "The actor holding the final decision changes from developer to assistant.",
+  "originalSHA256": "6a91fbc02ebc88262788f6d114f56a2710aa7d90f6099e77d5c4ba1b62e5bfe5",
+  "candidateSHA256": "55c8410dfdf015f5902c43d1a99b4408dc05836aba4a70585f2f487a3730b4dd",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Abstract",
+        "originalQuote": "The assistant will propose changes, while a developer will retain authority over acceptance.",
+        "revisedQuote": "The assistant will propose changes, while the assistant will retain authority over acceptance.",
+        "problem": "Transfers acceptance authority from the developer to the assistant, contradicting the original, source S1, and the candidate’s own Related Work and Limitations and Conclusion sections."
+      }
+    ],
+    "readability": "similar",
+    "reason": "All other substantive propositions, method steps, comparisons, evaluation measures, limitations, attributions, qualifications and planned-work status are unchanged. The single substitution preserves sentence structure but reverses who controls acceptance."
+  },
+  "semanticPass": false,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": [
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    }
+  ]
+}

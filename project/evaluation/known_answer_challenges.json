@@ -1,0 +1,283 @@
+{
+  "scope": "Deterministic guard only; constructed known-answer mutations, not full-pipeline or human evaluation.",
+  "cases": [
+    {
+      "caseId": "C01",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "The proposed experiment will therefore not estimate annual retreat rates",
+      "after": "The proposed experiment will therefore estimate annual retreat rates",
+      "referenceReason": "Negation removal changes a declared exclusion into a planned estimate."
+    },
+    {
+      "caseId": "C02",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": false,
+      "correct": true,
+      "findings": [
+        "Numeric tokens were added.",
+        "Numeric tokens were removed."
+      ],
+      "before": "arrivals from 18 weekdays",
+      "after": "arrivals from 81 weekdays",
+      "referenceReason": "The planned number of days changes from 18 to 81."
+    },
+    {
+      "caseId": "C03",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "assign 30 seedlings to each condition and observe them for 12 days",
+      "after": "assign 12 seedlings to each condition and observe them for 30 days",
+      "referenceReason": "Sample size and duration are exchanged while the set of numeric tokens is unchanged."
+    },
+    {
+      "caseId": "C04",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "a developer will retain authority over acceptance",
+      "after": "the assistant will retain authority over acceptance",
+      "referenceReason": "The actor holding the final decision changes from developer to assistant."
+    },
+    {
+      "caseId": "C05",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "A blank maker field also does not establish that an object was made anonymously",
+      "after": "A blank maker field also establishes that an object was made anonymously",
+      "referenceReason": "Missing metadata is turned into evidence of anonymous production."
+    },
+    {
+      "caseId": "C06",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "Equality is therefore not an exceedance",
+      "after": "Equality is therefore an exceedance",
+      "referenceReason": "The boundary convention changes from a strict threshold to an inclusive one."
+    },
+    {
+      "caseId": "C07",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "no archival source has resolved the competing closure dates",
+      "after": "an archival source has resolved the competing closure dates",
+      "referenceReason": "An unresolved conflict is falsely described as resolved by archival evidence."
+    },
+    {
+      "caseId": "C08",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "with the final 14 days held out from fitting",
+      "after": "with the first 14 days held out from fitting",
+      "referenceReason": "The temporal test split changes while its size is unchanged."
+    },
+    {
+      "caseId": "C09",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "recovery relative to target material in the input, while purity uses recovered output mass",
+      "after": "purity relative to target material in the input, while recovery uses recovered output mass",
+      "referenceReason": "The definitions of recovery and purity exchange denominators."
+    },
+    {
+      "caseId": "C10",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "only if both meet the recorded requirements",
+      "after": "if either meets the recorded requirements",
+      "referenceReason": "The verification conjunction changes to a disjunction."
+    },
+    {
+      "caseId": "C11",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": true,
+      "correct": false,
+      "findings": [],
+      "before": "It also does not assign course grades",
+      "after": "It also assigns course grades",
+      "referenceReason": "An explicitly excluded grading use becomes a claimed study function."
+    },
+    {
+      "caseId": "C12",
+      "challenge": "violation",
+      "expectedPass": false,
+      "actualPass": false,
+      "correct": true,
+      "findings": [
+        "Numeric tokens were added.",
+        "Numeric tokens were removed."
+      ],
+      "before": "1180 to 1260 CE",
+      "after": "1180 to 1261 CE",
+      "referenceReason": "The upper endpoint of the date interval changes."
+    },
+    {
+      "caseId": "C01",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "A glacier outline can change because the ice moved or because the observation is incomplete.",
+      "after": "A glacier outline may change because the ice moved or the observation is incomplete.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C02",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": false,
+      "correct": false,
+      "findings": [
+        "Numeric tokens were removed."
+      ],
+      "before": "arrivals from 18 weekdays",
+      "after": "arrivals from eighteen weekdays",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C03",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The study is small and focuses on a short observation period.",
+      "after": "The study is small and covers a short observation period.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C04",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "General advice can be correct in principle yet difficult to apply to a particular function.",
+      "after": "General advice may be correct in principle but difficult to apply to a particular function.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C05",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The source records may themselves be incomplete or inconsistent.",
+      "after": "The source records themselves may be incomplete or inconsistent.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C06",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The raw readings will remain available for inspection.",
+      "after": "The raw readings will remain available to inspect.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C07",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The study cannot resolve the underlying historical disagreement.",
+      "after": "The study cannot resolve the historical disagreement itself.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C08",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "A short series from one building cannot establish performance across seasons or sites.",
+      "after": "A short series from one building cannot establish performance across different seasons or sites.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C09",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The comparison is limited to the supplied material stream and sorting conditions.",
+      "after": "The comparison concerns only the supplied material stream and sorting conditions.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C10",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The records may become outdated, and accessibility needs differ between users.",
+      "after": "The records may become outdated, and users differ in their accessibility needs.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C11",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "A single review cannot show whether a student later learns the underlying concept.",
+      "after": "A single review cannot establish whether a student later learns the underlying concept.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    },
+    {
+      "caseId": "C12",
+      "challenge": "benign",
+      "expectedPass": true,
+      "actualPass": true,
+      "correct": true,
+      "findings": [],
+      "before": "The proposed study concerns the communication of existing evidence, not a new dating analysis.",
+      "after": "The proposed study concerns how existing evidence is communicated, not a new dating analysis.",
+      "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value."
+    }
+  ],
+  "correct": 13,
+  "total": 24,
+  "truePositive": 2,
+  "falseNegative": 10,
+  "trueNegative": 11,
+  "falsePositive": 1
+}

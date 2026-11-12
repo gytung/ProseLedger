@@ -1,0 +1,23 @@
+{
+  "guard": {
+    "passed": true,
+    "findings": []
+  },
+  "wordRatio": 0.992,
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The candidate preserves all substantive claims, source attribution, method steps, evaluation measures, limitations, uncertainty, and planned-work status. It retains the distinction between missing corroboration and an event not occurring, the prohibition on unsupported motives or date reconciliation, and the comparison of ordinary and attribution-preserving summaries across 16 excerpts. The wording changes are equivalent paraphrases, with modest sentence-level improvements in flow."
+  },
+  "eligible": true,
+  "bounds": {
+    "maxPatchesPerSection": 3,
+    "maxMatchedFraction": 0.35,
+    "maxAdditionalRounds": 0,
+    "finalLengthRatio": [
+      0.85,
+      1.15
+    ]
+  }
+}

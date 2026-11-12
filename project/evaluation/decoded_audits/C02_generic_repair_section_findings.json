@@ -1,0 +1,26 @@
+{
+  "sections": [
+    {
+      "id": 3,
+      "patches": [
+        {
+          "before": "to ensure the policy's reliability is accurately reflected",
+          "after": ", since removing difficult days could make the policy appear more dependable than it is",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Restores the qualified concern about an overly favourable assessment instead of guaranteeing accurate reliability estimates."
+    },
+    {
+      "id": 4,
+      "patches": [
+        {
+          "before": "without favoring either policy",
+          "after": "without selecting the definition that most favours either policy",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Restores the explicit commitment against selecting the long-wait definition that most favours either policy."
+    }
+  ]
+}

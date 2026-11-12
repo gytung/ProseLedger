@@ -1,0 +1,26 @@
+{
+  "caseId": "C08",
+  "challenge": "benign",
+  "expectedPass": true,
+  "actualPass": true,
+  "correct": true,
+  "findings": [],
+  "before": "A short series from one building cannot establish performance across seasons or sites.",
+  "after": "A short series from one building cannot establish performance across different seasons or sites.",
+  "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+  "originalSHA256": "0ca9551ea92f4c302854d16ce438b837c36a3f84e394edb7592c3736a2f4df1f",
+  "candidateSHA256": "429472a94aec5211ff0cc2c7dc7291f956858d72c9757b62350756b6fa07fa3b",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive claims, method steps, comparisons, evaluation measures, limitations, source attributions, uncertainty, and planned-work status are preserved. The only change, from “across seasons or sites” to “across different seasons or sites,” is an equivalent paraphrase. The candidate remains consistent with the supplied sources."
+  },
+  "semanticPass": true,
+  "combinedPass": true,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": []
+}

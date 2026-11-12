@@ -1,0 +1,25 @@
+{
+  "sections": [
+    {
+      "id": 3,
+      "patches": [
+        {
+          "before": "before calculating the measures",
+          "after": "before the measures are calculated",
+          "issueIndex": 0
+        },
+        {
+          "before": "to ensure that",
+          "after": "so that",
+          "issueIndex": 1
+        },
+        {
+          "before": "mask the performance of poorly sorted batches",
+          "after": "hide a small number of poorly sorted batches",
+          "issueIndex": 1
+        }
+      ],
+      "reason": "Restores the passive clause, removes the guarantee, and reinstates the concern about a small number of poorly sorted batches while preserving proposal status."
+    }
+  ]
+}

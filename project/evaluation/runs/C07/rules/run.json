@@ -1,0 +1,61 @@
+{
+  "protocol": "proseledger-desktop-revision-1",
+  "status": "completed",
+  "stage": "Finished",
+  "completedCalls": 8,
+  "cachedCalls": 0,
+  "localWriterCalls": 6,
+  "hostedCalls": 2,
+  "attempt": 1,
+  "attemptHistory": [],
+  "policy": "section",
+  "detectorUsedForSelection": false,
+  "memoryCardsUsed": 0,
+  "model": {
+    "condition": "rules",
+    "writer": {
+      "model": "qwen2.5:7b-instruct-q4_K_M",
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "size": 4683087332,
+      "ollamaVersion": "0.40.15",
+      "hostSystem": "Darwin",
+      "hostArchitecture": "arm64",
+      "runtime": "Ollama",
+      "quantization": "Q4_K_M"
+    },
+    "reviewer": "gpt-6.1-sol",
+    "sectionSeeds": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "reviewTransport": "official-native-cli",
+    "writerTemperature": 0.2,
+    "writerContextTokens": 8192,
+    "protocol": "controlled-paired-section-study-20261113"
+  },
+  "attemptStartedAt": 1794515535.3843148,
+  "executionHost": {
+    "system": "Darwin",
+    "architecture": "arm64",
+    "python": "3.12.7"
+  },
+  "elapsedSeconds": 189.9,
+  "totalCompletedCalls": 8,
+  "totalLocalWriterCalls": 6,
+  "totalHostedCalls": 2,
+  "totalElapsedSeconds": 189.9,
+  "currentBackend": "hosted",
+  "newCandidateAccepted": true,
+  "retained": "candidate",
+  "textSHA256": "8e7d322a01e1e303fe10177cde140fb0d23c3a22f5776fa76580c1484ea90df0",
+  "initialWords": 375,
+  "retainedWords": 372,
+  "changedSections": 6,
+  "readability": "similar",
+  "contentPreserved": true,
+  "guardPassed": true
+}

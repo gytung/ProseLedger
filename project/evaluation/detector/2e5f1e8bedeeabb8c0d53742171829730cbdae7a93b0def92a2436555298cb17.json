@@ -1,0 +1,724 @@
+{
+  "textSHA256": "2e5f1e8bedeeabb8c0d53742171829730cbdae7a93b0def92a2436555298cb17",
+  "characters": 2501,
+  "scannedAtUTC": "2026-11-12T20:53:19.291988+00:00",
+  "elapsedSeconds": 2.025,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 5,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 10,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 15,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 22,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 26,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 27,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.999997187324309,
+            "sentence": "# When a Glacier Map Is Allowed to Abstain",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.8126756910034968e-06,
+              "ai": 0.999875705908261,
+              "paraphrased": 0.00012148141604794714
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999970980392517,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.9019607483038183e-06,
+              "ai": 0.9998760901901259,
+              "paraphrased": 0.00012100784912580908
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999970980406064,
+            "sentence": "A glacier outline can change due to ice movement or incomplete observation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.901959393588449e-06,
+              "ai": 0.9998756166354048,
+              "paraphrased": 0.00012148140520160602
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999974390100501,
+            "sentence": "We propose testing whether allowing a mapping model to abstain on cloud-covered pixels enhances the reliability of boundary comparisons.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.56098994988717e-06,
+              "ai": 0.9998833169137189,
+              "paraphrased": 0.00011412209633118981
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999973577145433,
+            "sentence": "The study will utilize two summer visits and a local outline inventory [S1], focusing on how uncertainty is represented rather than assessing specific glacier retreat.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6422854567336752e-06,
+              "ai": 0.9998836804996432,
+              "paraphrased": 0.00011367721490013946
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999970980365583,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.901963441666349e-06,
+              "ai": 0.9998770317632362,
+              "paraphrased": 0.0001200662733221591
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999971873204869,
+            "sentence": "Missing pixels are often inconvenient for a mapping workflow because the output is expected to cover the entire image.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.8126795130823882e-06,
+              "ai": 0.9998771210364448,
+              "paraphrased": 0.00012006628404217877
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999973577156833,
+            "sentence": "However, filling every location with a label can turn missing evidence into an apparently definite boundary.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6422843166933604e-06,
+              "ai": 0.9998832356295755,
+              "paraphrased": 0.0001141220861078769
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.99999671165515,
+            "sentence": "In this proposal, cloud cover will remain an unavailable observation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.2883448500080254e-06,
+              "ai": 0.9998737984906642,
+              "paraphrased": 0.00012291316448587438
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999957777190391,
+            "sentence": "The inventory provides a starting outline but does not by itself provide evidence of recent retreat [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.222280960886517e-06,
+              "ai": 0.9998649385093893,
+              "paraphrased": 0.00013083920964985845
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999955054546869,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.49454531317599e-06,
+              "ai": 0.999854036076315,
+              "paraphrased": 0.00014146937837188284
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999962738315427,
+            "sentence": "The source packet distinguishes between an inventory and a change measurement [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.726168457383683e-06,
+              "ai": 0.9998699538781661,
+              "paraphrased": 0.00012631995337650386
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999996607265751,
+            "sentence": "It also defines mandatory classification and abstention as the two conditions to compare [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.392734248902533e-06,
+              "ai": 0.9998755994765123,
+              "paraphrased": 0.0001210077892387801
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999967116583668,
+            "sentence": "These definitions motivate a narrow experiment: the image evidence will remain fixed while the output rule changes.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.2883416331471814e-06,
+              "ai": 0.9998728345907953,
+              "paraphrased": 0.00012387706757146724
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999955054444702,
+            "sentence": "We will not use the inventory as an independent reference for the direction of glacier change.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.494555529745277e-06,
+              "ai": 0.9998562290332978,
+              "paraphrased": 0.00013927641117236395
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999952155593943,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.784440605628866e-06,
+              "ai": 0.9998586326634601,
+              "paraphrased": 0.0001365828959342639
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999949070352734,
+            "sentence": "We will provide the same image pairs to a boundary model under both conditions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.09296472655833e-06,
+              "ai": 0.9998495166415492,
+              "paraphrased": 0.00014539039372422612
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999962738277958,
+            "sentence": "In the first condition, the model must assign a label to every pixel.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.726172204282867e-06,
+              "ai": 0.9998709367798806,
+              "paraphrased": 0.00012533704791512827
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999963884731402,
+            "sentence": "In the second, it may abstain where cloud cover makes the observation unavailable.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.6115268597642687e-06,
+              "ai": 0.9998700685057906,
+              "paraphrased": 0.0001263199673495881
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999949069933468,
+            "sentence": "The evaluation set will contain 24 image pairs [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.093006653139763e-06,
+              "ai": 0.9998577896503863,
+              "paraphrased": 0.00013711734296055982
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999963884731402,
+            "sentence": "Reviewers will examine the resulting boundaries without seeing the condition names.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.6115268597642687e-06,
+              "ai": 0.9998700685057906,
+              "paraphrased": 0.0001263199673495881
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999873952994275,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2604700572534782e-05,
+              "ai": 0.9998092664293168,
+              "paraphrased": 0.00017812887011067727
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999968128280977,
+            "sentence": "The evaluation will report boundary disagreement on observable terrain and the fraction of pixels left unresolved.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.1871719023041175e-06,
+              "ai": 0.9998734186527751,
+              "paraphrased": 0.00012339417532260152
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999960335291253,
+            "sentence": "Abstentions will be reported separately from correct classifications to ensure the system cannot appear accurate simply by declining most cases.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.966470874744787e-06,
+              "ai": 0.9998662123326779,
+              "paraphrased": 0.00012982119644733866
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999963884626502,
+            "sentence": "We will also inspect examples where a cloud edge resembles an ice boundary.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.6115373498387014e-06,
+              "ai": 0.999872994339213,
+              "paraphrased": 0.00012339412343718794
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999906328756895,
+            "sentence": "These comparisons are planned, and no field measurements are yet available.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.367124310607388e-06,
+              "ai": 0.9998206591700339,
+              "paraphrased": 0.00016997370565548768
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999929292746197,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.070725380321108e-06,
+              "ai": 0.9998275391998087,
+              "paraphrased": 0.00016539007481095652
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999964996090378,
+            "sentence": "An abstention rule may make the limits of the evidence clearer while leaving a less complete map.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.5003909621350145e-06,
+              "ai": 0.9998641182000857,
+              "paraphrased": 0.0001323814089521185
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999953627600748,
+            "sentence": "A local inventory may also contain outdated boundaries.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.637239925186742e-06,
+              "ai": 0.9998587798457674,
+              "paraphrased": 0.000136582914307355
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999967116427546,
+            "sentence": "The proposed experiment will therefore not estimate annual retreat rates or establish that any particular glacier is shrinking [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.2883572453405716e-06,
+              "ai": 0.9998775796738982,
+              "paraphrased": 0.00011913196885642899
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999959076185908,
+            "sentence": "Its contribution would be a more explicit account of what the available images can support.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.092381409205718e-06,
+              "ai": 0.9998665925202679,
+              "paraphrased": 0.0001293150983229519
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# When a Glacier Map Is Allowed to Abstain\n\n## Abstract\n\nA glacier outline can change due to ice movement or incomplete observation. We propose testing whether allowing a mapping model to abstain on cloud-covered pixels enhances the reliability of boundary comparisons. The study will utilize two summer visits and a local outline inventory [S1], focusing on how uncertainty is represented rather than assessing specific glacier retreat.\n\n## Introduction\n\nMissing pixels are often inconvenient for a mapping workflow because the output is expected to cover the entire image. However, filling every location with a label can turn missing evidence into an apparently definite boundary. In this proposal, cloud cover will remain an unavailable observation. The inventory provides a starting outline but does not by itself provide evidence of recent retreat [S1].\n\n## Related Work\n\nThe source packet distinguishes between an inventory and a change measurement [S1]. It also defines mandatory classification and abstention as the two conditions to compare [S2]. These definitions motivate a narrow experiment: the image evidence will remain fixed while the output rule changes. We will not use the inventory as an independent reference for the direction of glacier change.\n\n## Methodology\n\nWe will provide the same image pairs to a boundary model under both conditions. In the first condition, the model must assign a label to every pixel. In the second, it may abstain where cloud cover makes the observation unavailable. The evaluation set will contain 24 image pairs [S2]. Reviewers will examine the resulting boundaries without seeing the condition names.\n\n## Planned Evaluation\n\nThe evaluation will report boundary disagreement on observable terrain and the fraction of pixels left unresolved. Abstentions will be reported separately from correct classifications to ensure the system cannot appear accurate simply by declining most cases. We will also inspect examples where a cloud edge resembles an ice boundary. These comparisons are planned, and no field measurements are yet available.\n\n## Limitations and Conclusion\n\nAn abstention rule may make the limits of the evidence clearer while leaving a less complete map. A local inventory may also contain outdated boundaries. The proposed experiment will therefore not estimate annual retreat rates or establish that any particular glacier is shrinking [S2]. Its contribution would be a more explicit account of what the available images can support.",
+        "document_id": null
+      }
+    ]
+  }
+}

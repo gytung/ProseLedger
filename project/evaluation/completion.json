@@ -1,0 +1,122 @@
+[
+  {
+    "case": "C01",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C01",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C02",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C02",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C03",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C03",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C04",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C04",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C05",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C05",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C06",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C06",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C07",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C07",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C08",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C08",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C09",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C09",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C10",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C10",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C11",
+    "condition": "generic",
+    "status": "completed"
+  },
+  {
+    "case": "C11",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C12",
+    "condition": "rules",
+    "status": "completed"
+  },
+  {
+    "case": "C12",
+    "condition": "generic",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "status": "frozen before new manuscripts generated or detected",
+  "selectedPolicy": "Qwen2.5-7B-Instruct 4-bit, ordinary section rewrite (lambda=0), independent section audit, bounded repairs, independent full audit; reject to original if gate fails",
+  "developmentResult": {
+    "initialAI": 1.0,
+    "oldTargetedAI": 1.0,
+    "newAI": 0.6260916940036801,
+    "newMixed": 0.3739083059963199,
+    "newHuman": 0
+  },
+  "selectionRationale": "First content-eligible development policy with lower document AI probability. The ongoing contrastive arm does not select the held-out policy.",
+  "model": {
+    "repo": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+    "sha": "c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed",
+    "files": [
+      ".gitattributes",
+      "README.md",
+      "added_tokens.json",
+      "config.json",
+      "merges.txt",
+      "model.safetensors",
+      "model.safetensors.index.json",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ]
+  },
+  "baseline": "Published protocol 3 Targeted route extracted without changing its prompts or selection rules; reviewer batch reduced to this route only. Generator and Targeted writer use gpt-6.1-sol. New writer uses Qwen plus gpt-6.1-sol audits/repairs; compute not matched.",
+  "metric": "GPTZero document class_probabilities.ai; secondary mixed, human and ai+mixed. This is not fraction of AI-written words.",
+  "contentGate": "Deterministic checks, word ratio .85\u20131.15, independent full content audit pass, readability not worse. Failed final candidate falls back to the same original; retain raw and rejection.",
+  "cases": [
+    {
+      "id": "case01",
+      "topic": "Evidence-linked revision of scientific proposals",
+      "sourceSHA256": "5896f35d1a895a024b1eb9f26481ab5e987a2d22ca8a7f5f55c392a2fc9d3d17"
+    },
+    {
+      "id": "case02",
+      "topic": "Conditional editing experience for laboratory handover notes",
+      "sourceSHA256": "5896f35d1a895a024b1eb9f26481ab5e987a2d22ca8a7f5f55c392a2fc9d3d17"
+    },
+    {
+      "id": "case03",
+      "topic": "Citation preservation during cross-section editing",
+      "sourceSHA256": "5896f35d1a895a024b1eb9f26481ab5e987a2d22ca8a7f5f55c392a2fc9d3d17"
+    },
+    {
+      "id": "case04",
+      "topic": "Preserving negative findings and uncertainty in literature synthesis",
+      "sourceSHA256": "5896f35d1a895a024b1eb9f26481ab5e987a2d22ca8a7f5f55c392a2fc9d3d17"
+    }
+  ],
+  "algorithmFileHashes": {
+    "contrastive_transfer.py": "a95c846035de20c5c29cab6cab708c63826a6832d329b54fc2691eb2007936e9",
+    "audit_contrastive.mjs": "95d799d0065c2a421eb77750867461da4f6b640ba306dac78f7b134aafcef4f8",
+    "repair_sections.mjs": "614da30af5c269ad4ab4ec9f9e5a69dbce428940007a3759d967ec9cb6efa61b",
+    "targeted_engine.mjs": "d1e0b1a36b2a1a8cb6e971c6f4a4bd227dc73cc6b993e5ecad2e9f7f794fb293",
+    "experiment_utils.mjs": "be449e60fe0dd02732e01ce2988c30ae11e8b7d7b1d915b397fa93caa5be8590",
+    "run_heldout_controls.mjs": "43ab3253f55b35e82590e5d02bd47302a802dec4676e6e6ab72479cb8ce240d6",
+    "model_bridge.py": "b0abd5d48ffba516912f9b821224233a04631fcd34a7a30b0d6ddc3ad53c4169"
+  },
+  "frozenAtUTC": "2026-10-30T17:00:53.616704+00:00",
+  "interfaceNote": "Case directory and route-selection I/O adapters added before any held-out outputs were available; generation prompts, decoding, audits and repair thresholds unchanged.",
+  "resourceAdapterChange": {
+    "beforeSHA256": "62c43e29fc8f465f5a070ef354af124063a146b3f8ad4fe887901ea51f18dda7",
+    "afterSHA256": "a95c846035de20c5c29cab6cab708c63826a6832d329b54fc2691eb2007936e9",
+    "description": "Before held-out inference, use MLX-LM official recommended wired-memory limit and restore it on process exit. No prompt, model, RNG seed, decoding formula, data, or selection-rule change."
+  }
+}

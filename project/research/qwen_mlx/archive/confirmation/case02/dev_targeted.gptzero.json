@@ -1,0 +1,1078 @@
+{
+  "label": "confirmation_case02_targeted",
+  "textSHA256": "f1e2a25e1971344c2d4d5898681b351c21b7603838e48f5af5985e7d007138d0",
+  "characters": 5012,
+  "requestVersion": "provider-default-returned-version-recorded",
+  "elapsedSeconds": 1.08,
+  "raw": {
+    "version": "2026-10-07-base",
+    "neatVersion": "4.1o",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 8,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 12,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 15,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 19,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 22,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 23,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 27,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 31,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 34,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 35,
+            "num_sentences": 2,
+            "completely_generated_prob": 0.8254776901813464
+          },
+          {
+            "start_sentence_index": 37,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 42,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 43,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [
+          {
+            "start": 0,
+            "end": 67,
+            "text": "# Preserving Exploratory Claims Through Claim-Status-Aware Revision",
+            "reason": "header"
+          },
+          {
+            "start": 69,
+            "end": 80,
+            "text": "## Abstract",
+            "reason": "header"
+          },
+          {
+            "start": 714,
+            "end": 729,
+            "text": "## Introduction",
+            "reason": "header"
+          },
+          {
+            "start": 1608,
+            "end": 1623,
+            "text": "## Related Work",
+            "reason": "header"
+          },
+          {
+            "start": 2573,
+            "end": 2587,
+            "text": "## Methodology",
+            "reason": "header"
+          },
+          {
+            "start": 3719,
+            "end": 3740,
+            "text": "## Planned Evaluation",
+            "reason": "header"
+          },
+          {
+            "start": 4606,
+            "end": 4635,
+            "text": "## Limitations and Conclusion",
+            "reason": "header"
+          }
+        ],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0,
+            "sentence": "# Preserving Exploratory Claims Through Claim-Status-Aware Revision",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993747932382,
+            "sentence": "Research proposals combine established findings, tentative explanations, and planned investigations.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.252067618396372e-07,
+              "ai": 0.9999727903257474,
+              "paraphrased": 2.6584467490790747e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993344705893,
+            "sentence": "Revising these statements for clarity can inadvertently change what authors claim to know.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.65529410635558e-07,
+              "ai": 0.999973315049066,
+              "paraphrased": 2.6019421523383028e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999987271436256,
+            "sentence": "This project proposes a claim-status-aware revision method for cross-disciplinary proposals.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.272856374434113e-06,
+              "ai": 0.9999717240614421,
+              "paraphrased": 2.7003082183500882e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993052503727,
+            "sentence": "The method would distinguish evidence-backed premises from hypotheses and planned activities, link factual statements to supplied sources, and examine whether revisions preserve uncertainty and scope.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.94749627275237e-07,
+              "ai": 0.9999732349616088,
+              "paraphrased": 2.607028876392066e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994610411634,
+            "sentence": "Planned evaluation would assess whether this structure improves clarity while retaining exploratory content and avoiding unsupported assertions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.389588365303976e-07,
+              "ai": 0.9999671111582145,
+              "paraphrased": 3.234988294902297e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995073489466,
+            "sentence": "Cross-disciplinary proposals must explain unfamiliar concepts while leaving room for questions that existing evidence cannot settle.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.926510534596034e-07,
+              "ai": 0.9999728188326852,
+              "paraphrased": 2.6688516261374555e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994240344263,
+            "sentence": "Consider a proposal suggesting that a mechanism established in one field might operate in another.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.75965573648482e-07,
+              "ai": 0.9999695344117262,
+              "paraphrased": 2.988962270014407e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995168804928,
+            "sentence": "A revision that removes “might” can turn an exploratory connection into an asserted finding; deleting the connection can erase the proposal’s motivation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.831195071695608e-07,
+              "ai": 0.9999670086539711,
+              "paraphrased": 3.2508226521717224e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994776203641,
+            "sentence": "These examples define the problem investigated here, rather than establish how frequently it occurs.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.223796358360014e-07,
+              "ai": 0.9999725535111389,
+              "paraphrased": 2.692410922523264e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993892774524,
+            "sentence": "The research question is whether explicitly representing claim status can help a revision system preserve exploratory reasoning while improving readability.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.107225476290034e-07,
+              "ai": 0.9999706446764327,
+              "paraphrased": 2.8744601019689944e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994080664761,
+            "sentence": "Preservation would concern the underlying proposition, its uncertainty, disciplinary scope, and role in the proposed investigation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.919335238016326e-07,
+              "ai": 0.9999721931846005,
+              "paraphrased": 2.721488187565647e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992575492791,
+            "sentence": "It would not require retaining every original phrase or protecting factual errors from correction.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.424507208935793e-07,
+              "ai": 0.9999718827442062,
+              "paraphrased": 2.7374805072855484e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999980742387309,
+            "sentence": "ALCE evaluates citation generation through fluency, correctness, and citation quality, establishing a useful framework for assessing verifiable factual content [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.925761269152744e-06,
+              "ai": 0.9999670546718136,
+              "paraphrased": 3.101956691728603e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999982119800462,
+            "sentence": "Attribute First, then Generate selects source segments before sentence planning and generation; its authors report more concise attributions and reduced verification time in their evaluated tasks [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.7880199538122205e-06,
+              "ai": 0.999973286901468,
+              "paraphrased": 2.4925078578210534e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990391994449,
+            "sentence": "These findings motivate evidence mapping but do not demonstrate preservation of exploratory proposal claims.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.608005550357382e-07,
+              "ai": 0.9999697276893103,
+              "paraphrased": 2.931151013466114e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999969703666065,
+            "sentence": "RefChecker extracts claim-triplets and checks them against references [S5].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.029633393470828e-06,
+              "ai": 0.9999622980504399,
+              "paraphrased": 3.4672316166615054e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991251783837,
+            "sentence": "The proposed project would extend this general checking perspective by representing modality and planned activity, which cannot be assessed solely as established factual assertions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.748216162802436e-07,
+              "ai": 0.9999728504281244,
+              "paraphrased": 2.6274750259244535e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999976405027782,
+            "sentence": "Scientific revision research also cautions against relying on similarity metrics or automated instruction-following judgments alone: Jourdan and colleagues report that LLM judges struggle with correctness [S4].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.3594972217307315e-06,
+              "ai": 0.9999691752871409,
+              "paraphrased": 2.8465215637310884e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990831869139,
+            "sentence": "The proposed workflow would begin with an author-provided draft, source excerpts, and revision instructions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.168130861217319e-07,
+              "ai": 0.9999815460586416,
+              "paraphrased": 1.753712827222749e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992719048549,
+            "sentence": "It would identify claim spans and assign provisional roles: factual premise, exploratory hypothesis, planned activity, or other discourse.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.280951450924947e-07,
+              "ai": 0.999978364605583,
+              "paraphrased": 2.090729927193431e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999983719652892,
+            "sentence": "Mixed statements would be split where feasible.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6280347109143463e-06,
+              "ai": 0.9999880623527992,
+              "paraphrased": 1.0309612489879704e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993940201928,
+            "sentence": "Each claim record would retain qualifiers, disciplinary context, and links to supporting evidence when applicable.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.059798071548242e-07,
+              "ai": 0.9999870791168928,
+              "paraphrased": 1.2314903300053056e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992249386453,
+            "sentence": "A revision model would then receive these records alongside the draft.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.75061354670839e-07,
+              "ai": 0.9999888344587542,
+              "paraphrased": 1.039047989114894e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995280629296,
+            "sentence": "Instructions would permit reorganization and clearer phrasing while requiring preservation of hypothesis status and future tense for planned work.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.719370703761301e-07,
+              "ai": 0.9999860818191066,
+              "paraphrased": 1.3446243822977097e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992575372327,
+            "sentence": "Unsupported factual premises would be flagged for author review.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.424627673032612e-07,
+              "ai": 0.9999881319375761,
+              "paraphrased": 1.1125599656622917e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993599578061,
+            "sentence": "Hypotheses would require explicit exploratory framing, without being treated as source-established findings.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.400421938279416e-07,
+              "ai": 0.9999869484690437,
+              "paraphrased": 1.2411488762455739e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993624530705,
+            "sentence": "A subsequent comparison would inspect original and revised claim records for lost propositions, strengthened certainty, altered scope, and invented support.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.375469293910398e-07,
+              "ai": 0.9999870234746625,
+              "paraphrased": 1.2338978408057499e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999997809244987,
+            "sentence": "Ambiguous changes would be presented to authors with the relevant passages.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.1907550129414857e-06,
+              "ai": 0.9999857561144,
+              "paraphrased": 1.2053130587086239e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999988410341789,
+            "sentence": "This comparison is a proposed safeguard whose reliability would itself require evaluation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.1589658210477467e-06,
+              "ai": 0.9999863077540537,
+              "paraphrased": 1.2533280125192853e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999998932307651,
+            "sentence": "The study would assemble permissioned cross-disciplinary proposal excerpts with author-confirmed claim annotations.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0676923490287272e-06,
+              "ai": 0.9999890562936268,
+              "paraphrased": 9.876014024219804e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990687431886,
+            "sentence": "It would compare ordinary instruction-based revision, revision with source attribution, and the full proposed workflow under matched editing requests and source access.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.312568114291568e-07,
+              "ai": 0.9999879648541959,
+              "paraphrased": 1.1103888992650097e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991553877232,
+            "sentence": "Disciplinary reviewers would independently assess clarity, preservation of exploratory meaning, factual support, and feasibility of author review.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.446122768199542e-07,
+              "ai": 0.9999868404880637,
+              "paraphrased": 1.231489965948504e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991079104891,
+            "sentence": "Targeted measures would count hypothesis deletions, unwarranted certainty increases, scope changes, and unsupported factual additions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.920895109438614e-07,
+              "ai": 0.9999881119285908,
+              "paraphrased": 1.0995981898283278e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999987901499314,
+            "sentence": "Disagreements would be adjudicated and reported.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2098500685664855e-06,
+              "ai": 0.9999859094397104,
+              "paraphrased": 1.2880710221015601e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999978849198087,
+            "sentence": "Ablations would remove claim-status annotation or the final comparison to examine their respective contributions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.1150801913393427e-06,
+              "ai": 0.9999884427431182,
+              "paraphrased": 9.442176690527363e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990867571266,
+            "sentence": "Analysis would consider both benefits and costs, including excessive hedging or reduced readability, without presuming improvement.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.132428734335717e-07,
+              "ai": 0.9999860287329935,
+              "paraphrased": 1.3058024133114014e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992249392291,
+            "sentence": "Claim roles can overlap, and disciplinary conventions may complicate annotation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.750607708417531e-07,
+              "ai": 0.9999880993404279,
+              "paraphrased": 1.1125598801256951e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990577652798,
+            "sentence": "Supplied excerpts may also leave factual support unresolved.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.422347202069731e-07,
+              "ai": 0.9999885857938579,
+              "paraphrased": 1.0471971421892686e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999986815799398,
+            "sentence": "Author involvement would therefore remain necessary.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.3184200602767444e-06,
+              "ai": 0.9999859757747073,
+              "paraphrased": 1.2705805232448351e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992859827892,
+            "sentence": "The project would test whether explicit claim-status tracking offers a practical way to clarify proposals while preserving the uncertainty that makes exploratory research possible.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.14017210837792e-07,
+              "ai": 0.9999850283484288,
+              "paraphrased": 1.425763436031983e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "4.1o",
+        "version": "2026-10-07-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Preserving Exploratory Claims Through Claim-Status-Aware Revision\n\n## Abstract\n\nResearch proposals combine established findings, tentative explanations, and planned investigations. Revising these statements for clarity can inadvertently change what authors claim to know. This project proposes a claim-status-aware revision method for cross-disciplinary proposals. The method would distinguish evidence-backed premises from hypotheses and planned activities, link factual statements to supplied sources, and examine whether revisions preserve uncertainty and scope. Planned evaluation would assess whether this structure improves clarity while retaining exploratory content and avoiding unsupported assertions.\n\n## Introduction\n\nCross-disciplinary proposals must explain unfamiliar concepts while leaving room for questions that existing evidence cannot settle. Consider a proposal suggesting that a mechanism established in one field might operate in another. A revision that removes “might” can turn an exploratory connection into an asserted finding; deleting the connection can erase the proposal’s motivation. These examples define the problem investigated here, rather than establish how frequently it occurs.\n\nThe research question is whether explicitly representing claim status can help a revision system preserve exploratory reasoning while improving readability. Preservation would concern the underlying proposition, its uncertainty, disciplinary scope, and role in the proposed investigation. It would not require retaining every original phrase or protecting factual errors from correction.\n\n## Related Work\n\nALCE evaluates citation generation through fluency, correctness, and citation quality, establishing a useful framework for assessing verifiable factual content [S1]. Attribute First, then Generate selects source segments before sentence planning and generation; its authors report more concise attributions and reduced verification time in their evaluated tasks [S2]. These findings motivate evidence mapping but do not demonstrate preservation of exploratory proposal claims.\n\nRefChecker extracts claim-triplets and checks them against references [S5]. The proposed project would extend this general checking perspective by representing modality and planned activity, which cannot be assessed solely as established factual assertions. Scientific revision research also cautions against relying on similarity metrics or automated instruction-following judgments alone: Jourdan and colleagues report that LLM judges struggle with correctness [S4].\n\n## Methodology\n\nThe proposed workflow would begin with an author-provided draft, source excerpts, and revision instructions. It would identify claim spans and assign provisional roles: factual premise, exploratory hypothesis, planned activity, or other discourse. Mixed statements would be split where feasible. Each claim record would retain qualifiers, disciplinary context, and links to supporting evidence when applicable.\n\nA revision model would then receive these records alongside the draft. Instructions would permit reorganization and clearer phrasing while requiring preservation of hypothesis status and future tense for planned work. Unsupported factual premises would be flagged for author review. Hypotheses would require explicit exploratory framing, without being treated as source-established findings.\n\nA subsequent comparison would inspect original and revised claim records for lost propositions, strengthened certainty, altered scope, and invented support. Ambiguous changes would be presented to authors with the relevant passages. This comparison is a proposed safeguard whose reliability would itself require evaluation.\n\n## Planned Evaluation\n\nThe study would assemble permissioned cross-disciplinary proposal excerpts with author-confirmed claim annotations. It would compare ordinary instruction-based revision, revision with source attribution, and the full proposed workflow under matched editing requests and source access.\n\nDisciplinary reviewers would independently assess clarity, preservation of exploratory meaning, factual support, and feasibility of author review. Targeted measures would count hypothesis deletions, unwarranted certainty increases, scope changes, and unsupported factual additions. Disagreements would be adjudicated and reported. Ablations would remove claim-status annotation or the final comparison to examine their respective contributions. Analysis would consider both benefits and costs, including excessive hedging or reduced readability, without presuming improvement.\n\n## Limitations and Conclusion\n\nClaim roles can overlap, and disciplinary conventions may complicate annotation. Supplied excerpts may also leave factual support unresolved. Author involvement would therefore remain necessary. The project would test whether explicit claim-status tracking offers a practical way to clarify proposals while preserving the uncertainty that makes exploratory research possible.",
+        "document_id": null
+      }
+    ]
+  }
+}

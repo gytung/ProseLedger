@@ -1,0 +1,30 @@
+{
+  "caseId": "C05",
+  "topic": "Museum Descriptions without Invented Provenance",
+  "draft": "# Museum Descriptions without Invented Provenance\n\n## Abstract\n\nMuseum descriptions need to be readable without making an uncertain object history sound settled. We propose to revise catalogue prose into concise public descriptions using only the supplied entry and curator note. The evaluation will examine readability together with the preservation of approximate dates, disputed locations and unknown makers [S2]. The study will not undertake new provenance research.\n\n## Introduction\n\nA short description can unintentionally remove the qualification that makes a historical statement defensible. For example, an approximate date should not become a precise one merely because the new sentence reads more smoothly. A blank maker field also does not establish that an object was made anonymously [S1]. These distinctions concern evidence, not just editorial style.\n\n## Related Work\n\nThe catalogue brief limits the writer to two supplied records: the entry and its curator note [S1]. The evaluation brief identifies three kinds of uncertainty that must remain visible [S2]. We will treat those qualifications as part of the content. They will not be counted as unnecessary hedging when an editor assesses whether a revision is more concise.\n\n## Methodology\n\nWe plan to study 28 objects with different combinations of uncertain dates, disputed locations and missing maker information [S2]. Each description will be revised from the same source packet. Reviewers will compare the revision with the original prose and identify the source phrase that supports each historical claim. Unsupported detail will remain an error even if it makes the account more vivid.\n\n## Planned Evaluation\n\nThe evaluation will ask readers which version is easier to follow and ask curators whether each qualification survives. These judgments will be reported separately rather than combined into a single quality score. Difficult cases will include entries in which a later note disputes an earlier location. The revised description must make the disagreement understandable without choosing a side unsupported by the packet.\n\n## Limitations and Conclusion\n\nThe source records may themselves be incomplete or inconsistent. Clearer prose cannot resolve those evidential gaps. We will not infer a maker from a missing field or treat an approximate date as exact [S1]. The intended contribution is an editing procedure that makes the limits of an object description readable, rather than concealing them behind confident wording.",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Controlled source packet: domain and evidence brief",
+      "excerpt": "The museum task uses catalogue entries for objects whose maker is sometimes unknown. An approximate date must remain approximate. A missing maker field is not evidence that an object was produced anonymously. Descriptions may use only the supplied catalogue entry and curator note.",
+      "content_kind": "author_constructed_evaluation_fixture"
+    },
+    {
+      "id": "S2",
+      "title": "Controlled source packet: experimental design brief",
+      "excerpt": "The proposed sample contains 28 objects. A concise description will be compared with the original catalogue prose. The study will measure readability and whether uncertain dates, disputed locations and unknown makers are preserved. No new provenance research will be conducted.",
+      "content_kind": "author_constructed_evaluation_fixture"
+    }
+  ],
+  "policy": "section",
+  "challengeTheme": "Uncertainty and missing evidence",
+  "knownFacts": [
+    "The sample contains 28 objects.",
+    "Only the catalogue entry and curator note may be used.",
+    "Approximate dates must remain approximate.",
+    "A missing maker field is not evidence of anonymous production.",
+    "Disputed locations must remain qualified.",
+    "No new provenance research will be conducted."
+  ],
+  "inputOrigin": "New author-constructed controlled manuscript, frozen before inference. Not a human-authorship sample, published paper or naturalistic test distribution."
+}

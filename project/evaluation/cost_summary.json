@@ -1,0 +1,334 @@
+{
+  "scope": "Counts from actual saved response usage. Hosted CLI input tokens include its standard instruction overhead; cached input is a subset of input tokens, not an extra total. Active time sums response durations; wall time includes scheduler waiting. No monetary cost is inferred.",
+  "groups": {
+    "generic/local_qwen": {
+      "responseCount": 72,
+      "inputTokens": 64185,
+      "cachedInputTokens": 0,
+      "outputTokens": 5359,
+      "activeSeconds": 1163.91
+    },
+    "generic/hosted_review_repair": {
+      "responseCount": 30,
+      "inputTokens": 467222,
+      "cachedInputTokens": 324096,
+      "outputTokens": 5660,
+      "activeSeconds": 494.33
+    },
+    "rules/local_qwen": {
+      "responseCount": 72,
+      "inputTokens": 73329,
+      "cachedInputTokens": 0,
+      "outputTokens": 5296,
+      "activeSeconds": 1195.88
+    },
+    "rules/hosted_review_repair": {
+      "responseCount": 30,
+      "inputTokens": 466581,
+      "cachedInputTokens": 331008,
+      "outputTokens": 4962,
+      "activeSeconds": 462.19
+    },
+    "blinded_evaluation": {
+      "responseCount": 24,
+      "inputTokens": 383341,
+      "cachedInputTokens": 259968,
+      "outputTokens": 24358,
+      "activeSeconds": 810.2
+    },
+    "known_answer_semantic_evaluation": {
+      "responseCount": 24,
+      "inputTokens": 367306,
+      "cachedInputTokens": 249600,
+      "outputTokens": 2887,
+      "activeSeconds": 334.65
+    }
+  },
+  "generationMeans": {
+    "generic": {
+      "completedCases": 12,
+      "meanActiveSeconds": 138.18583333333333,
+      "meanWallSecondsIncludingQueue": 204.275,
+      "meanInputTokens": 44283.916666666664,
+      "meanOutputTokens": 918.25,
+      "meanSuccessfulResponseCount": 8.5
+    },
+    "rules": {
+      "completedCases": 12,
+      "meanActiveSeconds": 138.17166666666665,
+      "meanWallSecondsIncludingQueue": 187.76666666666668,
+      "meanInputTokens": 44992.5,
+      "meanOutputTokens": 854.8333333333334,
+      "meanSuccessfulResponseCount": 8.5
+    }
+  },
+  "generationWallSpanSeconds": 2407.23,
+  "generationRunsCompleted": 24,
+  "generationRunsScheduled": 24,
+  "cases": [
+    {
+      "caseId": "C01",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 268.0,
+      "responseCount": 9,
+      "inputTokens": 51922,
+      "cachedInputTokens": 26880,
+      "outputTokens": 1164,
+      "activeSeconds": 153.23
+    },
+    {
+      "caseId": "C01",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 160.4,
+      "responseCount": 9,
+      "inputTokens": 52484,
+      "cachedInputTokens": 30336,
+      "outputTokens": 1097,
+      "activeSeconds": 160.0
+    },
+    {
+      "caseId": "C02",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 204.7,
+      "responseCount": 9,
+      "inputTokens": 51671,
+      "cachedInputTokens": 30336,
+      "outputTokens": 1087,
+      "activeSeconds": 144.93
+    },
+    {
+      "caseId": "C02",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 218.8,
+      "responseCount": 9,
+      "inputTokens": 52989,
+      "cachedInputTokens": 30336,
+      "outputTokens": 1221,
+      "activeSeconds": 155.66
+    },
+    {
+      "caseId": "C03",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 161.8,
+      "responseCount": 9,
+      "inputTokens": 51388,
+      "cachedInputTokens": 30336,
+      "outputTokens": 992,
+      "activeSeconds": 124.36
+    },
+    {
+      "caseId": "C03",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 155.2,
+      "responseCount": 9,
+      "inputTokens": 52502,
+      "cachedInputTokens": 33792,
+      "outputTokens": 1008,
+      "activeSeconds": 129.37
+    },
+    {
+      "caseId": "C04",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 146.9,
+      "responseCount": 8,
+      "inputTokens": 36825,
+      "cachedInputTokens": 21376,
+      "outputTokens": 861,
+      "activeSeconds": 110.2
+    },
+    {
+      "caseId": "C04",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 150.5,
+      "responseCount": 8,
+      "inputTokens": 37569,
+      "cachedInputTokens": 21376,
+      "outputTokens": 689,
+      "activeSeconds": 108.94
+    },
+    {
+      "caseId": "C05",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 161.2,
+      "responseCount": 8,
+      "inputTokens": 36825,
+      "cachedInputTokens": 21376,
+      "outputTokens": 688,
+      "activeSeconds": 106.14
+    },
+    {
+      "caseId": "C05",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 179.7,
+      "responseCount": 9,
+      "inputTokens": 52176,
+      "cachedInputTokens": 33792,
+      "outputTokens": 915,
+      "activeSeconds": 128.8
+    },
+    {
+      "caseId": "C06",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 213.9,
+      "responseCount": 9,
+      "inputTokens": 52157,
+      "cachedInputTokens": 30336,
+      "outputTokens": 1297,
+      "activeSeconds": 169.58
+    },
+    {
+      "caseId": "C06",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 178.9,
+      "responseCount": 8,
+      "inputTokens": 37346,
+      "cachedInputTokens": 17920,
+      "outputTokens": 646,
+      "activeSeconds": 120.84
+    },
+    {
+      "caseId": "C07",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 217.3,
+      "responseCount": 8,
+      "inputTokens": 36949,
+      "cachedInputTokens": 24832,
+      "outputTokens": 725,
+      "activeSeconds": 132.91
+    },
+    {
+      "caseId": "C07",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 189.9,
+      "responseCount": 8,
+      "inputTokens": 37682,
+      "cachedInputTokens": 24832,
+      "outputTokens": 777,
+      "activeSeconds": 140.07
+    },
+    {
+      "caseId": "C08",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 203.2,
+      "responseCount": 8,
+      "inputTokens": 36859,
+      "cachedInputTokens": 24832,
+      "outputTokens": 739,
+      "activeSeconds": 136.56
+    },
+    {
+      "caseId": "C08",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 220.9,
+      "responseCount": 9,
+      "inputTokens": 52166,
+      "cachedInputTokens": 33792,
+      "outputTokens": 772,
+      "activeSeconds": 142.23
+    },
+    {
+      "caseId": "C09",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 188.8,
+      "responseCount": 9,
+      "inputTokens": 51269,
+      "cachedInputTokens": 33792,
+      "outputTokens": 996,
+      "activeSeconds": 127.42
+    },
+    {
+      "caseId": "C09",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 173.3,
+      "responseCount": 8,
+      "inputTokens": 37366,
+      "cachedInputTokens": 24832,
+      "outputTokens": 721,
+      "activeSeconds": 122.55
+    },
+    {
+      "caseId": "C10",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 236.0,
+      "responseCount": 8,
+      "inputTokens": 36724,
+      "cachedInputTokens": 21376,
+      "outputTokens": 658,
+      "activeSeconds": 140.55
+    },
+    {
+      "caseId": "C10",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 202.3,
+      "responseCount": 8,
+      "inputTokens": 37500,
+      "cachedInputTokens": 24832,
+      "outputTokens": 634,
+      "activeSeconds": 155.6
+    },
+    {
+      "caseId": "C11",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 220.5,
+      "responseCount": 8,
+      "inputTokens": 36756,
+      "cachedInputTokens": 24832,
+      "outputTokens": 708,
+      "activeSeconds": 154.03
+    },
+    {
+      "caseId": "C11",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 207.3,
+      "responseCount": 8,
+      "inputTokens": 37517,
+      "cachedInputTokens": 21376,
+      "outputTokens": 640,
+      "activeSeconds": 144.99
+    },
+    {
+      "caseId": "C12",
+      "condition": "generic",
+      "status": "completed",
+      "wallElapsedSeconds": 229.0,
+      "responseCount": 9,
+      "inputTokens": 52062,
+      "cachedInputTokens": 33792,
+      "outputTokens": 1104,
+      "activeSeconds": 158.32
+    },
+    {
+      "caseId": "C12",
+      "condition": "rules",
+      "status": "completed",
+      "wallElapsedSeconds": 216.0,
+      "responseCount": 9,
+      "inputTokens": 52613,
+      "cachedInputTokens": 33792,
+      "outputTokens": 1138,
+      "activeSeconds": 149.01
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The education study concerns feedback on short statistics explanations. The assistant may identify a reasoning gap but must not supply a complete replacement answer. A fluent explanation is not necessarily statistically correct. The task uses anonymized responses and does not assign course grades.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "The proposed sample contains 40 responses to the same question. Feedback will be compared with a rubric-only condition. A response confusing association with causation is a prespecified hard case. The study will assess feedback accuracy and usefulness, not claim improved learning from a single review.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

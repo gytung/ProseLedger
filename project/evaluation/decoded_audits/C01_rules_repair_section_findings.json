@@ -1,0 +1,25 @@
+{
+  "sections": [
+    {
+      "id": 5,
+      "patches": [
+        {
+          "before": ", but it will leave",
+          "after": " while leaving",
+          "issueIndex": 0
+        },
+        {
+          "before": ", as no field measurements have been collected for this proposal [S1]",
+          "after": "",
+          "issueIndex": 1
+        },
+        {
+          "before": "its contribution will be",
+          "after": "its contribution would be",
+          "issueIndex": 2
+        }
+      ],
+      "reason": "Restores the possible tradeoff and conditional proposed contribution, and removes the unsupported causal connection concerning inventory boundaries."
+    }
+  ]
+}

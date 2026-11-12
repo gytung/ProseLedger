@@ -1,0 +1,1055 @@
+{
+  "label": "dev_initial",
+  "textSHA256": "8cdacb1cfb025c7e73861afbbd8979278120d44a7911dd3215934fc1b5cf42ce",
+  "characters": 4806,
+  "requestVersion": "provider-default-returned-version-recorded",
+  "elapsedSeconds": 1.09,
+  "raw": {
+    "version": "2026-10-07-base",
+    "neatVersion": "4.1o",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 8,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 14,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 15,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 18,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 22,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 23,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 28,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 33,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 34,
+            "num_sentences": 2,
+            "completely_generated_prob": 0.8254776901813464
+          },
+          {
+            "start_sentence_index": 36,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 41,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 42,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [
+          {
+            "start": 0,
+            "end": 52,
+            "text": "# Evidence-Preserving Revision of Research Proposals",
+            "reason": "header"
+          },
+          {
+            "start": 54,
+            "end": 65,
+            "text": "## Abstract",
+            "reason": "header"
+          },
+          {
+            "start": 683,
+            "end": 698,
+            "text": "## Introduction",
+            "reason": "header"
+          },
+          {
+            "start": 1446,
+            "end": 1461,
+            "text": "## Related Work",
+            "reason": "header"
+          },
+          {
+            "start": 2518,
+            "end": 2532,
+            "text": "## Methodology",
+            "reason": "header"
+          },
+          {
+            "start": 3557,
+            "end": 3578,
+            "text": "## Planned Evaluation",
+            "reason": "header"
+          },
+          {
+            "start": 4362,
+            "end": 4391,
+            "text": "## Limitations and Conclusion",
+            "reason": "header"
+          }
+        ],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0,
+            "sentence": "# Evidence-Preserving Revision of Research Proposals",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993396383925,
+            "sentence": "Research proposals must communicate clearly while distinguishing established findings from hypotheses and planned experiments.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.603616075241074e-07,
+              "ai": 0.9999904521752591,
+              "paraphrased": 8.887463133414657e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991684781124,
+            "sentence": "This project will investigate whether a claim-and-evidence ledger can guide language-model revision without weakening those distinctions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.315218875694876e-07,
+              "ai": 0.9999917572041862,
+              "paraphrased": 7.4112739262801106e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990240467003,
+            "sentence": "The proposed system will link factual claims to supplied evidence, record their qualifications, and check changes after revision.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.759532996886917e-07,
+              "ai": 0.9999926101181619,
+              "paraphrased": 6.413928538418946e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993186754996,
+            "sentence": "Evaluation will examine evidence preservation alongside readability and instruction following.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.81324500447485e-07,
+              "ai": 0.9999915668836615,
+              "paraphrased": 7.751791838047543e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993549355468,
+            "sentence": "The central question is whether explicit claim tracking improves factual fidelity while permitting useful editorial changes.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.450644531680415e-07,
+              "ai": 0.9999906902878516,
+              "paraphrased": 8.664647695251032e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993868748416,
+            "sentence": "Revising a proposal involves more than correcting grammar: authors may reorganize arguments, compress background material, and clarify methods.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.131251584456897e-07,
+              "ai": 0.999990688314835,
+              "paraphrased": 8.698560006647293e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995054125351,
+            "sentence": "These changes can inadvertently strengthen a qualified finding, detach a citation from its claim, or describe a planned experiment as completed.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.945874648928725e-07,
+              "ai": 0.9999893556220916,
+              "paraphrased": 1.0149790443556121e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994307331488,
+            "sentence": "A fluent revision can therefore misrepresent the underlying research even when its sentences appear plausible.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.692668512102293e-07,
+              "ai": 0.999989783489674,
+              "paraphrased": 9.64724347471953e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999236952719,
+            "sentence": "This project will treat evidence preservation as an explicit revision objective.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.630472810028608e-07,
+              "ai": 0.9999916350937486,
+              "paraphrased": 7.6018589704220605e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992997880702,
+            "sentence": "It will ask whether recording claim support and research status before editing helps maintain them afterward.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.002119298381981e-07,
+              "ai": 0.9999922140724558,
+              "paraphrased": 7.0857156144621275e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992309680666,
+            "sentence": "The intended contribution is a revision procedure and evaluation protocol, rather than a guarantee that automated checks can establish scientific truth.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.690319333541851e-07,
+              "ai": 0.9999916439419779,
+              "paraphrased": 7.587026088763612e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999998780653584,
+            "sentence": "ALCE evaluates generated answers through fluency, correctness, and citation quality, and its authors report substantial remaining gaps in citation support [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2193464158725215e-06,
+              "ai": 0.9999919663889946,
+              "paraphrased": 6.814264589537238e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990429234067,
+            "sentence": "Attribute First, then Generate selects source segments before sentence planning and generation; its authors report more concise attributions and reduced human verification time in summarization and long-form question answering [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.570765933669669e-07,
+              "ai": 0.9999925786904647,
+              "paraphrased": 6.464232942018933e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993292392358,
+            "sentence": "These findings motivate explicit evidence links, but do not establish their effectiveness for proposal revision.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.707607640932766e-07,
+              "ai": 0.9999904417761949,
+              "paraphrased": 8.887463040992474e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999986290517019,
+            "sentence": "TETRA provides professionally edited academic documents and addresses the difficulty of evaluating revisions with many acceptable realizations [S3].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.37094829802035e-06,
+              "ai": 0.9999920758368283,
+              "paraphrased": 6.553214873679687e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999989281259201,
+            "sentence": "Research on scientific revision metrics reports that LLM judges assess instruction following more effectively than correctness, motivating complementary evaluation measures [S4].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0718740800011618e-06,
+              "ai": 0.9999917868393724,
+              "paraphrased": 7.141286547653382e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999979659413343,
+            "sentence": "RefChecker represents claims as triplets and checks them against references [S5].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.034058665665782e-06,
+              "ai": 0.9999913742205127,
+              "paraphrased": 6.591720821638365e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999020227103,
+            "sentence": "The proposed ledger will adapt fine-grained checking to revision while explicitly retaining qualifications and planned-research status.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.797728970371616e-07,
+              "ai": 0.9999925559943077,
+              "paraphrased": 6.464232795304599e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990938578173,
+            "sentence": "Each input will contain an original proposal, a revision instruction, and a bounded evidence packet.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.061421827555839e-07,
+              "ai": 0.9999929014995956,
+              "paraphrased": 6.192358221645245e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999987614496799,
+            "sentence": "The system will first construct a ledger of substantive claims.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2385503201267319e-06,
+              "ai": 0.9999935469582958,
+              "paraphrased": 5.214491384099715e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995407940099,
+            "sentence": "Each entry will record the original wording, its role as a source finding, proposed method, hypothesis, or planned evaluation, and any relevant supporting passage.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.5920599008286e-07,
+              "ai": 0.9999830983062601,
+              "paraphrased": 1.644248774983961e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999995461444098,
+            "sentence": "Qualifications such as uncertainty, population, and task scope will be recorded where applicable.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.5385559022431445e-07,
+              "ai": 0.999981940370468,
+              "paraphrased": 1.7605773941812573e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994714576864,
+            "sentence": "Unsupported background assertions will be flagged for review.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.285423135932298e-07,
+              "ai": 0.9999819685401001,
+              "paraphrased": 1.7502917586310427e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992487883668,
+            "sentence": "A revision model will then receive the draft, instruction, and ledger.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.512116332103783e-07,
+              "ai": 0.9999841308002152,
+              "paraphrased": 1.5117988151566751e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993447805774,
+            "sentence": "It will be allowed to restructure and rewrite the proposal while preserving supported meanings and research status.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.552194225597102e-07,
+              "ai": 0.9999856065341743,
+              "paraphrased": 1.3738246403050453e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994776150649,
+            "sentence": "Afterward, a checker will align revised claims with ledger entries and inspect additions, omissions, and changes in scope or certainty.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.223849350903627e-07,
+              "ai": 0.9999827108347382,
+              "paraphrased": 1.6766780326732092e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990125481857,
+            "sentence": "New proposed ideas will be distinguished from new factual assertions requiring support.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.87451814336282e-07,
+              "ai": 0.9999868885727001,
+              "paraphrased": 1.2123975485570881e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994776161377,
+            "sentence": "Flagged changes will prompt a targeted correction or an author-facing explanation when the evidence cannot resolve them.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.223838623482715e-07,
+              "ai": 0.9999805894048394,
+              "paraphrased": 1.8888211298308294e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990723776035,
+            "sentence": "The study will assemble proposal–evidence pairs with annotations of claim support, qualifications, and research status.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.276223964631644e-07,
+              "ai": 0.9999839543921525,
+              "paraphrased": 1.5117985451077071e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993498814214,
+            "sentence": "Comparisons will include ordinary instruction-based revision, revision with evidence access, and the complete ledger procedure, using matched model settings and editing instructions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.501185787190944e-07,
+              "ai": 0.9999827135826153,
+              "paraphrased": 1.6636298806061055e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994796533,
+            "sentence": "Blinded human assessors will judge clarity, coherence, instruction following, and fidelity to supplied evidence.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.203466998789242e-07,
+              "ai": 0.9999794907442888,
+              "paraphrased": 1.9988909011262074e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990903194712,
+            "sentence": "Claim-level measures will track unsupported assertions, citation mismatches, lost qualifications, and changes from planned to completed research.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.096805287483593e-07,
+              "ai": 0.9999839131647368,
+              "paraphrased": 1.517715473447935e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993422202249,
+            "sentence": "Results will be reported separately to expose tradeoffs.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.577797750893808e-07,
+              "ai": 0.9999793923153887,
+              "paraphrased": 1.994990483626225e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991684863211,
+            "sentence": "Ablations will remove the ledger or post-revision checking to examine each component’s contribution.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.315136788736974e-07,
+              "ai": 0.9999819032405901,
+              "paraphrased": 1.7265245730980735e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992096580395,
+            "sentence": "Evaluator disagreements will be documented and adjudicated.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.903419605337796e-07,
+              "ai": 0.9999811511534954,
+              "paraphrased": 1.805850454403323e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992803861896,
+            "sentence": "Claim extraction and alignment may miss implicit meanings, while incomplete evidence limits support judgments.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.196138104767291e-07,
+              "ai": 0.9999800947372852,
+              "paraphrased": 1.9185648904310778e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992604360061,
+            "sentence": "Ledger constraints may also discourage beneficial restructuring.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.39563993927823e-07,
+              "ai": 0.9999824280382028,
+              "paraphrased": 1.6832397803224498e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999989239395086,
+            "sentence": "The planned study will examine these failure modes alongside potential benefits.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0760604914593603e-06,
+              "ai": 0.9999836873863917,
+              "paraphrased": 1.5236553116935472e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991387319102,
+            "sentence": "Its aim is to determine when explicit evidence tracking helps authors revise proposals clearly while preserving what is known, proposed, and still untested.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.612680898901586e-07,
+              "ai": 0.9999837526541439,
+              "paraphrased": 1.5386077766268104e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "4.1o",
+        "version": "2026-10-07-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Evidence-Preserving Revision of Research Proposals\n\n## Abstract\n\nResearch proposals must communicate clearly while distinguishing established findings from hypotheses and planned experiments. This project will investigate whether a claim-and-evidence ledger can guide language-model revision without weakening those distinctions. The proposed system will link factual claims to supplied evidence, record their qualifications, and check changes after revision. Evaluation will examine evidence preservation alongside readability and instruction following. The central question is whether explicit claim tracking improves factual fidelity while permitting useful editorial changes.\n\n## Introduction\n\nRevising a proposal involves more than correcting grammar: authors may reorganize arguments, compress background material, and clarify methods. These changes can inadvertently strengthen a qualified finding, detach a citation from its claim, or describe a planned experiment as completed. A fluent revision can therefore misrepresent the underlying research even when its sentences appear plausible.\n\nThis project will treat evidence preservation as an explicit revision objective. It will ask whether recording claim support and research status before editing helps maintain them afterward. The intended contribution is a revision procedure and evaluation protocol, rather than a guarantee that automated checks can establish scientific truth.\n\n## Related Work\n\nALCE evaluates generated answers through fluency, correctness, and citation quality, and its authors report substantial remaining gaps in citation support [S1]. Attribute First, then Generate selects source segments before sentence planning and generation; its authors report more concise attributions and reduced human verification time in summarization and long-form question answering [S2]. These findings motivate explicit evidence links, but do not establish their effectiveness for proposal revision.\n\nTETRA provides professionally edited academic documents and addresses the difficulty of evaluating revisions with many acceptable realizations [S3]. Research on scientific revision metrics reports that LLM judges assess instruction following more effectively than correctness, motivating complementary evaluation measures [S4]. RefChecker represents claims as triplets and checks them against references [S5]. The proposed ledger will adapt fine-grained checking to revision while explicitly retaining qualifications and planned-research status.\n\n## Methodology\n\nEach input will contain an original proposal, a revision instruction, and a bounded evidence packet. The system will first construct a ledger of substantive claims. Each entry will record the original wording, its role as a source finding, proposed method, hypothesis, or planned evaluation, and any relevant supporting passage. Qualifications such as uncertainty, population, and task scope will be recorded where applicable. Unsupported background assertions will be flagged for review.\n\nA revision model will then receive the draft, instruction, and ledger. It will be allowed to restructure and rewrite the proposal while preserving supported meanings and research status. Afterward, a checker will align revised claims with ledger entries and inspect additions, omissions, and changes in scope or certainty. New proposed ideas will be distinguished from new factual assertions requiring support. Flagged changes will prompt a targeted correction or an author-facing explanation when the evidence cannot resolve them.\n\n## Planned Evaluation\n\nThe study will assemble proposal–evidence pairs with annotations of claim support, qualifications, and research status. Comparisons will include ordinary instruction-based revision, revision with evidence access, and the complete ledger procedure, using matched model settings and editing instructions.\n\nBlinded human assessors will judge clarity, coherence, instruction following, and fidelity to supplied evidence. Claim-level measures will track unsupported assertions, citation mismatches, lost qualifications, and changes from planned to completed research. Results will be reported separately to expose tradeoffs. Ablations will remove the ledger or post-revision checking to examine each component’s contribution. Evaluator disagreements will be documented and adjudicated.\n\n## Limitations and Conclusion\n\nClaim extraction and alignment may miss implicit meanings, while incomplete evidence limits support judgments. Ledger constraints may also discourage beneficial restructuring. The planned study will examine these failure modes alongside potential benefits. Its aim is to determine when explicit evidence tracking helps authors revise proposals clearly while preserving what is known, proposed, and still untested.",
+        "document_id": null
+      }
+    ]
+  }
+}

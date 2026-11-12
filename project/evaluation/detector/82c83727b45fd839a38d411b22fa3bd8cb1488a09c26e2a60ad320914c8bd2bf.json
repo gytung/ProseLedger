@@ -1,0 +1,688 @@
+{
+  "textSHA256": "82c83727b45fd839a38d411b22fa3bd8cb1488a09c26e2a60ad320914c8bd2bf",
+  "characters": 2495,
+  "scannedAtUTC": "2026-11-12T20:53:40.999898+00:00",
+  "elapsedSeconds": 1.816,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 12,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 15,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 20,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 25,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 26,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9999994462075388,
+            "sentence": "# Museum Descriptions without Invented Provenance",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.537924612587934e-07,
+              "ai": 0.9997742780783797,
+              "paraphrased": 0.00022516812915908236
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994462067977,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.537932023825755e-07,
+              "ai": 0.9997755932788652,
+              "paraphrased": 0.00022385292793244212
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994797607771,
+            "sentence": "Museum descriptions should avoid making uncertain object histories sound settled.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.202392228762629e-07,
+              "ai": 0.9997728781279881,
+              "paraphrased": 0.0002266016327889973
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994797603539,
+            "sentence": "We propose revising catalogue prose into concise public descriptions using only the supplied entry and curator note.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.202396461562106e-07,
+              "ai": 0.999773761359524,
+              "paraphrased": 0.00022571840082985094
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994632459415,
+            "sentence": "The evaluation will assess readability alongside the preservation of approximate dates, disputed locations, and unknown makers [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.367540584653219e-07,
+              "ai": 0.9997741851711361,
+              "paraphrased": 0.0002252780748053408
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993917818761,
+            "sentence": "The study will not conduct new provenance research.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.082181238547449e-07,
+              "ai": 0.9997677571807864,
+              "paraphrased": 0.00023163460108975486
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993724717304,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.275282696251249e-07,
+              "ai": 0.9997728814472874,
+              "paraphrased": 0.00022649102444302025
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994462042894,
+            "sentence": "A concise description can unintentionally remove the qualifications that make a historical statement defensible.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.537957107123064e-07,
+              "ai": 0.9997801362650386,
+              "paraphrased": 0.0002193099392507367
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994462048075,
+            "sentence": "For example, an approximate date should not become precise merely because the new sentence reads more smoothly.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.537951924813755e-07,
+              "ai": 0.9997791706030862,
+              "paraphrased": 0.00022027560172132015
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993525493128,
+            "sentence": "A blank maker field does not establish that an object was made anonymously [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.474506872360576e-07,
+              "ai": 0.9997768071617588,
+              "paraphrased": 0.00022254538755405397
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993917813914,
+            "sentence": "These distinctions concern evidence, not just editorial style.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.082186085124022e-07,
+              "ai": 0.9997685473741016,
+              "paraphrased": 0.00023084440728985553
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992889240166,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.110759833367473e-07,
+              "ai": 0.9997635476210083,
+              "paraphrased": 0.0002357413030083376
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999998965415597,
+            "sentence": "The catalogue brief restricts the writer to using only the entry and its curator note [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0345844030267945e-06,
+              "ai": 0.9997393009053469,
+              "paraphrased": 0.00025966451025004935
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999988986934777,
+            "sentence": "The evaluation brief specifies that three types of uncertainty—uncertain dates, disputed locations, and unknown makers—must remain visible [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.1013065223001473e-06,
+              "ai": 0.9997366866665269,
+              "paraphrased": 0.0002622120269507481
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999989972598774,
+            "sentence": "These qualifications will be considered part of the content and will not be counted as unnecessary hedging when assessing conciseness.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0027401226882621e-06,
+              "ai": 0.9997258098084201,
+              "paraphrased": 0.00027318745145728446
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999986716044886,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.328395511362773e-06,
+              "ai": 0.9997112572677767,
+              "paraphrased": 0.00028741433671195194
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999984947608248,
+            "sentence": "We plan to study 28 objects with varying combinations of uncertain dates, disputed locations, and missing maker information [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.5052391751353117e-06,
+              "ai": 0.9996913524382707,
+              "paraphrased": 0.0003071423225541705
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990869837592,
+            "sentence": "Each description will be revised from the same source packet.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.130162408277136e-07,
+              "ai": 0.9997378969018901,
+              "paraphrased": 0.0002611900818690921
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992190525147,
+            "sentence": "Reviewers will compare the revised description with the original prose and identify the source phrase that supports each historical claim.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.809474853603224e-07,
+              "ai": 0.9997420772535858,
+              "paraphrased": 0.00025714179892885353
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993320165037,
+            "sentence": "Unsupported details will remain errors, even if they make the account more vivid.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.6798349630727e-07,
+              "ai": 0.9997476544396747,
+              "paraphrased": 0.00025167757682894383
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999988637601682,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.1362398317324264e-06,
+              "ai": 0.999713963679591,
+              "paraphrased": 0.00028490008057728653
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992190507645,
+            "sentence": "The evaluation will ask readers to determine which version is easier to follow and curators to assess whether each qualification is preserved.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.809492354816791e-07,
+              "ai": 0.9997443268365735,
+              "paraphrased": 0.0002548922141909701
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993108096217,
+            "sentence": "These judgments will be reported separately rather than combined into a single quality score.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.891903783268341e-07,
+              "ai": 0.9997517759722395,
+              "paraphrased": 0.00024753483738214723
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991423056173,
+            "sentence": "Difficult cases will involve entries where a later note disputes an earlier location.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.576943827526716e-07,
+              "ai": 0.999732020845464,
+              "paraphrased": 0.0002671214601532951
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992430834702,
+            "sentence": "The revised description must present the disagreement clearly without taking a side unsupported by the packet.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.569165297545624e-07,
+              "ai": 0.9997371589399419,
+              "paraphrased": 0.0002620841435283947
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991942584205,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.057415793769393e-07,
+              "ai": 0.9997472708771551,
+              "paraphrased": 0.000251923381265489
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993108083015,
+            "sentence": "The source records may be incomplete or inconsistent, and clearer prose cannot resolve these gaps.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.891916984615106e-07,
+              "ai": 0.9997537017960022,
+              "paraphrased": 0.0002456090122992823
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993320100915,
+            "sentence": "We will not infer a maker from a missing field or treat an approximate date as exact [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.679899084700942e-07,
+              "ai": 0.9997572937140317,
+              "paraphrased": 0.0002420382960598766
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992430754231,
+            "sentence": "The intended contribution is an editing procedure that makes the limits of an object description readable, rather than concealing them behind confident wording.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.569245768992183e-07,
+              "ai": 0.9997478111263942,
+              "paraphrased": 0.00025143194902884947
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Museum Descriptions without Invented Provenance\n\n## Abstract\n\nMuseum descriptions should avoid making uncertain object histories sound settled. We propose revising catalogue prose into concise public descriptions using only the supplied entry and curator note. The evaluation will assess readability alongside the preservation of approximate dates, disputed locations, and unknown makers [S2]. The study will not conduct new provenance research.\n\n## Introduction\n\nA concise description can unintentionally remove the qualifications that make a historical statement defensible. For example, an approximate date should not become precise merely because the new sentence reads more smoothly. A blank maker field does not establish that an object was made anonymously [S1]. These distinctions concern evidence, not just editorial style.\n\n## Related Work\n\nThe catalogue brief restricts the writer to using only the entry and its curator note [S1]. The evaluation brief specifies that three types of uncertainty—uncertain dates, disputed locations, and unknown makers—must remain visible [S2]. These qualifications will be considered part of the content and will not be counted as unnecessary hedging when assessing conciseness.\n\n## Methodology\n\nWe plan to study 28 objects with varying combinations of uncertain dates, disputed locations, and missing maker information [S2]. Each description will be revised from the same source packet. Reviewers will compare the revised description with the original prose and identify the source phrase that supports each historical claim. Unsupported details will remain errors, even if they make the account more vivid.\n\n## Planned Evaluation\n\nThe evaluation will ask readers to determine which version is easier to follow and curators to assess whether each qualification is preserved. These judgments will be reported separately rather than combined into a single quality score. Difficult cases will involve entries where a later note disputes an earlier location. The revised description must present the disagreement clearly without taking a side unsupported by the packet.\n\n## Limitations and Conclusion\n\nThe source records may be incomplete or inconsistent, and clearer prose cannot resolve these gaps. We will not infer a maker from a missing field or treat an approximate date as exact [S1]. The intended contribution is an editing procedure that makes the limits of an object description readable, rather than concealing them behind confident wording.",
+        "document_id": null
+      }
+    ]
+  }
+}

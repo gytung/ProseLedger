@@ -1,0 +1,136 @@
+{
+  "scope": "This run only; no historical card retrieval",
+  "memoryCardsUsed": 0,
+  "originalSHA256": "ab7a06375432b8cfde6152ec57ba384f0a0991f9ce7d5e2778b32f568ea09530",
+  "retainedSHA256": "f2401b38e15eafd5aed2038291d2830e58ec13d07b3807a470bb6710c744e5b9",
+  "detectorUsedForAdmission": false,
+  "fullAudit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The candidate preserves all substantive claims, method steps, evaluation measures, limitations, source attributions, uncertainty, and planned-work status. Both path and entrance evidence remain necessary for verification; missing measurements remain unknown; all 32 planned origin-destination pairs and the distinction between step-free paths and verified accessible routes are retained. Changes are equivalent paraphrases with minor stylistic effects."
+  },
+  "repairHistory": [],
+  "edits": [
+    {
+      "id": 0,
+      "heading": "Abstract",
+      "original": "A route can avoid steps and still end at a door that a traveller cannot use. We propose to test a campus routing interface that distinguishes a step-free path from a verified accessible destination. A verified route will require evidence for both the path and the entrance [S2]. Missing door measurements will remain visible as unknown information.",
+      "candidate": "A route can be step-free yet still end at a door that a traveler cannot use. We propose testing a campus routing interface that distinguishes between a step-free path and a verified accessible destination. A verified route will require evidence for both the path and the entrance [S2]. Missing door measurements will remain visible as unknown information.",
+      "text": "A route can be step-free yet still end at a door that a traveler cannot use. We propose testing a campus routing interface that distinguishes between a step-free path and a verified accessible destination. A verified route will require evidence for both the path and the entrance [S2]. Missing door measurements will remain visible as unknown information.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 0,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A route can be step-free yet still end at a door that a traveler cannot use. We propose testing a campus routing interface that distinguishes between a step-free path and a verified accessible destination. A verified route will require evidence for both the path and the entrance [S2]. Missing door measurements will remain visible as unknown information.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 1,
+      "heading": "Introduction",
+      "original": "A single accessibility label can conceal which part of a journey has actually been checked. The available campus map records paths and entrances, but some door measurements are absent [S1]. Treating an unmeasured door as usable would make the map more complete at the cost of an unsupported claim. The interface should help users see this gap before they begin a trip.",
+      "candidate": "A single accessibility label can obscure the extent of a journey's verification. The campus map records paths and entrances, but some door measurements are missing [S1]. Treating an unmeasured door as usable would make the map more complete but at the cost of an unsupported claim. The interface should help users recognize this gap before they begin a trip.",
+      "text": "A single accessibility label can obscure the extent of a journey's verification. The campus map records paths and entrances, but some door measurements are missing [S1]. Treating an unmeasured door as usable would make the map more complete but at the cost of an unsupported claim. The interface should help users recognize this gap before they begin a trip.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 1,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A single accessibility label can obscure the extent of a journey's verification. The campus map records paths and entrances, but some door measurements are missing [S1]. Treating an unmeasured door as usable would make the map more complete but at the cost of an unsupported claim. The interface should help users recognize this gap before they begin a trip.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 2,
+      "heading": "Related Work",
+      "original": "The task brief explicitly separates path properties from entrance properties [S1]. The evaluation brief defines verification as the conjunction of both requirements [S2]. We will preserve that distinction in route descriptions. A step-free path may be reported as such, but it will not automatically receive the stronger label of a verified accessible route.",
+      "candidate": "The task brief explicitly separates path properties from entrance properties [S1]. The evaluation brief defines verification as the conjunction of both requirements [S2]. We will preserve this distinction in route descriptions. A step-free path may be reported as such, but it will not automatically receive the label of a verified accessible route.",
+      "text": "The task brief explicitly separates path properties from entrance properties [S1]. The evaluation brief defines verification as the conjunction of both requirements [S2]. We will preserve this distinction in route descriptions. A step-free path may be reported as such, but it will not automatically receive the label of a verified accessible route.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 2,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The task brief explicitly separates path properties from entrance properties [S1]. The evaluation brief defines verification as the conjunction of both requirements [S2]. We will preserve this distinction in route descriptions. A step-free path may be reported as such, but it will not automatically receive the label of a verified accessible route.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 3,
+      "heading": "Methodology",
+      "original": "We plan to test 32 origin-destination pairs [S2]. For each pair, the system will retrieve the path record and destination entrance record. It will mark the route verified only if both meet the recorded requirements. An unknown entrance will be displayed separately, together with the missing measurement, rather than silently placed among the verified options.",
+      "candidate": "We plan to test 32 origin-destination pairs [S2]. For each pair, the system will retrieve the path record and destination entrance record. The route will be marked verified only if both the path and the entrance meet the recorded requirements. Unknown entrances will be displayed separately, alongside the missing measurement, rather than included among the verified options.",
+      "text": "We plan to test 32 origin-destination pairs [S2]. For each pair, the system will retrieve the path record and destination entrance record. The route will be marked verified only if both the path and the entrance meet the recorded requirements. Unknown entrances will be displayed separately, alongside the missing measurement, rather than included among the verified options.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 3,
+        "approve": true,
+        "issues": [],
+        "readability": "better"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "We plan to test 32 origin-destination pairs [S2]. For each pair, the system will retrieve the path record and destination entrance record. The route will be marked verified only if both the path and the entrance meet the recorded requirements. Unknown entrances will be displayed separately, alongside the missing measurement, rather than included among the verified options.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 4,
+      "heading": "Planned Evaluation",
+      "original": "Evaluation will compare the displayed route status against the supplied records. We will report unsupported verification labels, correctly identified unknown entrances and the clarity of the explanation shown to users. A hard case will have a step-free path but no usable entrance evidence. Success requires preserving this distinction, not merely finding a path through the map.",
+      "candidate": "Evaluation will compare the displayed route status against the supplied records. We will report unsupported verification labels, correctly identified unknown entrances, and the clarity of the explanation shown to users. A hard case will have a step-free path but no usable entrance evidence. Success requires preserving this distinction, not merely finding a path through the map.",
+      "text": "Evaluation will compare the displayed route status against the supplied records. We will report unsupported verification labels, correctly identified unknown entrances, and the clarity of the explanation shown to users. A hard case will have a step-free path but no usable entrance evidence. Success requires preserving this distinction, not merely finding a path through the map.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 4,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "Evaluation will compare the displayed route status against the supplied records. We will report unsupported verification labels, correctly identified unknown entrances, and the clarity of the explanation shown to users. A hard case will have a step-free path but no usable entrance evidence. Success requires preserving this distinction, not merely finding a path through the map.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 5,
+      "heading": "Limitations and Conclusion",
+      "original": "The records may become outdated, and accessibility needs differ between users. The study cannot guarantee that a route will be suitable for every traveller. It will also make no inference about unmeasured doors [S2]. The proposed contribution is a clearer representation of which journey components are supported by the available records and which still need checking.",
+      "candidate": "The records may become outdated, and accessibility needs vary between users. The study cannot guarantee that a route will be suitable for every traveler. It will also make no inference about unmeasured doors [S2]. The proposed contribution is a clearer representation of which journey components are supported by the available records and which still need verification.",
+      "text": "The records may become outdated, and accessibility needs vary between users. The study cannot guarantee that a route will be suitable for every traveler. It will also make no inference about unmeasured doors [S2]. The proposed contribution is a clearer representation of which journey components are supported by the available records and which still need verification.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 5,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The records may become outdated, and accessibility needs vary between users. The study cannot guarantee that a route will be suitable for every traveler. It will also make no inference about unmeasured doors [S2]. The proposed contribution is a clearer representation of which journey components are supported by the available records and which still need verification.",
+      "status": "verified_edit"
+    }
+  ]
+}

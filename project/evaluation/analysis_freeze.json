@@ -1,0 +1,29 @@
+{
+  "frozenAtUTC": "2026-11-12T20:15:20.407760+00:00",
+  "files": {
+    "scan_outputs.py": "5f11b6f8fb8599fe6cdf42d9cfda95f0f2ccb063c89984ef00547a51bfed6265",
+    "summarize.py": "bb64732f7a472108efb1ccc895f3582f46e018be1fe21421ed1f3c0927cbfc10",
+    "EXECUTION_NOTES.md": "25b8dd15dc0ab49fde4c0022a83f89d5779412e3a4b6ecd8074812984292aa3f"
+  },
+  "additionalAnalysisFiles": {
+    "extract_failures.py": "cba68f196b529a10bda3e7cf96f71fc634b3a868aaa7cd440a5857f115b7a265"
+  },
+  "additionalAnalysisRecordedUTC": "2026-11-12T20:16:06.102767+00:00",
+  "documentationUpdatedUTC": "2026-11-12T20:43:21.284703+00:00",
+  "documentation": {
+    "README.md": "ab427518aca043c7bcaabbf71f881fb5768b177994eb2707e4302b0cfd848698",
+    "previousREADME_SHA256": "720f230bd49c6e11a471613472c4abf4ca12eb78ad064b101bf1fb42e83f7c75"
+  },
+  "supportScripts": {
+    "reproduce.py": "6e2a7c16d171a5fd02894669518133775cef55997b874682c2fa25982937617c",
+    "trace_summary.py": "5ebc883775e9bfbecabd85f170b78f0499bfab4155e967cf86a77c9f4f4c25ec",
+    "extract_failures.py": "cba68f196b529a10bda3e7cf96f71fc634b3a868aaa7cd440a5857f115b7a265",
+    "watch_judges.py": "3d91d1a36d8a9ea554ca3ea5092a3e4d5c3cf4500f0817883a43160e30a08a96",
+    "fact_consensus.py": "2cce5ac4f1a957edc60eca3edccf4946807262609eea8bb5945e8e15b89506eb",
+    "cost_summary.py": "29cec2425e0e366e463dcc4912d707335735f2e19f262d4429f91ef17b7d2504",
+    "verify_results.py": "ad8c9e07103ec0856f8fcc8d3de1192295cff8d81739226d241f5735f6b9e697",
+    "curate_failures.py": "429f5c76373346fb258329919700083f758062b599b86d6aa48a68bd53c98433",
+    "report_failures.py": "65480cbe1942dbb8be3722219aab11904904fcbbe96f1ac0640badc6bfcbf180"
+  },
+  "finalSupportScriptsRecordedUTC": "2026-11-12T20:56:21.865927+00:00"
+}

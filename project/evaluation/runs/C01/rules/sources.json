@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The proposed glacier study uses optical imagery from two summer visits. Cloud-covered pixels are unavailable observations, not ice-free terrain. A local inventory supplies glacier outlines but does not establish recent retreat. No field measurements have been collected for this proposal.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "A boundary model will receive the same image pairs in both conditions. The comparison is between mandatory classification and an abstention rule for cloud-covered pixels. The evaluation set will contain 24 image pairs. The study will not estimate annual retreat rates.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

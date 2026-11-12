@@ -1,0 +1,136 @@
+{
+  "complete": true,
+  "validComparison": true,
+  "nPlanned": 4,
+  "nCompleted": 4,
+  "rows": [
+    {
+      "case": "case01",
+      "topic": "Evidence-linked revision of scientific proposals",
+      "status": "complete",
+      "targeted": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "dd2c010e852a0ab3dca7bdb81fea3fe287fff33695345d5dc15431d1400cbbb1"
+      },
+      "new": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "dd2c010e852a0ab3dca7bdb81fea3fe287fff33695345d5dc15431d1400cbbb1"
+      },
+      "deltaNewMinusTargeted": 0,
+      "outcome": "tie",
+      "targetedStatus": "completed",
+      "candidateStatus": "completed",
+      "newCandidateEligible": false,
+      "retained": "original_fallback"
+    },
+    {
+      "case": "case02",
+      "topic": "Conditional editing experience for laboratory handover notes",
+      "status": "complete",
+      "targeted": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477"
+      },
+      "new": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477"
+      },
+      "deltaNewMinusTargeted": 0,
+      "outcome": "tie",
+      "targetedStatus": "completed",
+      "candidateStatus": "completed",
+      "newCandidateEligible": false,
+      "retained": "original_fallback"
+    },
+    {
+      "case": "case03",
+      "topic": "Citation preservation during cross-section editing",
+      "status": "complete",
+      "targeted": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "d342ab9e8d69f23d1b3c0604a3cb2407577673f7f0e1a6d824320e659de18371"
+      },
+      "new": {
+        "ai": 0.634231937627079,
+        "mixed": 0.36576806237292103,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "2b3d7ebf0bf880000e00e0994513d7b877d0a5bb63a33a36b54ca7595ca68318"
+      },
+      "deltaNewMinusTargeted": -0.36576806237292103,
+      "outcome": "win",
+      "targetedStatus": "completed",
+      "candidateStatus": "completed",
+      "newCandidateEligible": true,
+      "retained": "repaired_new_candidate"
+    },
+    {
+      "case": "case04",
+      "topic": "Preserving negative findings and uncertainty in literature synthesis",
+      "status": "complete",
+      "targeted": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "ac14f893fe5cefadf3d0a654fc359d5c8f828b7ef12a1d06e46d356687d4b44d"
+      },
+      "new": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "c2c828baacbb6fac9c0647fc658e62ee4c3e0cc7b1c05dcef2130f6faedb5a18"
+      },
+      "deltaNewMinusTargeted": 0,
+      "outcome": "tie",
+      "targetedStatus": "completed",
+      "candidateStatus": "completed",
+      "newCandidateEligible": true,
+      "retained": "repaired_new_candidate"
+    }
+  ],
+  "evaluationUnit": "one complete manuscript",
+  "primary": "GPTZero class_probabilities.ai",
+  "secondary": "ai+mixed and classification; not fraction of AI-written words",
+  "attribution": "New pipeline changes the rewriting model and adds bounded repairs; no isolated MemGuard or CoPA benefit is established.",
+  "limitations": [
+    "Four generated proposals using the same five-source packet; not a representative corpus.",
+    "Content and readability audits are automated, not human evaluation.",
+    "Baseline and new pipeline have different models and compute costs.",
+    "Targeted-only control preserves published Targeted prompts/retention, but reviews only its own candidate batch.",
+    "All baseline AI probabilities are at the upper bound of 1; zero losses cannot establish general non-inferiority.",
+    "Model generation and external detector versions may change; saved responses reproduce observations, not guarantee fresh scores."
+  ],
+  "targetedMean": 1,
+  "newMean": 0.9085579844067697,
+  "targetedMeanAIPlusMixed": 1,
+  "newMeanAIPlusMixed": 1.0,
+  "wins": 1,
+  "ties": 3,
+  "losses": 0,
+  "primaryGoalMetInThisPilot": true
+}

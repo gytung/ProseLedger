@@ -1,0 +1,597 @@
+[
+  {
+    "failureId": "F01",
+    "title": "Unsupported causal link",
+    "analysis": "A connective added for fluency can introduce a causal claim absent from the source.",
+    "nextStep": "Require each added causal relation to be supported by a source span; otherwise preserve the two statements without a causal connector.",
+    "caseId": "C01",
+    "condition": "rules",
+    "originalQuote": "A local inventory may also contain outdated boundaries.",
+    "candidateQuote": "A local inventory might contain outdated boundaries, as no field measurements have been collected for this proposal [S1].",
+    "finding": "Adds an unsupported causal connection: the absence of field measurements for this proposal does not explain whether the inventory boundaries are outdated.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C01_rules_audit_sections.json",
+        "jsonPointer": "/reviews/5/issues/1"
+      },
+      {
+        "path": "runs/C01/rules/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "e99a4a31121af1ceddc2eda0c459e8b14a0c5e87deff4dca166a29cabba9306b"
+      },
+      {
+        "path": "runs/C01/rules/revision_ledger.json",
+        "jsonPointer": "/edits/5"
+      },
+      {
+        "path": "decoded_audits/C01_rules_repair_section_findings.json",
+        "jsonPointer": "/sections/0/patches"
+      }
+    ],
+    "section": "Limitations and Conclusion",
+    "finalSectionRestoredToOriginal": true,
+    "finalSectionStatus": "unchanged_or_rejected",
+    "repairDecision": {
+      "ok": false,
+      "reason": "patch_type"
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": ", as no field measurements have been collected for this proposal [S1]",
+        "after": "",
+        "issueIndex": 1
+      }
+    ],
+    "action": "The original section was retained.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F02",
+    "title": "Modality strengthened",
+    "analysis": "A possible trade-off becomes a promised consequence.",
+    "nextStep": "Compare the scope of modal verbs in addition to surface grammar, and reject unsupported increases in certainty.",
+    "caseId": "C01",
+    "condition": "rules",
+    "originalQuote": "An abstention rule may make the limits of the evidence clearer while leaving a less complete map.",
+    "candidateQuote": "An abstention rule may make the limits of the evidence clearer, but it will leave a less complete map.",
+    "finding": "Changes a possible tradeoff into a definite prediction that the map will be less complete.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C01_rules_audit_sections.json",
+        "jsonPointer": "/reviews/5/issues/0"
+      },
+      {
+        "path": "runs/C01/rules/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "e99a4a31121af1ceddc2eda0c459e8b14a0c5e87deff4dca166a29cabba9306b"
+      },
+      {
+        "path": "runs/C01/rules/revision_ledger.json",
+        "jsonPointer": "/edits/5"
+      },
+      {
+        "path": "decoded_audits/C01_rules_repair_section_findings.json",
+        "jsonPointer": "/sections/0/patches"
+      }
+    ],
+    "section": "Limitations and Conclusion",
+    "finalSectionRestoredToOriginal": true,
+    "finalSectionStatus": "unchanged_or_rejected",
+    "repairDecision": {
+      "ok": false,
+      "reason": "patch_type"
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": ", but it will leave",
+        "after": " while leaving",
+        "issueIndex": 0
+      }
+    ],
+    "action": "The original section was retained.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F03",
+    "title": "Valid deletion rejected by the repair schema",
+    "analysis": "The model proposed removing an unsupported clause, but an empty replacement fails the current nonempty-after constraint.",
+    "nextStep": "Permit deletion patches when a unique exact anchor, coverage bound and post-edit semantic audit all pass; test this change on separate data.",
+    "caseId": "C01",
+    "condition": "rules",
+    "originalQuote": "An abstention rule may make the limits of the evidence clearer while leaving a less complete map. A local inventory may also contain outdated boundaries. The proposed experiment will therefore not estimate annual retreat rates or establish that any particular glacier is shrinking [S2]. Its contribution would be a more explicit account of what the available images can support.",
+    "candidateQuote": "An abstention rule may make the limits of the evidence clearer, but it will leave a less complete map. A local inventory might contain outdated boundaries, as no field measurements have been collected for this proposal [S1]. The proposed experiment will not estimate annual retreat rates or establish that any particular glacier is shrinking [S2]. Instead, its contribution will be a more explicit account of what the available images can support.",
+    "finding": "patch_type",
+    "classification": "bounded_repair_rejected",
+    "section": "Limitations and Conclusion",
+    "proposedDeletion": {
+      "before": ", as no field measurements have been collected for this proposal [S1]",
+      "after": "",
+      "issueIndex": 1
+    },
+    "finalSectionRestoredToOriginal": true,
+    "finalSectionStatus": "unchanged_or_rejected",
+    "repairDecision": {
+      "ok": false,
+      "reason": "patch_type"
+    },
+    "action": "The complete patch set was rejected because one replacement was empty. The original section was restored; changes in the other sections remained eligible.",
+    "finalManuscriptSource": "candidate",
+    "evidence": [
+      {
+        "path": "decoded_audits/C01_rules_repair_section_findings.json",
+        "jsonPointer": "/sections/0/patches"
+      },
+      {
+        "path": "runs/C01/rules/revision_ledger.json",
+        "jsonPointer": "/edits/5/repair"
+      }
+    ]
+  },
+  {
+    "failureId": "F04",
+    "title": "Bias mitigation presented as a guarantee",
+    "analysis": "Retaining difficult days reduces one selection risk but cannot guarantee accurate reliability estimates.",
+    "nextStep": "Preserve the qualified relationship between the procedure and the risk it addresses.",
+    "caseId": "C02",
+    "condition": "generic",
+    "originalQuote": "We will preserve instances of service disruption, since removing difficult days could make the policy appear more dependable than it is.",
+    "candidateQuote": "We will retain instances of service disruption to ensure the policy's reliability is accurately reflected.",
+    "finding": "Retaining disruptions helps avoid an overly favourable assessment but cannot ensure accurate reliability estimates. The revision replaces a qualified bias concern with an unsupported guarantee.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C02_generic_audit_sections.json",
+        "jsonPointer": "/reviews/3/issues/0"
+      },
+      {
+        "path": "runs/C02/generic/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "0f2fd9c20c1bc55dce86d2f8f85e767f0e32637fdf213d89f6979877f5530db0"
+      },
+      {
+        "path": "runs/C02/generic/revision_ledger.json",
+        "jsonPointer": "/edits/3"
+      },
+      {
+        "path": "decoded_audits/C02_generic_repair_section_findings.json",
+        "jsonPointer": "/sections/0/patches"
+      }
+    ],
+    "section": "Methodology",
+    "finalSectionRestoredToOriginal": false,
+    "finalSectionStatus": "verified_edit",
+    "repairDecision": {
+      "ok": true
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": "to ensure the policy's reliability is accurately reflected",
+        "after": ", since removing difficult days could make the policy appear more dependable than it is",
+        "issueIndex": 0
+      }
+    ],
+    "action": "A bounded repair was applied and the revised section was retained after the final automated audit.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F05",
+    "title": "Grammar worsens during naturalization",
+    "analysis": "The revision combines two incompatible comparative constructions.",
+    "nextStep": "Check local grammar independently of lexical simplification; keep the original construction when the change is not an improvement.",
+    "caseId": "C02",
+    "condition": "rules",
+    "originalQuote": "may care as much about an unusually long delay as they do about a typical journey",
+    "candidateQuote": "may care equally about an unusually long delay as they do about a typical journey",
+    "finding": "“Equally about ... as they do about” is an awkward comparative construction. Retain “as much about ... as” or use “equally about ... and ...”.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C02_rules_audit_sections.json",
+        "jsonPointer": "/reviews/1/issues/0"
+      },
+      {
+        "path": "runs/C02/rules/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "793143a9762910ca3fdefde07a0e20e2238177a775088a8737985948fffcb5c8"
+      },
+      {
+        "path": "runs/C02/rules/revision_ledger.json",
+        "jsonPointer": "/edits/1"
+      },
+      {
+        "path": "decoded_audits/C02_rules_repair_section_findings.json",
+        "jsonPointer": "/sections/1/patches"
+      }
+    ],
+    "section": "Introduction",
+    "finalSectionRestoredToOriginal": false,
+    "finalSectionStatus": "verified_edit",
+    "repairDecision": {
+      "ok": true
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": "equally about",
+        "after": "as much about",
+        "issueIndex": 0
+      }
+    ],
+    "action": "A bounded repair was applied and the revised section was retained after the final automated audit.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F06",
+    "title": "Concrete evaluation safeguard omitted",
+    "analysis": "A general promise of neutrality replaces the explicit restriction against selecting a favourable threshold definition.",
+    "nextStep": "Represent fixed methodological safeguards as content commitments, not removable stylistic detail.",
+    "caseId": "C02",
+    "condition": "rules",
+    "originalQuote": "Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+    "candidateQuote": "Sensitivity checks will vary the definition of a long wait without favouring either policy.",
+    "finding": "The revision removes the explicit commitment against selecting the most favourable definition. A general promise of neutrality does not preserve this concrete safeguard against selective reporting.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C02_rules_audit_sections.json",
+        "jsonPointer": "/reviews/4/issues/0"
+      },
+      {
+        "path": "runs/C02/rules/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "793143a9762910ca3fdefde07a0e20e2238177a775088a8737985948fffcb5c8"
+      },
+      {
+        "path": "runs/C02/rules/revision_ledger.json",
+        "jsonPointer": "/edits/4"
+      },
+      {
+        "path": "decoded_audits/C02_rules_repair_section_findings.json",
+        "jsonPointer": "/sections/3/patches"
+      }
+    ],
+    "section": "Planned Evaluation",
+    "finalSectionRestoredToOriginal": false,
+    "finalSectionStatus": "verified_edit",
+    "repairDecision": {
+      "ok": true
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": "without favouring either policy",
+        "after": "without selecting the definition that most favours either policy",
+        "issueIndex": 0
+      }
+    ],
+    "action": "A bounded repair was applied and the revised section was retained after the final automated audit.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F07",
+    "title": "Temporal scope altered",
+    "analysis": "A rule fixed before observation is rewritten as a rule maintained only until observation starts.",
+    "nextStep": "Check temporal connectors as relations, because the same nouns and numbers do not guarantee the same commitment.",
+    "caseId": "C03",
+    "condition": "rules",
+    "originalQuote": "These roles will remain fixed before observation begins.",
+    "candidateQuote": "These roles will be maintained until observations begin",
+    "finding": "“Until” implies that the commitment to fixed outcome roles ends when observation begins, weakening the prespecified outcome hierarchy.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C03_rules_audit_sections.json",
+        "jsonPointer": "/reviews/2/issues/0"
+      },
+      {
+        "path": "runs/C03/rules/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "f9d178a4295ff38c00f3c2ce5adb81f734af2609804a0c75b6d5bf8f68deba9d"
+      },
+      {
+        "path": "runs/C03/rules/revision_ledger.json",
+        "jsonPointer": "/edits/2"
+      },
+      {
+        "path": "decoded_audits/C03_rules_repair_section_findings.json",
+        "jsonPointer": "/sections/0/patches"
+      }
+    ],
+    "section": "Related Work",
+    "finalSectionRestoredToOriginal": false,
+    "finalSectionStatus": "verified_edit",
+    "repairDecision": {
+      "ok": true
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": "These roles will be maintained until observations begin",
+        "after": "These roles will be fixed before observations begin and remain fixed throughout the study",
+        "issueIndex": 0
+      }
+    ],
+    "action": "A bounded repair was applied and the revised section was retained after the final automated audit.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F08",
+    "title": "Conservative whole-document rejection",
+    "analysis": "The auditor distinguishes a reporting commitment from a close statement about test limitations; the entire candidate is consequently rejected.",
+    "nextStep": "Obtain human equivalence labels for borderline cases and calibrate the rejection policy; this observation is a possible over-rejection, not a confirmed false positive.",
+    "caseId": "C04",
+    "condition": "generic",
+    "originalQuote": "Tests will check the supplied examples, but passing them will not be presented as proof that a program is correct for every input [S1].",
+    "candidateQuote": "While tests will verify the supplied examples, passing them does not guarantee the program's correctness for all inputs [S1].",
+    "finding": "The candidate preserves the limitation of testing but omits the explicit commitment not to present passing tests as proof of correctness for every input.",
+    "classification": "whole_document_audit_finding",
+    "section": "Introduction",
+    "finalManuscriptSource": "original",
+    "action": "The final audit rejected the complete candidate. Under the standard policy, no additional full-audit repair round is allowed; the original manuscript was retained.",
+    "evidence": [
+      {
+        "path": "runs/C04/generic/checks.json",
+        "jsonPointer": "/audit/issues/0"
+      },
+      {
+        "path": "runs/C04/generic/run.json",
+        "jsonPointer": "/retained"
+      }
+    ]
+  },
+  {
+    "failureId": "F09",
+    "title": "Assessor role changed",
+    "analysis": "An editorial simplification shifts the stated assessor from an editor to the study authors.",
+    "nextStep": "Preserve who performs each action, especially when review responsibilities are part of the design.",
+    "caseId": "C05",
+    "condition": "rules",
+    "originalQuote": "They will not be counted as unnecessary hedging when an editor assesses whether a revision is more concise.",
+    "candidateQuote": "We will consider these qualifications as integral content and not count them as unnecessary hedging when assessing conciseness.",
+    "finding": "The revision removes the explicit role of an editor in assessing conciseness and instead assigns the assessment to the authors. Preserve the specified assessor.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C05_rules_audit_sections.json",
+        "jsonPointer": "/reviews/2/issues/0"
+      },
+      {
+        "path": "runs/C05/rules/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "ff6a910280838e1d7ca3e629a4d62865496709ba09b2f83e7850f4b90381d052"
+      },
+      {
+        "path": "runs/C05/rules/revision_ledger.json",
+        "jsonPointer": "/edits/2"
+      },
+      {
+        "path": "decoded_audits/C05_rules_repair_section_findings.json",
+        "jsonPointer": "/sections/0/patches"
+      }
+    ],
+    "section": "Related Work",
+    "finalSectionRestoredToOriginal": false,
+    "finalSectionStatus": "verified_edit",
+    "repairDecision": {
+      "ok": true
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": "when assessing conciseness",
+        "after": "when an editor assesses whether a revision is more concise",
+        "issueIndex": 0
+      }
+    ],
+    "action": "A bounded repair was applied and the revised section was retained after the final automated audit.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F10",
+    "title": "Controlled comparison overinterpreted",
+    "analysis": "Holding one factor fixed is rewritten as establishing the sole cause of any observed difference.",
+    "nextStep": "Separate the factor controlled by the design from the causal conclusion that the evidence would support.",
+    "caseId": "C06",
+    "condition": "generic",
+    "originalQuote": "This isolates the effect of correction from a change in alert policy.",
+    "candidateQuote": "This design ensures that any changes in alert counts are attributable to the correction process rather than alterations in the alert policy.",
+    "finding": "The revision strengthens a controlled comparison into a blanket causal guarantee. A fixed threshold rules out threshold changes as an explanation but does not establish that any change in alert counts must result from correction.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C06_generic_audit_sections.json",
+        "jsonPointer": "/reviews/2/issues/0"
+      },
+      {
+        "path": "runs/C06/generic/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "728928e5e2e6a759029cecb7568d661d23744e8318d392370b495d5a4fa7779c"
+      },
+      {
+        "path": "runs/C06/generic/revision_ledger.json",
+        "jsonPointer": "/edits/2"
+      },
+      {
+        "path": "decoded_audits/C06_generic_repair_section_findings.json",
+        "jsonPointer": "/sections/0/patches"
+      }
+    ],
+    "section": "Related Work",
+    "finalSectionRestoredToOriginal": false,
+    "finalSectionStatus": "verified_edit",
+    "repairDecision": {
+      "ok": true
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": "This design ensures that any changes in alert counts are attributable to the correction process rather than alterations in the alert policy.",
+        "after": "This isolates the effect of correction from a change in alert policy.",
+        "issueIndex": 0
+      }
+    ],
+    "action": "A bounded repair was applied and the revised section was retained after the final automated audit.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F11",
+    "title": "Citation scope expanded",
+    "analysis": "A citation is attached to additional limitations that are not stated in that source packet.",
+    "nextStep": "Check the proposition supported by each citation occurrence rather than only whether the identifier is allowed.",
+    "caseId": "C06",
+    "condition": "generic",
+    "originalQuote": "A reference instrument can itself have error, and the study covers only a limited observation period.",
+    "candidateQuote": "A reference instrument can itself have errors, and the study covers only a limited observation period [S1].",
+    "finding": "The added citation attributes reference-instrument error and the limited observation period to S1, which states neither.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C06_generic_audit_sections.json",
+        "jsonPointer": "/reviews/5/issues/0"
+      },
+      {
+        "path": "runs/C06/generic/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "728928e5e2e6a759029cecb7568d661d23744e8318d392370b495d5a4fa7779c"
+      },
+      {
+        "path": "runs/C06/generic/revision_ledger.json",
+        "jsonPointer": "/edits/5"
+      },
+      {
+        "path": "decoded_audits/C06_generic_repair_section_findings.json",
+        "jsonPointer": "/sections/2/patches"
+      }
+    ],
+    "section": "Limitations and Conclusion",
+    "finalSectionRestoredToOriginal": false,
+    "finalSectionStatus": "verified_edit",
+    "repairDecision": {
+      "ok": true
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": "observation period [S1].",
+        "after": "observation period.",
+        "issueIndex": 0
+      }
+    ],
+    "action": "A bounded repair was applied and the revised section was retained after the final automated audit.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F12",
+    "title": "Citation occurrence lost",
+    "analysis": "A requirement remains in prose but loses its explicit source attribution.",
+    "nextStep": "Retain section-level citation occurrence checks and expose the rejection reason in the ledger.",
+    "caseId": "C08",
+    "condition": "rules",
+    "originalQuote": "Difficult days will remain in the overall result [S2].",
+    "candidateQuote": "Difficult days will remain in the overall results.",
+    "finding": "The revision removes the citation to S2, losing explicit attribution for the requirement to include difficult days in the overall results.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C08_rules_audit_sections.json",
+        "jsonPointer": "/reviews/4/issues/0"
+      },
+      {
+        "path": "runs/C08/rules/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "8e0bd0821cfafca5915697ba95035710386c3e5187c118f20bf64b895b26c2c8"
+      },
+      {
+        "path": "runs/C08/rules/revision_ledger.json",
+        "jsonPointer": "/edits/4"
+      },
+      {
+        "path": "decoded_audits/C08_rules_repair_section_findings.json",
+        "jsonPointer": "/sections/0/patches"
+      }
+    ],
+    "section": "Planned Evaluation",
+    "finalSectionRestoredToOriginal": false,
+    "finalSectionStatus": "verified_edit",
+    "repairDecision": {
+      "ok": true
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": "Difficult days will remain in the overall results.",
+        "after": "Difficult days will remain in the overall results [S2].",
+        "issueIndex": 0
+      }
+    ],
+    "action": "A bounded repair was applied and the revised section was retained after the final automated audit.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F13",
+    "title": "Dangling modifier introduced",
+    "analysis": "The rewritten clause grammatically assigns calculation to the recovered material rather than to the researchers.",
+    "nextStep": "Check the actor of a shortened clause; a concise sentence is not automatically a coherent sentence.",
+    "caseId": "C09",
+    "condition": "generic",
+    "originalQuote": "before the measures are calculated",
+    "candidateQuote": "before calculating the measures",
+    "finding": "The implied subject of 'calculating' is the recovered output, creating an awkward modifier. Retain the passive clause or explicitly identify who calculates the measures.",
+    "classification": "section_audit_finding",
+    "evidence": [
+      {
+        "path": "decoded_audits/C09_generic_audit_sections.json",
+        "jsonPointer": "/reviews/3/issues/0"
+      },
+      {
+        "path": "runs/C09/generic/audit_sections.response.json",
+        "jsonPointer": "/text",
+        "responseSHA256": "627f75b9eb6c0c1fd3024380372eeb65ce3ba62d7c8c4e5891d27e2f0ac49707"
+      },
+      {
+        "path": "runs/C09/generic/revision_ledger.json",
+        "jsonPointer": "/edits/3"
+      },
+      {
+        "path": "decoded_audits/C09_generic_repair_section_findings.json",
+        "jsonPointer": "/sections/0/patches"
+      }
+    ],
+    "section": "Methodology",
+    "finalSectionRestoredToOriginal": false,
+    "finalSectionStatus": "verified_edit",
+    "repairDecision": {
+      "ok": true
+    },
+    "proposedPatchesForThisFinding": [
+      {
+        "before": "before calculating the measures",
+        "after": "before the measures are calculated",
+        "issueIndex": 0
+      }
+    ],
+    "action": "A bounded repair was applied and the revised section was retained after the final automated audit.",
+    "finalManuscriptSource": "candidate"
+  },
+  {
+    "failureId": "F14",
+    "title": "Equivalent numeric wording rejected",
+    "analysis": "Changing 18 to eighteen preserves the quantity but removes a digit token. The lexical gate rejects this valid paraphrase even though the semantic auditor accepts it.",
+    "nextStep": "Normalize equivalent number expressions before comparing quantities and retain role-sensitive semantic checks for swapped values.",
+    "source": "known_answer_challenges.json; semantic_challenges/C02_benign/result.json",
+    "caseId": "C02",
+    "condition": null,
+    "originalQuote": "arrivals from 18 weekdays",
+    "candidateQuote": "arrivals from eighteen weekdays",
+    "finding": "The digit token 18 is absent after a meaning-preserving conversion to eighteen.",
+    "classification": "known_answer_false_positive",
+    "section": "Methodology",
+    "action": "The deterministic guard rejects the valid paraphrase. The semantic checker accepts it, but their conjunction retains the false rejection.",
+    "finalManuscriptSource": "component challenge; no writing run",
+    "evidence": [
+      {
+        "path": "semantic_challenges/C02_benign/result.json",
+        "jsonPointer": "/audit"
+      },
+      {
+        "path": "semantic_challenges/C02_benign/result.json",
+        "jsonPointer": "/combinedCorrect"
+      }
+    ]
+  }
+]

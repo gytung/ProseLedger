@@ -1,0 +1,706 @@
+{
+  "textSHA256": "f6b8d7dfbeaf6b56e17c2ca20f730a0093e00258088f70aaa4c0384b0ab5c050",
+  "characters": 2511,
+  "scannedAtUTC": "2026-11-12T20:53:51.978254+00:00",
+  "elapsedSeconds": 1.815,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 12,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 15,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 20,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 25,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 26,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9999999006884212,
+            "sentence": "# Oral Histories with Conflicting Accounts",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.931157884997412e-08,
+              "ai": 0.9999963168142729,
+              "paraphrased": 3.5838741482414933e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999999006884212,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.931157884997412e-08,
+              "ai": 0.9999963168142729,
+              "paraphrased": 3.5838741482414933e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999999095757582,
+            "sentence": "A concise oral-history summary can make a disputed event appear settled if it merges different speakers into a single account.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.042424169626973e-08,
+              "ai": 0.9999965164314232,
+              "paraphrased": 3.3931443350743138e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999999095757559,
+            "sentence": "We propose to compare ordinary concise summaries with summaries that retain attribution when accounts conflict.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.042424408395436e-08,
+              "ai": 0.9999965428366909,
+              "paraphrased": 3.3667390649974166e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999999095757559,
+            "sentence": "The collection concerns a factory closure for which two speakers give different dates [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.042424408395436e-08,
+              "ai": 0.9999965428366909,
+              "paraphrased": 3.3667390649974166e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999999006884212,
+            "sentence": "The disagreement will remain part of the evidence rather than become an error for the summarizer to fix.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.931157884997412e-08,
+              "ai": 0.9999963168142729,
+              "paraphrased": 3.5838741482414933e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998909275926,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.090724074787136e-07,
+              "ai": 0.9999961642888191,
+              "paraphrased": 3.726638773419396e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998909275926,
+            "sentence": "Interview transcripts record what a speaker says, not an automatically verified history of the event.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.090724074787136e-07,
+              "ai": 0.9999961642888191,
+              "paraphrased": 3.726638773419396e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999999006884157,
+            "sentence": "The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.931158436800889e-08,
+              "ai": 0.9999963723769224,
+              "paraphrased": 3.5283114932802767e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998909275862,
+            "sentence": "A summary should therefore distinguish the absence of corroboration from the absence of an event.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0907241378049277e-07,
+              "ai": 0.9999962220647053,
+              "paraphrased": 3.6688628809286316e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999999006884078,
+            "sentence": "It should also avoid assigning a motive that the speaker did not state.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.931159217245212e-08,
+              "ai": 0.9999964270782464,
+              "paraphrased": 3.473610161400843e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998642572412,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.3574275871452282e-07,
+              "ai": 0.9999957713471411,
+              "paraphrased": 4.092910100109998e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998874652435,
+            "sentence": "The collection brief identifies unresolved disagreement and makes speaker attribution necessary for interpreting it [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.125347564793964e-07,
+              "ai": 0.9999962471535847,
+              "paraphrased": 3.640311658785302e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998724814363,
+            "sentence": "The method brief requires disputed dates to stay attached to the speakers who supplied them [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.275185637298348e-07,
+              "ai": 0.9999960871566771,
+              "paraphrased": 3.785324759215379e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998909275862,
+            "sentence": "We will use this constraint to test whether a shorter account remains faithful to the structure of the evidence, rather than judge it only by how smoothly the narrative reads.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0907241378049277e-07,
+              "ai": 0.9999962220647053,
+              "paraphrased": 3.6688628809286316e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997617642603,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.38235739670823e-07,
+              "ai": 0.9999948631962909,
+              "paraphrased": 4.898567969401133e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999996743705234,
+            "sentence": "We will summarize 16 interview excerpts under both conditions [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.2562947659246476e-07,
+              "ai": 0.9999943362165706,
+              "paraphrased": 5.338153952803149e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998684335992,
+            "sentence": "The ordinary condition will request a concise account, while the attribution-preserving condition will explicitly retain disagreement.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.315664007244928e-07,
+              "ai": 0.9999958703351922,
+              "paraphrased": 3.9980984070404515e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998684336076,
+            "sentence": "Reviewers will receive the source excerpts and identify any statement that assigns a date, motive or event to the wrong speaker.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.3156639244092305e-07,
+              "ai": 0.9999958073743186,
+              "paraphrased": 4.061059289009776e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999996533694069,
+            "sentence": "The pseudonyms will be used consistently in both versions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.466305930797855e-07,
+              "ai": 0.9999937445747721,
+              "paraphrased": 5.908794634831387e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997690940088,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.3090599124627587e-07,
+              "ai": 0.9999947933851823,
+              "paraphrased": 4.975708826480194e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998362630192,
+            "sentence": "Evaluation will cover readability, attribution accuracy and the handling of unresolved dates.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6373698079318641e-07,
+              "ai": 0.9999954452127037,
+              "paraphrased": 4.391050315552288e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998555026144,
+            "sentence": "We will retain cases in which a summary is readable but collapses two accounts into one.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4449738562584334e-07,
+              "ai": 0.9999956655320985,
+              "paraphrased": 4.189970515843006e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998555026209,
+            "sentence": "A separate check will examine whether a silence in the transcript becomes a negative historical claim.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4449737910619167e-07,
+              "ai": 0.9999955995498597,
+              "paraphrased": 4.2559527611671675e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998555026192,
+            "sentence": "Reviewers will not be asked to decide the true closure date from evidence that does not establish it.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4449738087732475e-07,
+              "ai": 0.9999956326699262,
+              "paraphrased": 4.222832692971855e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999730043732,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.699562680045263e-07,
+              "ai": 0.9999941357073895,
+              "paraphrased": 5.594336342524103e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998555026096,
+            "sentence": "The study cannot resolve the underlying historical disagreement.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.444973903373676e-07,
+              "ai": 0.9999956981382514,
+              "paraphrased": 4.1573643582458935e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998838930465,
+            "sentence": "A faithful summary may consequently be less tidy than a single chronological narrative.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.1610695348890434e-07,
+              "ai": 0.9999959477786894,
+              "paraphrased": 3.936114357085338e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997617641981,
+            "sentence": "We will not reconcile the dates or infer motives without new evidence [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.382358018214455e-07,
+              "ai": 0.999995123891865,
+              "paraphrased": 4.637872333209357e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998310654259,
+            "sentence": "The intended benefit is a clearer account of who said what and where the source packet still leaves the history uncertain.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.689345741605331e-07,
+              "ai": 0.9999955751127687,
+              "paraphrased": 4.2559526571636045e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Oral Histories with Conflicting Accounts\n\n## Abstract\n\nA concise oral-history summary can make a disputed event appear settled if it merges different speakers into a single account. We propose to compare ordinary concise summaries with summaries that retain attribution when accounts conflict. The collection concerns a factory closure for which two speakers give different dates [S1]. The disagreement will remain part of the evidence rather than become an error for the summarizer to fix.\n\n## Introduction\n\nInterview transcripts record what a speaker says, not an automatically verified history of the event. The supplied collection uses pseudonyms, and no archival source has resolved the competing closure dates [S1]. A summary should therefore distinguish the absence of corroboration from the absence of an event. It should also avoid assigning a motive that the speaker did not state.\n\n## Related Work\n\nThe collection brief identifies unresolved disagreement and makes speaker attribution necessary for interpreting it [S1]. The method brief requires disputed dates to stay attached to the speakers who supplied them [S2]. We will use this constraint to test whether a shorter account remains faithful to the structure of the evidence, rather than judge it only by how smoothly the narrative reads.\n\n## Methodology\n\nWe will summarize 16 interview excerpts under both conditions [S2]. The ordinary condition will request a concise account, while the attribution-preserving condition will explicitly retain disagreement. Reviewers will receive the source excerpts and identify any statement that assigns a date, motive or event to the wrong speaker. The pseudonyms will be used consistently in both versions.\n\n## Planned Evaluation\n\nEvaluation will cover readability, attribution accuracy and the handling of unresolved dates. We will retain cases in which a summary is readable but collapses two accounts into one. A separate check will examine whether a silence in the transcript becomes a negative historical claim. Reviewers will not be asked to decide the true closure date from evidence that does not establish it.\n\n## Limitations and Conclusion\n\nThe study cannot resolve the underlying historical disagreement. A faithful summary may consequently be less tidy than a single chronological narrative. We will not reconcile the dates or infer motives without new evidence [S2]. The intended benefit is a clearer account of who said what and where the source packet still leaves the history uncertain.",
+        "document_id": null
+      }
+    ]
+  }
+}

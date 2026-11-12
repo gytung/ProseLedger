@@ -1,0 +1,38 @@
+{
+  "caseId": "C11",
+  "challenge": "violation",
+  "expectedPass": false,
+  "actualPass": true,
+  "correct": false,
+  "findings": [],
+  "before": "It also does not assign course grades",
+  "after": "It also assigns course grades",
+  "referenceReason": "An explicitly excluded grading use becomes a claimed study function.",
+  "originalSHA256": "9441cc51fbf0d7c38864461c82ad1e935472486e5266750f07cbbc1f60049287",
+  "candidateSHA256": "e0f3dd954c5ac58cfecf6817f199c78ae4f6f309690d333e2b1e45c8ada1d279",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Limitations and Conclusion",
+        "originalQuote": "It also does not assign course grades [S1].",
+        "revisedQuote": "It also assigns course grades [S1].",
+        "problem": "Reverses the exclusion of course grading, contradicts S1’s statement that the task “does not assign course grades,” and conflicts with the candidate’s Related Work section."
+      }
+    ],
+    "readability": "similar",
+    "reason": "The candidate is otherwise identical to the original. Removing the negation changes a substantive study boundary without improving readability."
+  },
+  "semanticPass": false,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": [
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    }
+  ]
+}

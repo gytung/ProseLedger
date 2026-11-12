@@ -1,0 +1,82 @@
+{
+  "complete": true,
+  "validComparison": true,
+  "nPlanned": 2,
+  "nCompleted": 2,
+  "rows": [
+    {
+      "case": "case01",
+      "topic": "Evidence-grounded revision of responses to scientific peer reviewers",
+      "status": "complete",
+      "targeted": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "008996fd4228f79f619acef2e8e7766bfe17c5ac0df63385421bdf71a67f538c"
+      },
+      "new": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "4519552c048ff9fd44007d4a8c732e4ac286f492fa98d6c2dbbf5d99ed9eec79"
+      },
+      "deltaNewMinusTargeted": 0,
+      "outcome": "tie",
+      "targetedStatus": "completed",
+      "candidateStatus": "completed",
+      "newCandidateEligible": true,
+      "retained": "repaired_new_candidate"
+    },
+    {
+      "case": "case02",
+      "topic": "Preserving exploratory claims in cross-disciplinary research proposals",
+      "status": "complete",
+      "targeted": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "f1e2a25e1971344c2d4d5898681b351c21b7603838e48f5af5985e7d007138d0"
+      },
+      "new": {
+        "ai": 1,
+        "mixed": 0,
+        "human": 0,
+        "class": "ai",
+        "version": "2026-10-07-base",
+        "sha256": "af78e5b8d2715e71b3ad16ca6254fc595d58dc99ce994524d3a6d59d592d813a"
+      },
+      "deltaNewMinusTargeted": 0,
+      "outcome": "tie",
+      "targetedStatus": "completed",
+      "candidateStatus": "completed",
+      "newCandidateEligible": true,
+      "retained": "repaired_new_candidate"
+    }
+  ],
+  "evaluationUnit": "one complete manuscript",
+  "primary": "GPTZero class_probabilities.ai",
+  "secondary": "ai+mixed and classification; not fraction of AI-written words",
+  "attribution": "New pipeline changes the rewriting model and adds bounded repairs; no isolated MemGuard or CoPA benefit is established.",
+  "limitations": [
+    "Two additional generated proposals using the same five-source packet; not a representative corpus.",
+    "Content and readability audits are automated, not human evaluation.",
+    "Baseline and new pipeline have different models and compute costs.",
+    "Targeted-only control preserves published Targeted prompts/retention, but reviews only its own candidate batch.",
+    "All baseline AI probabilities are at the upper bound of 1; zero losses cannot establish general non-inferiority.",
+    "Model generation and external detector versions may change; saved responses reproduce observations, not guarantee fresh scores."
+  ],
+  "targetedMean": 1,
+  "newMean": 1,
+  "targetedMeanAIPlusMixed": 1,
+  "newMeanAIPlusMixed": 1,
+  "wins": 0,
+  "ties": 2,
+  "losses": 0,
+  "primaryGoalMetInThisPilot": false
+}

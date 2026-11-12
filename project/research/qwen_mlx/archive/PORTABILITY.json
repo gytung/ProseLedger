@@ -1,0 +1,93 @@
+[
+  {
+    "protocol": "heldout_freeze.json",
+    "file": "contrastive_transfer.py",
+    "frozenSHA256": "a95c846035de20c5c29cab6cab708c63826a6832d329b54fc2691eb2007936e9",
+    "runnableSHA256": "a95c846035de20c5c29cab6cab708c63826a6832d329b54fc2691eb2007936e9",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "heldout_freeze.json",
+    "file": "audit_contrastive.mjs",
+    "frozenSHA256": "95d799d0065c2a421eb77750867461da4f6b640ba306dac78f7b134aafcef4f8",
+    "runnableSHA256": "0fcf51a51c9ff45eebda5bb41a9c778310075fca1d6ac9f5d11a8540b4f7a82c",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "heldout_freeze.json",
+    "file": "repair_sections.mjs",
+    "frozenSHA256": "614da30af5c269ad4ab4ec9f9e5a69dbce428940007a3759d967ec9cb6efa61b",
+    "runnableSHA256": "317b79d606b430966fc80c7376f53632b64880870a5f2a36c1fb106a73fcde16",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "heldout_freeze.json",
+    "file": "targeted_engine.mjs",
+    "frozenSHA256": "d1e0b1a36b2a1a8cb6e971c6f4a4bd227dc73cc6b993e5ecad2e9f7f794fb293",
+    "runnableSHA256": "3e57f32bcccd982881a77b67a9c4fe4053d05faa2755838c39b395c2420f11c6",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "heldout_freeze.json",
+    "file": "experiment_utils.mjs",
+    "frozenSHA256": "be449e60fe0dd02732e01ce2988c30ae11e8b7d7b1d915b397fa93caa5be8590",
+    "runnableSHA256": "6988ade52c00945df0cf3ddab846e9671e9b4e280654f000a971d895b26e4f74",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "heldout_freeze.json",
+    "file": "run_heldout_controls.mjs",
+    "frozenSHA256": "43ab3253f55b35e82590e5d02bd47302a802dec4676e6e6ab72479cb8ce240d6",
+    "runnableSHA256": "e3706a43345477f8d2c023a13d2c847b64c158f1a64b1cfa8ac050889d54b377",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "heldout_freeze.json",
+    "file": "model_bridge.py",
+    "frozenSHA256": "b0abd5d48ffba516912f9b821224233a04631fcd34a7a30b0d6ddc3ad53c4169",
+    "runnableSHA256": "b7ebd313b31fc1def0b86a9398be37f61677b74119a5628b7f014a9999c6ee77",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "confirmation_freeze.json",
+    "file": "contrastive_transfer.py",
+    "frozenSHA256": "a95c846035de20c5c29cab6cab708c63826a6832d329b54fc2691eb2007936e9",
+    "runnableSHA256": "a95c846035de20c5c29cab6cab708c63826a6832d329b54fc2691eb2007936e9",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "confirmation_freeze.json",
+    "file": "audit_contrastive.mjs",
+    "frozenSHA256": "95d799d0065c2a421eb77750867461da4f6b640ba306dac78f7b134aafcef4f8",
+    "runnableSHA256": "0fcf51a51c9ff45eebda5bb41a9c778310075fca1d6ac9f5d11a8540b4f7a82c",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "confirmation_freeze.json",
+    "file": "repair_sections.mjs",
+    "frozenSHA256": "614da30af5c269ad4ab4ec9f9e5a69dbce428940007a3759d967ec9cb6efa61b",
+    "runnableSHA256": "317b79d606b430966fc80c7376f53632b64880870a5f2a36c1fb106a73fcde16",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "confirmation_freeze.json",
+    "file": "repair_final_audit.mjs",
+    "frozenSHA256": "d32902567b1bb20080c66ba3e51b9c63ac0659d1bac2d141fd8c6c9cd2cb5587",
+    "runnableSHA256": "7aac920269b21fdb119d619d42b1386e19147a721a28a2f61da28a0253d2f3dd",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "confirmation_freeze.json",
+    "file": "bounded_patches.mjs",
+    "frozenSHA256": "0e3099d5bed52d944b6c5f6db8821583b475a86d9415ba29a5ca2c3b5cc96efe",
+    "runnableSHA256": "0e3099d5bed52d944b6c5f6db8821583b475a86d9415ba29a5ca2c3b5cc96efe",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  },
+  {
+    "protocol": "confirmation_freeze.json",
+    "file": "targeted_engine.mjs",
+    "frozenSHA256": "d1e0b1a36b2a1a8cb6e971c6f4a4bd227dc73cc6b993e5ecad2e9f7f794fb293",
+    "runnableSHA256": "3e57f32bcccd982881a77b67a9c4fe4053d05faa2755838c39b395c2420f11c6",
+    "change": "Host-specific paths/import locations and file-URL decoding are adjusted; the model bridge adds validated executable discovery with a macOS desktop-CLI fallback. Model requests and algorithm selection are unchanged."
+  }
+]

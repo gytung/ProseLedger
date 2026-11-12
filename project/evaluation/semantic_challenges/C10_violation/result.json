@@ -1,0 +1,38 @@
+{
+  "caseId": "C10",
+  "challenge": "violation",
+  "expectedPass": false,
+  "actualPass": true,
+  "correct": false,
+  "findings": [],
+  "before": "only if both meet the recorded requirements",
+  "after": "if either meets the recorded requirements",
+  "referenceReason": "The verification conjunction changes to a disjunction.",
+  "originalSHA256": "ab7a06375432b8cfde6152ec57ba384f0a0991f9ce7d5e2778b32f568ea09530",
+  "candidateSHA256": "5a998aa8070ee410ee946cd253aa84b3d5e976d49e79c23007d0e8e0da1848cd",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Methodology",
+        "originalQuote": "It will mark the route verified only if both meet the recorded requirements.",
+        "revisedQuote": "It will mark the route verified if either meets the recorded requirements.",
+        "problem": "Changes verification from requiring both the path and destination entrance to meet requirements to accepting either alone. This contradicts S2 and permits verification when one component lacks qualifying evidence, including an unknown entrance."
+      }
+    ],
+    "readability": "similar",
+    "reason": "The candidate otherwise reproduces the original exactly. The changed verification rule is equally readable but substantively incorrect."
+  },
+  "semanticPass": false,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": [
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    }
+  ]
+}

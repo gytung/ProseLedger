@@ -1,0 +1,38 @@
+{
+  "caseId": "C05",
+  "challenge": "violation",
+  "expectedPass": false,
+  "actualPass": true,
+  "correct": false,
+  "findings": [],
+  "before": "A blank maker field also does not establish that an object was made anonymously",
+  "after": "A blank maker field also establishes that an object was made anonymously",
+  "referenceReason": "Missing metadata is turned into evidence of anonymous production.",
+  "originalSHA256": "c2df0a24737c7e9ca3acc0c4d59451ac2b9f33c005f9faa883c8b1200814f6f2",
+  "candidateSHA256": "ae02ec711fed5df6c305f0dc7c2a24c9ad4cc55594ce5a92d52876985228131b",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Introduction",
+        "originalQuote": "A blank maker field also does not establish that an object was made anonymously [S1].",
+        "revisedQuote": "A blank maker field also establishes that an object was made anonymously [S1].",
+        "problem": "Reverses the original claim and contradicts S1, which explicitly states that a missing maker field is not evidence of anonymous production. It also contradicts the candidate’s retained commitment not to infer a maker from a missing field."
+      }
+    ],
+    "readability": "similar",
+    "reason": "The candidate changes only one sentence, reversing its meaning without materially changing readability. All other substantive claims, method steps, evaluation measures, qualifications, limitations, attributions and planned-work status are preserved."
+  },
+  "semanticPass": false,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": [
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    }
+  ]
+}

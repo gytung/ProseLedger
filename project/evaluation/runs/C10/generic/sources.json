@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The campus route study distinguishes a step-free path from a fully accessible destination. A step-free route does not establish that the destination door is usable. The supplied map records paths and entrances, but some door measurements are missing. Missing measurements must remain unknown.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "The planned test contains 32 origin-destination pairs. A route is marked verified only when both its path and destination entrance meet the recorded requirements. Unknown entrances will be shown separately from verified routes. The study will not infer accessibility for unmeasured doors.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

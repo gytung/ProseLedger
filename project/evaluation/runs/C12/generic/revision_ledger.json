@@ -1,0 +1,181 @@
+{
+  "scope": "This run only; no historical card retrieval",
+  "memoryCardsUsed": 0,
+  "originalSHA256": "fbc1ed9b4e2bf27a0cc5dc8dc228d24b4a091436cab7d497ac465ffb813aa3c2",
+  "retainedSHA256": "b5916b0c85f2c8c94b94304631c151d2d87b6fbcc293d62830d7dbfb10f5edcc",
+  "detectorUsedForAdmission": false,
+  "fullAudit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The candidate preserves all substantive claims, source attributions, the full 1180 to 1260 CE interval, uncertain charcoal–building association, distinction between material age and event timing, planned comparison of 14 descriptions, review criteria, evaluation measures, retention of uncertain contexts, midpoint restriction, and limitations. The study remains proposed rather than completed. Wording changes are equivalent paraphrases with similar readability."
+  },
+  "repairHistory": [],
+  "edits": [
+    {
+      "id": 0,
+      "heading": "Abstract",
+      "original": "A dated fragment can help interpret a site without directly dating the event that interests an archaeologist. We propose to study how short context descriptions present charcoal dates when the relation to a building remains uncertain. The supplied interval is 1180 to 1260 CE [S1]. A synthesis must preserve that interval and avoid turning material age into an established construction date.",
+      "candidate": "A dated fragment can assist in interpreting a site without directly dating the event of interest to archaeologists. We propose to investigate how short context descriptions present charcoal dates when the relation to a building remains uncertain. The supplied interval is 1180 to 1260 CE [S1]. A synthesis must preserve this interval and avoid treating the material age as an established construction date.",
+      "text": "A dated fragment can assist in interpreting a site without directly dating the event of interest to archaeologists. We propose to investigate how short context descriptions present charcoal dates when the relation to a building remains uncertain. The supplied interval is 1180 to 1260 CE [S1]. A synthesis must preserve this interval and avoid treating the material age as an established construction date.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 0,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A dated fragment can assist in interpreting a site without directly dating the event of interest to archaeologists. We propose to investigate how short context descriptions present charcoal dates when the relation to a building remains uncertain. The supplied interval is 1180 to 1260 CE [S1]. A synthesis must preserve this interval and avoid treating the material age as an established construction date.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 1,
+      "heading": "Introduction",
+      "original": "Readers can easily treat a date placed beside a building description as the date of construction. That inference is not always supported by the sampled material. In this proposal, the association between the charcoal and the building remains uncertain [S1]. Clear writing should make the evidential link explicit instead of relying on the reader to supply a stronger connection.",
+      "candidate": "Readers might mistakenly interpret a date next to a building description as the date of construction. However, this inference is not always supported by the sampled material. In this proposal, the association between the charcoal and the building remains uncertain [S1]. Therefore, clear writing should explicitly make the evidential link, rather than rely on the reader to infer a stronger connection.",
+      "text": "Readers might mistakenly interpret a date next to a building description as the date of construction. However, this inference is not always supported by the sampled material. In this proposal, the association between the charcoal and the building remains uncertain [S1]. Therefore, clear writing should make the evidential link explicit, rather than rely on the reader to infer a stronger connection.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 1,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "Clear writing should make the evidential link explicit",
+            "revisedQuote": "clear writing should explicitly make the evidential link",
+            "problem": "The revised wording is awkward and can suggest establishing a link rather than clearly stating the evidential relationship and its uncertainty."
+          }
+        ],
+        "readability": "worse"
+      },
+      "repair": {
+        "ok": true,
+        "text": "Readers might mistakenly interpret a date next to a building description as the date of construction. However, this inference is not always supported by the sampled material. In this proposal, the association between the charcoal and the building remains uncertain [S1]. Therefore, clear writing should make the evidential link explicit, rather than rely on the reader to infer a stronger connection.",
+        "spans": [
+          {
+            "before": "clear writing should explicitly make the evidential link",
+            "after": "clear writing should make the evidential link explicit",
+            "issueIndex": 0,
+            "start": 282,
+            "end": 338
+          }
+        ]
+      },
+      "retained": "Readers might mistakenly interpret a date next to a building description as the date of construction. However, this inference is not always supported by the sampled material. In this proposal, the association between the charcoal and the building remains uncertain [S1]. Therefore, clear writing should make the evidential link explicit, rather than rely on the reader to infer a stronger connection.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 2,
+      "heading": "Related Work",
+      "original": "The source brief distinguishes the age of a charcoal fragment from the timing of a building event [S1]. The method brief requires the complete interval and uncertain association to survive synthesis [S2]. We will treat these qualifications as central content. Removing them would change the archaeological claim even if the resulting sentence were shorter and easier to read.",
+      "candidate": "The source brief distinguishes the age of a charcoal fragment from the timing of a building event [S1]. The method brief requires that the complete interval and the uncertain association be preserved in the synthesis [S2]. We consider these qualifications central to the archaeological claim. Removing them would alter the claim, even if the resulting sentence were more concise and easier to read.",
+      "text": "The source brief distinguishes the age of a charcoal fragment from the timing of a building event [S1]. The method brief requires that the complete interval and the uncertain association be preserved in the synthesis [S2]. We consider these qualifications central to the archaeological claim. Removing them would alter the claim, even if the resulting sentence were more concise and easier to read.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 2,
+        "approve": true,
+        "issues": [],
+        "readability": "better"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The source brief distinguishes the age of a charcoal fragment from the timing of a building event [S1]. The method brief requires that the complete interval and the uncertain association be preserved in the synthesis [S2]. We consider these qualifications central to the archaeological claim. Removing them would alter the claim, even if the resulting sentence were more concise and easier to read.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 3,
+      "heading": "Methodology",
+      "original": "We plan to compare 14 context descriptions [S2]. Each synthesis will receive the same date interval and contextual note. Reviewers will check whether the output identifies what was sampled, preserves the full interval and states the uncertain relation to the building. Contexts with uncertain association will remain in the report rather than be excluded as inconvenient examples.",
+      "candidate": "We plan to compare 14 context descriptions [S2]. Each synthesis will receive the same date interval and contextual note. Reviewers will verify that the output identifies what was sampled, preserves the full interval, and states the uncertain relation to the building. Contexts with uncertain association will remain in the report, rather than be excluded as inconvenient examples.",
+      "text": "We plan to compare 14 context descriptions [S2]. Each synthesis will receive the same date interval and contextual note. Reviewers will verify that the output identifies what was sampled, preserves the full interval, and states the uncertain relation to the building. Contexts with uncertain association will remain in the report, rather than be excluded as inconvenient examples.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 3,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "We plan to compare 14 context descriptions [S2]. Each synthesis will receive the same date interval and contextual note. Reviewers will verify that the output identifies what was sampled, preserves the full interval, and states the uncertain relation to the building. Contexts with uncertain association will remain in the report, rather than be excluded as inconvenient examples.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 4,
+      "heading": "Planned Evaluation",
+      "original": "The evaluation will report whether a reader can distinguish material age from event timing and recover the stated interval from each description. We will inspect summaries that select a single date or imply that the fragment securely dates construction. The interval midpoint will not be treated as an established construction date [S2]. These errors will be recorded separately from ordinary stylistic awkwardness.",
+      "candidate": "The evaluation will assess whether readers can distinguish material age from event timing and recover the stated interval from each description. We will examine summaries that select a single date or imply that the fragment securely dates construction. The interval midpoint will not be treated as an established construction date [S2]. These errors will be recorded separately from ordinary stylistic issues.",
+      "text": "The evaluation will report whether readers can distinguish material age from event timing and recover the stated interval from each description. We will examine summaries that select a single date or imply that the fragment securely dates construction. The interval midpoint will not be treated as an established construction date [S2]. These errors will be recorded separately from ordinary stylistic issues.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 4,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "The evaluation will report whether a reader can distinguish material age from event timing and recover the stated interval from each description.",
+            "revisedQuote": "The evaluation will assess whether readers can distinguish material age from event timing and recover the stated interval from each description.",
+            "problem": "Assessing reader understanding does not preserve the explicit commitment to report the evaluation findings."
+          }
+        ],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": true,
+        "text": "The evaluation will report whether readers can distinguish material age from event timing and recover the stated interval from each description. We will examine summaries that select a single date or imply that the fragment securely dates construction. The interval midpoint will not be treated as an established construction date [S2]. These errors will be recorded separately from ordinary stylistic issues.",
+        "spans": [
+          {
+            "before": "will assess whether",
+            "after": "will report whether",
+            "issueIndex": 0,
+            "start": 15,
+            "end": 34
+          }
+        ]
+      },
+      "retained": "The evaluation will report whether readers can distinguish material age from event timing and recover the stated interval from each description. We will examine summaries that select a single date or imply that the fragment securely dates construction. The interval midpoint will not be treated as an established construction date [S2]. These errors will be recorded separately from ordinary stylistic issues.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 5,
+      "heading": "Limitations and Conclusion",
+      "original": "The proposed study concerns the communication of existing evidence, not a new dating analysis. It cannot resolve the uncertain association between the fragment and the building [S1]. A careful synthesis may therefore leave an important historical question open. Its value would lie in making that uncertainty understandable without presenting an interval estimate as a settled event date.",
+      "candidate": "The proposed study focuses on the communication of existing evidence, rather than conducting a new dating analysis. It cannot resolve the uncertain association between the charcoal fragment and the building [S1]. A careful synthesis may therefore leave an important historical question open. Its value lies in making this uncertainty understandable without presenting the interval estimate as a settled event date.",
+      "text": "The proposed study focuses on the communication of existing evidence, rather than conducting a new dating analysis. It cannot resolve the uncertain association between the charcoal fragment and the building [S1]. A careful synthesis may therefore leave an important historical question open. Its value would lie in making this uncertainty understandable without presenting the interval estimate as a settled event date.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 5,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "Its value would lie in making that uncertainty understandable",
+            "revisedQuote": "Its value lies in making this uncertainty understandable",
+            "problem": "The revision removes the conditional qualification on the proposed study's value, presenting its benefit more definitively than the original supports."
+          }
+        ],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": true,
+        "text": "The proposed study focuses on the communication of existing evidence, rather than conducting a new dating analysis. It cannot resolve the uncertain association between the charcoal fragment and the building [S1]. A careful synthesis may therefore leave an important historical question open. Its value would lie in making this uncertainty understandable without presenting the interval estimate as a settled event date.",
+        "spans": [
+          {
+            "before": "Its value lies",
+            "after": "Its value would lie",
+            "issueIndex": 0,
+            "start": 292,
+            "end": 306
+          }
+        ]
+      },
+      "retained": "The proposed study focuses on the communication of existing evidence, rather than conducting a new dating analysis. It cannot resolve the uncertain association between the charcoal fragment and the building [S1]. A careful synthesis may therefore leave an important historical question open. Its value would lie in making this uncertainty understandable without presenting the interval estimate as a settled event date.",
+      "status": "verified_edit"
+    }
+  ]
+}

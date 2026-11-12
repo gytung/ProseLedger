@@ -1,0 +1,20 @@
+{
+  "status": "development",
+  "development": "One previously inspected initial proposal. All variants are development, including failures.",
+  "planned_validation": "After a development policy is frozen, generate four new proposals on fixed topics; compare identical initial manuscripts under previous Targeted and the new method; scan each output once. No selection by held-out detector scores.",
+  "topics": [
+    "Evidence-linked revision of scientific proposals",
+    "Conditional editing experience for laboratory handover notes",
+    "Citation preservation during cross-section editing",
+    "Preserving negative findings and uncertainty in literature synthesis"
+  ],
+  "primary": "Mean GPTZero document class probability ai on exact full Markdown; report all raw probabilities and AI/mixed/human labels.",
+  "secondary": [
+    "AI plus mixed probability",
+    "content preservation audit",
+    "word count ratio",
+    "all API calls and candidate outcomes"
+  ],
+  "success": "Lower mean P(ai) than matched Targeted on the frozen small validation batch, with no detected content violations. An exploratory batch, not general proof.",
+  "detector_limit": 24
+}

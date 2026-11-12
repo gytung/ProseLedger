@@ -1,0 +1,38 @@
+{
+  "caseId": "C01",
+  "challenge": "violation",
+  "expectedPass": false,
+  "actualPass": true,
+  "correct": false,
+  "findings": [],
+  "before": "The proposed experiment will therefore not estimate annual retreat rates",
+  "after": "The proposed experiment will therefore estimate annual retreat rates",
+  "referenceReason": "Negation removal changes a declared exclusion into a planned estimate.",
+  "originalSHA256": "53bb11a91147eda5a1d09fd405b5ab3577d96b1c2025b561daa6b2895b55f5e4",
+  "candidateSHA256": "15d4a672ca620d185dd8a54f1a8d03d08d6789e1568a499f570e92ff43c2c5da",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Limitations and Conclusion",
+        "originalQuote": "The proposed experiment will therefore not estimate annual retreat rates or establish that any particular glacier is shrinking [S2].",
+        "revisedQuote": "The proposed experiment will therefore estimate annual retreat rates or establish that any particular glacier is shrinking [S2].",
+        "problem": "Removing “not” reverses the stated scope limitation into a planned claim to estimate retreat rates or establish glacier shrinkage. This contradicts S2’s explicit exclusion of annual retreat-rate estimation and is unsupported by the supplied evidence concerning glacier shrinkage."
+      }
+    ],
+    "readability": "similar",
+    "reason": "The candidate is otherwise identical to the original. Removing the negation changes substantive meaning without improving readability; all other claims, methods, evaluation measures, qualifications, attributions and planned-work status are preserved."
+  },
+  "semanticPass": false,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": [
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    }
+  ]
+}

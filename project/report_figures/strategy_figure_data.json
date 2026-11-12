@@ -1,0 +1,156 @@
+{
+  "document": "strategy_expanded.md",
+  "evidence_status": "Prospective strategy. Quantitative chart values are labelled assumptions, not observed product benefits.",
+  "style": {
+    "canvas": "#FFFFFF",
+    "title": "#5D425F",
+    "lavender": "#C4B7D7",
+    "sage": "#A8BCA3",
+    "sky": "#8FBFDA",
+    "apricot": "#E8B792",
+    "rose": "#CA8894",
+    "typography": "Times-compatible academic serif; bold italic panel titles; restrained sans serif small annotations",
+    "shapes": "Open grouped lanes; rounded capsules, document sheets, compact ledger glyph; no black rectangular grid"
+  },
+  "figures": [
+    {
+      "id": "strategy_opportunity_routes",
+      "title": "Three entry points, three approval paths",
+      "type": "qualitative workflow lanes",
+      "lanes": [
+        {
+          "label": "University proposal support",
+          "priority": 1,
+          "user": "Research author",
+          "approver": "Adviser",
+          "buyer": "Programme manager",
+          "protected_content": "Evidence and proposed research status",
+          "entry_adaptation": "Proposal template and adviser review",
+          "pilot": "30 proposals; 10 volunteer authors; 2 advisers; 4 weeks",
+          "continuation": "Target 20% lower median total editing time; no observed increase in material errors"
+        },
+        {
+          "label": "Scholarly author services",
+          "priority": 2,
+          "user": "Professional editor",
+          "approver": "Author / scientific editor",
+          "buyer": "Editorial operations manager",
+          "protected_content": "Scientific meaning across language edits",
+          "entry_adaptation": "Original/revised section adapter and editorial export",
+          "pilot": "40 authorised sections; at least 2 disciplines; 5 weeks",
+          "continuation": "Target 15% lower total editor time, or agreed error-detection improvement at an accepted cost"
+        },
+        {
+          "label": "R&D SME concept notes",
+          "priority": 3,
+          "user": "Engineer / technical author",
+          "approver": "Technical lead",
+          "buyer": "Founder / project lead",
+          "protected_content": "Quantities, exclusions and commitments",
+          "entry_adaptation": "Concept-note template; quantity-role relations; glossary",
+          "pilot": "20 completed notes; 2 firms; 6 weeks",
+          "continuation": "Lower review effort or fewer commitment errors at buyer-accepted cost; pause for uncontained serious error"
+        }
+      ],
+      "caption": "Proposed entry sequence and approval paths. These are three pilot designs, not adoption results. The value of a controlled revision is assessed at the point where a responsible person approves the document."
+    },
+    {
+      "id": "strategy_adaptation_architecture",
+      "title": "One revision core, explicit domain contracts",
+      "type": "architecture with implemented/proposed scope",
+      "existing_nodes": [
+        "Attributed evidence and proposal input",
+        "Six-rule section rewrite",
+        "Contextual review",
+        "Bounded repair and retention",
+        "Run ledger and export"
+      ],
+      "proposed_adapters": [
+        "University proposal contract",
+        "Manuscript-section comparison adapter",
+        "SME concept-note / quantity-role adapter"
+      ],
+      "proposed_overlays": [
+        "Domain-specific commitments",
+        "Named human approval",
+        "Customer-managed access and provider policy"
+      ],
+      "existing_flow": [
+        [
+          "Attributed evidence and proposal input",
+          "Six-rule section rewrite"
+        ],
+        [
+          "Six-rule section rewrite",
+          "Contextual review"
+        ],
+        [
+          "Contextual review",
+          "Bounded repair and retention"
+        ],
+        [
+          "Bounded repair and retention",
+          "Run ledger and export"
+        ]
+      ],
+      "caption": "The implemented revision core is shown with solid boundaries. Domain adapters and managed approval services are proposed extensions shown with dashed boundaries. A single run ledger supports review and traceability; this architecture does not imply that historical experience retrieval is active in the current route."
+    },
+    {
+      "id": "strategy_cost_sensitivity",
+      "title": "Value depends on net time saved",
+      "type": "annotated heatmap plus break-even inset",
+      "currency": "SGD",
+      "status": "Illustrative assumptions, not measured ROI",
+      "staff_cost_per_hour": 60,
+      "nonlabour_cost_per_document": 3,
+      "monthly_document_volume": 50,
+      "row_gross_saved_minutes": [
+        6,
+        12,
+        18
+      ],
+      "column_extra_check_minutes": [
+        0,
+        6,
+        12
+      ],
+      "net_value_per_document": [
+        [
+          3,
+          -3,
+          -9
+        ],
+        [
+          9,
+          3,
+          -3
+        ],
+        [
+          15,
+          9,
+          3
+        ]
+      ],
+      "formula": "(gross_saved_minutes - extra_check_minutes) * staff_cost_per_hour / 60 - nonlabour_cost_per_document",
+      "break_even": {
+        "staff_cost_per_hour": [
+          40,
+          60,
+          100
+        ],
+        "required_net_minutes_saved": [
+          4.5,
+          3,
+          1.8
+        ]
+      },
+      "central_case": {
+        "gross_saved_minutes": 12,
+        "extra_check_minutes": 6,
+        "value_per_document": 3,
+        "monthly_value_before_additional_fixed_cost": 150
+      },
+      "caption": "Illustrative net value per document at S$60 per staff hour and S$3 of non-labour cost. Values change with human checking effort, which must be counted alongside inference cost. The inset shows net minutes required to cover S$3 at three assumed labour rates. None of these values represents measured savings from ProseLedger."
+    }
+  ]
+}

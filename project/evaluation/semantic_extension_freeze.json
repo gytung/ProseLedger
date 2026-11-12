@@ -1,0 +1,13 @@
+{
+  "frozenAtUTC": "2026-11-12T20:18:01.768984+00:00",
+  "priorDeterministicOutcomesSeen": true,
+  "priorSemanticOutcomesSeen": false,
+  "scheduledCalls": 24,
+  "files": {
+    "audit_challenges.py": "6618ea99f389721aa30101fc7d75889102ce6dbde9db6c5940437416b31f7f7e",
+    "SEMANTIC_CHALLENGE_PROTOCOL.md": "a5ac9d8aba16a07c3991e9b25cd8c34dc4c0f31df9e86fd3b50b6affe9392c0b",
+    "known_answer_challenges.json": "1891f9ebb17bc7cee7d288bfa742f6943524e1a87374685195639bb980931e01",
+    "engine/core.py": "09e44f59fe1c14917308091c4ce3c5430353d1c61cfd4286dc1b8fd665c13c41",
+    "engine/native_runtime.py": "3edaf3f1de16dc22bc5748acdf050214dadaa5b86633318a1503db0e33bc324a"
+  }
+}

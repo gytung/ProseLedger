@@ -1,0 +1,15 @@
+{
+  "mappings": 36,
+  "uniqueScans": 35,
+  "versions": {
+    "2026-11-04-base": 36
+  },
+  "predictedClasses": {
+    "ai": 36
+  },
+  "probabilityValues": [
+    1
+  ],
+  "totalElapsedSeconds": 73.006,
+  "totalSubmittedCharacters": 86725
+}

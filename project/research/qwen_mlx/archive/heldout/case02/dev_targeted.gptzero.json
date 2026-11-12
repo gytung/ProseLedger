@@ -1,0 +1,1114 @@
+{
+  "label": "heldout_case02_targeted",
+  "textSHA256": "f79d32b4020fc072f01568d8483412fa6c13193fdd8afc784b56cd38dcc1d477",
+  "characters": 4853,
+  "requestVersion": "provider-default-returned-version-recorded",
+  "elapsedSeconds": 1.1,
+  "raw": {
+    "version": "2026-10-07-base",
+    "neatVersion": "4.1o",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 10,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 13,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 14,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 19,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 24,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 25,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 29,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 32,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 36,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 37,
+            "num_sentences": 2,
+            "completely_generated_prob": 0.8254776901813464
+          },
+          {
+            "start_sentence_index": 39,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 44,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 45,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [
+          {
+            "start": 0,
+            "end": 62,
+            "text": "# Conditional Editing Experience for Laboratory Handover Notes",
+            "reason": "header"
+          },
+          {
+            "start": 64,
+            "end": 75,
+            "text": "## Abstract",
+            "reason": "header"
+          },
+          {
+            "start": 648,
+            "end": 663,
+            "text": "## Introduction",
+            "reason": "header"
+          },
+          {
+            "start": 1437,
+            "end": 1452,
+            "text": "## Related Work",
+            "reason": "header"
+          },
+          {
+            "start": 2394,
+            "end": 2408,
+            "text": "## Methodology",
+            "reason": "header"
+          },
+          {
+            "start": 3562,
+            "end": 3583,
+            "text": "## Planned Evaluation",
+            "reason": "header"
+          },
+          {
+            "start": 4385,
+            "end": 4414,
+            "text": "## Limitations and Conclusion",
+            "reason": "header"
+          }
+        ],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0,
+            "sentence": "# Conditional Editing Experience for Laboratory Handover Notes",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990867528684,
+            "sentence": "This project proposes an editing assistant that learns reusable revision procedures from laboratory handover notes while keeping experiment-specific facts separate.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.132471315526012e-07,
+              "ai": 0.9999906722699315,
+              "paraphrased": 8.414482936911157e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991079081659,
+            "sentence": "Each stored editing experience would specify an applicable condition, an editing operation, and information that must be preserved.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.920918341173493e-07,
+              "ai": 0.999990726230433,
+              "paraphrased": 8.38167773297901e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993599568652,
+            "sentence": "The assistant would apply an experience only when the current note and its supporting evidence satisfy that condition.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.400431348336838e-07,
+              "ai": 0.9999884282126305,
+              "paraphrased": 1.0931744234764901e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994897140185,
+            "sentence": "Planned evaluation would examine whether conditional reuse improves clarity and recipient understanding while preserving factual content and uncertainty.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.102859814653944e-07,
+              "ai": 0.9999867590574939,
+              "paraphrased": 1.2730656524637196e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994482490397,
+            "sentence": "Laboratory handover notes may combine completed actions, unresolved problems, and instructions for subsequent work.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.517509602658959e-07,
+              "ai": 0.9999871813567086,
+              "paraphrased": 1.226689233114938e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994395607645,
+            "sentence": "Editing such notes requires more than fluent wording: a revision must preserve distinctions between observations, interpretations, and pending actions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.604392354346342e-07,
+              "ai": 0.9999862017803993,
+              "paraphrased": 1.323778036521876e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999993318555395,
+            "sentence": "A useful editing procedure might clarify who should perform a task, but it must not supply an owner absent from the evidence.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.68144460520156e-07,
+              "ai": 0.9999886115490342,
+              "paraphrased": 1.072030650525594e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991420841412,
+            "sentence": "The research question is whether conditional editing experience can support useful revisions without transferring facts between handovers.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.579158587445548e-07,
+              "ai": 0.9999901849177429,
+              "paraphrased": 8.957166398284805e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999989197211328,
+            "sentence": "We propose storing procedures such as separating an observation from a proposed explanation when both appear in one sentence.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0802788672024332e-06,
+              "ai": 0.9999899099197147,
+              "paraphrased": 9.009801418050437e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985744431535,
+            "sentence": "Whether this approach offers advantages over ordinary instruction-based editing remains an empirical question.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4255568464785104e-06,
+              "ai": 0.9999894406202353,
+              "paraphrased": 9.13382291821396e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999976126347381,
+            "sentence": "Gao et al.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.3873652619424646e-06,
+              "ai": 0.9999922953032893,
+              "paraphrased": 5.317331448808073e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999986712319754,
+            "sentence": "introduce ALCE to evaluate generated text along fluency, correctness, and citation quality, demonstrating that citation support remains incomplete in their evaluated systems [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.3287680245287528e-06,
+              "ai": 0.9999916680712962,
+              "paraphrased": 7.003160679194102e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999980362088078,
+            "sentence": "Slobodkin et al.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.9637911922528173e-06,
+              "ai": 0.9999913013372003,
+              "paraphrased": 6.734871607487811e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990240478202,
+            "sentence": "select source segments before sentence planning and generation; they report more concise attributions and reduced verification time in summarization and question answering [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.759521798154154e-07,
+              "ai": 0.9999915546482754,
+              "paraphrased": 7.469399544789133e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999326614912,
+            "sentence": "These findings motivate evidence-linked editing, but do not establish effectiveness for laboratory handovers.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 6.733850879970379e-07,
+              "ai": 0.9999889766418597,
+              "paraphrased": 1.0349973052276677e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999998977210441,
+            "sentence": "Document revision research also challenges reliance on a single reference revision [S3].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0227895590956164e-06,
+              "ai": 0.9999919053224378,
+              "paraphrased": 7.071888003193876e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999983719589453,
+            "sentence": "Jourdan et al.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6280410546688252e-06,
+              "ai": 0.9999919329317459,
+              "paraphrased": 6.439027199367911e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999989732076808,
+            "sentence": "report that LLM judges assess instruction-following more effectively than correctness, motivating complementary evaluation methods [S4].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0267923191671847e-06,
+              "ai": 0.9999916196099828,
+              "paraphrased": 7.353597697954191e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985688598226,
+            "sentence": "RefChecker assesses extracted claim-triplets against references [S5].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.431140177431621e-06,
+              "ai": 0.9999921423952054,
+              "paraphrased": 6.426464617227107e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990687408863,
+            "sentence": "We would adapt these ideas to examine factual preservation, without assuming their reported performance transfers to this setting.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.312591137241273e-07,
+              "ai": 0.9999904378764921,
+              "paraphrased": 8.630864394167421e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991813705,
+            "sentence": "We would assemble consented, de-identified handover drafts, supporting records, and editor-approved revisions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.186294999663623e-07,
+              "ai": 0.999990733953424,
+              "paraphrased": 8.447417076060446e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991684784393,
+            "sentence": "Editors would describe the procedural rationale for selected changes.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.315215607376231e-07,
+              "ai": 0.9999914166877509,
+              "paraphrased": 7.75179068834898e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999989732084125,
+            "sentence": "Each experience would contain a trigger condition, an operation, preservation constraints, and a reason to withhold the edit.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0267915875441998e-06,
+              "ai": 0.9999909753536487,
+              "paraphrased": 7.9978547638046e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999987370230329,
+            "sentence": "Stored procedures would exclude sample identities, measurements, and other case-specific facts.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2629769672105908e-06,
+              "ai": 0.9999923605680209,
+              "paraphrased": 6.376455011947702e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999998378306463,
+            "sentence": "For a new note, the assistant would retrieve candidate experiences and identify relevant evidence spans before proposing changes.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6216935369526562e-06,
+              "ai": 0.9999916696892739,
+              "paraphrased": 6.70861718915353e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999988854276753,
+            "sentence": "For example, an experience could separate completed work from pending work only when their statuses are explicit.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.1145723246946088e-06,
+              "ai": 0.9999914014264474,
+              "paraphrased": 7.484001227944298e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999990867534153,
+            "sentence": "If status is ambiguous, the assistant would flag the ambiguity instead of resolving it through inference.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.132465846563145e-07,
+              "ai": 0.9999900945311955,
+              "paraphrased": 8.992222219853517e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999989281262922,
+            "sentence": "The interface would present each proposed edit alongside its triggering condition and supporting spans.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0718737077843733e-06,
+              "ai": 0.9999914001446393,
+              "paraphrased": 7.527981652906511e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999991454275701,
+            "sentence": "A verification step would compare original and revised claims, checking quantities, negation, uncertainty, ownership, and temporal status.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 8.545724298712697e-07,
+              "ai": 0.9999917196647627,
+              "paraphrased": 7.425762807361434e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999988455456408,
+            "sentence": "Users would accept, modify, or reject each suggestion.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.1544543592128652e-06,
+              "ai": 0.999992343326404,
+              "paraphrased": 6.502219236825686e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999998957038287,
+            "sentence": "Accepted edits would become candidate experiences only after their procedural scope was reviewed.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0429617129822133e-06,
+              "ai": 0.9999914437451004,
+              "paraphrased": 7.513293186557954e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985406325468,
+            "sentence": "We would compare conditional reuse with instruction-only editing and retrieval of prior editing examples without explicit applicability conditions, using the same underlying model and evidence access.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.459367453286475e-06,
+              "ai": 0.9999924798972479,
+              "paraphrased": 6.0607352988069685e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999989406139822,
+            "sentence": "Evaluation would separate source sessions across development and testing to reduce overlap.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.0593860179074429e-06,
+              "ai": 0.9999914126322352,
+              "paraphrased": 7.5279817469137125e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999986128910886,
+            "sentence": "Blinded laboratory reviewers would assess clarity, actionability, factual preservation, and inappropriate edits.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.3871089114031289e-06,
+              "ai": 0.9999923719689046,
+              "paraphrased": 6.240922184002486e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999987995579946,
+            "sentence": "Recipient tasks would measure comprehension and verification time.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2004420054028412e-06,
+              "ai": 0.9999918508950797,
+              "paraphrased": 6.948662914910556e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985855334032,
+            "sentence": "Condition-mismatch cases would test whether the assistant withholds unsuitable procedures.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4144665968538816e-06,
+              "ai": 0.9999919550719667,
+              "paraphrased": 6.630461436474221e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999978599782982,
+            "sentence": "Ablations would remove condition checking or evidence links.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.1400217018259106e-06,
+              "ai": 0.999992845254171,
+              "paraphrased": 5.014724127189147e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999986608101666,
+            "sentence": "Automated claim checks would supplement expert review; analysis would report uncertainty and examine disagreements rather than treating automated judgments as ground truth.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.3391898333686964e-06,
+              "ai": 0.9999916849519462,
+              "paraphrased": 6.975858220404895e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999987901437367,
+            "sentence": "Incomplete records may prevent reliable verification, and applicability judgments may miss subtle laboratory context.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.209856263375771e-06,
+              "ai": 0.9999909622845549,
+              "paraphrased": 7.827859181808832e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985406334747,
+            "sentence": "De-identification could also remove useful information, while a narrow collection may limit transfer across laboratories.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4593665253418415e-06,
+              "ai": 0.9999918712084779,
+              "paraphrased": 6.669424996803094e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999984586020911,
+            "sentence": "The proposed assistant would therefore support accountable human editing.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.5413979088499207e-06,
+              "ai": 0.9999916841496649,
+              "paraphrased": 6.774452426289515e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999988766866345,
+            "sentence": "Its value would depend on demonstrating clearer handovers without introducing unsupported claims or concealing uncertainty.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.1233133655376321e-06,
+              "ai": 0.999990925556649,
+              "paraphrased": 7.951129985402208e-06
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "4.1o",
+        "version": "2026-10-07-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Conditional Editing Experience for Laboratory Handover Notes\n\n## Abstract\n\nThis project proposes an editing assistant that learns reusable revision procedures from laboratory handover notes while keeping experiment-specific facts separate. Each stored editing experience would specify an applicable condition, an editing operation, and information that must be preserved. The assistant would apply an experience only when the current note and its supporting evidence satisfy that condition. Planned evaluation would examine whether conditional reuse improves clarity and recipient understanding while preserving factual content and uncertainty.\n\n## Introduction\n\nLaboratory handover notes may combine completed actions, unresolved problems, and instructions for subsequent work. Editing such notes requires more than fluent wording: a revision must preserve distinctions between observations, interpretations, and pending actions. A useful editing procedure might clarify who should perform a task, but it must not supply an owner absent from the evidence.\n\nThe research question is whether conditional editing experience can support useful revisions without transferring facts between handovers. We propose storing procedures such as separating an observation from a proposed explanation when both appear in one sentence. Whether this approach offers advantages over ordinary instruction-based editing remains an empirical question.\n\n## Related Work\n\nGao et al. introduce ALCE to evaluate generated text along fluency, correctness, and citation quality, demonstrating that citation support remains incomplete in their evaluated systems [S1]. Slobodkin et al. select source segments before sentence planning and generation; they report more concise attributions and reduced verification time in summarization and question answering [S2]. These findings motivate evidence-linked editing, but do not establish effectiveness for laboratory handovers.\n\nDocument revision research also challenges reliance on a single reference revision [S3]. Jourdan et al. report that LLM judges assess instruction-following more effectively than correctness, motivating complementary evaluation methods [S4]. RefChecker assesses extracted claim-triplets against references [S5]. We would adapt these ideas to examine factual preservation, without assuming their reported performance transfers to this setting.\n\n## Methodology\n\nWe would assemble consented, de-identified handover drafts, supporting records, and editor-approved revisions. Editors would describe the procedural rationale for selected changes. Each experience would contain a trigger condition, an operation, preservation constraints, and a reason to withhold the edit. Stored procedures would exclude sample identities, measurements, and other case-specific facts.\n\nFor a new note, the assistant would retrieve candidate experiences and identify relevant evidence spans before proposing changes. For example, an experience could separate completed work from pending work only when their statuses are explicit. If status is ambiguous, the assistant would flag the ambiguity instead of resolving it through inference.\n\nThe interface would present each proposed edit alongside its triggering condition and supporting spans. A verification step would compare original and revised claims, checking quantities, negation, uncertainty, ownership, and temporal status. Users would accept, modify, or reject each suggestion. Accepted edits would become candidate experiences only after their procedural scope was reviewed.\n\n## Planned Evaluation\n\nWe would compare conditional reuse with instruction-only editing and retrieval of prior editing examples without explicit applicability conditions, using the same underlying model and evidence access. Evaluation would separate source sessions across development and testing to reduce overlap.\n\nBlinded laboratory reviewers would assess clarity, actionability, factual preservation, and inappropriate edits. Recipient tasks would measure comprehension and verification time. Condition-mismatch cases would test whether the assistant withholds unsuitable procedures. Ablations would remove condition checking or evidence links. Automated claim checks would supplement expert review; analysis would report uncertainty and examine disagreements rather than treating automated judgments as ground truth.\n\n## Limitations and Conclusion\n\nIncomplete records may prevent reliable verification, and applicability judgments may miss subtle laboratory context. De-identification could also remove useful information, while a narrow collection may limit transfer across laboratories. The proposed assistant would therefore support accountable human editing. Its value would depend on demonstrating clearer handovers without introducing unsupported claims or concealing uncertainty.",
+        "document_id": null
+      }
+    ]
+  }
+}

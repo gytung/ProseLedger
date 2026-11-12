@@ -1,0 +1,724 @@
+{
+  "textSHA256": "fbc1ed9b4e2bf27a0cc5dc8dc228d24b4a091436cab7d497ac465ffb813aa3c2",
+  "characters": 2503,
+  "scannedAtUTC": "2026-11-12T20:54:22.726831+00:00",
+  "elapsedSeconds": 2.737,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 12,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 17,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 22,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 26,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 27,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9999998509170175,
+            "sentence": "# Archaeological Dates as Intervals, Not Events",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4908298252235603e-07,
+              "ai": 0.9999872931216517,
+              "paraphrased": 1.255779536576396e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998509170175,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4908298252235603e-07,
+              "ai": 0.9999872931216517,
+              "paraphrased": 1.255779536576396e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998724823719,
+            "sentence": "A dated fragment can help interpret a site without directly dating the event that interests an archaeologist.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2751762811710883e-07,
+              "ai": 0.9999888334554363,
+              "paraphrased": 1.1039026935514675e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998724823774,
+            "sentence": "We propose to study how short context descriptions present charcoal dates when the relation to a building remains uncertain.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2751762260764015e-07,
+              "ai": 0.9999887902503732,
+              "paraphrased": 1.108223200419909e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998599493717,
+            "sentence": "The supplied interval is 1180 to 1260 CE [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4005062839509528e-07,
+              "ai": 0.9999880629838247,
+              "paraphrased": 1.1796965546938529e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998724823774,
+            "sentence": "A synthesis must preserve that interval and avoid turning material age into an established construction date.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2751762260764015e-07,
+              "ai": 0.9999887902503732,
+              "paraphrased": 1.108223200419909e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998461845332,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.5381546673817537e-07,
+              "ai": 0.9999877694645429,
+              "paraphrased": 1.2076719990291194e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998413018701,
+            "sentence": "Readers can easily treat a date placed beside a building description as the date of construction.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.5869812978731702e-07,
+              "ai": 0.9999879981647741,
+              "paraphrased": 1.1843137096050526e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998599493548,
+            "sentence": "That inference is not always supported by the sampled material.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.400506451588039e-07,
+              "ai": 0.9999882004209755,
+              "paraphrased": 1.1659528379316621e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997542040991,
+            "sentence": "In this proposal, the association between the charcoal and the building remains uncertain [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.45795900847968e-07,
+              "ai": 0.9999857449927523,
+              "paraphrased": 1.400921134684847e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999769096197,
+            "sentence": "Clear writing should make the evidential link explicit instead of relying on the reader to supply a stronger connection.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.3090380297864115e-07,
+              "ai": 0.9999853151911652,
+              "paraphrased": 1.4453905031871962e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997617665385,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.3823346150488271e-07,
+              "ai": 0.9999853078616125,
+              "paraphrased": 1.445390492592975e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997897595423,
+            "sentence": "The source brief distinguishes the age of a charcoal fragment from the timing of a building event [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.1024045772038352e-07,
+              "ai": 0.9999860515073917,
+              "paraphrased": 1.3738252150513158e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999999754204179,
+            "sentence": "The method brief requires the complete interval and uncertain association to survive synthesis [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.457958209496244e-07,
+              "ai": 0.9999854127784835,
+              "paraphrased": 1.4341425695501946e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997542041389,
+            "sentence": "We will treat these qualifications as central content.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.4579586113810466e-07,
+              "ai": 0.9999855798592102,
+              "paraphrased": 1.4174344928684358e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998257043242,
+            "sentence": "Removing them would change the archaeological claim even if the resulting sentence were shorter and easier to read.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.742956758292368e-07,
+              "ai": 0.9999872679092751,
+              "paraphrased": 1.255779504914807e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999994796532296,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 5.203467704457622e-07,
+              "ai": 0.9999796462967399,
+              "paraphrased": 1.9833356489688854e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997464015961,
+            "sentence": "We plan to compare 14 context descriptions [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.5359840390581124e-07,
+              "ai": 0.9999860081500412,
+              "paraphrased": 1.3738251554850634e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997617664587,
+            "sentence": "Each synthesis will receive the same date interval and contextual note.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.3823354133628433e-07,
+              "ai": 0.9999856426814054,
+              "paraphrased": 1.4119085053217255e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998144633057,
+            "sentence": "Reviewers will check whether the output identifies what was sampled, preserves the full interval and states the uncertain relation to the building.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.8553669432729128e-07,
+              "ai": 0.9999868580470875,
+              "paraphrased": 1.2956416218090622e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997690962513,
+            "sentence": "Contexts with uncertain association will remain in the report rather than be excluded as inconvenient examples.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.3090374863052476e-07,
+              "ai": 0.9999850875791028,
+              "paraphrased": 1.4681517148562799e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999992661952108,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 7.338047891401547e-07,
+              "ai": 0.9999771405422534,
+              "paraphrased": 2.2125652957439812e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998085737759,
+            "sentence": "The evaluation will report whether a reader can distinguish material age from event timing and recover the stated interval from each description.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.914262241222067e-07,
+              "ai": 0.9999866481254203,
+              "paraphrased": 1.3160448355590904e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998085737312,
+            "sentence": "We will inspect summaries that select a single date or imply that the fragment securely dates construction.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.9142626878145698e-07,
+              "ai": 0.9999868521575894,
+              "paraphrased": 1.295641614178283e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997300459844,
+            "sentence": "The interval midpoint will not be treated as an established construction date [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.699540156107653e-07,
+              "ai": 0.9999858840448458,
+              "paraphrased": 1.3846001138589154e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999997617664851,
+            "sentence": "These errors will be recorded separately from ordinary stylistic awkwardness.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.3823351493331717e-07,
+              "ai": 0.9999855319457897,
+              "paraphrased": 1.4229820695431228e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999996310177086,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.689822913984159e-07,
+              "ai": 0.9999827327349924,
+              "paraphrased": 1.6898282716252993e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998310668587,
+            "sentence": "The proposed study concerns the communication of existing evidence, not a new dating analysis.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6893314122820262e-07,
+              "ai": 0.9999871252467064,
+              "paraphrased": 1.2705820152317879e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998085737312,
+            "sentence": "It cannot resolve the uncertain association between the fragment and the building [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.9142626878145698e-07,
+              "ai": 0.9999868521575894,
+              "paraphrased": 1.295641614178283e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998310668232,
+            "sentence": "A careful synthesis may therefore leave an important historical question open.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6893317686090033e-07,
+              "ai": 0.9999873222300991,
+              "paraphrased": 1.2508836724051388e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999998144633611,
+            "sentence": "Its value would lie in making that uncertainty understandable without presenting an interval estimate as a settled event date.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.855366389239707e-07,
+              "ai": 0.9999865507979806,
+              "paraphrased": 1.3263665380498334e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Archaeological Dates as Intervals, Not Events\n\n## Abstract\n\nA dated fragment can help interpret a site without directly dating the event that interests an archaeologist. We propose to study how short context descriptions present charcoal dates when the relation to a building remains uncertain. The supplied interval is 1180 to 1260 CE [S1]. A synthesis must preserve that interval and avoid turning material age into an established construction date.\n\n## Introduction\n\nReaders can easily treat a date placed beside a building description as the date of construction. That inference is not always supported by the sampled material. In this proposal, the association between the charcoal and the building remains uncertain [S1]. Clear writing should make the evidential link explicit instead of relying on the reader to supply a stronger connection.\n\n## Related Work\n\nThe source brief distinguishes the age of a charcoal fragment from the timing of a building event [S1]. The method brief requires the complete interval and uncertain association to survive synthesis [S2]. We will treat these qualifications as central content. Removing them would change the archaeological claim even if the resulting sentence were shorter and easier to read.\n\n## Methodology\n\nWe plan to compare 14 context descriptions [S2]. Each synthesis will receive the same date interval and contextual note. Reviewers will check whether the output identifies what was sampled, preserves the full interval and states the uncertain relation to the building. Contexts with uncertain association will remain in the report rather than be excluded as inconvenient examples.\n\n## Planned Evaluation\n\nThe evaluation will report whether a reader can distinguish material age from event timing and recover the stated interval from each description. We will inspect summaries that select a single date or imply that the fragment securely dates construction. The interval midpoint will not be treated as an established construction date [S2]. These errors will be recorded separately from ordinary stylistic awkwardness.\n\n## Limitations and Conclusion\n\nThe proposed study concerns the communication of existing evidence, not a new dating analysis. It cannot resolve the uncertain association between the fragment and the building [S1]. A careful synthesis may therefore leave an important historical question open. Its value would lie in making that uncertainty understandable without presenting an interval estimate as a settled event date.",
+        "document_id": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "guard": {
+    "passed": true,
+    "findings": []
+  },
+  "wordRatio": 0.9915014164305949,
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The candidate preserves all substantive claims, method steps, comparisons, evaluation measures, limitations, source attributions, qualifications and planned-work status. Changes are equivalent paraphrases, with no added results or unsupported claims. Readability remains similar."
+  },
+  "eligible": true,
+  "bounds": {
+    "maxPatchesPerSection": 3,
+    "maxMatchedFraction": 0.35,
+    "maxAdditionalRounds": 0,
+    "finalLengthRatio": [
+      0.85,
+      1.15
+    ]
+  }
+}

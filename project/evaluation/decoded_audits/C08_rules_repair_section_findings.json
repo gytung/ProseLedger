@@ -1,0 +1,15 @@
+{
+  "sections": [
+    {
+      "id": 4,
+      "patches": [
+        {
+          "before": "Difficult days will remain in the overall results.",
+          "after": "Difficult days will remain in the overall results [S2].",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Restores the citation attributing inclusion of difficult days to S2."
+    }
+  ]
+}

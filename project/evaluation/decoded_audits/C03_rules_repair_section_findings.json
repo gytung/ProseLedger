@@ -1,0 +1,26 @@
+{
+  "sections": [
+    {
+      "id": 2,
+      "patches": [
+        {
+          "before": "These roles will be maintained until observations begin",
+          "after": "These roles will be fixed before observations begin and remain fixed throughout the study",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Preserves the prespecified outcome hierarchy through observation."
+    },
+    {
+      "id": 5,
+      "patches": [
+        {
+          "before": "to address these questions.",
+          "after": "to address these questions; stronger wording about the same observations would not answer them.",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Restores the explicit limitation that stronger wording cannot resolve questions about cellular damage or recovery."
+    }
+  ]
+}

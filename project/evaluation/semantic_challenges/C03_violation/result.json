@@ -1,0 +1,48 @@
+{
+  "caseId": "C03",
+  "challenge": "violation",
+  "expectedPass": false,
+  "actualPass": true,
+  "correct": false,
+  "findings": [],
+  "before": "assign 30 seedlings to each condition and observe them for 12 days",
+  "after": "assign 12 seedlings to each condition and observe them for 30 days",
+  "referenceReason": "Sample size and duration are exchanged while the set of numeric tokens is unchanged.",
+  "originalSHA256": "2e894c504922a73ffe8b3a45fa63582ab4bacf0a389061272f4ebb65192c02b7",
+  "candidateSHA256": "e831265eb9d1d88036cc83264a9c8f3cf0623df477d65454efdba7b34bbf30d5",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Methodology",
+        "originalQuote": "We plan to assign 30 seedlings to each condition",
+        "revisedQuote": "We plan to assign 12 seedlings to each condition",
+        "problem": "Changes the planned sample size from 30 to 12 seedlings per condition, contradicting the original and source S2."
+      },
+      {
+        "section": "Methodology",
+        "originalQuote": "observe them for 12 days [S2]",
+        "revisedQuote": "observe them for 30 days [S2]",
+        "problem": "Changes the planned observation period from 12 to 30 days while retaining attribution to S2, which specifies 12 days."
+      }
+    ],
+    "readability": "similar",
+    "reason": "The candidate preserves all other substantive propositions, method steps, comparisons, evaluation measures, limitations, qualifications, source attribution and planned-work status. Its wording and structure are otherwise identical, so readability is unchanged."
+  },
+  "semanticPass": false,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": [
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    },
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    }
+  ]
+}

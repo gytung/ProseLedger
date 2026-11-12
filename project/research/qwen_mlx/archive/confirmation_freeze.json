@@ -1,0 +1,62 @@
+{
+  "frozenAtUTC": "2026-10-30T17:16:16.196869+00:00",
+  "phase": "Second exploratory validation, two additional previously ungenerated topics",
+  "developmentUsed": [
+    "original development manuscript",
+    "phase-one cases01 and02 full-document audit findings"
+  ],
+  "change": "After existing section audit and bounded repair, repair final-audit findings in at most two additional bounded rounds, independently auditing the full manuscript after each. Keep original if final gate still fails. No detector scores are supplied to rewriting or selection.",
+  "primary": "GPTZero document class probability ai; all cases, not best-of-N",
+  "secondary": [
+    "mixed",
+    "human",
+    "ai+mixed",
+    "semantic audit",
+    "all fallback decisions"
+  ],
+  "topics": [
+    "Evidence-grounded revision of responses to scientific peer reviewers",
+    "Preserving exploratory claims in cross-disciplinary research proposals"
+  ],
+  "model": {
+    "repo": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+    "sha": "c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed",
+    "files": [
+      ".gitattributes",
+      "README.md",
+      "added_tokens.json",
+      "config.json",
+      "merges.txt",
+      "model.safetensors",
+      "model.safetensors.index.json",
+      "special_tokens_map.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "vocab.json"
+    ]
+  },
+  "bounds": {
+    "rounds": 2,
+    "maxPatchesPerSectionPerRound": 3,
+    "maxMatchedFractionPerRound": 0.35,
+    "wordRatio": [
+      0.85,
+      1.15
+    ]
+  },
+  "codeHashes": {
+    "contrastive_transfer.py": "a95c846035de20c5c29cab6cab708c63826a6832d329b54fc2691eb2007936e9",
+    "audit_contrastive.mjs": "95d799d0065c2a421eb77750867461da4f6b640ba306dac78f7b134aafcef4f8",
+    "repair_sections.mjs": "614da30af5c269ad4ab4ec9f9e5a69dbce428940007a3759d967ec9cb6efa61b",
+    "repair_final_audit.mjs": "d32902567b1bb20080c66ba3e51b9c63ac0659d1bac2d141fd8c6c9cd2cb5587",
+    "bounded_patches.mjs": "0e3099d5bed52d944b6c5f6db8821583b475a86d9415ba29a5ca2c3b5cc96efe",
+    "targeted_engine.mjs": "d1e0b1a36b2a1a8cb6e971c6f4a4bd227dc73cc6b993e5ecad2e9f7f794fb293"
+  },
+  "exclusions": "Phase-one scores stay unchanged. Phase-one cases used to design this repair step are not counted as its unseen validation.",
+  "limitations": [
+    "Only two extra topics, same source packet",
+    "New pipeline changes model and compute",
+    "Automated preservation audit, not human evaluation",
+    "No isolated MemGuard benefit demonstrated"
+  ]
+}

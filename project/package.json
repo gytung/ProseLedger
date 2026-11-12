@@ -1,0 +1,17 @@
+{
+  "name": "proseledger",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Evidence-grounded proposal writing and verified language revision",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test tests/browser-api.test.mjs tests/external-validation.test.mjs tests/revision-engine.test.mjs",
+    "test:browser": "node --test tests/revision-browser.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

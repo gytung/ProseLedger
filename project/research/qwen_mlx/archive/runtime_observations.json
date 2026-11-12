@@ -1,0 +1,48 @@
+{
+  "phase_one": [
+    {
+      "case": "case01",
+      "completedSections": 6,
+      "localWritingSeconds": 227.59,
+      "generatedTokens": 703,
+      "finalCandidateRecorded": true
+    },
+    {
+      "case": "case02",
+      "completedSections": 6,
+      "localWritingSeconds": 242.88,
+      "generatedTokens": 761,
+      "finalCandidateRecorded": true
+    },
+    {
+      "case": "case03",
+      "completedSections": 6,
+      "localWritingSeconds": 236.61,
+      "generatedTokens": 764,
+      "finalCandidateRecorded": true
+    },
+    {
+      "case": "case04",
+      "completedSections": 6,
+      "localWritingSeconds": 241.33,
+      "generatedTokens": 764,
+      "finalCandidateRecorded": true
+    }
+  ],
+  "phase_two": [
+    {
+      "case": "case01",
+      "completedSections": 6,
+      "localWritingSeconds": 212.62,
+      "generatedTokens": 715,
+      "finalCandidateRecorded": true
+    },
+    {
+      "case": "case02",
+      "completedSections": 6,
+      "localWritingSeconds": 219.32,
+      "generatedTokens": 774,
+      "finalCandidateRecorded": true
+    }
+  ]
+}

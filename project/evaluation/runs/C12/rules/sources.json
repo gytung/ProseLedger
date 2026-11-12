@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The archaeological proposal uses dated charcoal fragments from a site. A fragment date estimates the age of sampled material, not necessarily the date of a building event. The reported interval is 1180 to 1260 CE. The relation between the charcoal and the building remains uncertain.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "The team will compare 14 context descriptions. A cautious synthesis must preserve the full date interval and distinguish material age from event timing. Contexts with uncertain association will remain in the report. The study will not select the interval midpoint as an established construction date.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

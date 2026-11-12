@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "frozenSourceFiles": 34,
+  "completedRunsVerified": 24,
+  "expectedRuns": 24,
+  "writerResponsesVerified": 144,
+  "expectedWriterResponses": 144,
+  "detectorRowsVerified": 36,
+  "failures": []
+}

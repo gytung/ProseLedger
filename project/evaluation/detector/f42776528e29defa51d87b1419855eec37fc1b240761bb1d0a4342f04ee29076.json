@@ -1,0 +1,724 @@
+{
+  "textSHA256": "f42776528e29defa51d87b1419855eec37fc1b240761bb1d0a4342f04ee29076",
+  "characters": 2560,
+  "scannedAtUTC": "2026-11-12T20:53:30.073247+00:00",
+  "elapsedSeconds": 1.925,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 12,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 17,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 22,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 26,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 27,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9989440990739751,
+            "sentence": "# Distinguishing Salt Stress from Slow Growth",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0010559009260249213,
+              "ai": 0.887820352295726,
+              "paraphrased": 0.11112374677824909
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989096748336894,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0010903251663105364,
+              "ai": 0.8885589707691187,
+              "paraphrased": 0.11035070406457075
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989618121584359,
+            "sentence": "Reduced seedling growth can be consistent with salt stress without directly indicating cellular damage.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.001038187841564098,
+              "ai": 0.8866734159936988,
+              "paraphrased": 0.11228839616473714
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989928416269954,
+            "sentence": "We propose comparing a salt treatment with a water-only control, using change in height as the primary outcome.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0010071583730045422,
+              "ai": 0.8874772753086451,
+              "paraphrased": 0.11151556631835038
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989120427552443,
+            "sentence": "Leaf color will serve as a secondary observation [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0010879572447557986,
+              "ai": 0.8866292427606041,
+              "paraphrased": 0.11228279999464015
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9990212699917217,
+            "sentence": "The experiment aims to characterize an observable growth response rather than identify the underlying biological mechanism.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0009787300082783642,
+              "ai": 0.8898034431807855,
+              "paraphrased": 0.10921782681093616
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9988593907353918,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0011406092646082512,
+              "ai": 0.8869712023616073,
+              "paraphrased": 0.11188818837378445
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989418247014903,
+            "sentence": "A short plant experiment often collects measurements that are easier to obtain than the process of interest.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0010581752985096434,
+              "ai": 0.8897326794186118,
+              "paraphrased": 0.10920914528287856
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9988712710449289,
+            "sentence": "While height and leaf color are practical observations, neither directly measures cellular injury [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0011287289550710629,
+              "ai": 0.8915550613283336,
+              "paraphrased": 0.10731620971659532
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9988598900633655,
+            "sentence": "It is crucial to maintain this distinction when interpreting treatment effects.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0011401099366344408,
+              "ai": 0.8865829510089521,
+              "paraphrased": 0.11227693905441341
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9981709028333083,
+            "sentence": "A shorter plant would indicate slower growth under this design, rather than establish the reasons for the slowdown.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.001829097166691722,
+              "ai": 0.8762903784777285,
+              "paraphrased": 0.12188052435557982
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9979727941245873,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.002027205875412705,
+              "ai": 0.8705789383994539,
+              "paraphrased": 0.12739385572513343
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9984955188125039,
+            "sentence": "The design brief specifies a treatment of 40 millimolar salt and a water-only control [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0015044811874961662,
+              "ai": 0.8831084963575325,
+              "paraphrased": 0.11538702245497133
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9982629513535781,
+            "sentence": "The methods brief prioritizes height change as the primary outcome and leaf color as a secondary observation [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0017370486464218901,
+              "ai": 0.8721290964807077,
+              "paraphrased": 0.12613385487287038
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9985688930698094,
+            "sentence": "These roles will be fixed before observation begins and maintained throughout the study.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0014311069301905898,
+              "ai": 0.8803532189582683,
+              "paraphrased": 0.11821567411154106
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9987205611882347,
+            "sentence": "We will not alter the primary outcome based on which measure provides a more distinct difference.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0012794388117652459,
+              "ai": 0.8780219524104776,
+              "paraphrased": 0.12069860877775711
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.998225395157938,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0017746048420620173,
+              "ai": 0.8771717251524463,
+              "paraphrased": 0.12105367000549162
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9985840086712697,
+            "sentence": "We plan to assign 30 seedlings to each condition and observe them for 12 days [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0014159913287303215,
+              "ai": 0.8847719355732725,
+              "paraphrased": 0.1138120730979972
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9983712776714972,
+            "sentence": "Height will be measured using the same procedure at each visit.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.001628722328502674,
+              "ai": 0.8841890267533458,
+              "paraphrased": 0.11418225091815154
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999041614785431,
+            "sentence": "Leaf colour will be recorded separately, rather than combined into an unvalidated stress score.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0009583852145689877,
+              "ai": 0.8989654022790508,
+              "paraphrased": 0.10007621250638021
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9988393106645617,
+            "sentence": "Plants that fail to grow will remain in the analysis, as excluding them could hide important treatment responses.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0011606893354383114,
+              "ai": 0.9025860547816766,
+              "paraphrased": 0.09625325588288505
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9978774566224706,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.002122543377529376,
+              "ai": 0.8973895903791272,
+              "paraphrased": 0.10048786624334342
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9987883215668734,
+            "sentence": "The comparison will report the distribution of height changes in each condition, along with the uncertainty around their difference.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0012116784331266221,
+              "ai": 0.8990886036112926,
+              "paraphrased": 0.09969971795558075
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9987668859701768,
+            "sentence": "Leaf colour observations will be presented as a secondary description.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0012331140298231173,
+              "ai": 0.9008085013144462,
+              "paraphrased": 0.09795838465573063
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9987805098353415,
+            "sentence": "We will examine whether missing observations are more common under either condition and distinguish between missing measurements and an observed absence of growth.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0012194901646585805,
+              "ai": 0.9048849724347914,
+              "paraphrased": 0.09389553740055007
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9939289382341495,
+            "sentence": "No treatment effects have yet been measured.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.006071061765850444,
+              "ai": 0.9010254744657514,
+              "paraphrased": 0.09290346376839807
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9972473007959695,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.002752699204030562,
+              "ai": 0.8923263751560189,
+              "paraphrased": 0.10492092563995054
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9972540279395342,
+            "sentence": "The study is small and limited to a short observation period.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0027459720604657628,
+              "ai": 0.9041634777281669,
+              "paraphrased": 0.09309055021136738
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9986658025196065,
+            "sentence": "Even a clear difference in growth would not directly demonstrate cellular damage [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0013341974803934842,
+              "ai": 0.9014053415034615,
+              "paraphrased": 0.09726046101614494
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9985434105710568,
+            "sentence": "Additionally, the design does not test whether seedlings recover after salt is removed [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0014565894289432452,
+              "ai": 0.8960289423338045,
+              "paraphrased": 0.10251446823725226
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9957475037413627,
+            "sentence": "To address these questions, further measurements and a different follow-up period would be necessary; stronger wording about the same observations would not answer these questions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.004252496258637329,
+              "ai": 0.8762322835632395,
+              "paraphrased": 0.11951522017812322
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Distinguishing Salt Stress from Slow Growth\n\n## Abstract\n\nReduced seedling growth can be consistent with salt stress without directly indicating cellular damage. We propose comparing a salt treatment with a water-only control, using change in height as the primary outcome. Leaf color will serve as a secondary observation [S2]. The experiment aims to characterize an observable growth response rather than identify the underlying biological mechanism.\n\n## Introduction\n\nA short plant experiment often collects measurements that are easier to obtain than the process of interest. While height and leaf color are practical observations, neither directly measures cellular injury [S1]. It is crucial to maintain this distinction when interpreting treatment effects. A shorter plant would indicate slower growth under this design, rather than establish the reasons for the slowdown.\n\n## Related Work\n\nThe design brief specifies a treatment of 40 millimolar salt and a water-only control [S1]. The methods brief prioritizes height change as the primary outcome and leaf color as a secondary observation [S2]. These roles will be fixed before observation begins and maintained throughout the study. We will not alter the primary outcome based on which measure provides a more distinct difference.\n\n## Methodology\n\nWe plan to assign 30 seedlings to each condition and observe them for 12 days [S2]. Height will be measured using the same procedure at each visit. Leaf colour will be recorded separately, rather than combined into an unvalidated stress score. Plants that fail to grow will remain in the analysis, as excluding them could hide important treatment responses.\n\n## Planned Evaluation\n\nThe comparison will report the distribution of height changes in each condition, along with the uncertainty around their difference. Leaf colour observations will be presented as a secondary description. We will examine whether missing observations are more common under either condition and distinguish between missing measurements and an observed absence of growth. No treatment effects have yet been measured.\n\n## Limitations and Conclusion\n\nThe study is small and limited to a short observation period. Even a clear difference in growth would not directly demonstrate cellular damage [S1]. Additionally, the design does not test whether seedlings recover after salt is removed [S2]. To address these questions, further measurements and a different follow-up period would be necessary; stronger wording about the same observations would not answer these questions.",
+        "document_id": null
+      }
+    ]
+  }
+}

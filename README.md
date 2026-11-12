@@ -4,9 +4,54 @@
 
 **DSS5105 Capstone · Group 18 · National University of Singapore**
 
-[Generate a proposal](https://gytung.github.io/ProseLedger/create.html) · [Revise a proposal](https://gytung.github.io/ProseLedger/revise.html) · [Usage and limits](docs/REVISION_WORKSPACE.md) · [Archived evaluation](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md)
+[Generate a proposal](https://gytung.github.io/ProseLedger/create.html) · [Revise a proposal](https://gytung.github.io/ProseLedger/revise.html) · [Final application](project/README.md) · [Controlled evaluation](project/evaluation/README.md) · [Archived evaluation](https://gytung.github.io/ProseLedger/#rounds)
 
 ProseLedger generates a research proposal from supplied source notes, edits its language section by section, checks the changes against the original and evidence, and retains a revision only when its checks pass. The final manuscript, rejected candidates, repair decisions and exact-text fingerprints remain inspectable.
+
+## Final application and reproducible study
+
+**Start in [`project/`](project/README.md).** This directory contains the current desktop application, Windows and macOS launchers, browser source, attributed examples and reproducible evaluation. The root `app.py`, `proseledger/` and the six-case dashboard preserve the earlier three-route memory experiment. They are an archive, not the entry point for the final section-revision system. The published generation and revision links above use the current browser workflow.
+
+### Run locally from a clean checkout
+
+Install Python 3.10 or later; Python 3.12 is recommended. On Windows, enable **Add Python to PATH**. Then:
+
+```sh
+git clone https://github.com/gytung/ProseLedger.git
+cd ProseLedger
+python project/launch.py verify
+python project/launch.py open
+```
+
+On macOS, use `python3` if `python` is unavailable. The desktop application uses the Python standard library. Select **Hosted writer** and configure your own model API connection to use it without downloading a local model. Alternatively, use local Qwen for section rewriting and your own API or signed-in official Codex CLI for drafting, review and repair.
+
+| Action | Windows | macOS |
+|---|---|---|
+| Open the desktop app | `project/Windows/02_Open_ProseLedger.bat` | `project/Mac/02_Open_ProseLedger.command` |
+| Optional local Qwen setup | `project/Windows/01_Setup_Local_Qwen.bat` | `project/Mac/01_Setup_Local_Qwen.command` |
+| Optional official account login | `project/Windows/03_Login_Codex.bat` | `project/Mac/03_Login_Codex.command` |
+
+Local setup explicitly downloads Ollama and `qwen2.5:7b-instruct-q4_K_M`, approximately 4.7 GB of model weights. We recommend 16 GB RAM and 15 GB free disk space. Opening the app does not download missing model assets. API usage requires the operator's own provider key and credit; account-based review requires the official CLI installed and signed in separately. GPTZero validation is optional and uses a separate API key after manuscript retention.
+
+The public browser route requires no local installation. To serve the same pages from this checkout:
+
+```sh
+python -m http.server 8080 --directory docs --bind 127.0.0.1
+```
+
+Open `http://127.0.0.1:8080/create.html` or `http://127.0.0.1:8080/revise.html`. The selected model provider must permit browser requests through CORS. See the [application guide](project/README.md) for inputs, downloads, recovery and module responsibilities.
+
+### Inspect or repeat the controlled evaluation
+
+[`project/evaluation/`](project/evaluation/README.md) contains the twelve-case paired study: frozen inputs and code, Generic and Rules outputs, contextual reviews, bounded repairs, decision ledgers, blinded automated comparisons, known-answer challenges and post-retention detector observations. Public human-evaluation records remain separately identified. The study compares editorial instructions with the same local writer and verification procedure; it does not evaluate historical memory retrieval.
+
+For fresh inference, start the pinned local model and configure the recorded reviewer as described in the [evaluation guide](project/evaluation/README.md). Use a new output directory:
+
+```sh
+python project/evaluation/reproduce.py --out runs/controlled-rerun --execute
+```
+
+This verifies the frozen inputs and creates an independent run without copying archived model responses. Omit `--execute` to prepare and inspect the workspace before making model calls. The separate [`project/research/qwen_mlx/`](project/research/qwen_mlx/README.md) profile preserves the earlier Mac study. MLX, Ollama and visitor-selected cloud models are distinct execution conditions and do not share guaranteed output text or detector values.
 
 ## Current browser workflow
 

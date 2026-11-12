@@ -1,0 +1,523 @@
+{
+  "schema": "proseledger-source-pilot-public-1",
+  "study": "published_source_sprint3",
+  "record_group_count": 1,
+  "distinct_human_count": null,
+  "privacy": "Participant identifiers, codes, timestamps and full passages removed. Item identities, answer keys and response fields retained.",
+  "unit": "One A/B published-source identification decision; not an independently labelled text or a person.",
+  "source_labels": "Published paper excerpt versus project-labelled generated passage; publication does not certify absence of AI assistance.",
+  "items": [
+    {
+      "sample_id": "S3-01",
+      "topic": "Document revision and evidence",
+      "section": "Document Revision and Content Preservation",
+      "chosen_published_material": "A",
+      "published_material": "A",
+      "generated_material": "B",
+      "outcome": "correct",
+      "recorded_correct": true,
+      "feature_ratings": {
+        "A": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        },
+        "B": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        }
+      },
+      "explanations": {
+        "why_a_ai": "",
+        "why_a_not_ai": "not concise",
+        "why_b_ai": "",
+        "why_b_not_ai": ""
+      },
+      "published_source": {
+        "title": "Towards Automated Document Revision: Grammatical Error Correction, Fluency Edits, and Beyond",
+        "url": "https://aclanthology.org/2024.bea-1.21/",
+        "page": 251,
+        "license": "CC BY 4.0 (ACL Anthology source)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "material_a_word_count": 44,
+      "material_b_word_count": 54,
+      "published_word_count": 44,
+      "generated_word_count": 54,
+      "material_a_sha256": "8e6bdef768bb2c77a14f4aa7a6b6b533beaf9914d8aa3df76e1a331af0baacd9",
+      "material_b_sha256": "345f30fecb598b8dd13060c5d8273fa16019f0e9e31152377178f5df2cdf9154",
+      "generated_archive_token_normalized_matches": [],
+      "provenance_note": "Matching a reused paragraph does not identify a unique manuscript or treatment; unmatched items remain unassigned."
+    },
+    {
+      "sample_id": "S3-02",
+      "topic": "Document revision and evidence",
+      "section": "Fluent Expression and Evidence Preservation",
+      "chosen_published_material": "B",
+      "published_material": "B",
+      "generated_material": "A",
+      "outcome": "correct",
+      "recorded_correct": true,
+      "feature_ratings": {
+        "A": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        },
+        "B": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        }
+      },
+      "explanations": {
+        "why_a_ai": "",
+        "why_a_not_ai": "",
+        "why_b_ai": "",
+        "why_b_not_ai": ""
+      },
+      "published_source": {
+        "title": "Evaluating the Factual Consistency of Abstractive Text Summarization",
+        "url": "https://aclanthology.org/2020.emnlp-main.750/",
+        "page": 9334,
+        "license": "CC BY 4.0 (ACL Anthology source)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "material_a_word_count": 65,
+      "material_b_word_count": 55,
+      "published_word_count": 55,
+      "generated_word_count": 65,
+      "material_a_sha256": "83e3e4c2dc72ea1f742610f47ebfe00a2390a04e68773a1dd8a54c9bb5adaf8a",
+      "material_b_sha256": "d6ef91d0c4b3472e0d09b152b8339188b88d44c4d4a618b7a0b635e92e5bfe24",
+      "generated_archive_token_normalized_matches": [],
+      "provenance_note": "Matching a reused paragraph does not identify a unique manuscript or treatment; unmatched items remain unassigned."
+    },
+    {
+      "sample_id": "S3-03",
+      "topic": "Document revision and evidence",
+      "section": "Fine-Grained Claim Records",
+      "chosen_published_material": "B",
+      "published_material": "A",
+      "generated_material": "B",
+      "outcome": "incorrect",
+      "recorded_correct": false,
+      "feature_ratings": {
+        "A": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        },
+        "B": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        }
+      },
+      "explanations": {
+        "why_a_ai": "The sentence too lengthy, using comma",
+        "why_a_not_ai": "",
+        "why_b_ai": "",
+        "why_b_not_ai": ""
+      },
+      "published_source": {
+        "title": "Knowledge-Centric Hallucination Detection",
+        "url": "https://aclanthology.org/2024.emnlp-main.395/",
+        "page": 6954,
+        "license": "CC BY 4.0 (ACL Anthology source)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "material_a_word_count": 68,
+      "material_b_word_count": 70,
+      "published_word_count": 68,
+      "generated_word_count": 70,
+      "material_a_sha256": "e17d01c271f92d80e5d8371aac740c9b34264eb4814ea196cfc505aa78aabdf3",
+      "material_b_sha256": "c8f8e0a236709cffe91191bbb737326798110cd9a413a2021a8b73d2b7f0bec3",
+      "generated_archive_token_normalized_matches": [
+        "dev_initial.md",
+        "dev_qwen_plain.md",
+        "dev_qwen_contrastive_repaired.md",
+        "dev_qwen_contrastive.md",
+        "dev_tinystyler.md",
+        "dev_tiny_sentence.md"
+      ],
+      "provenance_note": "Matching a reused paragraph does not identify a unique manuscript or treatment; unmatched items remain unassigned."
+    },
+    {
+      "sample_id": "S3-04",
+      "topic": "Document revision and evidence",
+      "section": "Evidence-Grounded Generation and Verification",
+      "chosen_published_material": "B",
+      "published_material": "B",
+      "generated_material": "A",
+      "outcome": "correct",
+      "recorded_correct": true,
+      "feature_ratings": {
+        "A": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        },
+        "B": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        }
+      },
+      "explanations": {
+        "why_a_ai": "Every sentence shares the same structure. Not enough supporting evidence.",
+        "why_a_not_ai": "",
+        "why_b_ai": "",
+        "why_b_not_ai": "More logical thinking, explaining why using the steps"
+      },
+      "published_source": {
+        "title": "Attribute First, then Generate: Locally-attributable Grounded Text Generation",
+        "url": "https://aclanthology.org/2024.acl-long.182/",
+        "page": 3311,
+        "license": "CC BY 4.0 (ACL Anthology source)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "material_a_word_count": 77,
+      "material_b_word_count": 74,
+      "published_word_count": 74,
+      "generated_word_count": 77,
+      "material_a_sha256": "3adf77a8803d24bdfc3be4c28f7b8f19221b8fbc479824e995fff46d7b21a8fa",
+      "material_b_sha256": "6bb515bd3d14a9c75ae32a8bac23ce98dedf76a130f20c8a8b8fa6dc9c1e7d6c",
+      "generated_archive_token_normalized_matches": [
+        "dev_initial.md",
+        "dev_qwen_plain.md",
+        "dev_qwen_contrastive_repaired.md",
+        "dev_targeted.md",
+        "dev_qwen_contrastive.md",
+        "dev_tinystyler.md",
+        "dev_tiny_sentence.md"
+      ],
+      "provenance_note": "Matching a reused paragraph does not identify a unique manuscript or treatment; unmatched items remain unassigned."
+    },
+    {
+      "sample_id": "S3-05",
+      "topic": "Document revision and evidence",
+      "section": "Evaluating Text and Attribution Quality",
+      "chosen_published_material": "A",
+      "published_material": "A",
+      "generated_material": "B",
+      "outcome": "correct",
+      "recorded_correct": true,
+      "feature_ratings": {
+        "A": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        },
+        "B": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        }
+      },
+      "explanations": {
+        "why_a_ai": "Writing from a “we” or our perspective",
+        "why_a_not_ai": "",
+        "why_b_ai": "",
+        "why_b_not_ai": ""
+      },
+      "published_source": {
+        "title": "Attribute First, then Generate: Locally-attributable Grounded Text Generation",
+        "url": "https://aclanthology.org/2024.acl-long.182/",
+        "page": 3313,
+        "license": "CC BY 4.0 (ACL Anthology source)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "material_a_word_count": 99,
+      "material_b_word_count": 96,
+      "published_word_count": 99,
+      "generated_word_count": 96,
+      "material_a_sha256": "3b1e78a7d627d9c7f0ca7039e6c904adba4a5832c562602d43ee2c8623cbeffd",
+      "material_b_sha256": "da210fbed5757f13869a207bfd0085f05dddfaaf9c509ca289b84d5e7f15a0bb",
+      "generated_archive_token_normalized_matches": [
+        "dev_initial.md",
+        "dev_tinystyler.md",
+        "dev_tiny_sentence.md"
+      ],
+      "provenance_note": "Matching a reused paragraph does not identify a unique manuscript or treatment; unmatched items remain unassigned."
+    },
+    {
+      "sample_id": "S3-06",
+      "topic": "Document revision and evidence",
+      "section": "Evidence-Supported Research Objectives",
+      "chosen_published_material": "A",
+      "published_material": "B",
+      "generated_material": "A",
+      "outcome": "incorrect",
+      "recorded_correct": false,
+      "feature_ratings": {
+        "A": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        },
+        "B": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        }
+      },
+      "explanations": {
+        "why_a_ai": "",
+        "why_a_not_ai": "",
+        "why_b_ai": "",
+        "why_b_not_ai": ""
+      },
+      "published_source": {
+        "title": "Enabling Large Language Models to Generate Text with Citations",
+        "url": "https://aclanthology.org/2023.emnlp-main.398/",
+        "page": 6465,
+        "license": "CC BY 4.0 (ACL Anthology source)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "material_a_word_count": 75,
+      "material_b_word_count": 62,
+      "published_word_count": 62,
+      "generated_word_count": 75,
+      "material_a_sha256": "1db7f84800a7083006b3b010a339c093fd935ace4875f4fd53b4f525f92dad71",
+      "material_b_sha256": "a8d209f4dbaecad4d9bc652f1fac968d2ad1f969c7b8cd4a7d94049cfa215516",
+      "generated_archive_token_normalized_matches": [],
+      "provenance_note": "Matching a reused paragraph does not identify a unique manuscript or treatment; unmatched items remain unassigned."
+    },
+    {
+      "sample_id": "S3-07",
+      "topic": "Document revision and evidence",
+      "section": "Citation Attribution and Verifiability",
+      "chosen_published_material": "B",
+      "published_material": "A",
+      "generated_material": "B",
+      "outcome": "incorrect",
+      "recorded_correct": false,
+      "feature_ratings": {
+        "A": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        },
+        "B": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        }
+      },
+      "explanations": {
+        "why_a_ai": "sentence a bit complex, too well structured",
+        "why_a_not_ai": "",
+        "why_b_ai": "",
+        "why_b_not_ai": "Sounds authentic, have personal characteristics"
+      },
+      "published_source": {
+        "title": "Attribute First, then Generate: Locally-attributable Grounded Text Generation",
+        "url": "https://aclanthology.org/2024.acl-long.182/",
+        "page": 3309,
+        "license": "CC BY 4.0 (ACL Anthology source)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "material_a_word_count": 65,
+      "material_b_word_count": 62,
+      "published_word_count": 65,
+      "generated_word_count": 62,
+      "material_a_sha256": "a13d90dc4d3543b9f8190483bb5b23aa847cd8d645f7286f5e7d6405b1869a11",
+      "material_b_sha256": "174a1ef6809beb66f7b0f6890fc6a3eae7431ae07323ae7f967b3eb1169b2bd6",
+      "generated_archive_token_normalized_matches": [],
+      "provenance_note": "Matching a reused paragraph does not identify a unique manuscript or treatment; unmatched items remain unassigned."
+    },
+    {
+      "sample_id": "S3-08",
+      "topic": "Document revision and evidence",
+      "section": "Limits of Local Verification",
+      "chosen_published_material": "Cannot tell",
+      "published_material": "B",
+      "generated_material": "A",
+      "outcome": "cannot_tell",
+      "recorded_correct": false,
+      "feature_ratings": {
+        "A": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        },
+        "B": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        }
+      },
+      "explanations": {
+        "why_a_ai": "",
+        "why_a_not_ai": "",
+        "why_b_ai": "",
+        "why_b_not_ai": ""
+      },
+      "published_source": {
+        "title": "Knowledge-Centric Hallucination Detection",
+        "url": "https://aclanthology.org/2024.emnlp-main.395/",
+        "page": 6961,
+        "license": "CC BY 4.0 (ACL Anthology source)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "material_a_word_count": 58,
+      "material_b_word_count": 64,
+      "published_word_count": 64,
+      "generated_word_count": 58,
+      "material_a_sha256": "ad73a92fab56df3e2df96a68786eb16862aea93b19308a64df03643440bd44d5",
+      "material_b_sha256": "64275027e51c42861b3d2c212a9545004fbee1616dae6873d8f9bab215a06698",
+      "generated_archive_token_normalized_matches": [],
+      "provenance_note": "Matching a reused paragraph does not identify a unique manuscript or treatment; unmatched items remain unassigned."
+    },
+    {
+      "sample_id": "S3-09",
+      "topic": "Document revision and evidence",
+      "section": "Research Limitations and Scope",
+      "chosen_published_material": "B",
+      "published_material": "A",
+      "generated_material": "B",
+      "outcome": "incorrect",
+      "recorded_correct": false,
+      "feature_ratings": {
+        "A": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        },
+        "B": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        }
+      },
+      "explanations": {
+        "why_a_ai": "",
+        "why_a_not_ai": "",
+        "why_b_ai": "",
+        "why_b_not_ai": ""
+      },
+      "published_source": {
+        "title": "Towards Automated Document Revision: Grammatical Error Correction, Fluency Edits, and Beyond",
+        "url": "https://aclanthology.org/2024.bea-1.21/",
+        "page": 259,
+        "license": "CC BY 4.0 (ACL Anthology source)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "material_a_word_count": 40,
+      "material_b_word_count": 42,
+      "published_word_count": 40,
+      "generated_word_count": 42,
+      "material_a_sha256": "8e4da28a92d970c4f1c73c7765707be967615392855b1c25b2b1e3ee63c7413d",
+      "material_b_sha256": "5cddcaa3ad969e46a2de48269ef2dc9409cfaec0caf4fda78f057fc4bae8b0b8",
+      "generated_archive_token_normalized_matches": [],
+      "provenance_note": "Matching a reused paragraph does not identify a unique manuscript or treatment; unmatched items remain unassigned."
+    },
+    {
+      "sample_id": "S3-10",
+      "topic": "Document revision and evidence",
+      "section": "Evaluating Scientific Text Revision",
+      "chosen_published_material": "A",
+      "published_material": "B",
+      "generated_material": "A",
+      "outcome": "incorrect",
+      "recorded_correct": false,
+      "feature_ratings": {
+        "A": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        },
+        "B": {
+          "Specificity": null,
+          "Evidence integration": null,
+          "Restraint and limitations": null,
+          "Coherence": null,
+          "Language naturalness": null
+        }
+      },
+      "explanations": {
+        "why_a_ai": "",
+        "why_a_not_ai": "",
+        "why_b_ai": "",
+        "why_b_not_ai": ""
+      },
+      "published_source": {
+        "title": "Identifying Reliable Evaluation Metrics for Scientific Text Revision",
+        "url": "https://aclanthology.org/2025.acl-long.335/",
+        "page": 6731,
+        "license": "CC BY 4.0 (ACL Anthology source)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "material_a_word_count": 66,
+      "material_b_word_count": 63,
+      "published_word_count": 63,
+      "generated_word_count": 66,
+      "material_a_sha256": "993b74e75954162c48ce920d70d2a957edc80ea8c53eec53df1e7ddf096c6723",
+      "material_b_sha256": "06dd623ade2d6f8acb3eab2ba80cedf11c82abe26e88b21838b40226d0616258",
+      "generated_archive_token_normalized_matches": [
+        "dev_initial.md",
+        "dev_qwen_plain.md",
+        "dev_qwen_contrastive_repaired.md",
+        "dev_targeted.md",
+        "dev_qwen_contrastive.md",
+        "dev_tinystyler.md",
+        "dev_tiny_sentence.md"
+      ],
+      "provenance_note": "Matching a reused paragraph does not identify a unique manuscript or treatment; unmatched items remain unassigned."
+    }
+  ],
+  "summary": {
+    "answered": 10,
+    "correct": 4,
+    "incorrect": 5,
+    "cannot_tell": 1,
+    "correct_over_all": 0.4,
+    "correct_over_decisive": 0.4444444444444444,
+    "generated_chosen_as_published": 5
+  },
+  "organizer_recruitment_note": {
+    "estimated_classmates": 10,
+    "estimate_status": "approximate organizer recollection; not verified distinct-rater count",
+    "reported_overlap": "One person reportedly completed both tasks",
+    "shared_code_allocation": "Approximately two items per person where a code was shared; exact assignment unavailable"
+  }
+}

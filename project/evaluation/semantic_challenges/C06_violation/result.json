@@ -1,0 +1,38 @@
+{
+  "caseId": "C06",
+  "challenge": "violation",
+  "expectedPass": false,
+  "actualPass": true,
+  "correct": false,
+  "findings": [],
+  "before": "Equality is therefore not an exceedance",
+  "after": "Equality is therefore an exceedance",
+  "referenceReason": "The boundary convention changes from a strict threshold to an inclusive one.",
+  "originalSHA256": "3f8d97b40fc49843b836109f5ecd6457308c916addb5ac64c467a8b2670fcb80",
+  "candidateSHA256": "b95ff8bbb3f88dca446746023a6c8fa9f0f3b403591443073f072ccb9fbbe09b",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Related Work",
+        "originalQuote": "Equality is therefore not an exceedance.",
+        "revisedQuote": "Equality is therefore an exceedance.",
+        "problem": "Reverses the threshold rule: readings equal to 900 microsiemens per centimetre become exceedances, contradicting both the original and S1, which explicitly excludes equality."
+      }
+    ],
+    "readability": "similar",
+    "reason": "The candidate otherwise preserves all substantive claims, methods, evaluation measures, limitations, attribution, uncertainty and planned-work status. Wording is otherwise identical, but the changed equality rule creates an internal contradiction with the definition of exceedance as a reading above the threshold."
+  },
+  "semanticPass": false,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": [
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    }
+  ]
+}

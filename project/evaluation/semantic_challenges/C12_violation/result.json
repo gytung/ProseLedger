@@ -1,0 +1,41 @@
+{
+  "caseId": "C12",
+  "challenge": "violation",
+  "expectedPass": false,
+  "actualPass": false,
+  "correct": true,
+  "findings": [
+    "Numeric tokens were added.",
+    "Numeric tokens were removed."
+  ],
+  "before": "1180 to 1260 CE",
+  "after": "1180 to 1261 CE",
+  "referenceReason": "The upper endpoint of the date interval changes.",
+  "originalSHA256": "fbc1ed9b4e2bf27a0cc5dc8dc228d24b4a091436cab7d497ac465ffb813aa3c2",
+  "candidateSHA256": "38920f51dab1c28fae5985fe6b93c29445c7563eb6711e7808e4b039a90ea321",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": false,
+    "issues": [
+      {
+        "section": "Abstract",
+        "originalQuote": "The supplied interval is 1180 to 1260 CE [S1].",
+        "revisedQuote": "The supplied interval is 1180 to 1261 CE [S1].",
+        "problem": "The upper endpoint changes from 1260 to 1261 CE, contradicting both the original and S1 and failing to preserve the full supplied interval."
+      }
+    ],
+    "readability": "similar",
+    "reason": "The candidate is otherwise identical to the original. All other substantive claims, method steps, evaluation measures, limitations, source attributions, uncertainty and planned-work status are preserved; the changed date does not affect readability."
+  },
+  "semanticPass": false,
+  "combinedPass": false,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": [
+    {
+      "originalQuoteExact": true,
+      "revisedQuoteExact": true
+    }
+  ]
+}

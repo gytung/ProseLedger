@@ -1,0 +1,64 @@
+{
+  "reviews": [
+    {
+      "id": 0,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "while leaving some journeys less reliable",
+          "revisedQuote": "but may make some journeys less reliable",
+          "problem": "The revision introduces a claim that the timetable may cause reliability to deteriorate for some journeys. The original describes uneven reliability despite a lower average, without asserting such deterioration."
+        }
+      ],
+      "readability": "similar"
+    },
+    {
+      "id": 1,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "may care as much about an unusually long delay as they do about a typical journey",
+          "revisedQuote": "may care equally about an unusually long delay as they do about a typical journey",
+          "problem": "“Equally about ... as they do about” is an awkward comparative construction. Retain “as much about ... as” or use “equally about ... and ...”."
+        }
+      ],
+      "readability": "worse"
+    },
+    {
+      "id": 2,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 3,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "We will preserve instances of service disruption, since removing difficult days could make the policy appear more dependable than it is.",
+          "revisedQuote": "To ensure a realistic assessment, we will preserve instances of service disruption, as removing difficult days could make the policy appear more dependable than it is.",
+          "problem": "“Ensure a realistic assessment” adds an unsupported assurance. Preserving disruptions reduces a potential bias but does not ensure realism, especially given the manuscript’s stated limitations of historical replay."
+        }
+      ],
+      "readability": "similar"
+    },
+    {
+      "id": 4,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+          "revisedQuote": "Sensitivity checks will vary the definition of a long wait without favouring either policy.",
+          "problem": "The revision removes the explicit commitment against selecting the most favourable definition. A general promise of neutrality does not preserve this concrete safeguard against selective reporting."
+        }
+      ],
+      "readability": "similar"
+    },
+    {
+      "id": 5,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    }
+  ]
+}

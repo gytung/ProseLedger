@@ -1,0 +1,23 @@
+{
+  "guard": {
+    "passed": true,
+    "findings": []
+  },
+  "wordRatio": 1.0438356164383562,
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive claims, method steps, comparisons, outcome priorities, uncertainty, limitations, source attributions and planned-work status are preserved and consistent with the supplied sources. The paraphrases introduce no concrete meaning changes. Readability remains similar, with slightly wordier phrasing in Introduction and Related Work."
+  },
+  "eligible": true,
+  "bounds": {
+    "maxPatchesPerSection": 3,
+    "maxMatchedFraction": 0.35,
+    "maxAdditionalRounds": 0,
+    "finalLengthRatio": [
+      0.85,
+      1.15
+    ]
+  }
+}

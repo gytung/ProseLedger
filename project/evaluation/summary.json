@@ -1,0 +1,938 @@
+{
+  "caseCount": 12,
+  "scheduledRuns": 24,
+  "completedRuns": {
+    "generic": 12,
+    "rules": 12
+  },
+  "acceptedCandidates": {
+    "generic": 11,
+    "rules": 12
+  },
+  "changedSectionTotals": {
+    "generic": 66,
+    "rules": 69
+  },
+  "naturalness": {
+    "inconclusive": 3,
+    "rules": 7,
+    "generic": 2
+  },
+  "detectorRulesVsGeneric": {
+    "tie": 12
+  },
+  "detectorPairedDifferencePercentagePoints": {
+    "mean": 0,
+    "lower95": 0,
+    "upper95": 0,
+    "method": "paired case bootstrap percentile, 10000 resamples, seed 20261113",
+    "n": 12
+  },
+  "detectorIsPostHoc": true,
+  "detectorUsedForSelection": false,
+  "memoryCardsUsed": 0,
+  "conditions": "Generic vs six-rule section writing, with the same verification and repair process",
+  "scope": "12 author-constructed controlled proposals; automated comparisons, not human ratings or population-level validation",
+  "cases": [
+    {
+      "caseId": "C01",
+      "title": "When a Glacier Map Is Allowed to Abstain",
+      "inputWords": 386,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 379,
+      "generic_retainedWords": 375,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 268.0,
+      "generic_totalCompletedCalls": 9,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 3,
+      "generic_activeModelSeconds": 153.23,
+      "generic_inputTokens": 51922,
+      "generic_outputTokens": 1164,
+      "generic_cachedInputTokens": 26880,
+      "generic_rawSHA256": "8d728b6ac374418e02def695a5569b0bb6d2eefb342de3f378762a1eca4f5efd",
+      "generic_retainedSHA256": "07ce066d00430711c2783441f57296dcc79575ecec5ef263a4199cfc3b064163",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 5,
+      "rules_initialWords": 379,
+      "rules_retainedWords": 374,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 160.4,
+      "rules_totalCompletedCalls": 9,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 3,
+      "rules_activeModelSeconds": 160.0,
+      "rules_inputTokens": 52484,
+      "rules_outputTokens": 1097,
+      "rules_cachedInputTokens": 30336,
+      "rules_rawSHA256": "0f37fdd64593f22ef90ab3cb2639e6008b8d8ed4ecb32154f72a4fc647ebefeb",
+      "rules_retainedSHA256": "2e5f1e8bedeeabb8c0d53742171829730cbdae7a93b0def92a2436555298cb17",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "generic",
+        "rules"
+      ],
+      "blindedConsistency": false,
+      "naturalnessWinner": "inconclusive",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C02",
+      "title": "Bus Reliability Beyond the Average Wait",
+      "inputWords": 383,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 376,
+      "generic_retainedWords": 370,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 204.7,
+      "generic_totalCompletedCalls": 9,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 3,
+      "generic_activeModelSeconds": 144.93,
+      "generic_inputTokens": 51671,
+      "generic_outputTokens": 1087,
+      "generic_cachedInputTokens": 30336,
+      "generic_rawSHA256": "3697acd620cda50ab8ad12de550fe28ba0aa7f47db170ae8a4250cc92d46e6fa",
+      "generic_retainedSHA256": "853d330dd0e59e43f3582dc51971f26de673e923352a52d1f1b84d1382e742b5",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 6,
+      "rules_initialWords": 376,
+      "rules_retainedWords": 376,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 218.8,
+      "rules_totalCompletedCalls": 9,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 3,
+      "rules_activeModelSeconds": 155.66,
+      "rules_inputTokens": 52989,
+      "rules_outputTokens": 1221,
+      "rules_cachedInputTokens": 30336,
+      "rules_rawSHA256": "d880ebe6236537ea798c9ca600a68c83687907e675fa86146d0ce151e2d70ccd",
+      "rules_retainedSHA256": "8454b75de1b7481cf85a26fcd781cf6e658893b207d088157aa43a642dde89b6",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "rules",
+        "rules"
+      ],
+      "blindedConsistency": true,
+      "naturalnessWinner": "rules",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C03",
+      "title": "Distinguishing Salt Stress from Slow Growth",
+      "inputWords": 372,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 365,
+      "generic_retainedWords": 376,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 161.8,
+      "generic_totalCompletedCalls": 9,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 3,
+      "generic_activeModelSeconds": 124.36,
+      "generic_inputTokens": 51388,
+      "generic_outputTokens": 992,
+      "generic_cachedInputTokens": 30336,
+      "generic_rawSHA256": "d11ea9b0a06ff6987b522b146d5e1fe91313fec34899bca5dde39771a9185317",
+      "generic_retainedSHA256": "f42776528e29defa51d87b1419855eec37fc1b240761bb1d0a4342f04ee29076",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 6,
+      "rules_initialWords": 365,
+      "rules_retainedWords": 381,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 155.2,
+      "rules_totalCompletedCalls": 9,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 3,
+      "rules_activeModelSeconds": 129.37,
+      "rules_inputTokens": 52502,
+      "rules_outputTokens": 1008,
+      "rules_cachedInputTokens": 33792,
+      "rules_rawSHA256": "75688f8cdef7af81bff1e22ddcb935d1daa8d67cb12bbd7b4f60ea9ca17cf553",
+      "rules_retainedSHA256": "d79faec1b2f77826494701eb8cef0f76d63a4234012e6bbea07bf418dcbebbf7",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "rules",
+        "rules"
+      ],
+      "blindedConsistency": true,
+      "naturalnessWinner": "rules",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C04",
+      "title": "Code Review Suggestions with a Measured Scope",
+      "inputWords": 377,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": false,
+      "generic_changedSections": 0,
+      "generic_initialWords": 370,
+      "generic_retainedWords": 370,
+      "generic_readability": "similar",
+      "generic_contentPreserved": false,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 146.9,
+      "generic_totalCompletedCalls": 8,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 2,
+      "generic_activeModelSeconds": 110.2,
+      "generic_inputTokens": 36825,
+      "generic_outputTokens": 861,
+      "generic_cachedInputTokens": 21376,
+      "generic_rawSHA256": "fb9e069e525b1d58b36d64698c14c99af30dd7b4d0855b2e8c34d45561dabb67",
+      "generic_retainedSHA256": "6a91fbc02ebc88262788f6d114f56a2710aa7d90f6099e77d5c4ba1b62e5bfe5",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 6,
+      "rules_initialWords": 370,
+      "rules_retainedWords": 362,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 150.5,
+      "rules_totalCompletedCalls": 8,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 2,
+      "rules_activeModelSeconds": 108.94,
+      "rules_inputTokens": 37569,
+      "rules_outputTokens": 689,
+      "rules_cachedInputTokens": 21376,
+      "rules_rawSHA256": "ef60f3ed1d11a3aca060a317b3c46450fc6a14f8be64e71d49e74fae08a0aad0",
+      "rules_retainedSHA256": "ef60f3ed1d11a3aca060a317b3c46450fc6a14f8be64e71d49e74fae08a0aad0",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "generic",
+        "generic"
+      ],
+      "blindedConsistency": true,
+      "naturalnessWinner": "generic",
+      "factAssessments": [
+        {
+          "generic": {
+            "unverified_quote": 1,
+            "preserved": 5
+          },
+          "rules": {
+            "unverified_quote": 1,
+            "preserved": 5
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C05",
+      "title": "Museum Descriptions without Invented Provenance",
+      "inputWords": 375,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 368,
+      "generic_retainedWords": 359,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 161.2,
+      "generic_totalCompletedCalls": 8,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 2,
+      "generic_activeModelSeconds": 106.14,
+      "generic_inputTokens": 36825,
+      "generic_outputTokens": 688,
+      "generic_cachedInputTokens": 21376,
+      "generic_rawSHA256": "82c83727b45fd839a38d411b22fa3bd8cb1488a09c26e2a60ad320914c8bd2bf",
+      "generic_retainedSHA256": "82c83727b45fd839a38d411b22fa3bd8cb1488a09c26e2a60ad320914c8bd2bf",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 6,
+      "rules_initialWords": 368,
+      "rules_retainedWords": 363,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 179.7,
+      "rules_totalCompletedCalls": 9,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 3,
+      "rules_activeModelSeconds": 128.8,
+      "rules_inputTokens": 52176,
+      "rules_outputTokens": 915,
+      "rules_cachedInputTokens": 33792,
+      "rules_rawSHA256": "9b1346e64d34ce8c86ccb240fead07ac98bd9c937bdaa2a5af535a6da5aed241",
+      "rules_retainedSHA256": "c368533867d54f3afa44d58b35862b8a0a2796fc9d54c55084d409b8fa666f1b",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "generic",
+        "generic"
+      ],
+      "blindedConsistency": true,
+      "naturalnessWinner": "generic",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C06",
+      "title": "Water Quality Alerts under Sensor Drift",
+      "inputWords": 365,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 358,
+      "generic_retainedWords": 350,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 213.9,
+      "generic_totalCompletedCalls": 9,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 3,
+      "generic_activeModelSeconds": 169.58,
+      "generic_inputTokens": 52157,
+      "generic_outputTokens": 1297,
+      "generic_cachedInputTokens": 30336,
+      "generic_rawSHA256": "18b97887c97ae1a1278fb4cd34619f0979a1f127db4e61764cb662a5b9552580",
+      "generic_retainedSHA256": "56ec4611879e59a88523c0427606ff54ac63595799d1a7a3b2028427b4756920",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 6,
+      "rules_initialWords": 358,
+      "rules_retainedWords": 347,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 178.9,
+      "rules_totalCompletedCalls": 8,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 2,
+      "rules_activeModelSeconds": 120.84,
+      "rules_inputTokens": 37346,
+      "rules_outputTokens": 646,
+      "rules_cachedInputTokens": 17920,
+      "rules_rawSHA256": "e1c6819ca9ed101bc04f30c5a9700f7086ad0425bf7d106720e217da8f777966",
+      "rules_retainedSHA256": "e1c6819ca9ed101bc04f30c5a9700f7086ad0425bf7d106720e217da8f777966",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "rules",
+        "rules"
+      ],
+      "blindedConsistency": true,
+      "naturalnessWinner": "rules",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C07",
+      "title": "Oral Histories with Conflicting Accounts",
+      "inputWords": 382,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 375,
+      "generic_retainedWords": 380,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 217.3,
+      "generic_totalCompletedCalls": 8,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 2,
+      "generic_activeModelSeconds": 132.91,
+      "generic_inputTokens": 36949,
+      "generic_outputTokens": 725,
+      "generic_cachedInputTokens": 24832,
+      "generic_rawSHA256": "31ee59b4f817dd31eded6dd30aeb20589a26b33e5f3b238c4d514e647ea68969",
+      "generic_retainedSHA256": "31ee59b4f817dd31eded6dd30aeb20589a26b33e5f3b238c4d514e647ea68969",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 6,
+      "rules_initialWords": 375,
+      "rules_retainedWords": 372,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 189.9,
+      "rules_totalCompletedCalls": 8,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 2,
+      "rules_activeModelSeconds": 140.07,
+      "rules_inputTokens": 37682,
+      "rules_outputTokens": 777,
+      "rules_cachedInputTokens": 24832,
+      "rules_rawSHA256": "8e7d322a01e1e303fe10177cde140fb0d23c3a22f5776fa76580c1484ea90df0",
+      "rules_retainedSHA256": "8e7d322a01e1e303fe10177cde140fb0d23c3a22f5776fa76580c1484ea90df0",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "tie",
+        "rules"
+      ],
+      "blindedConsistency": false,
+      "naturalnessWinner": "inconclusive",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C08",
+      "title": "Energy Forecasts with a Fixed Information Cutoff",
+      "inputWords": 378,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 371,
+      "generic_retainedWords": 367,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 203.2,
+      "generic_totalCompletedCalls": 8,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 2,
+      "generic_activeModelSeconds": 136.56,
+      "generic_inputTokens": 36859,
+      "generic_outputTokens": 739,
+      "generic_cachedInputTokens": 24832,
+      "generic_rawSHA256": "14baa29e82416dee6f79ea089288738da882678140826559d17505faa987dae7",
+      "generic_retainedSHA256": "14baa29e82416dee6f79ea089288738da882678140826559d17505faa987dae7",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 6,
+      "rules_initialWords": 371,
+      "rules_retainedWords": 361,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 220.9,
+      "rules_totalCompletedCalls": 9,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 3,
+      "rules_activeModelSeconds": 142.23,
+      "rules_inputTokens": 52166,
+      "rules_outputTokens": 772,
+      "rules_cachedInputTokens": 33792,
+      "rules_rawSHA256": "5a2b469f249fa5cf8df50d63405e5821340b1cd9a0b5c57d3dd6689818cc9b1d",
+      "rules_retainedSHA256": "42cbcaafcae2be9378c256a046c9f59d9fcdbd133530a3c4a1e288f7563a062d",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "rules",
+        "rules"
+      ],
+      "blindedConsistency": true,
+      "naturalnessWinner": "rules",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C09",
+      "title": "Recycling Claims with Separate Material Fractions",
+      "inputWords": 365,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 358,
+      "generic_retainedWords": 360,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 188.8,
+      "generic_totalCompletedCalls": 9,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 3,
+      "generic_activeModelSeconds": 127.42,
+      "generic_inputTokens": 51269,
+      "generic_outputTokens": 996,
+      "generic_cachedInputTokens": 33792,
+      "generic_rawSHA256": "65ac4659f10c60ebee3496e3a23d74cdc579f735e46f5ee7562af6854d1c5fbb",
+      "generic_retainedSHA256": "080a685868b2a15ec5ff3b9fa85ce56b01e090041d7d67c2f145053f71dcbceb",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 6,
+      "rules_initialWords": 358,
+      "rules_retainedWords": 351,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 173.3,
+      "rules_totalCompletedCalls": 8,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 2,
+      "rules_activeModelSeconds": 122.55,
+      "rules_inputTokens": 37366,
+      "rules_outputTokens": 721,
+      "rules_cachedInputTokens": 24832,
+      "rules_rawSHA256": "d3ceeacc5dc481a6c38c262e46c25807d6045dccf2cb4f77879e3449441dcb0a",
+      "rules_retainedSHA256": "d3ceeacc5dc481a6c38c262e46c25807d6045dccf2cb4f77879e3449441dcb0a",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "generic",
+        "tie"
+      ],
+      "blindedConsistency": false,
+      "naturalnessWinner": "inconclusive",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C10",
+      "title": "Accessible Routes without Assuming Accessible Doors",
+      "inputWords": 362,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 355,
+      "generic_retainedWords": 353,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 236.0,
+      "generic_totalCompletedCalls": 8,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 2,
+      "generic_activeModelSeconds": 140.55,
+      "generic_inputTokens": 36724,
+      "generic_outputTokens": 658,
+      "generic_cachedInputTokens": 21376,
+      "generic_rawSHA256": "f2401b38e15eafd5aed2038291d2830e58ec13d07b3807a470bb6710c744e5b9",
+      "generic_retainedSHA256": "f2401b38e15eafd5aed2038291d2830e58ec13d07b3807a470bb6710c744e5b9",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 6,
+      "rules_initialWords": 355,
+      "rules_retainedWords": 359,
+      "rules_readability": "better",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 202.3,
+      "rules_totalCompletedCalls": 8,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 2,
+      "rules_activeModelSeconds": 155.6,
+      "rules_inputTokens": 37500,
+      "rules_outputTokens": 634,
+      "rules_cachedInputTokens": 24832,
+      "rules_rawSHA256": "50f35e15ad6621b2dff240c41c7b946d0089826bae2ef7f834823d7bab5d7a10",
+      "rules_retainedSHA256": "50f35e15ad6621b2dff240c41c7b946d0089826bae2ef7f834823d7bab5d7a10",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "rules",
+        "rules"
+      ],
+      "blindedConsistency": true,
+      "naturalnessWinner": "rules",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C11",
+      "title": "Feedback that Identifies a Reasoning Gap",
+      "inputWords": 360,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 353,
+      "generic_retainedWords": 350,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 220.5,
+      "generic_totalCompletedCalls": 8,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 2,
+      "generic_activeModelSeconds": 154.03,
+      "generic_inputTokens": 36756,
+      "generic_outputTokens": 708,
+      "generic_cachedInputTokens": 24832,
+      "generic_rawSHA256": "9ae443223fbc6f4d0a016de12098c3ba1523b6101c9e2961f566a26cf91ce1f2",
+      "generic_retainedSHA256": "9ae443223fbc6f4d0a016de12098c3ba1523b6101c9e2961f566a26cf91ce1f2",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 5,
+      "rules_initialWords": 353,
+      "rules_retainedWords": 354,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 207.3,
+      "rules_totalCompletedCalls": 8,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 2,
+      "rules_activeModelSeconds": 144.99,
+      "rules_inputTokens": 37517,
+      "rules_outputTokens": 640,
+      "rules_cachedInputTokens": 21376,
+      "rules_rawSHA256": "14d7039732892882097b95860020e866b50de0622ee82070202919913681e54a",
+      "rules_retainedSHA256": "14d7039732892882097b95860020e866b50de0622ee82070202919913681e54a",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "rules",
+        "rules"
+      ],
+      "blindedConsistency": true,
+      "naturalnessWinner": "rules",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    },
+    {
+      "caseId": "C12",
+      "title": "Archaeological Dates as Intervals, Not Events",
+      "inputWords": 377,
+      "generic_status": "completed",
+      "generic_newCandidateAccepted": true,
+      "generic_changedSections": 6,
+      "generic_initialWords": 370,
+      "generic_retainedWords": 382,
+      "generic_readability": "similar",
+      "generic_contentPreserved": true,
+      "generic_guardPassed": true,
+      "generic_totalElapsedSeconds": 229.0,
+      "generic_totalCompletedCalls": 9,
+      "generic_totalLocalWriterCalls": 6,
+      "generic_totalHostedCalls": 3,
+      "generic_activeModelSeconds": 158.32,
+      "generic_inputTokens": 52062,
+      "generic_outputTokens": 1104,
+      "generic_cachedInputTokens": 33792,
+      "generic_rawSHA256": "8283584fef7d5656a882f92034768bb6bbe281df5b44911c0bf0819a732bd304",
+      "generic_retainedSHA256": "b5916b0c85f2c8c94b94304631c151d2d87b6fbcc293d62830d7dbfb10f5edcc",
+      "generic_aiProbability": 1,
+      "generic_predictedClass": "ai",
+      "rules_status": "completed",
+      "rules_newCandidateAccepted": true,
+      "rules_changedSections": 5,
+      "rules_initialWords": 370,
+      "rules_retainedWords": 369,
+      "rules_readability": "similar",
+      "rules_contentPreserved": true,
+      "rules_guardPassed": true,
+      "rules_totalElapsedSeconds": 216.0,
+      "rules_totalCompletedCalls": 9,
+      "rules_totalLocalWriterCalls": 6,
+      "rules_totalHostedCalls": 3,
+      "rules_activeModelSeconds": 149.01,
+      "rules_inputTokens": 52613,
+      "rules_outputTokens": 1138,
+      "rules_cachedInputTokens": 33792,
+      "rules_rawSHA256": "892278db6b682a0def7aeb44076d6103151f2baa045d6f76efea8e813bc8af92",
+      "rules_retainedSHA256": "6b218129b51a79fabce0e7ac8ceef6e032d5d28c26552378ff5a1dc7d4f9dcbf",
+      "rules_aiProbability": 1,
+      "rules_predictedClass": "ai",
+      "original_aiProbability": 1,
+      "blindedChoices": [
+        "rules",
+        "rules"
+      ],
+      "blindedConsistency": true,
+      "naturalnessWinner": "rules",
+      "factAssessments": [
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        },
+        {
+          "generic": {
+            "preserved": 6
+          },
+          "rules": {
+            "preserved": 6
+          }
+        }
+      ],
+      "detectorDeltaPercentagePoints": 0,
+      "detectorRulesVsGeneric": "tie"
+    }
+  ],
+  "genericVsOriginalDetectorDifferencePP": {
+    "mean": 0,
+    "lower95": 0,
+    "upper95": 0,
+    "method": "paired case bootstrap percentile, 10000 resamples, seed 20261113",
+    "n": 12
+  },
+  "genericVsOriginalDetectorCounts": {
+    "unchanged": 12
+  },
+  "genericDetectorDecreaseWilson95": {
+    "proportion": 0.0,
+    "lower95": 2.7755575615628914e-17,
+    "upper95": 0.24249400665524085,
+    "numerator": 0,
+    "denominator": 12
+  },
+  "rulesVsOriginalDetectorDifferencePP": {
+    "mean": 0,
+    "lower95": 0,
+    "upper95": 0,
+    "method": "paired case bootstrap percentile, 10000 resamples, seed 20261113",
+    "n": 12
+  },
+  "rulesVsOriginalDetectorCounts": {
+    "unchanged": 12
+  },
+  "rulesDetectorDecreaseWilson95": {
+    "proportion": 0.0,
+    "lower95": 2.7755575615628914e-17,
+    "upper95": 0.24249400665524085,
+    "numerator": 0,
+    "denominator": 12
+  }
+}

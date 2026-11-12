@@ -1,0 +1,15 @@
+{
+  "sections": [
+    {
+      "id": 2,
+      "patches": [
+        {
+          "before": "when assessing conciseness",
+          "after": "when an editor assesses whether a revision is more concise",
+          "issueIndex": 0
+        }
+      ],
+      "reason": "Restores the editor as the specified assessor while preserving the planned treatment of qualifications."
+    }
+  ]
+}

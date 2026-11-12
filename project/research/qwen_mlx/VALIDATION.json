@@ -1,0 +1,168 @@
+{
+  "date": "2026-11-08",
+  "scope": "Offline packaging validation only. No fresh generation, weight download, model login or detector call.",
+  "checks": [
+    {
+      "file": "contrastive_transfer.py",
+      "check": "Python AST",
+      "passed": true
+    },
+    {
+      "file": "model_bridge.py",
+      "check": "Python AST",
+      "passed": true
+    },
+    {
+      "file": "run_revision.py",
+      "check": "Python AST",
+      "passed": true
+    },
+    {
+      "file": "verify_archive.py",
+      "check": "Python AST",
+      "passed": true
+    },
+    {
+      "file": "detector_console.py",
+      "check": "Python AST",
+      "passed": true
+    },
+    {
+      "file": "run_cohort.py",
+      "check": "Python AST",
+      "passed": true
+    },
+    {
+      "file": "prepare_contrastive_model.py",
+      "check": "Python AST",
+      "passed": true
+    },
+    {
+      "file": "_review/__init__.py",
+      "check": "Python AST",
+      "passed": true
+    },
+    {
+      "file": "_review/codex_client.py",
+      "check": "Python AST",
+      "passed": true
+    },
+    {
+      "file": "_review/processes.py",
+      "check": "Python AST",
+      "passed": true
+    },
+    {
+      "file": "targeted_engine.mjs",
+      "check": "Node syntax",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "run_targeted.mjs",
+      "check": "Node syntax",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "bounded_patches.mjs",
+      "check": "Node syntax",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "experiment_utils.mjs",
+      "check": "Node syntax",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "audit_contrastive.mjs",
+      "check": "Node syntax",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "repair_final_audit.mjs",
+      "check": "Node syntax",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "test_bounded_patches.mjs",
+      "check": "Node syntax",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "repair_sections.mjs",
+      "check": "Node syntax",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "naturalness-rules.mjs",
+      "check": "Node syntax",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "guard.mjs",
+      "check": "Node syntax",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "run_revision.py",
+      "check": "--help",
+      "passed": true
+    },
+    {
+      "file": "run_cohort.py",
+      "check": "--help",
+      "passed": true
+    },
+    {
+      "file": "detector_console.py",
+      "check": "--help",
+      "passed": true
+    },
+    {
+      "file": "run_targeted.mjs",
+      "check": "--help",
+      "passed": true
+    }
+  ],
+  "archive": {
+    "scope": "Offline integrity and accounting only; no fresh model or detector execution",
+    "sourceFilesVerified": 143,
+    "detectorInputsVerified": 15,
+    "cohorts": {
+      "heldout": {
+        "n": 4,
+        "targetedMean": 1.0,
+        "newMean": 0.9085579844067697,
+        "lower": 1,
+        "unchanged": 3,
+        "higher": 0
+      },
+      "confirmation": {
+        "n": 2,
+        "targetedMean": 1.0,
+        "newMean": 1.0,
+        "lower": 0,
+        "unchanged": 2,
+        "higher": 0
+      }
+    },
+    "failures": []
+  },
+  "boundedPatchChecks": {
+    "passed": 6,
+    "output": "Bounded editing validation: 6 checks passed"
+  },
+  "machineSpecificAbsolutePaths": [],
+  "freshModelGeneration": false,
+  "weightsDownloaded": false,
+  "newDetectorCalls": 0
+}

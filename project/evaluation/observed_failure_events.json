@@ -1,0 +1,556 @@
+{
+  "events": [
+    {
+      "caseId": "C01",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 4,
+      "section": "Planned Evaluation",
+      "originalQuote": "so the system cannot appear accurate simply by declining most cases",
+      "revisedQuote": "to ensure the system's accuracy is not inflated by avoiding difficult cases",
+      "problem": "Replaces the explicit safeguard against declining most cases with a claim about avoiding difficult cases. Difficulty is not the abstention criterion, and separate reporting does not ensure that selective avoidance cannot inflate accuracy.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C01/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C01",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "or establish that any particular glacier is shrinking",
+      "revisedQuote": "or definitively establish that any particular glacier is shrinking",
+      "problem": "Adding 'definitively' weakens the stated limitation by leaving open that the experiment could establish glacier shrinkage less definitively.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C01/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C01",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "Its contribution would be a more explicit account",
+      "revisedQuote": "its contribution lies in providing a more explicit account",
+      "problem": "Recasts a conditional, prospective contribution as an existing contribution, weakening the distinction between proposed and completed work.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C01/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C01",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "A local inventory may also contain outdated boundaries.",
+      "revisedQuote": "A local inventory, however, may contain outdated boundaries.",
+      "problem": "'However' introduces an unsupported contrast with the preceding abstention tradeoff; this is an additional limitation.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C01/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C01",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "An abstention rule may make the limits of the evidence clearer while leaving a less complete map.",
+      "revisedQuote": "An abstention rule may make the limits of the evidence clearer, but it will leave a less complete map.",
+      "problem": "Changes a possible tradeoff into a definite prediction that the map will be less complete.",
+      "repair": {
+        "ok": false,
+        "reason": "patch_type"
+      },
+      "finalEditStatus": "unchanged_or_rejected",
+      "originalSectionRestored": true,
+      "source": "runs/C01/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C01",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "A local inventory may also contain outdated boundaries.",
+      "revisedQuote": "A local inventory might contain outdated boundaries, as no field measurements have been collected for this proposal [S1].",
+      "problem": "Adds an unsupported causal connection: the absence of field measurements for this proposal does not explain whether the inventory boundaries are outdated.",
+      "repair": {
+        "ok": false,
+        "reason": "patch_type"
+      },
+      "finalEditStatus": "unchanged_or_rejected",
+      "originalSectionRestored": true,
+      "source": "runs/C01/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C01",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "Its contribution would be a more explicit account of what the available images can support.",
+      "revisedQuote": "Instead, its contribution will be a more explicit account of what the available images can support.",
+      "problem": "Replaces a conditional proposed contribution with a definite outcome, weakening the original uncertainty.",
+      "repair": {
+        "ok": false,
+        "reason": "patch_type"
+      },
+      "finalEditStatus": "unchanged_or_rejected",
+      "originalSectionRestored": true,
+      "source": "runs/C01/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C01",
+      "condition": "rules",
+      "type": "bounded_repair_rejected",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "reason": "patch_type",
+      "finalEditStatus": "unchanged_or_rejected",
+      "source": "runs/C01/rules/revision_ledger.json"
+    },
+    {
+      "caseId": "C02",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 3,
+      "section": "Methodology",
+      "originalQuote": "We will preserve instances of service disruption, since removing difficult days could make the policy appear more dependable than it is.",
+      "revisedQuote": "We will retain instances of service disruption to ensure the policy's reliability is accurately reflected.",
+      "problem": "Retaining disruptions helps avoid an overly favourable assessment but cannot ensure accurate reliability estimates. The revision replaces a qualified bias concern with an unsupported guarantee.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C02/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C02",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 4,
+      "section": "Planned Evaluation",
+      "originalQuote": "Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+      "revisedQuote": "Sensitivity checks will vary the definition of a long wait without favoring either policy.",
+      "problem": "The revision loses the explicit commitment against selecting whichever long-wait definition most favours a policy. A general statement of impartiality does not preserve this methodological safeguard.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C02/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C02",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 0,
+      "section": "Abstract",
+      "originalQuote": "while leaving some journeys less reliable",
+      "revisedQuote": "but may make some journeys less reliable",
+      "problem": "The revision introduces a claim that the timetable may cause reliability to deteriorate for some journeys. The original describes uneven reliability despite a lower average, without asserting such deterioration.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C02/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C02",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 1,
+      "section": "Introduction",
+      "originalQuote": "may care as much about an unusually long delay as they do about a typical journey",
+      "revisedQuote": "may care equally about an unusually long delay as they do about a typical journey",
+      "problem": "“Equally about ... as they do about” is an awkward comparative construction. Retain “as much about ... as” or use “equally about ... and ...”.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C02/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C02",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 3,
+      "section": "Methodology",
+      "originalQuote": "We will preserve instances of service disruption, since removing difficult days could make the policy appear more dependable than it is.",
+      "revisedQuote": "To ensure a realistic assessment, we will preserve instances of service disruption, as removing difficult days could make the policy appear more dependable than it is.",
+      "problem": "“Ensure a realistic assessment” adds an unsupported assurance. Preserving disruptions reduces a potential bias but does not ensure realism, especially given the manuscript’s stated limitations of historical replay.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C02/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C02",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 4,
+      "section": "Planned Evaluation",
+      "originalQuote": "Sensitivity checks will vary the definition of a long wait without selecting the definition that most favours either policy.",
+      "revisedQuote": "Sensitivity checks will vary the definition of a long wait without favouring either policy.",
+      "problem": "The revision removes the explicit commitment against selecting the most favourable definition. A general promise of neutrality does not preserve this concrete safeguard against selective reporting.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C02/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C03",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 2,
+      "section": "Related Work",
+      "originalQuote": "These roles will remain fixed before observation begins.",
+      "revisedQuote": "These roles will be maintained until observations are made.",
+      "problem": "The revision makes observation a possible endpoint for maintaining the outcome roles, weakening the commitment to fixing them before observation and preserving them throughout the study.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C03/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C03",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "Those questions would need additional measurements and a different follow-up period rather than stronger wording about the same observations.",
+      "revisedQuote": "To address these questions, further measurements and a different follow-up period would be necessary.",
+      "problem": "The revision omits the explicit interpretive limitation that stronger wording about the existing observations cannot answer these questions.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C03/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C03",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 2,
+      "section": "Related Work",
+      "originalQuote": "These roles will remain fixed before observation begins.",
+      "revisedQuote": "These roles will be maintained until observations begin",
+      "problem": "“Until” implies that the commitment to fixed outcome roles ends when observation begins, weakening the prespecified outcome hierarchy.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C03/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C03",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "Those questions would need additional measurements and a different follow-up period rather than stronger wording about the same observations.",
+      "revisedQuote": "Additional measurements and a different follow-up period would be needed to address these questions.",
+      "problem": "Omits the explicit interpretive limitation that stronger wording about existing observations cannot answer the questions about cellular damage or recovery.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C03/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C04",
+      "condition": "generic",
+      "type": "whole_document_audit_finding",
+      "section": "Introduction",
+      "originalQuote": "Tests will check the supplied examples, but passing them will not be presented as proof that a program is correct for every input [S1].",
+      "revisedQuote": "While tests will verify the supplied examples, passing them does not guarantee the program's correctness for all inputs [S1].",
+      "problem": "The candidate preserves the limitation of testing but omits the explicit commitment not to present passing tests as proof of correctness for every input.",
+      "candidateRetained": false,
+      "source": "runs/C04/generic/checks.json"
+    },
+    {
+      "caseId": "C05",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 2,
+      "section": "Related Work",
+      "originalQuote": "They will not be counted as unnecessary hedging when an editor assesses whether a revision is more concise.",
+      "revisedQuote": "We will consider these qualifications as integral content and not count them as unnecessary hedging when assessing conciseness.",
+      "problem": "The revision removes the explicit role of an editor in assessing conciseness and instead assigns the assessment to the authors. Preserve the specified assessor.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C05/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C06",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 2,
+      "section": "Related Work",
+      "originalQuote": "This isolates the effect of correction from a change in alert policy.",
+      "revisedQuote": "This design ensures that any changes in alert counts are attributable to the correction process rather than alterations in the alert policy.",
+      "problem": "The revision strengthens a controlled comparison into a blanket causal guarantee. A fixed threshold rules out threshold changes as an explanation but does not establish that any change in alert counts must result from correction.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C06/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C06",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 3,
+      "section": "Methodology",
+      "originalQuote": "We will record periods with missing reference measurements rather than invent corrections for intervals where the necessary evidence is unavailable.",
+      "revisedQuote": "periods with missing reference measurements will be recorded rather than inventing corrections for intervals where evidence is unavailable.",
+      "problem": "The passive construction leaves 'inventing corrections' without a coherent grammatical actor. Preserve the explicit statement that the researchers will record missing-reference periods rather than invent corrections.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C06/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C06",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "A reference instrument can itself have error, and the study covers only a limited observation period.",
+      "revisedQuote": "A reference instrument can itself have errors, and the study covers only a limited observation period [S1].",
+      "problem": "The added citation attributes reference-instrument error and the limited observation period to S1, which states neither.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C06/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C06",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "The proposed analysis will therefore stop at measurement agreement and alert behaviour.",
+      "revisedQuote": "The proposed analysis will therefore focus on measurement agreement and alert behavior",
+      "problem": "'Focus on' weakens the explicit boundary that the analysis will stop at measurement agreement and alert behaviour.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C06/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C08",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 4,
+      "section": "Planned Evaluation",
+      "originalQuote": "Difficult days will remain in the overall result [S2].",
+      "revisedQuote": "Difficult days will remain in the overall results.",
+      "problem": "The revision removes the citation to S2, losing explicit attribution for the requirement to include difficult days in the overall results.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C08/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C09",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 3,
+      "section": "Methodology",
+      "originalQuote": "before the measures are calculated",
+      "revisedQuote": "before calculating the measures",
+      "problem": "The implied subject of 'calculating' is the recovered output, creating an awkward modifier. Retain the passive clause or explicitly identify who calculates the measures.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C09/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C09",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 3,
+      "section": "Methodology",
+      "originalQuote": "so that a high average does not hide a small number of poorly sorted batches",
+      "revisedQuote": "to ensure that a high average does not mask the performance of poorly sorted batches",
+      "problem": "The revision loses the explicit concern about a small number of poorly sorted batches and strengthens the wording to a guarantee, although retaining records alone does not ensure that aggregate reporting exposes those batches.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C09/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C12",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 1,
+      "section": "Introduction",
+      "originalQuote": "Clear writing should make the evidential link explicit",
+      "revisedQuote": "clear writing should explicitly make the evidential link",
+      "problem": "The revised wording is awkward and can suggest establishing a link rather than clearly stating the evidential relationship and its uncertainty.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C12/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C12",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 4,
+      "section": "Planned Evaluation",
+      "originalQuote": "The evaluation will report whether a reader can distinguish material age from event timing and recover the stated interval from each description.",
+      "revisedQuote": "The evaluation will assess whether readers can distinguish material age from event timing and recover the stated interval from each description.",
+      "problem": "Assessing reader understanding does not preserve the explicit commitment to report the evaluation findings.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C12/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C12",
+      "condition": "generic",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "Its value would lie in making that uncertainty understandable",
+      "revisedQuote": "Its value lies in making this uncertainty understandable",
+      "problem": "The revision removes the conditional qualification on the proposed study's value, presenting its benefit more definitively than the original supports.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C12/generic/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C12",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 4,
+      "section": "Planned Evaluation",
+      "originalQuote": "The evaluation will report whether a reader can distinguish material age from event timing and recover the stated interval from each description.",
+      "revisedQuote": "The evaluation will assess whether readers can distinguish material age from event timing and recover the stated interval from each description.",
+      "problem": "Assessment does not preserve the explicit commitment to report these evaluation outcomes.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "verified_edit",
+      "originalSectionRestored": false,
+      "source": "runs/C12/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C12",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "Its value would lie in making that uncertainty understandable",
+      "revisedQuote": "Its value lies in making that uncertainty understandable",
+      "problem": "The revision makes the proposed study's conditional value categorical; retain the qualification.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "unchanged_or_rejected",
+      "originalSectionRestored": true,
+      "source": "runs/C12/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    },
+    {
+      "caseId": "C12",
+      "condition": "rules",
+      "type": "section_audit_finding",
+      "sectionId": 5,
+      "section": "Limitations and Conclusion",
+      "originalQuote": "It cannot resolve the uncertain association between the fragment and the building [S1].",
+      "revisedQuote": "The proposed study concerns the communication of existing evidence, not a new dating analysis [S1].",
+      "problem": "Moving the citation attributes the study's scope to S1, which describes the archaeological evidence rather than the proposed communication study.",
+      "repair": {
+        "ok": true
+      },
+      "finalEditStatus": "unchanged_or_rejected",
+      "originalSectionRestored": true,
+      "source": "runs/C12/rules/audit_sections.response.json",
+      "evidenceType": "model audit finding with exact supplied quotations; assess its validity before treating it as a confirmed error"
+    }
+  ],
+  "count": 33
+}

@@ -1,0 +1,51 @@
+{
+  "reviews": [
+    {
+      "id": 0,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 1,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 2,
+      "approve": true,
+      "issues": [],
+      "readability": "better"
+    },
+    {
+      "id": 3,
+      "approve": false,
+      "issues": [
+        {
+          "originalQuote": "before the measures are calculated",
+          "revisedQuote": "before calculating the measures",
+          "problem": "The implied subject of 'calculating' is the recovered output, creating an awkward modifier. Retain the passive clause or explicitly identify who calculates the measures."
+        },
+        {
+          "originalQuote": "so that a high average does not hide a small number of poorly sorted batches",
+          "revisedQuote": "to ensure that a high average does not mask the performance of poorly sorted batches",
+          "problem": "The revision loses the explicit concern about a small number of poorly sorted batches and strengthens the wording to a guarantee, although retaining records alone does not ensure that aggregate reporting exposes those batches."
+        }
+      ],
+      "readability": "worse"
+    },
+    {
+      "id": 4,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    },
+    {
+      "id": 5,
+      "approve": true,
+      "issues": [],
+      "readability": "similar"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "guard": {
+    "passed": true,
+    "findings": []
+  },
+  "wordRatio": 1.0133333333333334,
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive claims, source attributions, method steps, evaluation measures, limitations, qualifications, and planned-work status are preserved. The candidate retains the 16-excerpt comparison, speaker-specific attribution, unresolved dates, consistent pseudonyms, checks for collapsed accounts and unsupported negative historical claims, and restrictions on inferring motives or reconciling dates without new evidence. Changes are equivalent paraphrases and minor sentence restructuring, with little overall effect on readability."
+  },
+  "eligible": true,
+  "bounds": {
+    "maxPatchesPerSection": 3,
+    "maxMatchedFraction": 0.35,
+    "maxAdditionalRounds": 0,
+    "finalLengthRatio": [
+      0.85,
+      1.15
+    ]
+  }
+}

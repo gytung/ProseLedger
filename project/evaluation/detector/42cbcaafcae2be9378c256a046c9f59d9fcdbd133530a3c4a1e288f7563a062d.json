@@ -1,0 +1,688 @@
+{
+  "textSHA256": "42cbcaafcae2be9378c256a046c9f59d9fcdbd133530a3c4a1e288f7563a062d",
+  "characters": 2473,
+  "scannedAtUTC": "2026-11-12T20:54:04.014044+00:00",
+  "elapsedSeconds": 1.847,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 10,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 15,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 20,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 24,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 25,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9999824981591243,
+            "sentence": "# Energy Forecasts with a Fixed Information Cutoff",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.750184087569602e-05,
+              "ai": 0.9999204487512119,
+              "paraphrased": 6.20494079124333e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999819425922495,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.8057407750459994e-05,
+              "ai": 0.9999203760578428,
+              "paraphrased": 6.156653440670179e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999838133621657,
+            "sentence": "An energy forecast may appear accurate if it incorporates information unavailable at the time of prediction.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6186637834325803e-05,
+              "ai": 0.9999255230410541,
+              "paraphrased": 5.829032111157083e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999835584638059,
+            "sentence": "We propose comparing a seasonal baseline with a learned forecaster for next-day demand in a single campus building.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6441536194059114e-05,
+              "ai": 0.999925268158206,
+              "paraphrased": 5.8290305599876594e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999807781093079,
+            "sentence": "Both models will use the same information cutoff [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.9221890692178545e-05,
+              "ai": 0.9999142092214978,
+              "paraphrased": 6.656888781010468e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999840643167137,
+            "sentence": "The experiment will prioritize deployable forecasting conditions over achieving the best fit to a completed record.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.5935683286314118e-05,
+              "ai": 0.9999253168307278,
+              "paraphrased": 5.874748598586959e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999983558470758,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6441529241934058e-05,
+              "ai": 0.9999248110155785,
+              "paraphrased": 5.874745517952782e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999845546119553,
+            "sentence": "A weather reading collected after a forecast deadline can explain demand retrospectively but cannot support the earlier prediction.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.544538804465553e-05,
+              "ai": 0.9999248820144985,
+              "paraphrased": 5.967259745685764e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999854903229539,
+            "sentence": "The task brief excludes such observations [S1] and represents occupancy through a published timetable, without tracking individuals.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.450967704606906e-05,
+              "ai": 0.9999303018912415,
+              "paraphrased": 5.518843171235691e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999843113717343,
+            "sentence": "These restrictions define the information available to the forecaster and will remain unchanged when the two methods are compared.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.5688628265706887e-05,
+              "ai": 0.99992556387069,
+              "paraphrased": 5.8747501044307266e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999970229240221,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.9770759778953854e-05,
+              "ai": 0.9998911785569444,
+              "paraphrased": 7.905068327664712e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999753187917961,
+            "sentence": "The source packet specifies one building as the unit of analysis and next-day demand as the target [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.4681208203901158e-05,
+              "ai": 0.9999066373040845,
+              "paraphrased": 6.86814877116549e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999673033105202,
+            "sentence": "The evaluation brief requires a shared information cutoff and a held-out period [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.269668947980797e-05,
+              "ai": 0.9998882528579115,
+              "paraphrased": 7.905045260871602e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999813694551293,
+            "sentence": "We will not interpret this design as a study of household electricity use.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.8630544870768485e-05,
+              "ai": 0.9999168485080421,
+              "paraphrased": 6.452094708718023e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999832996230067,
+            "sentence": "Instead, the comparison asks whether a more flexible model adds value under the same practical information limits.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.670037699334992e-05,
+              "ai": 0.9999207635289301,
+              "paraphrased": 6.253609407655998e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999531664163223,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.6833583677720905e-05,
+              "ai": 0.999839937341463,
+              "paraphrased": 0.00011322907485923316
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999816583086599,
+            "sentence": "The evaluation will cover 42 consecutive days, with the final 14 days held out from fitting [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.8341691340011276e-05,
+              "ai": 0.9999161213544336,
+              "paraphrased": 6.553695422633532e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999981658337843,
+            "sentence": "Features will be assembled as they would have been available at each forecast deadline.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.8341662157041796e-05,
+              "ai": 0.9999145673193258,
+              "paraphrased": 6.709101851718096e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999845546048723,
+            "sentence": "The seasonal baseline and learned forecaster will receive the same eligible observations.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.5445395127601156e-05,
+              "ai": 0.9999253463561802,
+              "paraphrased": 5.920824869213901e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999861547836386,
+            "sentence": "Missing inputs will be recorded rather than silently replaced with measurements obtained later.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.3845216361435482e-05,
+              "ai": 0.9999292145421942,
+              "paraphrased": 5.694024144442523e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999599397581432,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.006024185674147e-05,
+              "ai": 0.999873796702141,
+              "paraphrased": 8.614305600217321e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999566844953347,
+            "sentence": "We plan to report forecast errors for each evaluation day and separately inspect unusually hot days.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.331550466524035e-05,
+              "ai": 0.9998751257812968,
+              "paraphrased": 8.155871403793844e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999531649631216,
+            "sentence": "Difficult days will remain in the overall results [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.683503687842696e-05,
+              "ai": 0.9998709669216487,
+              "paraphrased": 8.219804147291432e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999810761525872,
+            "sentence": "The report will also state which forecasts lacked an eligible weather observation, making a missing-input failure distinguishable from a model error on fully observed inputs without discarding either from the record.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.8923847412717124e-05,
+              "ai": 0.9999123942695753,
+              "paraphrased": 6.868188301191957e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999053992289815,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 9.460077101860571e-05,
+              "ai": 0.9997800735709697,
+              "paraphrased": 0.00012532565801176622
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999843114313514,
+            "sentence": "A short series from one building cannot establish performance across seasons or sites.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.5688568648591783e-05,
+              "ai": 0.9999217752754352,
+              "paraphrased": 6.253615591611639e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999737271024651,
+            "sentence": "Under a strict information cutoff, a learned model may offer little improvement over a seasonal baseline.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.627289753489221e-05,
+              "ai": 0.9999023099591714,
+              "paraphrased": 7.141714329373823e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999667883285318,
+            "sentence": "The study will report this outcome if it occurs.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 3.321167146820447e-05,
+              "ai": 0.9998907660540443,
+              "paraphrased": 7.602227448753485e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999978218891931,
+            "sentence": "Its central requirement is a fair comparison based on information available at prediction time, not a retrospective explanation of demand.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.1781108069054197e-05,
+              "ai": 0.999907357170517,
+              "paraphrased": 7.08617214139586e-05
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Energy Forecasts with a Fixed Information Cutoff\n\n## Abstract\n\nAn energy forecast may appear accurate if it incorporates information unavailable at the time of prediction. We propose comparing a seasonal baseline with a learned forecaster for next-day demand in a single campus building. Both models will use the same information cutoff [S2]. The experiment will prioritize deployable forecasting conditions over achieving the best fit to a completed record.\n\n## Introduction\n\nA weather reading collected after a forecast deadline can explain demand retrospectively but cannot support the earlier prediction. The task brief excludes such observations [S1] and represents occupancy through a published timetable, without tracking individuals. These restrictions define the information available to the forecaster and will remain unchanged when the two methods are compared.\n\n## Related Work\n\nThe source packet specifies one building as the unit of analysis and next-day demand as the target [S1]. The evaluation brief requires a shared information cutoff and a held-out period [S2]. We will not interpret this design as a study of household electricity use. Instead, the comparison asks whether a more flexible model adds value under the same practical information limits.\n\n## Methodology\n\nThe evaluation will cover 42 consecutive days, with the final 14 days held out from fitting [S2]. Features will be assembled as they would have been available at each forecast deadline. The seasonal baseline and learned forecaster will receive the same eligible observations. Missing inputs will be recorded rather than silently replaced with measurements obtained later.\n\n## Planned Evaluation\n\nWe plan to report forecast errors for each evaluation day and separately inspect unusually hot days. Difficult days will remain in the overall results [S2]. The report will also state which forecasts lacked an eligible weather observation, making a missing-input failure distinguishable from a model error on fully observed inputs without discarding either from the record.\n\n## Limitations and Conclusion\n\nA short series from one building cannot establish performance across seasons or sites. Under a strict information cutoff, a learned model may offer little improvement over a seasonal baseline. The study will report this outcome if it occurs. Its central requirement is a fair comparison based on information available at prediction time, not a retrospective explanation of demand.",
+        "document_id": null
+      }
+    ]
+  }
+}

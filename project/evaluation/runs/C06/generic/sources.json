@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The proposed study concerns conductivity alerts from river sensors. Conductivity is not a direct measurement of pathogen concentration. A reference instrument will be used to identify sensor drift. The alert threshold is 900 microsiemens per centimetre, and values equal to the threshold are not exceedances.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "Eight sensors will be compared over 21 days. Raw readings and drift-corrected readings will use the same fixed threshold. Corrections will be estimated from the reference instrument, not from whether an alert appears plausible. The study will not make drinking-water safety recommendations.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

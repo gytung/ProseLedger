@@ -1,0 +1,26 @@
+{
+  "caseId": "C11",
+  "challenge": "benign",
+  "expectedPass": true,
+  "actualPass": true,
+  "correct": true,
+  "findings": [],
+  "before": "A single review cannot show whether a student later learns the underlying concept.",
+  "after": "A single review cannot establish whether a student later learns the underlying concept.",
+  "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+  "originalSHA256": "9441cc51fbf0d7c38864461c82ad1e935472486e5266750f07cbbc1f60049287",
+  "candidateSHA256": "4a400eca38f61d9c0db499386b5ecb55ae52171c6bf0ccc9fb615e8a3aede56b",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive propositions, method steps, comparisons, evaluation measures, limitations, source attributions, qualifications and planned-work status are preserved. The only change, from “cannot show” to “cannot establish” in “Limitations and Conclusion,” is an equivalent paraphrase with similar readability."
+  },
+  "semanticPass": true,
+  "combinedPass": true,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": []
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The oral-history collection contains interview transcripts about a factory closure. Two speakers give different closure dates. The discrepancy has not been resolved by an archival source. Speaker labels are pseudonyms, and an absence of discussion is not evidence that an event did not happen.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "The study will summarize 16 interview excerpts. An attribution-preserving summary will be compared with an ordinary concise summary. Disputed dates must remain attached to their speakers. The summaries must not infer motives or reconcile the dates without additional evidence.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The proposed transport study uses an anonymized bus arrival log from one route. The log contains scheduled and observed arrivals but no passenger identities. Its coverage is limited to weekdays. A lower mean waiting time does not imply that every passenger group benefits.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "The team will compare a fixed timetable with a holding policy using the same recorded arrivals. Peak and off-peak periods will be reported separately. The analysis will use 18 weekdays and will not make a causal claim about passenger satisfaction.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

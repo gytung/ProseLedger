@@ -1,0 +1,151 @@
+{
+  "scope": "This run only; no historical card retrieval",
+  "memoryCardsUsed": 0,
+  "originalSHA256": "c2df0a24737c7e9ca3acc0c4d59451ac2b9f33c005f9faa883c8b1200814f6f2",
+  "retainedSHA256": "c368533867d54f3afa44d58b35862b8a0a2796fc9d54c55084d409b8fa666f1b",
+  "detectorUsedForAdmission": false,
+  "fullAudit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "The candidate preserves all substantive claims, method steps, comparisons, evaluation measures, limitations, source attributions, uncertainty, and planned-work status. It retains the 28-object sample, source restrictions, claim-level evidence checks, separate reader and curator judgments, and prohibition on unsupported historical inferences. Changes are equivalent paraphrases with minor effects on readability."
+  },
+  "repairHistory": [],
+  "edits": [
+    {
+      "id": 0,
+      "heading": "Abstract",
+      "original": "Museum descriptions need to be readable without making an uncertain object history sound settled. We propose to revise catalogue prose into concise public descriptions using only the supplied entry and curator note. The evaluation will examine readability together with the preservation of approximate dates, disputed locations and unknown makers [S2]. The study will not undertake new provenance research.",
+      "candidate": "Museum descriptions should avoid making uncertain object histories sound settled. We propose revising catalogue prose into concise public descriptions using only the supplied entry and curator note. The evaluation will assess readability alongside the preservation of approximate dates, disputed locations, and unknown makers [S2]. No new provenance research will be conducted.",
+      "text": "Museum descriptions should avoid making uncertain object histories sound settled. We propose revising catalogue prose into concise public descriptions using only the supplied entry and curator note. The evaluation will assess readability alongside the preservation of approximate dates, disputed locations, and unknown makers [S2]. No new provenance research will be conducted.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 0,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "Museum descriptions should avoid making uncertain object histories sound settled. We propose revising catalogue prose into concise public descriptions using only the supplied entry and curator note. The evaluation will assess readability alongside the preservation of approximate dates, disputed locations, and unknown makers [S2]. No new provenance research will be conducted.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 1,
+      "heading": "Introduction",
+      "original": "A short description can unintentionally remove the qualification that makes a historical statement defensible. For example, an approximate date should not become a precise one merely because the new sentence reads more smoothly. A blank maker field also does not establish that an object was made anonymously [S1]. These distinctions concern evidence, not just editorial style.",
+      "candidate": "A concise description can unintentionally remove the qualification that makes a historical statement defensible. For example, an approximate date should not become precise merely because the new sentence reads more smoothly. A blank maker field does not establish that an object was made anonymously [S1]. These distinctions concern evidence, not just editorial style.",
+      "text": "A concise description can unintentionally remove the qualification that makes a historical statement defensible. For example, an approximate date should not become precise merely because the new sentence reads more smoothly. A blank maker field does not establish that an object was made anonymously [S1]. These distinctions concern evidence, not just editorial style.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 1,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "A concise description can unintentionally remove the qualification that makes a historical statement defensible. For example, an approximate date should not become precise merely because the new sentence reads more smoothly. A blank maker field does not establish that an object was made anonymously [S1]. These distinctions concern evidence, not just editorial style.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 2,
+      "heading": "Related Work",
+      "original": "The catalogue brief limits the writer to two supplied records: the entry and its curator note [S1]. The evaluation brief identifies three kinds of uncertainty that must remain visible [S2]. We will treat those qualifications as part of the content. They will not be counted as unnecessary hedging when an editor assesses whether a revision is more concise.",
+      "candidate": "The catalogue brief restricts the writer to using only the entry and its curator note [S1]. The evaluation brief specifies that three types of uncertainty—uncertain dates, disputed locations, and unknown makers—must remain visible [S2]. We will consider these qualifications as integral content and not count them as unnecessary hedging when assessing conciseness.",
+      "text": "The catalogue brief restricts the writer to using only the entry and its curator note [S1]. The evaluation brief specifies that three types of uncertainty—uncertain dates, disputed locations, and unknown makers—must remain visible [S2]. We will consider these qualifications as integral content and not count them as unnecessary hedging when an editor assesses whether a revision is more concise.",
+      "sectionAccepted": false,
+      "review": {
+        "id": 2,
+        "approve": false,
+        "issues": [
+          {
+            "originalQuote": "They will not be counted as unnecessary hedging when an editor assesses whether a revision is more concise.",
+            "revisedQuote": "We will consider these qualifications as integral content and not count them as unnecessary hedging when assessing conciseness.",
+            "problem": "The revision removes the explicit role of an editor in assessing conciseness and instead assigns the assessment to the authors. Preserve the specified assessor."
+          }
+        ],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": true,
+        "text": "The catalogue brief restricts the writer to using only the entry and its curator note [S1]. The evaluation brief specifies that three types of uncertainty—uncertain dates, disputed locations, and unknown makers—must remain visible [S2]. We will consider these qualifications as integral content and not count them as unnecessary hedging when an editor assesses whether a revision is more concise.",
+        "spans": [
+          {
+            "before": "when assessing conciseness",
+            "after": "when an editor assesses whether a revision is more concise",
+            "issueIndex": 0,
+            "start": 337,
+            "end": 363
+          }
+        ]
+      },
+      "retained": "The catalogue brief restricts the writer to using only the entry and its curator note [S1]. The evaluation brief specifies that three types of uncertainty—uncertain dates, disputed locations, and unknown makers—must remain visible [S2]. We will consider these qualifications as integral content and not count them as unnecessary hedging when an editor assesses whether a revision is more concise.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 3,
+      "heading": "Methodology",
+      "original": "We plan to study 28 objects with different combinations of uncertain dates, disputed locations and missing maker information [S2]. Each description will be revised from the same source packet. Reviewers will compare the revision with the original prose and identify the source phrase that supports each historical claim. Unsupported detail will remain an error even if it makes the account more vivid.",
+      "candidate": "We plan to study 28 objects with varying combinations of uncertain dates, disputed locations, and missing maker information [S2]. Each description will be revised from the same source packet. Reviewers will compare the revised version with the original prose and identify the source phrase that supports each historical claim. Unsupported detail will remain an error, even if it makes the account more vivid.",
+      "text": "We plan to study 28 objects with varying combinations of uncertain dates, disputed locations, and missing maker information [S2]. Each description will be revised from the same source packet. Reviewers will compare the revised version with the original prose and identify the source phrase that supports each historical claim. Unsupported detail will remain an error, even if it makes the account more vivid.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 3,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "We plan to study 28 objects with varying combinations of uncertain dates, disputed locations, and missing maker information [S2]. Each description will be revised from the same source packet. Reviewers will compare the revised version with the original prose and identify the source phrase that supports each historical claim. Unsupported detail will remain an error, even if it makes the account more vivid.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 4,
+      "heading": "Planned Evaluation",
+      "original": "The evaluation will ask readers which version is easier to follow and ask curators whether each qualification survives. These judgments will be reported separately rather than combined into a single quality score. Difficult cases will include entries in which a later note disputes an earlier location. The revised description must make the disagreement understandable without choosing a side unsupported by the packet.",
+      "candidate": "The evaluation will ask readers to determine which version is easier to follow and curators to confirm whether each qualification is preserved. These assessments will be reported separately, not combined into a single quality score. Difficult cases will involve entries where a later note disputes an earlier location. The revised description must present the disagreement clearly without taking a side unsupported by the packet.",
+      "text": "The evaluation will ask readers to determine which version is easier to follow and curators to confirm whether each qualification is preserved. These assessments will be reported separately, not combined into a single quality score. Difficult cases will involve entries where a later note disputes an earlier location. The revised description must present the disagreement clearly without taking a side unsupported by the packet.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 4,
+        "approve": true,
+        "issues": [],
+        "readability": "similar"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The evaluation will ask readers to determine which version is easier to follow and curators to confirm whether each qualification is preserved. These assessments will be reported separately, not combined into a single quality score. Difficult cases will involve entries where a later note disputes an earlier location. The revised description must present the disagreement clearly without taking a side unsupported by the packet.",
+      "status": "verified_edit"
+    },
+    {
+      "id": 5,
+      "heading": "Limitations and Conclusion",
+      "original": "The source records may themselves be incomplete or inconsistent. Clearer prose cannot resolve those evidential gaps. We will not infer a maker from a missing field or treat an approximate date as exact [S1]. The intended contribution is an editing procedure that makes the limits of an object description readable, rather than concealing them behind confident wording.",
+      "candidate": "The source records may be incomplete or inconsistent, and clearer prose cannot resolve these gaps. We will not infer a maker from a missing field or treat an approximate date as exact [S1]. The intended contribution is an editing procedure that makes the limits of an object description readable, rather than concealing them behind confident wording.",
+      "text": "The source records may be incomplete or inconsistent, and clearer prose cannot resolve these gaps. We will not infer a maker from a missing field or treat an approximate date as exact [S1]. The intended contribution is an editing procedure that makes the limits of an object description readable, rather than concealing them behind confident wording.",
+      "sectionAccepted": true,
+      "review": {
+        "id": 5,
+        "approve": true,
+        "issues": [],
+        "readability": "better"
+      },
+      "repair": {
+        "ok": false,
+        "reason": "not_needed_or_not_repairable"
+      },
+      "retained": "The source records may be incomplete or inconsistent, and clearer prose cannot resolve these gaps. We will not infer a maker from a missing field or treat an approximate date as exact [S1]. The intended contribution is an editing procedure that makes the limits of an object description readable, rather than concealing them behind confident wording.",
+      "status": "verified_edit"
+    }
+  ]
+}

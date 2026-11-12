@@ -1,0 +1,724 @@
+{
+  "textSHA256": "9441cc51fbf0d7c38864461c82ad1e935472486e5266750f07cbbc1f60049287",
+  "characters": 2439,
+  "scannedAtUTC": "2026-11-12T20:54:16.691682+00:00",
+  "elapsedSeconds": 1.84,
+  "aiProbability": 1,
+  "predictedClass": "ai",
+  "version": "2026-11-04-base",
+  "raw": {
+    "version": "2026-11-04-base",
+    "neatVersion": "5.0b",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 6,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 12,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 17,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 21,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 22,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 26,
+            "num_sentences": 1,
+            "completely_generated_prob": 0.8181818033057853
+          },
+          {
+            "start_sentence_index": 27,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 1,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 1,
+        "confidence_category": "high",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0.9999987122709256,
+            "sentence": "# Feedback that Identifies a Reasoning Gap",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2877290743709149e-06,
+              "ai": 0.9998696490855029,
+              "paraphrased": 0.00012906318542268237
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985857183471,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4142816529208878e-06,
+              "ai": 0.9998611998389548,
+              "paraphrased": 0.0001373858793922554
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999987122722515,
+            "sentence": "Feedback can sound encouraging while failing to identify the reasoning that a student needs to revisit.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2877277485430439e-06,
+              "ai": 0.9998686369650075,
+              "paraphrased": 0.00013007530724399902
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999998712271644,
+            "sentence": "We propose to compare assistant feedback with a rubric-only condition for short statistics explanations.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2877283558972281e-06,
+              "ai": 0.999869144021973,
+              "paraphrased": 0.00012956824967106523
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999998712271644,
+            "sentence": "The assistant may identify a gap but will not provide a complete replacement answer [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.2877283558972281e-06,
+              "ai": 0.999869144021973,
+              "paraphrased": 0.00012956824967106523
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999987122712846,
+            "sentence": "The study will examine feedback accuracy and usefulness rather than infer learning from a single encounter.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.287728715452628e-06,
+              "ai": 0.9998693968010847,
+              "paraphrased": 0.00012931547019985745
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985857175231,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4142824768405713e-06,
+              "ai": 0.9998617353860377,
+              "paraphrased": 0.00013685033148537953
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985857183471,
+            "sentence": "Clear prose and correct statistical reasoning are different properties.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4142816529208878e-06,
+              "ai": 0.9998611998389548,
+              "paraphrased": 0.0001373858793922554
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985857172553,
+            "sentence": "A fluent explanation may still confuse association with causation [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.414282744613496e-06,
+              "ai": 0.999862002365862,
+              "paraphrased": 0.00013658335139336345
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999986713934756,
+            "sentence": "The proposed feedback task therefore requires more than a style improvement.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.328606524321631e-06,
+              "ai": 0.9998701113133288,
+              "paraphrased": 0.0001285600801468401
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999998540821113,
+            "sentence": "It asks whether the response directs attention to a specific gap while leaving the student responsible for revising the explanation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4591788870950541e-06,
+              "ai": 0.9998632846229314,
+              "paraphrased": 0.00013525619818152663
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999982940511948,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.7059488052556167e-06,
+              "ai": 0.9998609082227679,
+              "paraphrased": 0.00013738582842689472
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999984944976884,
+            "sentence": "The task brief limits the assistant to feedback and excludes both complete replacement answers and course grading [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.505502311641988e-06,
+              "ai": 0.9998661128297978,
+              "paraphrased": 0.00013238166789063932
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999983465424872,
+            "sentence": "The evaluation brief specifies a rubric-only comparison and a causal-reasoning hard case [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6534575128247612e-06,
+              "ai": 0.9998579775353031,
+              "paraphrased": 0.0001403690071840627
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999983465443523,
+            "sentence": "These boundaries will guide the evaluation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6534556477133911e-06,
+              "ai": 0.9998568767614043,
+              "paraphrased": 0.00014146978294790497
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999981264013639,
+            "sentence": "A polished answer written for the student will not count as successful feedback merely because it resolves the original error.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.873598636089378e-06,
+              "ai": 0.9998504462962515,
+              "paraphrased": 0.00014768010511238418
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999972739649513,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.7260350487649816e-06,
+              "ai": 0.999837595743037,
+              "paraphrased": 0.00015967822191428928
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999998346546118,
+            "sentence": "The planned sample contains 40 anonymized responses to the same question [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6534538819965898e-06,
+              "ai": 0.9998557673448623,
+              "paraphrased": 0.00014257920125570084
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999983974166413,
+            "sentence": "Each response will receive assistant feedback and the relevant rubric.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6025833586967893e-06,
+              "ai": 0.9998563740097335,
+              "paraphrased": 0.00014202340690786492
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999985857195004,
+            "sentence": "Reviewers will check whether the feedback identifies a real gap, refers to the response accurately and avoids supplying a finished answer.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.4142804996102667e-06,
+              "ai": 0.9998603925852626,
+              "paraphrased": 0.00013819313423780547
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999983974136156,
+            "sentence": "The original student text will remain unchanged in the evaluation record.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6025863843452302e-06,
+              "ai": 0.9998583022511555,
+              "paraphrased": 0.00014009516246018427
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999975942583638,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.4057416362605604e-06,
+              "ai": 0.9998475889602461,
+              "paraphrased": 0.00015000529811770623
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999973578232143,
+            "sentence": "We will assess the accuracy and usefulness of the feedback separately.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.6421767857490552e-06,
+              "ai": 0.9998425916208102,
+              "paraphrased": 0.00015476620240406256
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999830393059363,
+            "sentence": "The prespecified hard case confuses association with causation [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.69606940636444e-05,
+              "ai": 0.9997630896644086,
+              "paraphrased": 0.0002199496415277427
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999973578411742,
+            "sentence": "Reviewers will also examine responses that are already correct, since unnecessary criticism can be harmful even when it sounds detailed.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.642158825853139e-06,
+              "ai": 0.9998357976844378,
+              "paraphrased": 0.00016156015673642033
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999979422700741,
+            "sentence": "The study will record unsupported corrections and missed errors rather than report only examples of helpful feedback.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.0577299258616445e-06,
+              "ai": 0.9998428734538753,
+              "paraphrased": 0.00015506881619875587
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999974391349732,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.5608650268227683e-06,
+              "ai": 0.9998346120293057,
+              "paraphrased": 0.00016282710566748682
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999983974166413,
+            "sentence": "A single review cannot show whether a student later learns the underlying concept.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.6025833586967893e-06,
+              "ai": 0.9998563740097335,
+              "paraphrased": 0.00014202340690786492
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999977400296862,
+            "sentence": "The study will therefore make no claim of improved learning from this design [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 2.2599703137710017e-06,
+              "ai": 0.9998411497133662,
+              "paraphrased": 0.00015659031631996367
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999995777835703,
+            "sentence": "It also does not assign course grades [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 4.222164296975808e-06,
+              "ai": 0.9998373422959581,
+              "paraphrased": 0.00015843553974491866
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9999980055670773,
+            "sentence": "Its intended outcome is a more precise understanding of when feedback identifies a reasoning gap and when it merely produces plausible instructional language.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 1.994432922746804e-06,
+              "ai": 0.9998491673865627,
+              "paraphrased": 0.00014883818051455872
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 1,
+          "mixed": 0
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 1,
+            "mixed": 0,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "5.0b",
+        "version": "2026-11-04-base",
+        "language": "en",
+        "result_message": "Our detector is highly confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Feedback that Identifies a Reasoning Gap\n\n## Abstract\n\nFeedback can sound encouraging while failing to identify the reasoning that a student needs to revisit. We propose to compare assistant feedback with a rubric-only condition for short statistics explanations. The assistant may identify a gap but will not provide a complete replacement answer [S1]. The study will examine feedback accuracy and usefulness rather than infer learning from a single encounter.\n\n## Introduction\n\nClear prose and correct statistical reasoning are different properties. A fluent explanation may still confuse association with causation [S1]. The proposed feedback task therefore requires more than a style improvement. It asks whether the response directs attention to a specific gap while leaving the student responsible for revising the explanation.\n\n## Related Work\n\nThe task brief limits the assistant to feedback and excludes both complete replacement answers and course grading [S1]. The evaluation brief specifies a rubric-only comparison and a causal-reasoning hard case [S2]. These boundaries will guide the evaluation. A polished answer written for the student will not count as successful feedback merely because it resolves the original error.\n\n## Methodology\n\nThe planned sample contains 40 anonymized responses to the same question [S2]. Each response will receive assistant feedback and the relevant rubric. Reviewers will check whether the feedback identifies a real gap, refers to the response accurately and avoids supplying a finished answer. The original student text will remain unchanged in the evaluation record.\n\n## Planned Evaluation\n\nWe will assess the accuracy and usefulness of the feedback separately. The prespecified hard case confuses association with causation [S2]. Reviewers will also examine responses that are already correct, since unnecessary criticism can be harmful even when it sounds detailed. The study will record unsupported corrections and missed errors rather than report only examples of helpful feedback.\n\n## Limitations and Conclusion\n\nA single review cannot show whether a student later learns the underlying concept. The study will therefore make no claim of improved learning from this design [S2]. It also does not assign course grades [S1]. Its intended outcome is a more precise understanding of when feedback identifies a reasoning gap and when it merely produces plausible instructional language.",
+        "document_id": null
+      }
+    ]
+  }
+}

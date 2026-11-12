@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The proposed recycling study separates recovered mass from material purity. A larger recovered mass can contain more contaminants and does not necessarily imply better recovery quality. The material stream contains aluminium and plastic. No claim about lifecycle emissions follows from mass measurements alone.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "The team will compare manual sorting with optical sorting over 20 batches. Both methods will process equal input mass from each batch. Recovery is defined relative to target material in the input; purity is defined relative to recovered output mass. The measures must remain separate.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

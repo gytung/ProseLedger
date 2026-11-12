@@ -1,0 +1,26 @@
+{
+  "caseId": "C06",
+  "challenge": "benign",
+  "expectedPass": true,
+  "actualPass": true,
+  "correct": true,
+  "findings": [],
+  "before": "The raw readings will remain available for inspection.",
+  "after": "The raw readings will remain available to inspect.",
+  "referenceReason": "Meaning-preserving paraphrase; numerical wording may change form without changing value.",
+  "originalSHA256": "3f8d97b40fc49843b836109f5ecd6457308c916addb5ac64c467a8b2670fcb80",
+  "candidateSHA256": "c877867700009123ec09314110ad256380580437c58e0b165a4b9345a63b497f",
+  "sourceScope": "same pre-existing fixed mutation challenge; semantic audit extension frozen after deterministic guard outcomes",
+  "status": "completed",
+  "audit": {
+    "contentPreserved": true,
+    "issues": [],
+    "readability": "similar",
+    "reason": "All substantive claims, method steps, evaluation measures, limitations, source attributions, qualifications and planned-work status are preserved. The only change, from “available for inspection” to “available to inspect” in Methodology, is an equivalent paraphrase with negligible effect on readability."
+  },
+  "semanticPass": true,
+  "combinedPass": true,
+  "semanticCorrect": true,
+  "combinedCorrect": true,
+  "issueQuotes": []
+}

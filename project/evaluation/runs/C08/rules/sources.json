@@ -1,0 +1,14 @@
+[
+  {
+    "id": "S1",
+    "title": "Controlled source packet: domain and evidence brief",
+    "excerpt": "The forecasting study predicts next-day electricity demand for one campus building. Weather observations recorded after the forecast deadline are unavailable inputs. Occupancy is represented by a published timetable rather than personal tracking. The study does not estimate household electricity use.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  },
+  {
+    "id": "S2",
+    "title": "Controlled source packet: experimental design brief",
+    "excerpt": "The evaluation will cover 42 consecutive days. A seasonal baseline and a learned forecaster will use the same information cutoff. The final 14 days will be held out from fitting. Forecast errors will be reported for all days, including unusually hot days.",
+    "content_kind": "author_constructed_evaluation_fixture"
+  }
+]

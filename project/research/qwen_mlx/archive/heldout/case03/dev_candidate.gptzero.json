@@ -1,0 +1,1096 @@
+{
+  "label": "heldout_case03_new",
+  "textSHA256": "2b3d7ebf0bf880000e00e0994513d7b877d0a5bb63a33a36b54ca7595ca68318",
+  "characters": 4936,
+  "requestVersion": "provider-default-returned-version-recorded",
+  "elapsedSeconds": 0.96,
+  "raw": {
+    "version": "2026-10-07-base",
+    "neatVersion": "4.1o",
+    "documents": [
+      {
+        "paragraphs": [
+          {
+            "start_sentence_index": 0,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 1,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 2,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 7,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 8,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 11,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 15,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 16,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.5710657228372709
+          },
+          {
+            "start_sentence_index": 20,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.013701276613118245
+          },
+          {
+            "start_sentence_index": 24,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 25,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 28,
+            "num_sentences": 3,
+            "completely_generated_prob": 0.850090677245877
+          },
+          {
+            "start_sentence_index": 31,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          },
+          {
+            "start_sentence_index": 35,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 36,
+            "num_sentences": 2,
+            "completely_generated_prob": 0.8254776901813464
+          },
+          {
+            "start_sentence_index": 38,
+            "num_sentences": 5,
+            "completely_generated_prob": 0.8871651474786718
+          },
+          {
+            "start_sentence_index": 43,
+            "num_sentences": 1,
+            "completely_generated_prob": 0
+          },
+          {
+            "start_sentence_index": 44,
+            "num_sentences": 4,
+            "completely_generated_prob": 0.8708627247549962
+          }
+        ],
+        "completely_generated_prob": 0.634231937627079,
+        "average_generated_prob": 1,
+        "predicted_class": "ai",
+        "confidence_score": 0.634231937627079,
+        "confidence_category": "medium",
+        "overall_burstiness": 0,
+        "writing_stats": {},
+        "excluded_spans": [
+          {
+            "start": 0,
+            "end": 58,
+            "text": "# Preserving Citation Support During Cross-Section Editing",
+            "reason": "header"
+          },
+          {
+            "start": 60,
+            "end": 71,
+            "text": "## Abstract",
+            "reason": "header"
+          },
+          {
+            "start": 708,
+            "end": 723,
+            "text": "## Introduction",
+            "reason": "header"
+          },
+          {
+            "start": 1542,
+            "end": 1557,
+            "text": "## Related Work",
+            "reason": "header"
+          },
+          {
+            "start": 2537,
+            "end": 2551,
+            "text": "## Methodology",
+            "reason": "header"
+          },
+          {
+            "start": 3569,
+            "end": 3590,
+            "text": "## Planned Evaluation",
+            "reason": "header"
+          },
+          {
+            "start": 4494,
+            "end": 4523,
+            "text": "## Limitations and Conclusion",
+            "reason": "header"
+          }
+        ],
+        "confidence_thresholds_raw": {
+          "identity": {
+            "ai": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "human": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            },
+            "mixed": {
+              "reject": 0.33,
+              "low": 0.6,
+              "medium": 0.8
+            }
+          }
+        },
+        "sentences": [
+          {
+            "generated_prob": 0,
+            "sentence": "# Preserving Citation Support During Cross-Section Editing",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Abstract",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9988146571067898,
+            "sentence": "Academic revision frequently relocates, merges, or rewrites claims across sections.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0011853428932101662,
+              "ai": 0.8864454558927799,
+              "paraphrased": 0.11236920121400998
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9992581378377596,
+            "sentence": "While a citation may persist through these changes, it may no longer support the revised statement.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0007418621622403506,
+              "ai": 0.9111335205960189,
+              "paraphrased": 0.08812461724174073
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9986193691810178,
+            "sentence": "This project proposes a claim–evidence ledger to track relationships between manuscript claims and their supporting source passages throughout editing.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0013806308189822378,
+              "ai": 0.8814117632574018,
+              "paraphrased": 0.11720760592361598
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.999322358235571,
+            "sentence": "The core research question is whether such tracking can preserve citation support while facilitating useful restructuring.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0006776417644289655,
+              "ai": 0.8637247582575203,
+              "paraphrased": 0.13559759997805074
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9982607494035423,
+            "sentence": "The planned experiments will compare ledger-assisted editing to ordinary revision and explicit citation-preservation prompts, evaluating both attribution and writing quality.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0017392505964576612,
+              "ai": 0.8430684099628044,
+              "paraphrased": 0.1551923394407379
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Introduction",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9834628031889885,
+            "sentence": "Cross-section editing alters more than just sentence location.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.016537196811011456,
+              "ai": 0.8117292462905552,
+              "paraphrased": 0.17173355689843328
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9983672521307116,
+            "sentence": "Moving a qualified observation from a discussion into an introduction can broaden its apparent scope; merging sentences may link a single citation to multiple distinct claims.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0016327478692883485,
+              "ai": 0.864152096645014,
+              "paraphrased": 0.13421515548569768
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9976331786015615,
+            "sentence": "These examples highlight the distinction between retaining citation markers and ensuring that the cited evidence still supports the claims.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.002366821398438452,
+              "ai": 0.8592665023553414,
+              "paraphrased": 0.1383666762462201
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9989688387764855,
+            "sentence": "The proposed system views each citation as a relationship needing reassessment when its associated claim changes.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0010311612235144902,
+              "ai": 0.873818761857022,
+              "paraphrased": 0.12515007691946348
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9983649330985016,
+            "sentence": "Its aim is to help authors retain evidence-supported content and identify revisions that require verification.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0016350669014983778,
+              "ai": 0.8306034643438368,
+              "paraphrased": 0.1677614687546648
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9993592524193489,
+            "sentence": "The hypothesis is that explicit tracking can mitigate unsupported attribution while still supporting legitimate paraphrasing and reorganization.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0006407475806511619,
+              "ai": 0.8744807533984741,
+              "paraphrased": 0.12487849902087476
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9981409777806189,
+            "sentence": "Whether this balance is achievable remains an empirical question.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.001859022219381088,
+              "ai": 0.8448772573037076,
+              "paraphrased": 0.15326372047691134
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Related Work",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.8582118770746606,
+            "sentence": "Gao and colleagues introduce ALCE, evaluating generated answers based on fluency, correctness, and citation quality [S1].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.1417881229253393,
+              "ai": 0.6946757332283894,
+              "paraphrased": 0.16353614384627127
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9407425970113868,
+            "sentence": "Their work suggests evaluating support independently of readability.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.059257402988613206,
+              "ai": 0.7662136069475438,
+              "paraphrased": 0.174528990063843
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.7579364031553268,
+            "sentence": "Slobodkin and colleagues select source segments before sentence planning and generation, resulting in more concise attributions and reduced human verification time in their tasks [S2].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.24206359684467316,
+              "ai": 0.6081393957138062,
+              "paraphrased": 0.1497970074415207
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.8084161565334809,
+            "sentence": "This proposal adapts the concept of explicit evidence selection for use in cross-section editing, rather than initial generation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.19158384346651913,
+              "ai": 0.6882586530466277,
+              "paraphrased": 0.12015750348685311
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.7269407788436173,
+            "sentence": "TETRA offers professionally edited academic texts with a focus on document-level coherence and consistency [S3].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.2730592211563827,
+              "ai": 0.6089966342523443,
+              "paraphrased": 0.11794414459127295
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.6802518987636872,
+            "sentence": "Jourdan and colleagues highlight the complementary strengths of task-specific metrics and LLM judges, noting the challenges in judging correctness [S4].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.3197481012363128,
+              "ai": 0.5677903252259617,
+              "paraphrased": 0.1124615735377254
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.7271389487174623,
+            "sentence": "RefChecker represents claims as triplets checked against references [S5].",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.2728610512825377,
+              "ai": 0.5975860090142783,
+              "paraphrased": 0.12955293970318407
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9365840027971863,
+            "sentence": "These supplied excerpts inform our design but do not establish performance on citation preservation during cross-section editing.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0634159972028136,
+              "ai": 0.7763465104724951,
+              "paraphrased": 0.1602374923246912
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Methodology",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9951161682965202,
+            "sentence": "The system will first create a ledger connecting manuscript claims, citation identifiers, and supporting source passages.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0048838317034799105,
+              "ai": 0.8540524832903257,
+              "paraphrased": 0.14106368500619446
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9889184868252963,
+            "sentence": "Each entry will include relevant qualifications, such as population, conditions, and uncertainty.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.011081513174703822,
+              "ai": 0.972517064829562,
+              "paraphrased": 0.016401421995734192
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9516023441910395,
+            "sentence": "Authors will be able to correct the initial mapping before any revisions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.04839765580896056,
+              "ai": 0.9223835330846379,
+              "paraphrased": 0.029218811106401517
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9962577498953585,
+            "sentence": "After an edit, an alignment component will identify retained, relocated, split, merged, or newly introduced claims.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0037422501046414243,
+              "ai": 0.979527044813998,
+              "paraphrased": 0.016730705081360587
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9941756843435261,
+            "sentence": "It will use both semantic correspondence and edit history when available.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0058243156564739135,
+              "ai": 0.9661988332539208,
+              "paraphrased": 0.027976851089605306
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9900181083762474,
+            "sentence": "Candidate evidence links will follow aligned claims and will be reassessed against the revised wording and context.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.00998189162375253,
+              "ai": 0.9649358859068398,
+              "paraphrased": 0.025082222469407663
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9933497720291327,
+            "sentence": "For each relationship, the system will categorize it as supported, contradicted, or unresolved.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0066502279708672545,
+              "ai": 0.9707311783826823,
+              "paraphrased": 0.0226185936464504
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9907158271123107,
+            "sentence": "Unresolved cases will include insufficient evidence or ambiguous alignment.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.00928417288768942,
+              "ai": 0.9638052322432848,
+              "paraphrased": 0.02691059486902575
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9980755766326073,
+            "sentence": "A proposed repair may restore qualifications, narrow claims, or flag passages for author review.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0019244233673927028,
+              "ai": 0.9756871363598285,
+              "paraphrased": 0.022388440272778736
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9976997104355002,
+            "sentence": "The system will not assume that a nearby citation supports every clause or that deleting a difficult claim constitutes successful preservation.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.002300289564499807,
+              "ai": 0.9706411804644557,
+              "paraphrased": 0.027058529971044482
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Planned Evaluation",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9915140727139733,
+            "sentence": "An evaluation set will pair academic passages with their cited evidence and instructions to relocate arguments, consolidate repeated claims, or rewrite material across sections.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.008485927286026661,
+              "ai": 0.9506626173419068,
+              "paraphrased": 0.0408514553720665
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9890577623648938,
+            "sentence": "Human annotators will assess initial support and the revised claim–evidence relationships.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.010942237635106107,
+              "ai": 0.9380489745036527,
+              "paraphrased": 0.051008787861241196
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9969433689822353,
+            "sentence": "Comparisons will include ordinary editing, explicit citation-preservation prompting, and ledger-assisted editing under matched model and evidence conditions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0030566310177647187,
+              "ai": 0.9584910923351219,
+              "paraphrased": 0.03845227664711345
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9771837245447126,
+            "sentence": "Assessments will cover unsupported attribution, retained supported claims, citation completeness, adherence to instructions, and coherence.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.02281627545528732,
+              "ai": 0.9320952597155805,
+              "paraphrased": 0.04508846482913215
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9799741616097185,
+            "sentence": "Blinded reviewers will inspect source passages, while automated checks will supplement their judgments.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.02002583839028148,
+              "ai": 0.9407079920996874,
+              "paraphrased": 0.03926616951003115
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9819074310362339,
+            "sentence": "Ablations will remove persistent claim identities or post-edit support checking.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.018092568963766098,
+              "ai": 0.9379940032958984,
+              "paraphrased": 0.043913427740335464
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9961948157289913,
+            "sentence": "Analysis will examine whether apparent preservation gains result from avoiding requested edits, deleting content, or producing less readable prose.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.0038051842710088326,
+              "ai": 0.9662994150685272,
+              "paraphrased": 0.029895400660463988
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0,
+            "sentence": "## Limitations and Conclusion",
+            "perplexity": 0,
+            "should_mask": true,
+            "masking_reason": "header",
+            "class_probabilities": {
+              "human": 1,
+              "ai": 0,
+              "paraphrased": 0
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": false,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9958452081838108,
+            "sentence": "Claim alignment may fail if revisions substantially reorganize arguments.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.004154791816189253,
+              "ai": 0.964421026798552,
+              "paraphrased": 0.03142418138525878
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9164709867843944,
+            "sentence": "Source passages might lack context necessary for judging support, and automated checkers could misinterpret qualifications.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.08352901321560562,
+              "ai": 0.8672107152823226,
+              "paraphrased": 0.04926027150207178
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9836836484780102,
+            "sentence": "Thus, human review will remain essential for unresolved cases.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.016316351521989795,
+              "ai": 0.9446000423789049,
+              "paraphrased": 0.039083606099105245
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          },
+          {
+            "generated_prob": 0.9361411058850174,
+            "sentence": "The intended contribution is an editing method and evaluation protocol to test citation preservation as continued evidential support across revisions.",
+            "perplexity": 0,
+            "should_mask": false,
+            "masking_reason": null,
+            "class_probabilities": {
+              "human": 0.06385889411498255,
+              "ai": 0.900029744951809,
+              "paraphrased": 0.03611136093320843
+            },
+            "interpretability_value": null,
+            "interpretability_normalized_value": null,
+            "interpretability_designation": null,
+            "interpretability_alpha": null,
+            "highlight_sentence_for_ai": true,
+            "special_highlight_type": null
+          }
+        ],
+        "class_probabilities": {
+          "human": 0,
+          "ai": 0.634231937627079,
+          "mixed": 0.36576806237292103
+        },
+        "confidence_scores_raw": {
+          "identity": {
+            "ai": 0.634231937627079,
+            "mixed": 0.36576806237292103,
+            "human": 0
+          }
+        },
+        "subclass": {
+          "ai": {
+            "predicted_class": "pure_ai",
+            "result_message": "",
+            "confidence_score": 1,
+            "confidence_category": "high",
+            "class_probabilities": {
+              "pure_ai": 1,
+              "ai_paraphrased": 0
+            },
+            "confidence_scores_raw": {
+              "identity": {
+                "pure_ai": 1,
+                "ai_paraphrased": 0
+              }
+            },
+            "confidence_thresholds_raw": {
+              "identity": {
+                "ai_paraphrased": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                },
+                "pure_ai": {
+                  "reject": 0.33,
+                  "low": 0.6,
+                  "medium": 0.8
+                }
+              }
+            }
+          }
+        },
+        "pageNumber": 0,
+        "neatVersion": "4.1o",
+        "version": "2026-10-07-base",
+        "language": "en",
+        "result_message": "Our detector is moderately confident that the text is written by AI.",
+        "result_sub_message": null,
+        "document_classification": "AI_ONLY",
+        "inputText": "# Preserving Citation Support During Cross-Section Editing\n\n## Abstract\n\nAcademic revision frequently relocates, merges, or rewrites claims across sections. While a citation may persist through these changes, it may no longer support the revised statement. This project proposes a claim–evidence ledger to track relationships between manuscript claims and their supporting source passages throughout editing. The core research question is whether such tracking can preserve citation support while facilitating useful restructuring. The planned experiments will compare ledger-assisted editing to ordinary revision and explicit citation-preservation prompts, evaluating both attribution and writing quality.\n\n## Introduction\n\nCross-section editing alters more than just sentence location. Moving a qualified observation from a discussion into an introduction can broaden its apparent scope; merging sentences may link a single citation to multiple distinct claims. These examples highlight the distinction between retaining citation markers and ensuring that the cited evidence still supports the claims.\n\nThe proposed system views each citation as a relationship needing reassessment when its associated claim changes. Its aim is to help authors retain evidence-supported content and identify revisions that require verification. The hypothesis is that explicit tracking can mitigate unsupported attribution while still supporting legitimate paraphrasing and reorganization. Whether this balance is achievable remains an empirical question.\n\n## Related Work\n\nGao and colleagues introduce ALCE, evaluating generated answers based on fluency, correctness, and citation quality [S1]. Their work suggests evaluating support independently of readability. Slobodkin and colleagues select source segments before sentence planning and generation, resulting in more concise attributions and reduced human verification time in their tasks [S2]. This proposal adapts the concept of explicit evidence selection for use in cross-section editing, rather than initial generation.\n\nTETRA offers professionally edited academic texts with a focus on document-level coherence and consistency [S3]. Jourdan and colleagues highlight the complementary strengths of task-specific metrics and LLM judges, noting the challenges in judging correctness [S4]. RefChecker represents claims as triplets checked against references [S5]. These supplied excerpts inform our design but do not establish performance on citation preservation during cross-section editing.\n\n## Methodology\n\nThe system will first create a ledger connecting manuscript claims, citation identifiers, and supporting source passages. Each entry will include relevant qualifications, such as population, conditions, and uncertainty. Authors will be able to correct the initial mapping before any revisions.\n\nAfter an edit, an alignment component will identify retained, relocated, split, merged, or newly introduced claims. It will use both semantic correspondence and edit history when available. Candidate evidence links will follow aligned claims and will be reassessed against the revised wording and context.\n\nFor each relationship, the system will categorize it as supported, contradicted, or unresolved. Unresolved cases will include insufficient evidence or ambiguous alignment. A proposed repair may restore qualifications, narrow claims, or flag passages for author review. The system will not assume that a nearby citation supports every clause or that deleting a difficult claim constitutes successful preservation.\n\n## Planned Evaluation\n\nAn evaluation set will pair academic passages with their cited evidence and instructions to relocate arguments, consolidate repeated claims, or rewrite material across sections. Human annotators will assess initial support and the revised claim–evidence relationships.\n\nComparisons will include ordinary editing, explicit citation-preservation prompting, and ledger-assisted editing under matched model and evidence conditions. Assessments will cover unsupported attribution, retained supported claims, citation completeness, adherence to instructions, and coherence. Blinded reviewers will inspect source passages, while automated checks will supplement their judgments. Ablations will remove persistent claim identities or post-edit support checking. Analysis will examine whether apparent preservation gains result from avoiding requested edits, deleting content, or producing less readable prose.\n\n## Limitations and Conclusion\n\nClaim alignment may fail if revisions substantially reorganize arguments. Source passages might lack context necessary for judging support, and automated checkers could misinterpret qualifications. Thus, human review will remain essential for unresolved cases. The intended contribution is an editing method and evaluation protocol to test citation preservation as continued evidential support across revisions.",
+        "document_id": null
+      }
+    ]
+  }
+}
