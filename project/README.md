@@ -110,7 +110,7 @@ cd evaluation
 python reproduce.py --out ../fresh-evaluation --execute
 ```
 
-First start the pinned model and configure the review connection as described in `evaluation/README.md`. The destination must not exist. GPTZero scans are a separate command requiring your detector key. Recorded probabilities describe classifier responses; they are not measures of human authorship or proof of writing quality. The study compares editing instructions under controlled inputs, not historical memory retrieval.
+Use the recorded macOS environment for the frozen controlled-study runner. Windows support applies to the current desktop application; it does not establish Windows reproduction of the archived research engine. First start the pinned model and configure the review connection as described in `evaluation/README.md`. The destination must not exist. GPTZero scans are a separate command requiring your detector key. Recorded probabilities describe classifier responses; they are not measures of human authorship or proof of writing quality. The study compares editing instructions under controlled inputs, not historical memory retrieval.
 
 ## Team
 

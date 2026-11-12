@@ -45,7 +45,7 @@ Open `http://127.0.0.1:8080/create.html` or `http://127.0.0.1:8080/revise.html`.
 
 [`project/evaluation/`](project/evaluation/README.md) contains the twelve-case paired study: frozen inputs and code, Generic and Rules outputs, contextual reviews, bounded repairs, decision ledgers, blinded automated comparisons, known-answer challenges and post-retention detector observations. Public human-evaluation records remain separately identified. The study compares editorial instructions with the same local writer and verification procedure; it does not evaluate historical memory retrieval.
 
-For fresh inference, start the pinned local model and configure the recorded reviewer as described in the [evaluation guide](project/evaluation/README.md). Use a new output directory:
+The frozen controlled study was executed on macOS. Use that recorded configuration for research reproduction; cross-platform software checks cover the current application rather than a Windows research run. For fresh inference, start the pinned local model and configure the recorded reviewer as described in the [evaluation guide](project/evaluation/README.md). Use a new output directory:
 
 ```sh
 python project/evaluation/reproduce.py --out runs/controlled-rerun --execute
