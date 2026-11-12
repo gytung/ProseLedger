@@ -16,9 +16,9 @@ def build():
     stream = io.BytesIO()
     with zipfile.ZipFile(stream, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for name in FILES:
-            content = (ROOT / 'local_connector' / name).read_bytes()
+            content = (ROOT / 'local_connector' / name).read_bytes().replace(b'\r\n', b'\n')
             if name.endswith(('.bat', '.ps1')):
-                content = content.replace(b'\r\n', b'\n').replace(b'\n', b'\r\n')
+                content = content.replace(b'\n', b'\r\n')
             info = zipfile.ZipInfo('ProseLedger_Local_Connector/' + name, (2026, 11, 13, 0, 0, 0))
             info.create_system = 3
             info.compress_type = zipfile.ZIP_DEFLATED
@@ -33,8 +33,18 @@ def main():
     args = parser.parse_args()
     data = build()
     if args.check:
-        if not TARGET.is_file() or TARGET.read_bytes() != data:
+        if not TARGET.is_file():
             raise SystemExit('Connector ZIP differs from its source files. Run scripts/package_connector.py.')
+        # Git checkout line endings and zlib versions differ across platforms.
+        # Compare extracted bytes and entry metadata, not deflate implementation details.
+        with zipfile.ZipFile(io.BytesIO(data)) as expected, zipfile.ZipFile(TARGET) as actual:
+            if actual.testzip() is not None or actual.namelist() != expected.namelist() or any(
+                actual.read(name) != expected.read(name)
+                or actual.getinfo(name).external_attr != expected.getinfo(name).external_attr
+                for name in expected.namelist()
+            ):
+                raise SystemExit('Connector ZIP differs from its source files. Run scripts/package_connector.py.')
+        data = TARGET.read_bytes()
     else:
         TARGET.parent.mkdir(parents=True, exist_ok=True)
         TARGET.write_bytes(data)
