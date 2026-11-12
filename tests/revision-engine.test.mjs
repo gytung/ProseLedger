@@ -156,3 +156,27 @@ test('a malformed repair cannot change the manuscript outside a valid anchor',as
   assert.equal(run.sections[0].retained,run.sections[0].original);
   assert.doesNotMatch(run.retained,/invented fact/);
 });
+
+test('proposal-only generation stops before all rewriting and review calls', async()=>{
+  const client=fakeClient();
+  const native={endpoint:'http://127.0.0.1:11437',primaryBackend:'codex',model:'account-default',writerBackend:'none'};
+  const run=await runRevision({...input,draft:'',operation:'draft'},{callModel:client,model:native});
+  assert.deepEqual(client.stages,['generate_initial_proposal']);
+  assert.equal(run.status,'completed');
+  assert.equal(run.retained,run.initial);
+  assert.equal(run.input.operation,'draft');
+  assert.equal(run.changedSections,0);
+  assert.equal(validateCheckpoint(run).input.operation,'draft');
+  await assert.rejects(runRevision(input,{callModel:client,model:native}),/Connect a section writer/);
+});
+
+test('local rewrite identity binds the exact endpoint, tag and digest',async()=>{
+  const identity={endpoint:'http://127.0.0.1:11437',primaryBackend:'codex',model:'account-default',writerBackend:'ollama',writerBase:'http://127.0.0.1:11436',writerModel:'qwen2.5:7b-instruct-q4_K_M',writerDigest:'845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e'};
+  const run=await runRevision(input,{callModel:fakeClient(),model:identity});
+  assert.equal(run.model.primaryBackend,'codex');
+  assert.equal(run.model.writerBackend,'ollama');
+  assert.equal(run.model.writerDigest,identity.writerDigest);
+  await assert.rejects(runRevision(input,{callModel:fakeClient(),model:{...identity,writerBase:'http://127.0.0.1:11434'},resume:run}),/Resume requires/);
+  await assert.rejects(runRevision(input,{callModel:fakeClient(),model:{...identity,writerDigest:'other'}}),/digest/);
+  await assert.rejects(runRevision(input,{callModel:fakeClient(),model:{...identity,endpoint:'http://192.168.1.1:11437'}}),/on this computer/);
+});

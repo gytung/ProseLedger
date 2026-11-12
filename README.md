@@ -4,29 +4,36 @@
 
 **DSS5105 Capstone · Group 18 · National University of Singapore**
 
-[Open the writing workspace](https://gytung.github.io/ProseLedger/create.html) · [Usage and limits](docs/REVISION_WORKSPACE.md) · [Archived evaluation](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md)
+[Generate a proposal](https://gytung.github.io/ProseLedger/create.html) · [Revise a proposal](https://gytung.github.io/ProseLedger/revise.html) · [Usage and limits](docs/REVISION_WORKSPACE.md) · [Archived evaluation](https://gytung.github.io/ProseLedger/#rounds) · [Architecture](docs/ARCHITECTURE.md)
 
 ProseLedger generates a research proposal from supplied source notes, edits its language section by section, checks the changes against the original and evidence, and retains a revision only when its checks pass. The final manuscript, rejected candidates, repair decisions and exact-text fingerprints remain inspectable.
 
 ## Current browser workflow
 
-Open **[create.html](https://gytung.github.io/ProseLedger/create.html)** and enter your own model-provider API key. Supply a topic and two to ten source notes, or bring an existing six-section proposal. Choose **Generate and revise** to run the complete workflow:
+The public website has two separate workspaces:
 
-**Initial proposal → six section revisions → section review → bounded repairs → whole-document audit → retained manuscript and revision ledger.**
+- **[Generate proposal](https://gytung.github.io/ProseLedger/create.html)** takes a topic and two to ten source excerpts and produces one six-section proposal. It does not run Qwen or revise the text. Download the proposal, or select **Continue to revision** to carry that exact text and its sources to the next page.
+- **[Revise proposal](https://gytung.github.io/ProseLedger/revise.html)** starts from an existing proposal. Local **Ollama Qwen2.5 7B** rewrites six sections; the visitor's **Codex account** reviews and repairs the changes. The page retains the checked revision or restores the original.
 
-Six editorial rules guide the writer: actor and action, concrete wording, redundancy, information flow, sentence focus, and calibrated claims. The writer must preserve scientific content, source attribution, uncertainty, and planned-work status. The application checks citation identifiers and numbers in addition to the model review. These checks are fallible and do not establish scientific truth.
+The default connection uses a [local connector](https://gytung.github.io/ProseLedger/local/ProseLedger_Local_Connector.zip). Extract it, open **Start_Windows.bat** or **Start_Mac.command**, and choose the full setup (or proposal-only setup if you do not need revision). Complete Codex sign-in locally, then paste its **pairing code** into the website. The pairing code is not an API key. Generation needs only the Codex connector; revision also needs Ollama with **`qwen2.5:7b-instruct-q4_K_M`**. The first full setup downloads the runtime and approximately 4.7 GB of model weights; existing project model files can be reused. Use the address printed by your launcher (normally Ollama port `11436`) and click the connection tests. The website cannot install or start local programs for you.
 
-Repairs use exact, unique text anchors. At most three non-overlapping patches may cover no more than 35% of a section. The extended policy permits at most two additional whole-document repair cycles. The final candidate must pass the checks, have no unresolved model findings, receive a readability judgment of better or similar, and remain within 85–115% of the initial word count. Otherwise the original is retained.
+No Qwen cloud credit is needed when using local Ollama. Codex account access and usage limits still apply. Cloud API mode remains optional: it requires the selected provider's own API key and API credit. This API billing is separate from a ChatGPT subscription. Hosted section writing is available in API mode; it is a different execution configuration from the local Qwen route.
 
-The page shows **Original, Candidate and Retained** separately. A returned original is not presented as an improved rewrite. Download the manuscript, ledger and complete run record. Save a checkpoint before closing the tab; unchanged input, policy and model settings are required to resume validated stages.
+**Proposal → six local section revisions → Codex section review → bounded repairs → whole-document audit → retained manuscript and revision ledger.**
 
-The browser runs the workflow; the selected provider runs the model. **No local model, GPU, Python installation or project server is needed.** API billing is separate from a ChatGPT subscription. Credentials stay in tab memory, are sent only to the chosen provider, and are excluded from application exports. A custom provider must permit browser requests. An optional section-writer Model ID can route the six rewriting calls to another model offered by the same provider; generation, review and repair use the main model.
+Six editorial rules guide the writer: actor and action, concrete wording, redundancy, information flow, sentence focus and calibrated claims. Scientific content, attribution, uncertainty and planned-work status must be preserved. Citation and number checks supplement the model review. These checks are fallible; they do not establish scientific truth.
 
-The current revision ledger records **this run's edits and checks**. It does not retrieve historical experience cards or train a model. The older three-route memory experiments remain archived below. The public browser adaptation is also separate from the desktop local-Qwen execution profile; its outputs and latency are not reproductions of the Mac experiments.
+Repairs use exact, unique text anchors. At most three non-overlapping patches may cover no more than 35% of a section. The Extended policy permits at most two extra whole-document repair cycles. Retention requires passing checks, no unresolved model findings, a readability judgment of better or similar, and 85–115% of the original word count. Otherwise the original is retained.
 
-**GPTZero is optional and separate.** After the manuscript is retained, a visitor may provide their own GPTZero key to scan the exact original or retained text. Detector observations include text hashes and timestamps. They do not select edits or alter the manuscript. Class probabilities are not the proportion of words written by AI, a naturalness score, or a guarantee of factual accuracy. No fixed score decrease is promised.
+The revision page separates **Original, Candidate and Retained**, and provides the manuscript, ledger and full run for download. Save a checkpoint before closing the tab; resume requires unchanged input, policy and model settings. The current ledger records **this run's edits and checks**; it does not retrieve historical cards or train a model. Archived three-route memory experiments remain below.
 
-See [the current workspace guide](docs/REVISION_WORKSPACE.md) for installation-free use, checkpoint recovery and recording guidance. Earlier [language-edit recordings](https://gytung.github.io/ProseLedger/writing-demo.html) belong to the archived comparison editor and do not describe new runs from this workspace.
+Connection secrets stay in tab memory and are excluded from exports. The Codex pairing code is sent only to the local connector; no cloud credentials are sent to Ollama. **Continue to revision** temporarily transfers only the topic, source excerpts and proposal through this tab's session storage, then removes that transfer record on arrival.
+
+**GPTZero is optional and separate.** After revision, any teammate can manually enter their own or the team-shared GPTZero API key to scan the exact original and retained text. Observations include text hashes and timestamps. They do not select edits or alter the manuscript. Class probabilities are not the proportion of AI-written words, a naturalness score or a guarantee of factual accuracy.
+
+The pinned Ollama writer does not make a visitor's run a reproduction of an archived Mac result. Draft, runtime, review model, sampling and detector version can differ. A new result must be reported with its own run record and exact-text validation; no fixed score decrease is promised.
+
+See [the workspace guide](docs/REVISION_WORKSPACE.md) for setup, recovery and recording. Earlier [language-edit recordings](https://gytung.github.io/ProseLedger/writing-demo.html) belong to the archived comparison editor.
 
 ## Archived Python evaluation
 
@@ -101,27 +108,19 @@ The CLI exports the initial proposal, all three retained proposals, checks, scor
 ## Design
 
 ```text
-Topic + source notes → generate a proposal ─┐
-Supplied six-section proposal ───────────────┴→ one initial draft (D0)
-                                                |
-                                    diagnose anchored expression issues
-                                                |
-                         shared conditional editing rules
-                           /                    |                   \
-                      Targeted             Planner-only         Memory + cards
-                           \                    |                   /
-                            bounded edits with exact rule evidence
-                                                |
-                                 content checks + blind paired review
-                                                |
-                                     retain / reject / stop
-                                                |
-                                  branch-local decision records
+Generate proposal page
+  topic + sources → Codex (or chosen API) → one proposal → download / transfer
+
+Revise proposal page
+  existing proposal + sources → six rule-guided local Qwen rewrites
+    → Codex section review → bounded repair → whole-document audit
+    → retain candidate or original → manuscript + per-run revision ledger
+    → optional, separate GPTZero observations
 ```
 
-This diagram describes the current browser implementation. A card application must bind to a real changed paragraph and quote evidence that its conditions hold. Cross-document cards remain frozen. Branch history informs later decisions but does not automatically become a new card. The public browser demo has no training or cross-visitor learning.
+Generation and revision are explicit operations. The handoff reuses the generated draft without regenerating it. Draft generation alone does not imply that a proposal has passed the revision checks.
 
-The original Python drafting graph, fallback routes, and archived score are documented separately in [architecture](docs/ARCHITECTURE.md). The memory mechanism is a writing-specific adaptation of verifier-aware memory governance, not a reproduction of every MemGuard component or benchmark.
+The original Python drafting graph, three-route memory comparison and frozen scores are documented separately in [architecture](docs/ARCHITECTURE.md). The archived memory mechanism is a writing-specific adaptation of verifier-aware memory governance, not a reproduction of every MemGuard component or benchmark.
 
 ## Repository map
 
@@ -130,7 +129,8 @@ app.py                 Local application entry point
 proseledger/           Drafting, revision, checking and model transport
 ui/                    Background job support
 data/                  Frozen catalogue and attributed example source notes
-docs/assets/           Current browser editor, rule specifications and transport
+docs/assets/           Browser generation/revision engine, rules and model transports
+docs/local/            Local Codex connector and Ollama launchers
 docs/                  Live UI, saved walkthroughs, archived evidence and documentation
 tests/                 Offline checks; no paid model calls
 scripts/               Publication and resource checks

@@ -1,0 +1,78 @@
+{
+  "checkedDate": "2026-11-08",
+  "ollamaVersion": "0.40.15",
+  "model": "qwen2.5:7b-instruct-q4_K_M",
+  "modelDigest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "modelBytes": 4683086845,
+  "endpoint": "http://127.0.0.1:11436",
+  "runtimes": {
+    "Darwin": {
+      "url": "https://github.com/ollama/ollama/releases/download/v0.40.15/ollama-darwin.tgz",
+      "sha256": "607c79d5d6315ef9d896db83adde736a4c0057196329843544e79b95afb260a8",
+      "bytes": 185971671
+    },
+    "Windows": {
+      "url": "https://github.com/ollama/ollama/releases/download/v0.40.15/ollama-windows-amd64.zip",
+      "sha256": "9ca74a7ab66ec86870b1eecac7df160df08dc4e3a291ab5d2d59bcf9310221c6",
+      "bytes": 1614941966
+    }
+  },
+  "pythonMac": {
+    "source": "Astral python-build-standalone, CPython 3.12.16, release 20261026",
+    "arm64": {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.12.16%2B20261026-aarch64-apple-darwin-install_only.tar.gz",
+      "sha256": "fbf4afef53c2a6b72bb741bc06d5671a9dfaf87bd84e5aa73ac9b3d0d589f14e"
+    },
+    "x86_64": {
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.12.16%2B20261026-x86_64-apple-darwin-install_only.tar.gz",
+      "sha256": "a962e47df522889eaa7ff0d6a56203f1079f68aabb65ffdbe8455f362bc769f3"
+    }
+  },
+  "sources": [
+    "https://docs.ollama.com/windows",
+    "https://docs.ollama.com/macos",
+    "https://docs.ollama.com/api/pull",
+    "https://github.com/ollama/ollama/releases/tag/v0.40.15",
+    "https://ollama.com/library/qwen2.5:7b-instruct-q4_K_M",
+    "https://registry.ollama.ai/v2/library/qwen2.5/manifests/7b-instruct-q4_K_M",
+    "https://github.com/astral-sh/python-build-standalone/releases/tag/20261026",
+    "https://github.com/openai/codex/releases/tag/rust-v0.167.0"
+  ],
+  "codexMac": {
+    "version": "0.167.0",
+    "arm64": {
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-aarch64-apple-darwin.tar.gz",
+      "sha256": "4b22a2a971be2791c3e31f912f3e77a88ebd64a65812a7289ccba65dd6425fe9",
+      "bytes": 108379331,
+      "label": "official Codex CLI"
+    },
+    "x86_64": {
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-x86_64-apple-darwin.tar.gz",
+      "sha256": "d8eb4a865a0b17319cde10347523e5bab0978d01725b39f4a639f40905e01221",
+      "bytes": 117941240,
+      "label": "official Codex CLI"
+    }
+  },
+  "codex": {
+    "Darwin-arm64": {
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-aarch64-apple-darwin.tar.gz",
+      "sha256": "4b22a2a971be2791c3e31f912f3e77a88ebd64a65812a7289ccba65dd6425fe9"
+    },
+    "Darwin-x86_64": {
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-x86_64-apple-darwin.tar.gz",
+      "sha256": "d8eb4a865a0b17319cde10347523e5bab0978d01725b39f4a639f40905e01221"
+    },
+    "Windows": {
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-x86_64-pc-windows-msvc.exe.zip",
+      "sha256": "94b51ca84648a6923784ef71f06e2feb1e10796ddb3f5d033ccb0fbe8daa2f16"
+    },
+    "Windows-service": {
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-windows-sandbox-service-x86_64-pc-windows-msvc.exe.zip",
+      "sha256": "7d9e27636709870aaac6c5c4ddfe6a563c13b6dc32175c54ec3d2a3c766c1a47"
+    },
+    "Windows-setup": {
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-windows-sandbox-setup-x86_64-pc-windows-msvc.exe.zip",
+      "sha256": "f517ac24465514ce98c691b88d410824d9e14e39ef9719a0eabd421b26a0a306"
+    }
+  }
+}

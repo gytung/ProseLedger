@@ -21,12 +21,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs tests/browser-checkpoint.test.mjs tests/presentation.test.mjs tests/naturalness-rules.test.mjs tests/external-validation.test.mjs tests/writing-demo.test.mjs tests/revision-engine.test.mjs
+      - run: node --test tests/browser-api.test.mjs tests/browser-engine.test.mjs tests/browser-ui.test.mjs tests/browser-checkpoint.test.mjs tests/presentation.test.mjs tests/naturalness-rules.test.mjs tests/external-validation.test.mjs tests/writing-demo.test.mjs tests/revision-engine.test.mjs tests/ollama-client.test.mjs tests/native-client.test.mjs
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m proseledger verify
       - run: python -m pytest -q
       - run: python scripts/export_round_scores.py --check
       - run: python scripts/check_publication.py
+      - run: python scripts/package_connector.py --check
 
   browser:
     runs-on: ubuntu-latest

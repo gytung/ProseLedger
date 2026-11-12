@@ -1,3 +1,4 @@
+import {validateOllamaConfig, OLLAMA_DIGEST} from './ollama-client.js?v=20261113c';
 /** Browser adaptation of the portable section-revision protocol.
  * Models are called through the visitor's configured provider. No local model,
  * historical card retrieval, detector-based selection or hidden score is used.
@@ -83,6 +84,8 @@ export function guard(original, candidate, sources) {
 export function validateInput(value) {
   if (!isObject(value)) throw new Error('Provide a topic, sources and optional draft.');
   const input = {topic: cleanText(value.topic), draft: cleanText(value.draft), sources: sourceValidation(value.sources), policy: value.policy || 'section'};
+  if (value.operation !== undefined && value.operation !== 'draft') throw new Error('Unknown workspace operation.');
+  if (value.operation === 'draft') input.operation = 'draft';
   if (!['section', 'full-audit'].includes(input.policy)) throw new Error('Choose Standard or Extended repair.');
   if (input.topic.length > 1600 || (!input.draft && input.topic.length < 10)) throw new Error('Provide a topic of 10–1,600 characters.');
   if (input.draft) {
@@ -132,10 +135,22 @@ function publicModel(value) {
   if (!isObject(value) || typeof value.endpoint !== 'string' || typeof value.model !== 'string') throw new Error('Connect a model before starting.');
   let endpoint;
   try { endpoint = new URL(value.endpoint); } catch { throw new Error('The model endpoint is invalid.'); }
-  if (endpoint.protocol !== 'https:' || endpoint.username || endpoint.password || endpoint.search || endpoint.hash || value.model.length > 160 || !value.model.trim() || /[\r\n]/.test(value.model)) throw new Error('Use a public HTTPS endpoint and a valid model ID.');
+  const native = value.primaryBackend === 'codex';
+  if (value.primaryBackend && !['codex', 'api'].includes(value.primaryBackend)) throw new Error('Unknown reviewer backend.');
+  if (endpoint.username || endpoint.password || endpoint.search || endpoint.hash || value.model.length > 160 || !value.model.trim() || /[\r\n]/.test(value.model)) throw new Error('Use a valid model connection.');
+  if (native) {
+    if (endpoint.protocol !== 'http:' || !['127.0.0.1','localhost'].includes(endpoint.hostname) || endpoint.port !== '11437' || !['','/'].includes(endpoint.pathname)) throw new Error('The Codex connector must be on this computer at port 11437.');
+  } else if (endpoint.protocol !== 'https:') throw new Error('Use a public HTTPS model-provider endpoint.');
   const writerModel = value.writerModel == null || value.writerModel === '' ? value.model.trim() : value.writerModel;
   if (typeof writerModel !== 'string' || !writerModel.trim() || writerModel.length > 160 || /[\r\n]/.test(writerModel)) throw new Error('The writer model ID is invalid.');
-  return {endpoint: endpoint.href, model: value.model.trim(), writerModel: writerModel.trim()};
+  const result = {endpoint: native ? endpoint.origin : endpoint.href, model: value.model.trim(), writerModel: writerModel.trim()};
+  if (native) result.primaryBackend = 'codex';
+  if (value.writerBackend === 'ollama') {
+    const config = validateOllamaConfig({base: value.writerBase, model: writerModel});
+    if (value.writerDigest !== OLLAMA_DIGEST) throw new Error('Test the local Qwen connection before running; its weight digest must match the selected release.');
+    Object.assign(result, {writerBackend: 'ollama', writerBase: config.base, writerDigest: OLLAMA_DIGEST});
+  } else if (native && value.writerBackend === 'none') { result.writerBackend = 'none'; } else if (native || value.writerBackend && value.writerBackend !== 'hosted') throw new Error('The Codex account workflow requires the local Ollama section writer.');
+  return result;
 }
 /** Checkpoints are local, editable records, not signed experimental evidence. */
 export function validateCheckpoint(value) {
@@ -231,7 +246,10 @@ export function validateCheckpoint(value) {
     seen.add(r.stage);
     return {stage: r.stage, requestHash: r.requestHash, responseHash: r.responseHash, text: r.text, receivedAt: typeof r.receivedAt === 'string' ? r.receivedAt.slice(0, 60) : null};
   });
-  if (result.status === 'completed' && (!result.initial || !result.candidate || !result.retained || result.sections.length !== 6 || !result.checks || !result.ledger)) return fieldError();
+  if (input.operation === 'draft') {
+    if (result.sections.length || result.checks || result.ledger || result.responses.some(r => r.stage !== 'generate_initial_proposal')) return fieldError();
+    if (result.status === 'completed' && (!result.initial || result.retained !== result.initial || result.candidate || result.retainedSource !== 'original')) return fieldError();
+  } else if (result.status === 'completed' && (!result.initial || !result.candidate || !result.retained || result.sections.length !== 6 || !result.checks || !result.ledger)) return fieldError();
   return result;
 }
 const labels = id => ({generate_initial_proposal: 'Generate the initial proposal', audit_sections: 'Review all six section edits', repair_section_findings: 'Repair flagged passages', audit_full_revision: 'Audit the complete candidate', retain: 'Select and save the final proposal'}[id] || (id.startsWith('rewrite_section_') ? 'Revise ' + HEADINGS[Number(id.slice(-1)) - 1] : id.startsWith('repair_full') ? 'Repair full-document findings' : 'Recheck repaired proposal'));
@@ -244,6 +262,7 @@ function reasonForSection(record) {
 export async function runRevision(rawInput, {callModel, onUpdate = () => {}, signal, resume = null, model} = {}) {
   if (typeof callModel !== 'function') throw new Error('A model connection is required.');
   const input = validateInput(rawInput), identity = publicModel(model);
+  if (input.operation !== 'draft' && identity.writerBackend === 'none') throw new Error('Connect a section writer before revising.');
   const saved = resume ? validateCheckpoint(resume) : null;
   if (saved && (stable(saved.input) !== stable(input) || stable(saved.model) !== stable(identity))) throw new Error('Resume requires the same topic, sources, draft, repair policy, endpoint and model. Start a new run to change them.');
   const started = performance.now(), previousElapsed = Number.isFinite(saved?.totalElapsedSeconds) ? Math.max(0, saved.totalElapsedSeconds) : 0;
@@ -312,6 +331,10 @@ export async function runRevision(rawInput, {callModel, onUpdate = () => {}, sig
     } else step('generate_initial_proposal', 'skipped', {reason: 'Using your supplied draft without regeneration.'});
     const {title, sections} = splitSections(draft);
     publish({initial: draft, retained: draft, retainedSource: 'original', initialWords: wordCount(draft), retainedWords: wordCount(draft)});
+    if (input.operation === 'draft') {
+      publish({status:'completed',stage:'Initial proposal ready',completedAt:now(),changedSections:0,guardPassed:true});
+      return clone(run);
+    }
     const records = [];
     for (const section of sections) {
       const result = await ask('rewrite_section_' + (section.id + 1), 'Copy-edit only the supplied section. Use direct, idiomatic academic prose with clear verbs, sensible clause order, precise qualifications and established logical connections. Preserve every substantive proposition, technical term, citation occurrence, method step, comparison, metric and limitation. Do not move material across sections. Do not invent details or deliberately introduce errors. Keep approximately the original length. Return {text:string} with only the revised section body; no headings. Use the full manuscript for context.', {fullManuscript: draft, sources: input.sources, rules: RULES.map(r => [r.name, r.instruction]), section}, value => {
