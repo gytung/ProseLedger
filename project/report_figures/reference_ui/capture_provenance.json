@@ -1,0 +1,10 @@
+{
+  "image": "desktop_candidate_narrow.png",
+  "sha256": "74429c231ea71c1c8f93204a229ed3dea46e293b7c285fdfe2c7a6d0d8fae06b",
+  "case": "C01",
+  "condition": "rules",
+  "display": "Desktop application displaying the preserved candidate section from a completed execution.",
+  "record": "evaluation/runs/C01/rules/revision_ledger.json",
+  "newInferenceCalls": 0,
+  "privateDataIncluded": false
+}
