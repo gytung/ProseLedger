@@ -14,9 +14,7 @@ const require = createRequire(import.meta.url);
 const { chromium } = require('playwright');
 const root = fileURLToPath(new URL('../docs/', import.meta.url));
 const KEY = 'browser-fixture-secret-never-export';
-const NATIVE_TOKEN = 'native-bridge-fixture-pairing-code-never-export';
-const OLLAMA_MODEL = 'qwen2.5:7b-instruct-q4_K_M';
-const OLLAMA_DIGEST = '845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e';
+const DETECTOR_KEY = 'synthetic-detector-secret-never-export';
 const ARTIFACTS = process.env.PROSELEDGER_BROWSER_ARTIFACTS || null;
 const HEADINGS = ['Abstract','Introduction','Related Work','Methodology','Planned Evaluation','Limitations and Conclusion'];
 const sections = HEADINGS.map((heading,id) => ({heading,text:[
@@ -54,7 +52,7 @@ async function downloadJSON(page, selector) {
   const download=await waiting;
   const text=await readFile(await download.path(),'utf8');
   assert.ok(!text.includes(KEY),'credentials must not appear in exported JSON');
-  assert.ok(!text.includes(NATIVE_TOKEN),'local pairing codes must not appear in exported JSON');
+  assert.ok(!text.includes(DETECTOR_KEY),'detector keys must not appear in exported JSON');
   return JSON.parse(text);
 }
 async function installFixture(page, options={}) {
@@ -62,6 +60,7 @@ async function installFixture(page, options={}) {
   await page.route('https://api.openai.com/**',async route=>{
     const request=route.request();
     if(request.method()==='OPTIONS'){await route.fulfill({status:204,headers:{'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'*'}});return;}
+    assert.equal(request.headers().authorization,`Bearer ${KEY}`);
     const body=request.postDataJSON();
     const result=responseFor(body,options);
     requests.push({stage:result.stage,body});
@@ -72,55 +71,12 @@ async function installFixture(page, options={}) {
   });
   return requests;
 }
-async function installLocalFixture(page, options={}) {
-  const requests=[];
-  await page.route(/^http:\/\/(?:127\.0\.0\.1|localhost):1143[46]\/api\/(?:tags|chat)$/,async route=>{
-    const request=route.request();
-    const headers=request.headers();
-    assert.equal(headers.authorization,undefined,'cloud authentication must never reach Ollama');
-    assert.equal(headers['x-api-key'],undefined,'no API-key header is allowed on loopback');
-    assert.equal(headers['x-proseledger-token'],undefined,'the account bridge pairing code must not reach Ollama');
-    if(request.method()==='OPTIONS'){await route.fulfill({status:204,headers:{'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'*'}});return;}
-    if(request.url().endsWith('/api/tags')){
-      requests.push({stage:'probe',url:request.url()});
-      await route.fulfill({status:200,json:{models:options.missingLocalModel?[]:[{name:OLLAMA_MODEL,model:OLLAMA_MODEL,digest:options.wrongLocalDigest?'0'.repeat(64):OLLAMA_DIGEST,size:4683075648}]}});return;
-    }
-    const body=request.postDataJSON();
-    assert.ok(!JSON.stringify(body).includes(KEY),'cloud credentials must never enter the local prompt');
-    assert.ok(!JSON.stringify(body).includes(NATIVE_TOKEN),'pairing codes must never enter the local prompt');
-    const result=responseFor(body,options);
-    requests.push({stage:result.stage,url:request.url(),body});
-    assert.match(result.stage,/^rewrite_section_[1-6]$/,'only section rewrites go to the local model');
-    assert.equal(body.model,OLLAMA_MODEL);assert.equal(body.options.num_ctx,8192);assert.equal(body.options.num_predict,2200);assert.equal(body.options.temperature,.2);
-    assert.equal(body.options.seed,41+Number(result.stage.at(-1)));
-    if(options.delayLocalAt===result.stage)await new Promise(resolve=>setTimeout(resolve,700));
-    const ndjson=JSON.stringify({model:OLLAMA_MODEL,message:{role:'assistant',content:JSON.stringify(result.value)},done:true,done_reason:'stop',prompt_eval_count:600,eval_count:80,total_duration:100000000})+'\n';
-    try{await route.fulfill({status:200,contentType:'application/x-ndjson',body:ndjson});}catch(error){if(!/closed|handled|cancel/i.test(error.message))throw error;}
-  });
-  return requests;
-}
-async function installNativeFixture(page, options={}) {
-  const requests=[];
-  await page.route(/^http:\/\/(?:127\.0\.0\.1|localhost):11437\/(?:status|call|cancel)$/,async route=>{
-    const req=route.request();
-    if(req.method()==='OPTIONS'){await route.fulfill({status:204,headers:{'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'*'}});return;}
-    assert.equal(req.headers()['x-proseledger-token'],NATIVE_TOKEN,'the pairing code goes only to the account connector');
-    assert.equal(req.headers().authorization,undefined,'the account connector does not receive an API key');
-    if(req.url().endsWith('/status')){requests.push({stage:'probe'});await route.fulfill({status:200,json:{ready:!options.nativeNotReady,authenticated:!options.nativeNotReady}});return;}
-    const body=req.postDataJSON();assert.ok(!JSON.stringify(body).includes(KEY));assert.ok(!JSON.stringify(body).includes(NATIVE_TOKEN));
-    if(req.url().endsWith('/cancel')){requests.push({stage:'cancel',body});await route.fulfill({status:200,json:{cancelled:true}});return;}
-    const result=responseFor(body,options);requests.push({stage:result.stage,body});
-    assert.ok(!result.stage.startsWith('rewrite_section_'),'section rewrites must stay on Ollama');
-    await route.fulfill({status:200,json:{requestId:body.requestId,text:JSON.stringify(result.value),model:'account-default',usage:{input_tokens:100,output_tokens:40},elapsedSeconds:.1}});
-  });return requests;
-}
-async function fill(page,{existing=true,writerBackend='hosted',provider='openai'}={}) {
+async function fill(page,{existing=true,provider='openai'}={}) {
   await page.selectOption('#provider-preset',provider);
-  if(await page.locator('#writer-backend').isVisible())await page.selectOption('#writer-backend',writerBackend);
   await page.fill('#topic','Preserving scientific evidence when revising research proposals');
   await page.fill('#source-notes',notes);
-  if(existing){if(await page.locator('#input-mode').isVisible())await page.selectOption('#input-mode','existing');await page.fill('#supplied-draft',initial);}
-  if(provider==='codex')await page.fill('#native-token',NATIVE_TOKEN);else await page.fill('#api-key',KEY);await page.check('#consent');
+  if(existing)await page.fill('#supplied-draft',initial);
+  await page.fill('#api-key',KEY);await page.check('#consent');
 }
 async function waitFinished(page) {
   await page.waitForFunction(()=>document.querySelector('#generate')?.disabled===false && !document.querySelector('#results-panel')?.hidden,{},{timeout:15000});
@@ -147,9 +103,11 @@ test.after(async()=>{await browser?.close();if(server?.listening)await new Promi
 async function pageFor(t,options={}){
   const context=await browser.newContext({acceptDownloads:true,viewport:{width:1440,height:1000}});
   t.after(()=>context.close());const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
-  const requests=await installFixture(page,options);const localRequests=await installLocalFixture(page,options);const nativeRequests=await installNativeFixture(page,options);await page.goto(base+'/'+(options.page||'revise.html'));
+  const localRequests=[];await page.route(/^http:\/\/(?:127\.0\.0\.1|localhost):1143[467]\//,async route=>{localRequests.push(route.request().url());await route.abort();});
+  const requests=await installFixture(page,options);await page.goto(base+'/'+(options.page||'revise.html'));
   await page.waitForFunction(()=>document.querySelector('#source-notes')?.value.length>0);
-  return{page,requests,localRequests,nativeRequests,errors};
+  t.after(()=>assert.deepEqual(localRequests,[],'API-only pages must never contact local model services'));
+  return{page,requests,localRequests,errors};
 }
 
 test('supplied-proposal revision applies bounded repair, exports exact retention and displays model text safely',async t=>{
@@ -178,7 +136,7 @@ test('failure retains partial work; resume reuses completed responses without re
   await page.locator('#error-panel').waitFor({state:'visible'});assert.equal(await page.inputValue('#api-key'),'');
   const checkpoint=await downloadJSON(page,'#download-checkpoint');assert.ok(checkpoint.responses.length>=6);
   await page.reload();await page.waitForFunction(()=>document.querySelector('#source-notes')?.value.length>0);
-  await page.selectOption('#provider-preset','openai');await page.selectOption('#writer-backend','hosted');
+  await page.selectOption('#provider-preset','openai');
   await page.fill('#api-key','an-unrelated-provider-credential');await page.check('#consent');
   await page.locator('#restore-run').setInputFiles({name:'checkpoint.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(checkpoint))});
   await page.waitForTimeout(100);assert.equal(await page.inputValue('#api-key'),'');assert.equal(await page.isChecked('#consent'),false);
@@ -215,86 +173,76 @@ test('Stop interrupts an in-flight request while preserving the original and com
 });
 
 
-test('local writer makes six credential-free Ollama calls while checks stay hosted',async t=>{
-  const {page,requests,localRequests,errors}=await pageFor(t,{repair:true});
-  assert.equal(await page.inputValue('#writer-backend'),'ollama');
-  await page.waitForTimeout(100);assert.equal(localRequests.length,0,'opening the page must not access local services');
-  await page.click('#test-ollama');await page.waitForFunction(()=>/ready|connected|available/i.test(document.querySelector('#ollama-status').textContent));
-  assert.equal(requests.length,0,'local readiness needs no paid cloud request');
-  await fill(page,{writerBackend:'ollama'});await page.click('#generate');await waitFinished(page);
-  const run=await downloadJSON(page,'#download-run');
-  assert.equal(run.status,'completed');assert.equal(run.model.writerBackend,'ollama');assert.equal(run.model.writerDigest,OLLAMA_DIGEST);
-  assert.equal(run.model.writerModel,OLLAMA_MODEL);assert.equal(run.model.writerBase,'http://127.0.0.1:11436');
-  assert.equal(localRequests.filter(x=>x.stage.startsWith('rewrite_section_')).length,6);
-  assert.equal(requests.filter(x=>x.stage.startsWith('rewrite_section_')).length,0);
-  assert.deepEqual(requests.map(x=>x.stage),['audit_sections','repair','audit_full_revision']);
-  assert.notEqual(run.initial,run.retained);assert.equal(await page.inputValue('#api-key'),'');assert.deepEqual(errors,[]);
-  if(ARTIFACTS){await page.locator('#workspace').screenshot({path:path.join(ARTIFACTS,'ollama-workspace.png')});await page.locator('#results-panel').screenshot({path:path.join(ARTIFACTS,'ollama-result-fixture.png')});}
-});
-
-test('missing or mismatched local model blocks the run before a cloud call',async t=>{
-  for(const option of ['missingLocalModel','wrongLocalDigest']){
-    const {page,requests,localRequests,errors}=await pageFor(t,{[option]:true});
-    await fill(page,{writerBackend:'ollama'});await page.click('#generate');await page.locator('#error-panel').waitFor({state:'visible'});
-    assert.equal(requests.length,0);assert.ok(localRequests.some(x=>x.stage==='probe'));assert.equal(localRequests.filter(x=>x.stage.startsWith('rewrite_section_')).length,0);
-    assert.equal(await page.inputValue('#api-key'),'');assert.deepEqual(errors,[]);
+test('API-only pages expose no native controls, scripts or local-service CSP destinations',async t=>{
+  for(const name of ['create.html','revise.html']){
+    const {page,requests,errors}=await pageFor(t,{page:name});
+    assert.equal(await page.inputValue('#provider-preset'),'openai');
+    assert.equal(await page.locator('#native-token, #native-base, #native-model, #writer-backend, #ollama-base, #test-ollama').count(),0);
+    assert.equal(await page.locator('#provider-preset option[value=codex]').count(),0);
+    const csp=await page.locator('meta[http-equiv="Content-Security-Policy"]').getAttribute('content');assert.doesNotMatch(csp,/localhost|127\.0\.0\.1|1143[467]/);
+    const resources=await page.evaluate(()=>performance.getEntriesByType('resource').map(x=>x.name));assert.ok(!resources.some(x=>/native-client|ollama-client/.test(x)));
+    assert.equal(requests.length,0);assert.deepEqual(errors,[]);
   }
 });
 
-test('local checkpoint binds writer backend and resumes without repeated section rewrites',async t=>{
-  const {page,requests,localRequests,errors}=await pageFor(t,{failAuditOnce:true});
-  await fill(page,{writerBackend:'ollama'});await page.click('#generate');await page.locator('#error-panel').waitFor({state:'visible'});
-  const checkpoint=await downloadJSON(page,'#download-checkpoint');assert.equal(checkpoint.model.writerBackend,'ollama');
-  const paid=requests.length, local=localRequests.filter(x=>x.stage.startsWith('rewrite_section_')).length;
-  await page.selectOption('#writer-backend','hosted');await page.fill('#api-key',KEY);await page.check('#consent');await page.click('#resume');
-  await page.waitForFunction(()=>document.querySelector('#generate')?.disabled===false);
-  assert.match(await page.locator('#error-message').innerText(),/Resume requires|same .*model|writer/i);
-  assert.equal(requests.length,paid,'changing routes cannot reuse a checkpoint or make paid calls');
-  await page.selectOption('#writer-backend','ollama');await page.fill('#api-key',KEY);await page.check('#consent');await page.click('#resume');await waitFinished(page);
-  const completed=await downloadJSON(page,'#download-run');assert.equal(completed.status,'completed');
-  assert.equal(localRequests.filter(x=>x.stage.startsWith('rewrite_section_')).length,local);assert.equal(local,6);assert.deepEqual(errors,[]);
-});
-
-test('cancelling a local rewrite saves prior work and never falls back to the cloud writer',async t=>{
-  const {page,requests,localRequests,errors}=await pageFor(t,{delayLocalAt:'rewrite_section_2'});
-  await fill(page,{writerBackend:'ollama'});await page.click('#generate');
-  const deadline=Date.now()+5000;while(!localRequests.some(x=>x.stage==='rewrite_section_2')&&Date.now()<deadline)await new Promise(resolve=>setTimeout(resolve,10));
-  assert.ok(localRequests.some(x=>x.stage==='rewrite_section_2'));await page.click('#cancel');await page.waitForFunction(()=>document.querySelector('#generate')?.disabled===false);
-  const checkpoint=await downloadJSON(page,'#download-checkpoint');assert.equal(checkpoint.status,'cancelled');assert.equal(checkpoint.retained,checkpoint.initial);
-  assert.equal(checkpoint.responses.filter(x=>x.stage==='rewrite_section_1').length,1);assert.deepEqual(requests.map(x=>x.stage),[]);assert.deepEqual(errors,[]);
-});
-
-
-test('default account connector handles review and repair without an OpenAI API key',async t=>{
-  const {page,requests,localRequests,nativeRequests,errors}=await pageFor(t,{repair:true});
-  assert.equal(await page.inputValue('#provider-preset'),'codex');
-  await page.waitForTimeout(100);assert.equal(nativeRequests.length,0);assert.equal(localRequests.length,0);
-  await fill(page,{provider:'codex',writerBackend:'ollama'});await page.click('#generate');await waitFinished(page);
+test('optional section writer uses its selected API model while review and repair stay on the main model',async t=>{
+  const {page,requests,errors}=await pageFor(t,{repair:true});await fill(page);
+  await page.locator('details.endpoint').evaluate(element=>element.open=true);
+  await page.fill('#writer-model','synthetic-section-writer');await page.click('#generate');await waitFinished(page);
   const run=await downloadJSON(page,'#download-run');assert.equal(run.status,'completed');
-  assert.equal(run.model.primaryBackend,'codex');assert.equal(run.model.writerBackend,'ollama');
-  assert.equal(localRequests.filter(x=>x.stage.startsWith('rewrite_section_')).length,6);
-  assert.deepEqual(nativeRequests.filter(x=>x.stage!=='probe').map(x=>x.stage),['audit_sections','repair','audit_full_revision']);
-  assert.equal(requests.length,0);assert.equal(await page.inputValue('#native-token'),'');assert.deepEqual(errors,[]);
+  const writers=requests.filter(x=>x.stage.startsWith('rewrite_section_')),reviewers=requests.filter(x=>!x.stage.startsWith('rewrite_section_'));
+  assert.equal(writers.length,6);assert.ok(writers.every(x=>x.body.model==='synthetic-section-writer'));
+  assert.deepEqual(reviewers.map(x=>x.stage),['audit_sections','repair','audit_full_revision']);assert.ok(reviewers.every(x=>x.body.model==='gpt-4.1-mini'));
+  assert.equal(run.model.writerModel,'synthetic-section-writer');assert.equal(run.model.model,'gpt-4.1-mini');assert.deepEqual(errors,[]);
 });
 
-test('create page generates once, then transfers exact proposal and sources to the separate revision page',async t=>{
-  const {page,requests,localRequests,nativeRequests,errors}=await pageFor(t,{page:'create.html'});
-  await fill(page,{provider:'codex',existing:false,writerBackend:'ollama'});
+test('create generates once through the API and hands exact proposal and sources to revision without credentials',async t=>{
+  const {page,requests,errors}=await pageFor(t,{page:'create.html'});await fill(page,{existing:false});
   await page.click('#generate');await waitFinished(page);
   const generated=await downloadJSON(page,'#download-draft-record');assert.equal(generated.status,'completed');assert.equal(generated.initial,initial);
-  assert.deepEqual(nativeRequests.filter(x=>x.stage!=='probe').map(x=>x.stage),['generate_initial_proposal']);
-  assert.equal(localRequests.length,0,'draft generation must neither probe nor invoke Ollama');
-  assert.equal(requests.length,0);assert.equal(await page.inputValue('#native-token'),'');
-  await page.click('#continue-revision');await page.waitForURL('**/revise.html');
-  await page.waitForFunction(()=>document.querySelector('#supplied-draft')?.value.length>300);
-  assert.equal(await page.inputValue('#supplied-draft'),generated.initial);
-  assert.equal(await page.inputValue('#source-notes'),notes);
-  assert.equal(await page.inputValue('#native-token'),'');assert.equal(await page.inputValue('#api-key'),'');
-  assert.equal(await page.evaluate(()=>sessionStorage.getItem('proseledger-proposal-handoff-v1')),null,'handoff is consumed and removed');
-  const storage=await page.evaluate(()=>JSON.stringify({...sessionStorage,...localStorage}));assert.ok(!storage.includes(KEY)&&!storage.includes(NATIVE_TOKEN));
-  await page.fill('#native-token',NATIVE_TOKEN);await page.check('#consent');await page.click('#generate');await waitFinished(page);
+  assert.deepEqual(requests.map(x=>x.stage),['generate_initial_proposal']);assert.equal(await page.inputValue('#api-key'),'');
+  await page.click('#continue-revision');await page.waitForURL('**/revise.html');await page.waitForFunction(()=>document.querySelector('#supplied-draft')?.value.length>300);
+  assert.equal(await page.inputValue('#supplied-draft'),generated.initial);assert.equal(await page.inputValue('#source-notes'),notes);assert.equal(await page.inputValue('#api-key'),'');
+  assert.equal(await page.evaluate(()=>sessionStorage.getItem('proseledger-proposal-handoff-v1')),null);
+  assert.equal(await page.evaluate(()=>localStorage.length+sessionStorage.length),0);
+  await page.fill('#api-key',KEY);await page.check('#consent');await page.click('#generate');await waitFinished(page);
   const revised=await downloadJSON(page,'#download-run');assert.equal(revised.initial,generated.initial);assert.notEqual(revised.retained,revised.initial);
-  assert.equal(nativeRequests.filter(x=>x.stage==='generate_initial_proposal').length,1);
-  assert.equal(localRequests.filter(x=>x.stage.startsWith('rewrite_section_')).length,6);
+  assert.equal(requests.filter(x=>x.stage==='generate_initial_proposal').length,1);assert.equal(requests.filter(x=>x.stage.startsWith('rewrite_section_')).length,6);
+  const pending=page.waitForEvent('download');await page.click('#download-manuscript');const file=await pending;assert.equal(await readFile(await file.path(),'utf8'),revised.retained);
   assert.deepEqual(errors,[]);
+});
+
+test('local-runtime checkpoints are rejected explicitly instead of silently converted to API resumes',async t=>{
+  const {page,requests,errors}=await pageFor(t);await fill(page);await page.click('#generate');await waitFinished(page);
+  const saved=await downloadJSON(page,'#download-run'),paid=requests.length;
+  for(const localModel of [
+    {primaryBackend:'codex',endpoint:'http://127.0.0.1:11437',model:'account-default',writerBackend:'none',writerModel:'none'},
+    {endpoint:'https://api.openai.com/v1/chat/completions',model:'gpt-4.1-mini',writerBackend:'ollama',writerModel:'qwen2.5:7b-instruct-q4_K_M',writerBase:'http://127.0.0.1:11436',writerDigest:'845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e'}
+  ]){
+    const checkpoint={...saved,model:localModel};
+    await page.locator('#restore-run').setInputFiles({name:'local-runtime.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(checkpoint))});
+    await page.locator('#error-panel').waitFor({state:'visible'});assert.match(await page.locator('#error-message').innerText(),/local|Codex|Ollama|API/i);assert.equal(requests.length,paid);
+  }
+  assert.deepEqual(errors,[]);
+});
+
+test('optional GPTZero checks original and retained snapshots without changing the manuscript or exporting keys',async t=>{
+  const {page,requests,errors}=await pageFor(t);const detector=[];
+  await page.route('https://api.gptzero.me/v2/predict/text',async route=>{
+    const req=route.request();if(req.method()==='OPTIONS'){await route.fulfill({status:204,headers:{'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'*'}});return;}
+    assert.equal(req.headers()['x-api-key'],DETECTOR_KEY);assert.equal(req.headers().authorization,undefined);
+    const body=req.postDataJSON();assert.deepEqual(Object.keys(body),['document']);assert.ok(!JSON.stringify(body).includes(DETECTOR_KEY));detector.push(body.document);
+    await route.fulfill({status:200,json:{version:'synthetic-fixture',documents:[{class_probabilities:{human:.5,mixed:.2,ai:.3},predicted_class:'human',confidence_category:'synthetic'}]}});
+  });
+  await fill(page);await page.click('#generate');await waitFinished(page);const run=await downloadJSON(page,'#download-run'),modelCalls=requests.length;
+  const panel=page.locator('#external-validation-panel');await panel.locator('summary').click();
+  for(const version of ['initial','retained']){
+    await panel.getByLabel('Proposal to check').selectOption(version);await panel.getByLabel('GPTZero API key').fill(DETECTOR_KEY);await panel.locator('input[type=checkbox]').check();
+    await panel.getByRole('button',{name:'Check selected text',exact:true}).click();await page.waitForFunction(()=>document.querySelector('#external-validation-panel [role=status]').textContent.startsWith('Observation saved'));
+    assert.equal(await panel.getByLabel('GPTZero API key').inputValue(),'');assert.equal(await panel.locator('input[type=checkbox]').isChecked(),false);
+  }
+  assert.deepEqual(detector,[run.initial,run.retained]);assert.equal(requests.length,modelCalls);
+  const pending=page.waitForEvent('download');await panel.getByRole('button',{name:'Download detector observations',exact:true}).click();const file=await pending;const text=await readFile(await file.path(),'utf8');assert.ok(!text.includes(DETECTOR_KEY)&&!text.includes(KEY));
+  const observations=JSON.parse(text);assert.equal(observations.observations.length,2);assert.ok(observations.observations.every(o=>o.currentDocumentMatch==='current'&&o.runId===run.id));
+  const after=await downloadJSON(page,'#download-run');assert.equal(after.retained,run.retained);assert.deepEqual(errors,[]);
 });

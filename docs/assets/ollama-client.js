@@ -1,19 +1,12 @@
 /** A credential-free, loopback-only section writer for the pinned desktop model. */
-export const OLLAMA_MODEL = 'qwen2.5:7b-instruct-q4_K_M';
-export const OLLAMA_DIGEST = '845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e';
+import {OLLAMA_MODEL, OLLAMA_DIGEST, validateOllamaConfig} from './local-model-identity.js?v=20261113d';
+export {OLLAMA_MODEL, OLLAMA_DIGEST, validateOllamaConfig};
 const CONTEXT = 8192;
 const MAX_BYTES = 2_000_000;
 const MAX_TEXT = 100_000;
 const aborted = () => new DOMException('Local writing cancelled. Completed stages remain available.', 'AbortError');
 const CONNECTION_HELP = 'Cannot reach local Ollama. Start it on the selected loopback port, allow this site with OLLAMA_ORIGINS=https://gytung.github.io, and allow local-network access if your browser asks. No cloud fallback was used.';
 
-export function validateOllamaConfig({base = 'http://127.0.0.1:11434', model = OLLAMA_MODEL} = {}) {
-  if (typeof base !== 'string' || !/^http:\/\/(?:127\.0\.0\.1|localhost):(?:11434|11436)\/?$/i.test(base.trim())) {
-    throw new Error('Use http://127.0.0.1:11434 for your Ollama installation, or http://127.0.0.1:11436 for the project runtime. Other network destinations are not permitted.');
-  }
-  if (model !== OLLAMA_MODEL) throw new Error('Use the pinned local model tag: ' + OLLAMA_MODEL + '.');
-  return {base: new URL(base.trim()).origin, model};
-}
 
 function raceAbort(promise, signal) {
   if (signal.aborted) return Promise.reject(aborted());

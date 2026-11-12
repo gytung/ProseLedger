@@ -1,43 +1,31 @@
-# Local Qwen in the browser workspace
+# Local Qwen experiments and the archived connector
 
-The [revision page](https://gytung.github.io/ProseLedger/revise.html) uses **Ollama on your own computer** for section rewriting. Its default reviewer connection uses the local account connector and your existing signed-in Codex account for initial drafting, checking and bounded repair. No Qwen API key or separate OpenAI API key is needed for this default arrangement. The page itself cannot launch local programs or sign into the account: start the local services first.
+**The current public [generation](https://gytung.github.io/ProseLedger/create.html) and [revision](https://gytung.github.io/ProseLedger/revise.html) pages use cloud model APIs. They do not require Ollama, a local connector, Codex sign-in or a pairing code.** Enter your provider's API key and Model ID on those pages. See the [current workspace guide](REVISION_WORKSPACE.md).
 
-## Prepare the local writer
+This document preserves the context of the independent local experiment and the earlier browser-to-local connector. It is not a setup prerequisite for the public website.
 
-1. Install Ollama, or use the local runtime prepared by the desktop project package.
-2. Ensure the model `qwen2.5:7b-instruct-q4_K_M` is installed. The workspace checks the model digest before using it; it does not silently substitute another model or switch to a cloud writer.
-3. Start Ollama on a loopback address. A normal Ollama installation uses `http://127.0.0.1:11434`; the project's private runtime uses port `11436`.
-4. Permit only this website's origin by setting `OLLAMA_ORIGINS=https://gytung.github.io` before starting Ollama. Restart an already-running Ollama process for the setting to take effect. Do not set the origin to `*` or expose Ollama on a LAN address.
-5. Open the website in Chrome or Edge. If the browser asks for local-network access, allow it for this site. Do not disable browser security. If organisational policy blocks local access, use the local desktop application instead.
+## Independent local experiment package
 
-The connector package linked from both pages prepares the website-origin setting and starts the local services. Its setup downloads the pinned Qwen model when it is missing. The project's private Ollama port, `11436`, is selected by default; `11434` remains available for an existing standard Ollama installation. Neither route creates a public inference server.
+The separately distributed desktop package runs the section writer through local Ollama and uses its configured review connection for checking and bounded repair. Follow that package's included installation and launch instructions on Windows or macOS. The package's local interface is a separate application from the public cloud pages.
 
-## Run the writing workflow
+The pinned Ollama writer is **`qwen2.5:7b-instruct-q4_K_M`**. Its recorded weight digest is `845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e`. The writing configuration uses an 8,192-token context, a 2,200-token output limit, temperature 0.2 and section seeds 42–47. Local inference requires model files, sufficient RAM and time; it does not consume purchased Qwen cloud API tokens. Review calls may still use a remote model service under the package's configured account or API access.
 
-Use [Create proposal](https://gytung.github.io/ProseLedger/create.html) to generate the initial proposal only; it does not call Ollama. Its **Continue to revision** action transfers the draft and sources to [Revise proposal](https://gytung.github.io/ProseLedger/revise.html). Alternatively, open the revision page and paste an existing proposal and its source notes.
+Installing this model does not change the model used by the current public website. Selecting cloud Qwen on the website calls the selected provider's hosted model and is a separate configuration.
 
-On the revision page, select **Local Qwen2.5 7B · Ollama** as the section writer and choose the port used by your local process. Click the local connection test first. A successful check confirms the exact installed model; it does not download it.
+## Archived browser connector
 
-For the main connection, keep **Codex account · local connector** selected, start the account connector, and enter the pairing code it displays. This pairing code is not an OpenAI API key. The connector binds to loopback port `11437` and uses the officially signed-in account locally. The pairing code is sent only to that connector, never to Ollama or a cloud API endpoint. Test the required connections, supply the topic and source excerpts on the creation page or the existing proposal on the revision page, confirm usage, and start the run. The handoff transfers only proposal input, never credentials; re-enter the connector pairing code on the revision page.
+The earlier connector implementation remains available for inspection in `local_connector/`, with browser transport modules and regression tests. It paired a specific website origin with an operator's own account login on loopback port `11437`; local Qwen requests went to Ollama on port `11434` or the project-private port `11436`. A pairing code granted access to that local bridge; it was not a model API key.
 
-Alternatively, a hosted-API connection requires a provider-issued API key with credit. A ChatGPT subscription is not an API key. Hosted API mode remains optional and has separate billing; it is not the default account-based route.
+The connector bundle under `docs/local/` belongs to that earlier optional integration. **Starting it or entering a pairing code is not part of the current public-page workflow.** Use the independently packaged local application for local experiments; do not follow archived connector instructions as instructions for the current cloud pages.
 
-Only the six section-rewriting requests go to Ollama. Generation, independent review and bounded repair go through the selected main connection: the signed-in account connector by default, or the explicitly selected hosted API. The reviewed final draft and revision ledger remain downloadable. Closing the page or stopping a request preserves completed responses in a checkpoint; resume requires the same reviewer connection, model and local writer identity.
+Where the archived integration is deliberately maintained for development, Ollama must remain bound to loopback and allow only the intended website origin. Do not expose local inference or the account connector on a public address. The current public application does not need local-network browser permission.
 
-The text supplied to the local writer includes the manuscript and source excerpts. Those materials also reach the account's model service, or the selected API provider, during generation and review. Local rewriting does not make the whole workflow offline or private from that service.
+## Comparability and validation
 
-## Interpret the results correctly
+The prior Mac account-plus-Ollama functional run on 13 November 2026 completed generation in 45.8 seconds and revision/checking in 282.9 seconds. It retained four changed sections, from 724 to 726 words, with the reviewer judging content preserved and readability similar. No GPTZero scan was run in that functional check. It is neither a Windows measurement nor a cloud API performance result.
 
-This route uses the desktop package's Ollama model tag and writer parameters, but a new model run can still produce different text. The original frozen Mac/MLX experiment used a separate runtime and quantisation profile. Neither a local Ollama run nor a cloud-Qwen run automatically reproduces that experiment's GPTZero numbers.
+The earlier frozen Mac/MLX experiment used another runtime and quantisation profile. Matching a model family or nominal parameter count does not reproduce its text or GPTZero observations. Local Ollama runs, archived MLX results and new cloud runs must retain separate inputs, model identities, outputs and validation records.
 
-## Optional GPTZero comparison
+GPTZero remains an optional external observation. Each teammate may manually enter their own or a privately shared team API key where a scan is offered; no key belongs in a website, source archive or installer. Compare original and retained text only after scanning those exact texts. A detector probability is not a percentage of AI-written words, a naturalness score or proof of factual accuracy.
 
-Team members may use the GPTZero API key shared privately by the project owner. Each person enters it manually in the masked field; it is not included in the website, source code or connector package. This is a separate credential from the Codex pairing code and any model API key.
-
-After a revision completes, open **Optional external check · GPTZero** below the results. Under **Proposal to check**, choose **Original proposal**, paste the GPTZero key, tick the consent box and click **Check selected text**. Then choose **Final retained proposal** and repeat. The key is cleared after each scan, so enter it again for the second text. If the original was retained unchanged, the selector shows one combined **Original = final retained proposal** entry; there are not two different texts to compare. Click **Download detector observations** to save the observations, text fingerprints and run identifier.
-
-The current webpage sends each selected manuscript directly to `https://api.gptzero.me/v2/predict/text`; it does not route GPTZero through the local connector or a proxy. Browser access, service access and the shared account's allowance must permit the request. If it fails, keep the error and the completed manuscript; no detector result is inferred.
-
-GPTZero remains an optional observation. Its result does not change the manuscript or determine which revision is retained. Displayed percentages are detector class probabilities, not a measured percentage of words written by AI, and should be reported alongside human judgments and content checks.
-
-Reference: [Ollama server and origin configuration](https://docs.ollama.com/faq), [Chrome local-network access](https://developer.chrome.com/blog/local-network-access).
+For the current public workflow, use [Generate and revise: workspace guide](REVISION_WORKSPACE.md). For a local reproduction, use the documentation included in the independent local package and report its own measured results.

@@ -1,8 +1,12 @@
-# ProseLedger local connector
+# Archived ProseLedger local connector
 
-This small launcher connects the public writing pages to **your own computer and account**. It does not depend on another group member's Mac. It does not contain account credentials or model weights.
+**This connector is not required or used by the current public website.** [Generate proposal](https://gytung.github.io/ProseLedger/create.html) and [Revise proposal](https://gytung.github.io/ProseLedger/revise.html) now run directly through each visitor's cloud model API key and Model ID. No installation, Ollama, Codex sign-in or pairing code is needed for those pages.
 
-## Start
+The connector is retained for the earlier optional browser-to-local integration and source inspection. The instructions below apply only to a preserved, matching earlier browser build. They do not describe the current public pages. For a current local reproduction, use the separately distributed desktop package and its own instructions.
+
+This earlier launcher connects a compatible browser build to **your own computer and account**. It does not depend on another group member's Mac or contain account credentials or model weights.
+
+## Earlier integration: start
 
 1. Extract the **whole ZIP** into a writable folder. On Windows, use **Extract all** first; do not launch from inside the ZIP. A short path such as `C:\ProseLedgerConnector` is convenient.
 2. Double-click **Start_Windows.bat** on Windows, or **Start_Mac.command** on macOS. If macOS blocks the downloaded launcher, use Finder's Open action and the normal Privacy & Security approval for this file. Do not disable system protections.
@@ -10,10 +14,9 @@ This small launcher connects the public writing pages to **your own computer and
 4. If asked, sign in to **your own Codex account** in the official login flow. This mode uses that account's access and limits; an OpenAI API key is not required. A subscription does not provide unlimited calls.
 5. Keep the launcher window open. Copy its **pair code** into the website's **Local pairing code** field. The code changes each time the connector restarts. It is not an API key or account password.
 
-## Two separate pages
+## Earlier integration: matching browser pages
 
-- Generate a proposal: https://gytung.github.io/ProseLedger/create.html
-- Revise an existing proposal: https://gytung.github.io/ProseLedger/revise.html
+Use a preserved browser build that still has **Codex account · local connector**, **Local pairing code** and **Test local Qwen** controls. The current public `create.html` and `revise.html` do not have these controls and do not call this connector.
 
 On the first page, leave **Codex account · local connector** selected, paste the pair code, and click **Test connection**. Supply a topic and source excerpts, then generate. Download the proposal, or click **Continue to revision** to transfer the same draft and sources into the second page.
 

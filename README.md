@@ -12,14 +12,14 @@ ProseLedger generates a research proposal from supplied source notes, edits its 
 
 The public website has two separate workspaces:
 
-- **[Generate proposal](https://gytung.github.io/ProseLedger/create.html)** takes a topic and two to ten source excerpts and produces one six-section proposal. It does not run Qwen or revise the text. Download the proposal, or select **Continue to revision** to carry that exact text and its sources to the next page.
-- **[Revise proposal](https://gytung.github.io/ProseLedger/revise.html)** starts from an existing proposal. Local **Ollama Qwen2.5 7B** rewrites six sections; the visitor's **Codex account** reviews and repairs the changes. The page retains the checked revision or restores the original.
+- **[Generate proposal](https://gytung.github.io/ProseLedger/create.html)** takes a topic and two to ten source excerpts and produces one six-section proposal. It does not revise the text. Download the proposal, or select **Continue to revision** to carry that exact text and its sources to the next page.
+- **[Revise proposal](https://gytung.github.io/ProseLedger/revise.html)** starts from an existing proposal, rewrites six sections through a cloud model API, then reviews and repairs the changes. The page retains the checked revision or restores the original.
 
-The default connection uses a [local connector](https://gytung.github.io/ProseLedger/local/ProseLedger_Local_Connector.zip). Extract it, open **Start_Windows.bat** or **Start_Mac.command**, and choose the full setup (or proposal-only setup if you do not need revision). Complete Codex sign-in locally, then paste its **pairing code** into the website. The pairing code is not an API key. Generation needs only the Codex connector; revision also needs Ollama with **`qwen2.5:7b-instruct-q4_K_M`**. The first full setup downloads the runtime and approximately 4.7 GB of model weights; existing project model files can be reused. Use the address printed by your launcher (normally Ollama port `11436`) and click the connection tests. The website cannot install or start local programs for you.
+**Both public pages run directly in the browser using the visitor's own model API key. No local installation, Ollama, Codex sign-in or pairing code is required.** Choose OpenAI API, OpenRouter or a compatible provider; enter a Model ID available to that account and the matching API key; then select **Test connection**. Use the provider's HTTPS endpoint when configuring a custom service. The provider must allow browser requests from this website.
 
-No Qwen cloud credit is needed when using local Ollama. Codex account access and usage limits still apply. Cloud API mode remains optional: it requires the selected provider's own API key and API credit. This API billing is separate from a ChatGPT subscription. Hosted section writing is available in API mode; it is a different execution configuration from the local Qwen route.
+Model calls use that provider's API credit. A ChatGPT subscription or Codex account login is not an API key. By default, the selected cloud model handles writing and review in separate calls. The optional section-writer Model ID can select a different model offered by the same provider, using the same key; only the six section rewrites use that model. Cloud Qwen is an option when the chosen provider offers it, but it is not the local Qwen 7B experiment.
 
-**Proposal → six local section revisions → Codex section review → bounded repairs → whole-document audit → retained manuscript and revision ledger.**
+**Proposal → six rule-guided section revisions → section review → bounded repairs → whole-document audit → retained manuscript and revision ledger.**
 
 Six editorial rules guide the writer: actor and action, concrete wording, redundancy, information flow, sentence focus and calibrated claims. Scientific content, attribution, uncertainty and planned-work status must be preserved. Citation and number checks supplement the model review. These checks are fallible; they do not establish scientific truth.
 
@@ -27,11 +27,11 @@ Repairs use exact, unique text anchors. At most three non-overlapping patches ma
 
 The revision page separates **Original, Candidate and Retained**, and provides the manuscript, ledger and full run for download. Save a checkpoint before closing the tab; resume requires unchanged input, policy and model settings. The current ledger records **this run's edits and checks**; it does not retrieve historical cards or train a model. Archived three-route memory experiments remain below.
 
-Connection secrets stay in tab memory and are excluded from exports. The Codex pairing code is sent only to the local connector; no cloud credentials are sent to Ollama. **Continue to revision** temporarily transfers only the topic, source excerpts and proposal through this tab's session storage, then removes that transfer record on arrival.
+API keys stay in tab memory, are sent only to the selected provider, and are excluded from exports. **Continue to revision** temporarily transfers only the topic, source excerpts and proposal through this tab's session storage, then removes that transfer record on arrival. Enter the API key again on the revision page. Requests go from the browser to the provider; GitHub Pages does not run a model or supply a shared account.
 
 **GPTZero is optional and separate.** After revision, any teammate can manually enter their own or the team-shared GPTZero API key to scan the exact original and retained text. Observations include text hashes and timestamps. They do not select edits or alter the manuscript. Class probabilities are not the proportion of AI-written words, a naturalness score or a guarantee of factual accuracy.
 
-The pinned Ollama writer does not make a visitor's run a reproduction of an archived Mac result. Draft, runtime, review model, sampling and detector version can differ. A new result must be reported with its own run record and exact-text validation; no fixed score decrease is promised.
+The independently distributed local experiment package remains a separate option for local Ollama Qwen rewriting and account-based review. Its setup is not required for these public pages. Archived Mac results, the local package and a current cloud run can differ in draft, model, runtime, sampling and detector version. Report each new run with its own record and exact-text validation; no fixed score decrease is promised. See [local-experiment context](docs/OLLAMA_BROWSER.md).
 
 See [the workspace guide](docs/REVISION_WORKSPACE.md) for setup, recovery and recording. Earlier [language-edit recordings](https://gytung.github.io/ProseLedger/writing-demo.html) belong to the archived comparison editor.
 
@@ -109,11 +109,11 @@ The CLI exports the initial proposal, all three retained proposals, checks, scor
 
 ```text
 Generate proposal page
-  topic + sources → Codex (or chosen API) → one proposal → download / transfer
+  topic + sources → selected cloud API → one proposal → download / transfer
 
 Revise proposal page
-  existing proposal + sources → six rule-guided local Qwen rewrites
-    → Codex section review → bounded repair → whole-document audit
+  existing proposal + sources → six rule-guided cloud-model rewrites
+    → separate model review → bounded repair → whole-document audit
     → retain candidate or original → manuscript + per-run revision ledger
     → optional, separate GPTZero observations
 ```
@@ -130,7 +130,7 @@ proseledger/           Drafting, revision, checking and model transport
 ui/                    Background job support
 data/                  Frozen catalogue and attributed example source notes
 docs/assets/           Browser generation/revision engine, rules and model transports
-docs/local/            Local Codex connector and Ollama launchers
+docs/local/            Archived optional connector bundle; not used by public pages
 docs/                  Live UI, saved walkthroughs, archived evidence and documentation
 tests/                 Offline checks; no paid model calls
 scripts/               Publication and resource checks

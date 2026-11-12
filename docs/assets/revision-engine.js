@@ -1,4 +1,4 @@
-import {validateOllamaConfig, OLLAMA_DIGEST} from './ollama-client.js?v=20261113c';
+import {validateOllamaConfig, OLLAMA_DIGEST} from './local-model-identity.js?v=20261113d';
 /** Browser adaptation of the portable section-revision protocol.
  * Models are called through the visitor's configured provider. No local model,
  * historical card retrieval, detector-based selection or hidden score is used.
